@@ -40,7 +40,10 @@ let terra: Terra = try! Terra(dev_id: <YOUR DEV ID>,
                          reference_id: <YOUR USER REFERENCE ID>, 
                          bodySleepDailyInterval: 60, 
                          connections: Set([Connections.APPLE_HEALTH, Connections.FREESTYLE_LIBRE]), 
-                         permissions: Set([Permissions.DAILY, Permissions.SLEEP, Permissions.ATHLETE]))
+                         permissions: Set([Permissions.DAILY, Permissions.SLEEP, Permissions.ATHLETE])){success in 
+                         // success : Boolean ->  to detect when the initialisation is done.
+                         // Can leave this callback empty if not needed, but this allows for you to know when the initialisation is complete. 
+                         }
 ```
 
 **Please note this initialisation can fail by throwing the following errors: TerraError.HealthKitUnavailable, TerraError.UnexpectedError. Catch them and handle appropriately instead of forcing try!**
@@ -51,6 +54,7 @@ let terra: Terra = try! Terra(dev_id: <YOUR DEV ID>,
 - bodySleepDailyInterval: The scheduler interval for body, sleep, daily data in seconds.
 - connections: A set of `Connections` you wish to connect through Terra with
 - permissions: A set of `Permissions` you wish to request permissions (from Health Kit) from. 
+
 
 ## Getting Data
 
