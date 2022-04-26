@@ -1,0 +1,11 @@
+framework module TerraiOS {
+  umbrella header "TerraiOS.h"
+
+  export *
+  module * { export * }
+}
+
+module TerraiOS.Swift {
+    header "TerraiOS-Swift.h"
+    requires objc
+}

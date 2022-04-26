@@ -1,0 +1,932 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TerraiOS
+import Combine
+import CoreLocation
+import CoreNFC
+import Foundation
+import HealthKit
+import Swift
+import SwiftUI
+@_exported import TerraiOS
+import UIKit
+import _Concurrency
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+public class LibreManager {
+  public init(devId: Swift.String, _ unlockCode: Swift.Int? = 0xA4, _ password: Foundation.Data? = Data([0xc2, 0xad, 0x75, 0x21]))
+  public func getGlucoseData() throws
+  @objc deinit
+}
+public enum Resource {
+  case APPLE_HEALTH, FREESTYLE_LIBRE
+  public static func == (a: TerraiOS.Resource, b: TerraiOS.Resource) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class Terra {
+  public init(dev_id: Swift.String, x_api_key: Swift.String, reference_id: Swift.String? = nil, bodySleepDailyInterval: Swift.Double = 60*60*8, connections: Swift.Set<TerraiOS.Connections>, permissions: Swift.Set<TerraiOS.Permissions>, completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in }) throws
+  public func readGlucoseData() throws
+  public func getAthlete(type: TerraiOS.Resource, completion: @escaping (Swift.Bool, TerraiOS.TerraAthleteData?) -> Swift.Void = {(success, _) -> Void in })
+  public func getDaily(type: TerraiOS.Resource, startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraDailyData]?) -> Swift.Void = {(success, _) -> Void in})
+  public func getSleep(type: TerraiOS.Resource, startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraSleepData]?) -> Swift.Void = {(success, _) -> Void in})
+  public func getBody(type: TerraiOS.Resource, startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraBodyData]?) -> Swift.Void = {(success, _) -> Void in})
+  public func getNutrition(type: TerraiOS.Resource, startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraNutritionData]?) -> Swift.Void = {(success, _) -> Void in})
+  public func getActivity(type: TerraiOS.Resource, startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraActivityData]?) -> Swift.Void = {(success, _) -> Void in})
+  public func disconnectTerra(type: TerraiOS.Resource)
+  @objc deinit
+}
+public enum LibreSensorState {
+  case notYetStarted
+  case starting
+  case ready
+  case expired
+  case shutdown
+  case failure
+  case unknown
+  case end
+  public static func == (a: TerraiOS.LibreSensorState, b: TerraiOS.LibreSensorState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct TerraStressData : Swift.Decodable {
+  public var medium_stress_duration: Swift.Double?
+  public var low_stress_duration: Swift.Double?
+  public var avg_stress_level: Swift.Double?
+  public var activity_stress_duration: Swift.Double?
+  public var rest_stress_duration: Swift.Double?
+  public var stress_duration: Swift.Double?
+  public var max_stress_level: Swift.Double?
+  public var high_stress_duration: Swift.Double?
+  public var samples: [TerraiOS.StressSample]?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraMETData : Swift.Decodable {
+  public var num_moderate_intensity_minutes: Swift.Double?
+  public var num_low_intensity_minutes: Swift.Double?
+  public var avg_level: Swift.Double?
+  public var samples: [TerraiOS.METSample]?
+  public var num_high_intensity_minutes: Swift.Double?
+  public var num_inactive_minutes: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraHeartRateSummaryData : Swift.Decodable {
+  public var user_hr_max_bpm: Swift.Double?
+  public var min_hr_bpm: Swift.Double?
+  public var avg_hr_variability_sdnn: Swift.Double?
+  public var avg_hr_variability_rmssd: Swift.Double?
+  public var avg_hr_bpm: Swift.Double?
+  public var resting_hr_bpm: Swift.Double?
+  public var max_hr_bpm: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraHeartRateDetailedData : Swift.Decodable {
+  public var hrv_samples_rmssd: [TerraiOS.HeartRatesVariabilitySampleRMSSD]?
+  public var hrv_samples_sdnn: [TerraiOS.HeartRatesVariabilitySampleSDNN]?
+  public var hr_samples: [TerraiOS.HeartRateSample]?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraHeartRateData : Swift.Decodable {
+  public var summary: TerraiOS.TerraHeartRateSummaryData?
+  public var detailed: TerraiOS.TerraHeartRateDetailedData?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraActiveDurationsData : Swift.Decodable {
+  public var activity_seconds: Swift.Double?
+  public var low_intensity_seconds: Swift.Double?
+  public var rest_seconds: Swift.Double?
+  public var num_continuous_inactive_periods: Swift.Double?
+  public var inactivity_seconds: Swift.Double?
+  public var activity_levels_samples: [TerraiOS.ActivityLevelSample]?
+  public var moderate_intensity_seconds: Swift.Double?
+  public var vigorous_intensity_seconds: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraDailyMetaData : Swift.Decodable {
+  public var start_time: Swift.String?
+  public var end_time: Swift.String?
+  public var upload_type: Swift.Int?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraDeviceData : Swift.Decodable {
+  public var software_version: Swift.String?
+  public var manufacturer: Swift.String?
+  public var serial_number: Swift.String?
+  public var name: Swift.String?
+  public var hardware_version: Swift.String?
+  public var other_devices: [TerraiOS.OtherDeviceData]?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraSwimmingData : Swift.Decodable {
+  public var pool_length_meters: Swift.Double?
+  public var num_laps: Swift.Double?
+  public var num_strokes: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraElevationData : Swift.Decodable {
+  public var gain_actual_meters: Swift.Double?
+  public var avg_meters: Swift.Double?
+  public var loss_actual_meters: Swift.Double?
+  public var max_meters: Swift.Double?
+  public var gain_planned_meters: Swift.Double?
+  public var min_meters: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraDistanceSummaryData : Swift.Decodable {
+  public var floors_climbed: Swift.Double?
+  public var steps: Swift.Double?
+  public var distance_meters: Swift.Double?
+  public var swimming: TerraiOS.TerraSwimmingData?
+  public var elevation: TerraiOS.TerraElevationData?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraCaloriesData : Swift.Decodable {
+  public var net_intake_calories: Swift.Double?
+  public var net_activity_calories: Swift.Double?
+  public var BMR_calories: Swift.Double?
+  public var total_burned_calories: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraDailyData : Swift.Decodable {
+  public var stress_data: TerraiOS.TerraStressData?
+  public var metadata: TerraiOS.TerraDailyMetaData?
+  public var MET_data: TerraiOS.TerraMETData?
+  public var heart_rate_data: TerraiOS.TerraHeartRateData?
+  public var active_durations_data: TerraiOS.TerraActiveDurationsData?
+  public var device_data: TerraiOS.TerraDeviceData?
+  public var distance_data: TerraiOS.TerraDistanceSummaryData?
+  public var calories_data: TerraiOS.TerraCaloriesData?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraOxygenData : Swift.Decodable {
+  public var saturation_percentage: Swift.Double?
+  public var max_volume_ml_per_min_per_kg: Swift.Double?
+  public var saturation_samples: [TerraiOS.OxygenSaturationSample]?
+  public var vo2_samples: [TerraiOS.Vo2Sample]?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraInsulinData : Swift.Decodable {
+  public var insulin_units: Swift.Double?
+  public var insulin_type: Swift.String?
+  public var day_avg_blood_glucose_mg_per_dL: Swift.Double?
+  public var blood_glucose_samples: [TerraiOS.GlucoseDataSample]?
+  public var urine_color: Swift.String?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraBodyMetaData : Swift.Decodable {
+  public var start_time: Swift.String?
+  public var end_time: Swift.String?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraBodyHeartData : Swift.Decodable {
+  public var pulse_wave_velocity_samples: [TerraiOS.PulseVelocitySample]?
+  public var heart_rate_data: TerraiOS.TerraHeartRateData?
+  public var afib_classifications: [TerraiOS.AFibClassificationSample]?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraBloodPressureData : Swift.Decodable {
+  public var blood_pressure_samples: [TerraiOS.BloodPressureSample]?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraHydrationData : Swift.Decodable {
+  public var hydration_level: [TerraiOS.HydrationLevelSample]?
+  public var hydration_kg: [TerraiOS.HydrationMeasurementSample]?
+  public var water_consumption_ml: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraTemperatureData : Swift.Decodable {
+  public var temperature_celsius: [TerraiOS.TemperatureSample]?
+  public var skin_temperature_samples: [TerraiOS.SkinTemperatureSample]?
+  public var body_temperature_samples: [TerraiOS.BodyTemperatureSample]?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraMeasurementData : Swift.Decodable {
+  public var measurements: [TerraiOS.MeasurementDataSample]?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraBodyData : Swift.Decodable {
+  public var metadata: TerraiOS.TerraBodyMetaData?
+  public var oxygen_data: TerraiOS.TerraOxygenData?
+  public var insulin_data: TerraiOS.TerraInsulinData?
+  public var heart_data: TerraiOS.TerraBodyHeartData?
+  public var blood_pressure_data: TerraiOS.TerraBloodPressureData?
+  public var hydration_data: TerraiOS.TerraHydrationData?
+  public var temperature_data: TerraiOS.TerraTemperatureData?
+  public var measurements_data: TerraiOS.TerraMeasurementData?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraEnergyData : Swift.Decodable {
+  public var energy_kilojoules: Swift.Double?
+  public var energy_planned_kilojoules: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraLapData : Swift.Decodable {
+  public var laps: [TerraiOS.LapSample]?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraStrainData : Swift.Decodable {
+  public var strain_level: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraPowerData : Swift.Decodable {
+  public var avg_watts: Swift.Double?
+  public var power_samples: [TerraiOS.PowerSample]?
+  public var max_watts: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraPolyLineMapData : Swift.Decodable {
+  public var summary_polyline: Swift.String?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraMovementData : Swift.Decodable {
+  public var normalized_speed_meters_per_second: Swift.Double?
+  public var avg_torque_newton_meters: Swift.Double?
+  public var avg_pace_minutes_per_kilometer: Swift.Double?
+  public var max_pace_minutes_per_kilometer: Swift.Double?
+  public var max_speed_meters_per_second: Swift.Double?
+  public var avg_cadence_rpm: Swift.Double?
+  public var max_cadence_rpm: Swift.Double?
+  public var avg_velocity_meters_per_second: Swift.Double?
+  public var max_torque_newton_meters: Swift.Double?
+  public var avg_speed_meters_per_second: Swift.Double?
+  public var max_velocity_meters_per_second: Swift.Double?
+  public var cadence_samples: [TerraiOS.CadenceSample]
+  public var speed_samples: [TerraiOS.SpeedSample]
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraActivityMetaData : Swift.Decodable {
+  public var city: Swift.String?
+  public var type: Swift.Int?
+  public var end_time: Swift.String?
+  public var start_time: Swift.String?
+  public var country: Swift.String?
+  public var name: Swift.String?
+  public var summary_id: Swift.String?
+  public var upload_type: Swift.Int?
+  public var state: Swift.String?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraTSSData : Swift.Decodable {
+  public var samples: [TerraiOS.TSSSample]?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraWorkData : Swift.Decodable {
+  public var work_in_kilojoules: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraDistanceDetailedData : Swift.Decodable {
+  public var elevation_samples: [TerraiOS.ElevationSample]?
+  public var distance_samples: [TerraiOS.DistanceSample]?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraDistanceData : Swift.Decodable {
+  public var summary: TerraiOS.TerraDistanceSummaryData?
+  public var detailed: TerraiOS.TerraDistanceDetailedData?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraPositionData : Swift.Decodable {
+  public var start_pos_lat_lng: [Swift.Double]?
+  public var position_samples: [TerraiOS.PositionSample]?
+  public var centre_pos_lat_lng: [Swift.Double]?
+  public var end_pos_lat_lng: [Swift.Double]?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraActivityData : Swift.Decodable {
+  public var energy_data: TerraiOS.TerraEnergyData?
+  public var oxygen_data: TerraiOS.TerraOxygenData?
+  public var MET_data: TerraiOS.TerraMETData?
+  public var strain_data: TerraiOS.TerraStrainData?
+  public var power_data: TerraiOS.TerraPowerData?
+  public var polyline_map_data: TerraiOS.TerraPolyLineMapData?
+  public var heart_rate_data: TerraiOS.TerraHeartRateData?
+  public var active_durations_data: TerraiOS.TerraActiveDurationsData?
+  public var lap_data: TerraiOS.TerraLapData?
+  public var moevement_data: TerraiOS.TerraMovementData?
+  public var metadata: TerraiOS.TerraActivityMetaData?
+  public var TSS_data: TerraiOS.TerraTSSData?
+  public var device_data: TerraiOS.TerraDeviceData?
+  public var work_data: TerraiOS.TerraWorkData?
+  public var distance_data: TerraiOS.TerraDistanceData?
+  public var calories_data: TerraiOS.TerraCaloriesData?
+  public var position_data: TerraiOS.TerraPositionData?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraBreathsData : Swift.Decodable {
+  public var samples: [TerraiOS.BreathSample]?
+  public var end_time: Swift.String?
+  public var start_time: Swift.String?
+  public var max_breaths_per_min: Swift.Double?
+  public var min_breaths_per_min: Swift.Double?
+  public var avg_breaths_per_min: Swift.Double?
+  public var on_demand_reading: Swift.Bool?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraOxygenSaturationData : Swift.Decodable {
+  public var samples: [TerraiOS.SPO2Sample]?
+  public var end_time: Swift.String?
+  public var start_time: Swift.String?
+  public var on_demand_reading: Swift.Bool?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraSnoringData : Swift.Decodable {
+  public var num_snoring_events: Swift.Int?
+  public var samples: [TerraiOS.SnoringSample]?
+  public var end_time: Swift.String?
+  public var start_time: Swift.String?
+  public var total_snoring_duration: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraRespirationData : Swift.Decodable {
+  public var breaths_data: TerraiOS.TerraBreathsData?
+  public var oxygen_saturation_data: TerraiOS.TerraOxygenSaturationData?
+  public var snoring_data: TerraiOS.TerraSnoringData?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraSleepMetaData : Swift.Decodable {
+  public var sleep_efficiency: Swift.Double?
+  public var end_time: Swift.String?
+  public var start_time: Swift.String?
+  public var sleep_duration_planned: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraAwakeDurationData : Swift.Decodable {
+  public var num_out_of_bed_events: Swift.Int?
+  public var num_wakeup_events: Swift.Int?
+  public var duration_after_wakeup_seconds: Swift.Double?
+  public var waso: Swift.Double?
+  public var duration_before_sleeping_seconds: Swift.Double?
+  public var duration_long_interruption_seconds: Swift.Double?
+  public var duration_awake_state_seconds: Swift.Double?
+  public var duration_short_interruption_seconds: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraOtherDurationData : Swift.Decodable {
+  public var duration_unmeasurable_sleep_seconds: Swift.Double?
+  public var duration_in_bed_seconds: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraAsleepDurationData : Swift.Decodable {
+  public var duration_deep_sleep_state_seconds: Swift.Double?
+  public var duration_REM_sleep_state_seconds: Swift.Double?
+  public var duration_asleep_state_seconds: Swift.Double?
+  public var num_REM_events: Swift.Int?
+  public var duration_light_sleep_state_seconds: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraSleepDurationData : Swift.Decodable {
+  public var awake: TerraiOS.TerraAwakeDurationData?
+  public var other: TerraiOS.TerraOtherDurationData?
+  public var asleep: TerraiOS.TerraAsleepDurationData?
+  public var hypnogram_samples: [TerraiOS.HypnogramSample]?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraTemperatureSleepData : Swift.Decodable {
+  public var delta: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraSleepData : Swift.Decodable {
+  public var metadata: TerraiOS.TerraSleepMetaData?
+  public var sleep_durations_data: TerraiOS.TerraSleepDurationData?
+  public var temperature_data: TerraiOS.TerraTemperatureData?
+  public var respiration_data: TerraiOS.TerraRespirationData?
+  public var heart_rate_data: TerraiOS.TerraHeartRateData?
+  public init(from decoder: Swift.Decoder) throws
+}
+public func connectTerra(dev_id: Swift.String, xAPIKey: Swift.String, referenceId: Swift.String? = nil, resource: Swift.String) -> TerraiOS.TerraAuthResponse?
+public enum Connections {
+  case FREESTYLE_LIBRE
+  case APPLE_HEALTH
+  public static func == (a: TerraiOS.Connections, b: TerraiOS.Connections) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum Permissions {
+  case DAILY, BODY, SLEEP, ACTIVITY, ATHLETE, NUTRITION
+  public static func == (a: TerraiOS.Permissions, b: TerraiOS.Permissions) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct authenticateUserPayload : Swift.Decodable {
+  public var status: Swift.String?
+  public var auth_url: Swift.String?
+  public var user_id: Swift.String?
+  public var message: Swift.String?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct deauthenticateUserPayload : Swift.Decodable {
+  public var status: Swift.String?
+  public var message: Swift.String?
+  public init(from decoder: Swift.Decoder) throws
+}
+public class TerraAuthClient {
+  public init(dev_id: Swift.String, xAPIKey: Swift.String)
+  public func authenticateUser(resource: Swift.String) -> TerraiOS.authenticateUserPayload?
+  public func deauthenticateUser(user_id: Swift.String) -> TerraiOS.deauthenticateUserPayload?
+  @objc deinit
+}
+public struct TerraAuthResponse : Swift.Decodable {
+  public var status: Swift.String
+  public var user_id: Swift.String?
+  public var reference_id: Swift.String?
+  public var message: Swift.String?
+  public init(from decoder: Swift.Decoder) throws
+}
+public func disconnectTerra(dev_id: Swift.String, xAPIKey: Swift.String, user_id: Swift.String)
+public class AppleHealth {
+  final public let user_id: Swift.String?
+  @available(iOS 10.0, *)
+  public init(dev_id: Swift.String, xAPIKey: Swift.String, user_id: Swift.String? = nil, auto: Swift.Bool = true, bodySleepDailyInterval: Swift.Double = 60*60*8, readTypes: Swift.Set<HealthKit.HKObjectType> = Set([HKObjectType.workoutType(),
+                                                     HKObjectType.activitySummaryType(),
+                                                     HKObjectType.quantityType(forIdentifier:.activeEnergyBurned)!,
+                                                     HKQuantityType.quantityType(forIdentifier: .stepCount)!,
+                                                     HKObjectType.quantityType(forIdentifier: .heartRate)!,
+                                                     HKObjectType.quantityType(forIdentifier: .heartRateVariabilitySDNN)!,
+                                                     HKObjectType.quantityType(forIdentifier: .vo2Max)!,
+                                                     HKObjectType.quantityType(forIdentifier: .height)!,
+                                                     HKObjectType.quantityType(forIdentifier: .appleExerciseTime)!,
+                                                     HKObjectType.quantityType(forIdentifier: .bodyMass)!,
+                                                     HKObjectType.quantityType(forIdentifier: .flightsClimbed)!,
+                                                     HKObjectType.quantityType(forIdentifier: .bodyMassIndex)!,
+                                                     HKObjectType.quantityType(forIdentifier: .bodyFatPercentage)!,
+                                                     HKObjectType.quantityType(forIdentifier: .distanceSwimming)!,
+                                                     HKObjectType.quantityType(forIdentifier: .distanceCycling)!,
+                                                     HKObjectType.quantityType(forIdentifier: .distanceWalkingRunning)!,
+                                                     HKObjectType.characteristicType(forIdentifier: .biologicalSex)!,
+                                                     HKObjectType.characteristicType(forIdentifier: .dateOfBirth)!,
+                                                     HKObjectType.quantityType(forIdentifier: .basalEnergyBurned)!,
+                                                     HKObjectType.quantityType(forIdentifier: .swimmingStrokeCount)!,
+                                                     HKObjectType.quantityType(forIdentifier: .restingHeartRate)!,
+                                                     HKObjectType.quantityType(forIdentifier: .bloodPressureDiastolic)!,
+                                                     HKObjectType.quantityType(forIdentifier: .bloodPressureSystolic)!,
+                                                     HKObjectType.quantityType(forIdentifier: .bodyTemperature)!,
+                                                     HKObjectType.quantityType(forIdentifier: .leanBodyMass)!,
+                                                     HKObjectType.quantityType(forIdentifier: .oxygenSaturation)!,
+                                                     HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!,
+                                                     HKObjectType.quantityType(forIdentifier: .respiratoryRate)!,
+                                                     HKObjectType.quantityType(forIdentifier: .dietarySodium)!,
+                                                     HKObjectType.quantityType(forIdentifier: .dietaryProtein)!,
+                                                     HKObjectType.quantityType(forIdentifier: .dietaryCarbohydrates)!,
+                                                     HKObjectType.quantityType(forIdentifier: .dietaryFiber)!,
+                                                     HKObjectType.quantityType(forIdentifier: .dietaryCholesterol)!,
+                                                     HKObjectType.quantityType(forIdentifier: .dietaryFatTotal)!,
+                                                     HKObjectType.quantityType(forIdentifier: .dietarySugar)!,
+                                                     HKObjectType.quantityType(forIdentifier: .dietaryVitaminC)!,
+                                                     HKObjectType.quantityType(forIdentifier: .dietaryVitaminA)!,
+                                                     HKObjectType.quantityType(forIdentifier: .dietaryEnergyConsumed)!,
+                                                     HKObjectType.quantityType(forIdentifier: .dietaryWater)!,
+                                                     HKObjectType.quantityType(forIdentifier: .bloodGlucose)!,
+                                                     HKSeriesType.workoutRoute()
+                                                    ]), shareType: Swift.Set<HealthKit.HKSampleType> = Set(), enableHr: Swift.Bool = false, completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in }) throws
+  public func disconnectFromTerra(user_id: Swift.String)
+  public func getAthlete(completion: @escaping (Swift.Bool, TerraiOS.TerraAthleteData?) -> Swift.Void = {(success, _) -> Void in})
+  public func getDaily(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraDailyData]?) -> Swift.Void = {(success, _) -> Void in})
+  public func getBody(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraBodyData]) -> Swift.Void = {(success, _) -> Void in})
+  public func getSleep(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraSleepData]) -> Swift.Void = {(success, _) -> Void in})
+  public func getNutrition(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraNutritionData]) -> Swift.Void = {(success, _) -> Void in})
+  public func getWorkout(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraActivityData]) -> Swift.Void = {(success, _) -> Void in})
+  @objc deinit
+}
+public struct Reading {
+  public let log: Swift.String
+  public let sensorData: TerraiOS.SensorData?
+}
+extension Foundation.Date {
+  public static func mondayAt12AM() -> Foundation.Date
+  public static func todayAt12AM(date: Foundation.Date) -> Foundation.Date
+  public static func convertToUTC(dateToConvert: Foundation.Date) -> Foundation.Date
+}
+extension Foundation.Date : Swift.Strideable {
+  public func distance(to other: Foundation.Date) -> Foundation.TimeInterval
+  public func advanced(by n: Foundation.TimeInterval) -> Foundation.Date
+}
+extension Swift.Optional {
+  public var optional: Wrapped? {
+    get
+  }
+}
+extension Foundation.Date {
+  public func isBetween(_ date1: Foundation.Date, and date2: Foundation.Date) -> Swift.Bool
+  public func rounded(on amount: Swift.Int, _ component: Foundation.Calendar.Component) -> Foundation.Date
+  public func floorAllComponents(before component: Foundation.Calendar.Component) -> Foundation.Date
+  public static var LocaleWantsAMPM: Swift.Bool {
+    get
+  }
+  public func toMillisecondsAsInt64() -> Swift.Int64
+}
+public struct TerraMenstruationDetails : Swift.Decodable {
+  public var period_start_date: Swift.String?
+  public var day_in_cycle: Swift.Double?
+  public var period_length_in_days: Swift.Double?
+  public var current_phase: Swift.Double?
+  public var length_of_current_phase_in_day: Swift.Double?
+  public var days_until_next_phase: Swift.Double?
+  public var predicted_cycle_length_in_days: Swift.Double?
+  public var is_predicted_cycle: Swift.String?
+  public var cycle_length_in_days: Swift.Double?
+  public var last_updated_time: Swift.String?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraMenstruationMetadata : Swift.Decodable {
+  public var start_time: Swift.String?
+  public var end_time: Swift.String?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraMenstruationData : Swift.Decodable {
+  public var metadata: TerraiOS.TerraMenstruationMetadata?
+  public var menstruation_data: TerraiOS.TerraMenstruationDetails?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraMacrosModel : Swift.Decodable {
+  public var sodium_mg: Swift.Double?
+  public var protein_g: Swift.Double?
+  public var carbohydrates_g: Swift.Double?
+  public var fiber_g: Swift.Double?
+  public var cholesterol_mg: Swift.Double?
+  public var fat_g: Swift.Double?
+  public var sugar_g: Swift.Double?
+  public var calories: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraMicrosModel : Swift.Decodable {
+  public var biotin_mg: Swift.Double?
+  public var caffeine_mg: Swift.Double?
+  public var chloride_mg: Swift.Double?
+  public var chromium_mg: Swift.Double?
+  public var copper_mg: Swift.Double?
+  public var calcium_mg: Swift.Double?
+  public var folate_mg: Swift.Double?
+  public var folic_acid_mg: Swift.Double?
+  public var iodine_mg: Swift.Double?
+  public var iron_mg: Swift.Double?
+  public var magnesium_mg: Swift.Double?
+  public var manganese_mg: Swift.Double?
+  public var molybdenum_mg: Swift.Double?
+  public var niacin_mg: Swift.Double?
+  public var pantothenic_acid_mg: Swift.Double?
+  public var phosphorus_mg: Swift.Double?
+  public var potassium_mg: Swift.Double?
+  public var riboflavin_mg: Swift.Double?
+  public var selenium_mg: Swift.Double?
+  public var thiamin_mg: Swift.Double?
+  public var vitamin_A_mg: Swift.Double?
+  public var vitamin_B12_mg: Swift.Double?
+  public var vitamin_B6_mg: Swift.Double?
+  public var vitamin_C_mg: Swift.Double?
+  public var vitamin_D_mg: Swift.Double?
+  public var vitamin_E_mg: Swift.Double?
+  public var vitamin_K_mg: Swift.Double?
+  public var zinc_mg: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraQuantityModel : Swift.Decodable {
+  public var unit: Swift.Int?
+  public var amount: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraMealData : Swift.Decodable {
+  public var quantity: TerraiOS.TerraQuantityModel?
+  public var name: Swift.String?
+  public var macros: TerraiOS.TerraMacrosModel?
+  public var micros: TerraiOS.TerraMicrosModel?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraNutritonMetaData : Swift.Decodable {
+  public var start_time: Swift.String?
+  public var end_time: Swift.String?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraNutritonSummary : Swift.Decodable {
+  public var macros: TerraiOS.TerraMacrosModel?
+  public var micros: TerraiOS.TerraMicrosModel?
+  public var water_ml: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraNutritionData : Swift.Decodable {
+  public var meals: [TerraiOS.TerraMealData]?
+  public var summary: TerraiOS.TerraNutritonSummary?
+  public var metadata: TerraiOS.TerraNutritonMetaData?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraUserModel : Swift.Decodable {
+  public var last_webhook_update: Swift.String?
+  public var provider: Swift.String?
+  public var user_id: Swift.String?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraBodyDataPayloadModel : Swift.Decodable {
+  public var user: TerraiOS.TerraUserModel
+  public var data: [TerraiOS.TerraBodyData]?
+  public var message: Swift.String?
+  public var reference: Swift.String?
+  public var type: Swift.String?
+  public var status: Swift.String
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraAthleteDataPayloadModel : Swift.Decodable {
+  public var user: TerraiOS.TerraUserModel
+  public var data: [TerraiOS.TerraAthleteData]?
+  public var message: Swift.String?
+  public var reference: Swift.String?
+  public var type: Swift.String?
+  public var status: Swift.String
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraActivityDataPayloadModel : Swift.Decodable {
+  public var user: TerraiOS.TerraUserModel
+  public var data: [TerraiOS.TerraActivityData]?
+  public var message: Swift.String?
+  public var reference: Swift.String?
+  public var type: Swift.String?
+  public var status: Swift.String
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraSleepDataPayloadModel : Swift.Decodable {
+  public var user: TerraiOS.TerraUserModel
+  public var data: [TerraiOS.TerraSleepData]?
+  public var message: Swift.String?
+  public var reference: Swift.String?
+  public var type: Swift.String?
+  public var status: Swift.String
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraDailyDataPayloadModel : Swift.Decodable {
+  public var user: TerraiOS.TerraUserModel
+  public var data: [TerraiOS.TerraDailyData]?
+  public var message: Swift.String?
+  public var reference: Swift.String?
+  public var type: Swift.String?
+  public var status: Swift.String
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraMenstruationDataPayloadModel : Swift.Decodable {
+  public var user: TerraiOS.TerraUserModel
+  public var data: [TerraiOS.TerraMenstruationData]?
+  public var message: Swift.String?
+  public var reference: Swift.String?
+  public var type: Swift.String?
+  public var status: Swift.String
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraNutritionDataPayloadModel : Swift.Decodable {
+  public var user: TerraiOS.TerraUserModel
+  public var data: [TerraiOS.TerraNutritionData]?
+  public var message: Swift.String?
+  public var reference: Swift.String?
+  public var type: Swift.String?
+  public var status: Swift.String
+  public init(from decoder: Swift.Decoder) throws
+}
+public class TerraClient {
+  public init(user_id: Swift.String, dev_id: Swift.String, xAPIKey: Swift.String)
+  public func getActivity(startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true) -> TerraiOS.TerraActivityDataPayloadModel?
+  public func getDaily(startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true) -> TerraiOS.TerraDailyDataPayloadModel?
+  public func getBody(startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true) -> TerraiOS.TerraBodyDataPayloadModel?
+  public func getAthlete(startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true) -> TerraiOS.TerraAthleteDataPayloadModel?
+  public func getMenstruation(startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true) -> TerraiOS.TerraMenstruationDataPayloadModel?
+  public func getSleep(startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true) -> TerraiOS.TerraSleepDataPayloadModel?
+  public func getNutrition(startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true) -> TerraiOS.TerraSleepDataPayloadModel?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+public class LibreToolsViewModel : Combine.ObservableObject {
+  public func readHistory(completion: @escaping (TerraiOS.SensorData?) -> Swift.Void)
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+public struct TerraAthleteData : Swift.Decodable {
+  public var first_name: Swift.String?
+  public var last_name: Swift.String?
+  public var gender: Swift.String?
+  public var sex: Swift.String?
+  public var date_of_birth: Swift.String?
+  public var bio: Swift.String?
+  public var email: Swift.String?
+  public var city: Swift.String?
+  public var state: Swift.String?
+  public var country: Swift.String?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ActivityLevelSample : Swift.Decodable {
+  public var timestamp: Swift.String
+  public var activity_level: Swift.Int
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct BreathSample : Swift.Decodable {
+  public var timestamp: Swift.String
+  public var breaths_per_min: Swift.Double
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct CadenceSample : Swift.Decodable {
+  public var timestamp: Swift.String
+  public var cadence_rpm: Swift.Double
+  public var timer_duration_seconds: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SpeedSample : Swift.Decodable {
+  public var timestamp: Swift.String
+  public var speed_meters_per_seconds: Swift.Double?
+  public var timer_duration_seconds: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct LapSample : Swift.Decodable {
+  public var start_time: Swift.String
+  public var distsnce_meters: Swift.Double?
+  public var calories: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct DistanceSample : Swift.Decodable {
+  public var timestamp: Swift.String
+  public var distance_meters: Swift.Double
+  public var timer_duration_seconds: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ElevationSample : Swift.Decodable {
+  public var timestamp: Swift.String
+  public var elev_meters: Swift.Double
+  public var timer_duration_seconds: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct GlucoseDataSample : Swift.Decodable {
+  public var timestamp: Swift.String
+  public var blood_glucose_mg_per_dL: Swift.Double?
+  public var glucose_level_flag: Swift.Int
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct HeartRateSample : Swift.Decodable {
+  public var timestamp: Swift.String
+  public var bpm: Swift.Double
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct HeartRatesVariabilitySampleSDNN : Swift.Decodable {
+  public var hrv_sdnn: Swift.Double
+  public var timestamp: Swift.String
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct HeartRatesVariabilitySampleRMSSD : Swift.Decodable {
+  public var hrv_rmssd: Swift.Double
+  public var timestamp: Swift.String
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct HypnogramSample : Swift.Decodable {
+  public var level: Swift.Int
+  public var timestamp: Swift.String
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct METSample : Swift.Decodable {
+  public var level: Swift.Double
+  public var timestamp: Swift.String
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct OxygenSaturationSample : Swift.Decodable {
+  public var percentage: Swift.Double
+  public var timestamp: Swift.String
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct PositionSample : Swift.Decodable {
+  public var timestamp: Swift.String
+  public var coords_lat_lng: [Swift.Double]
+  public var timer_duration_seconds: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct PowerSample : Swift.Decodable {
+  public var timestamp: Swift.String
+  public var watts: Swift.Double
+  public var timer_duration_seconds: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SPO2Sample : Swift.Decodable {
+  public var timestamp: Swift.String
+  public var percentage: Swift.Double
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SnoringSample : Swift.Decodable {
+  public var duration: Swift.Double
+  public var timestamp: Swift.String
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct StressSample : Swift.Decodable {
+  public var level: Swift.Int
+  public var timestamp: Swift.String
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TSSSample : Swift.Decodable {
+  public var intensity_factor_planned: Swift.Double?
+  public var intensity_factor_actual: Swift.Double?
+  public var method: Swift.String?
+  public var planned: Swift.Double?
+  public var actual: Swift.Double?
+  public var normalized_power_watts: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct OtherDeviceData : Swift.Decodable {
+  public var software_version: Swift.String?
+  public var manufacturer: Swift.String?
+  public var serial_number: Swift.String?
+  public var name: Swift.String?
+  public var hardware_version: Swift.String?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct BloodPressureSample : Swift.Decodable {
+  public var timestamp: Swift.String?
+  public var diastolic_bp: Swift.Double?
+  public var systolic_bp: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct MeasurementDataSample : Swift.Decodable {
+  public var measurement_time: Swift.String?
+  public var fat_percentage: Swift.Double?
+  public var BMI: Swift.Double?
+  public var muscle_mass_g: Swift.Double?
+  public var skin_fold_mm: Swift.Double?
+  public var BMR: Swift.Double?
+  public var height_cm: Swift.Double?
+  public var estimated_fitness_age: Swift.Double?
+  public var bone_mass_g: Swift.Double?
+  public var water_percentage: Swift.Double?
+  public var RMR: Swift.Double?
+  public var weight_kg: Swift.Double?
+  public var lean_mass_g: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct BodyTemperatureSample : Swift.Decodable {
+  public var timestamp: Swift.String?
+  public var body_temperature_celsius: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SkinTemperatureSample : Swift.Decodable {
+  public var timestamp: Swift.String?
+  public var skin_temperature_celsius: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TemperatureSample : Swift.Decodable {
+  public var timestamp: Swift.String?
+  public var temperature_celsius: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct HydrationLevelSample : Swift.Decodable {
+  public var timestamp: Swift.String?
+  public var hydration_level: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct HydrationMeasurementSample : Swift.Decodable {
+  public var timestamp: Swift.String?
+  public var hydration_kg: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct Vo2MaxSample : Swift.Decodable {
+  public var timestamp: Swift.String?
+  public var max_volume_ml_per_min_per_kg: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct PulseVelocitySample : Swift.Decodable {
+  public var timestamp: Swift.String?
+  public var pulse_wave_velocity_meters_per_second: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct AFibClassificationSample : Swift.Decodable {
+  public var timestamp: Swift.String?
+  public var afib_classification: Swift.Int?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct Vo2Sample : Swift.Decodable {
+  public var timestamp: Swift.String?
+  public var max_volume_ml_per_min_per_kg: Swift.Double?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SensorData {
+  public var patchUid: Swift.String?
+  public init?(uuid: Foundation.Data, bytes: [Swift.UInt8], date: Foundation.Date = Date(), patchInfo: Swift.String?)
+}
+extension TerraiOS.SensorData {
+  public var history: [Swift.UInt8] {
+    get
+  }
+  public var trend: [Swift.UInt8] {
+    get
+  }
+  public var ageSeconds: Swift.Int {
+    get
+  }
+  public var glucoseHistory: [Swift.UInt16] {
+    get
+  }
+  public var glucoseTrend: [Swift.UInt16] {
+    get
+  }
+  public func rawGlucose(_ record: Swift.UInt16) -> Swift.UInt16
+}
+extension TerraiOS.Resource : Swift.Equatable {}
+extension TerraiOS.Resource : Swift.Hashable {}
+extension TerraiOS.LibreSensorState : Swift.Equatable {}
+extension TerraiOS.LibreSensorState : Swift.Hashable {}
+extension TerraiOS.Connections : Swift.Equatable {}
+extension TerraiOS.Connections : Swift.Hashable {}
+extension TerraiOS.Permissions : Swift.Equatable {}
+extension TerraiOS.Permissions : Swift.Hashable {}
