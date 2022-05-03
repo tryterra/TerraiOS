@@ -914,6 +914,9 @@ extension TerraiOS.SensorData {
   public var ageSeconds: Swift.Int {
     get
   }
+  public var type: Swift.String {
+    get
+  }
   public var glucoseHistory: [Swift.UInt16] {
     get
   }
