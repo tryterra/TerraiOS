@@ -65,48 +65,48 @@ However, you may also obtain data manually.
 ### Body Data
 
 ```swift
-terra.getBody(type: Resource, startDate: Date, endDate: Date)
+terra.getBody(type: Connections, startDate: Date, endDate: Date)
 ```
 
 ### Activity Data
 
 ```swift
-terra.getActivity(type: Resource, startDate: Date, endDate: Date)
+terra.getActivity(type: Connections, startDate: Date, endDate: Date)
 ```
 
 
 ### Daily Data
 
 ```swift
-terra.getBody(type: Resource, startDate: Date, endDate: Date)
+terra.getBody(type: Connections, startDate: Date, endDate: Date)
 ```
 
 
 ### Sleep Data
 
 ```swift
-terra.getSleep(type: Resource, startDate: Date, endDate: Date)
+terra.getSleep(type: Connections, startDate: Date, endDate: Date)
 ```
 
 
 ### Nutrition Data
 
 ```swift
-terra.getNutrition(type: Resource, startDate: Date, endDate: Date)
+terra.getNutrition(type: Connections, startDate: Date, endDate: Date)
 ```
 
 ### Athlete Data
 
 ```swift
-terra.getAthlete(type: Resource)
+terra.getAthlete(type: Connections)
 ```
 
-The type argument takes a `Resource` enum, such as `Resource.APPLE_HEALTH`
+These functions that take `Date` as an argument, also takes `Time Interval` (Unix timestamp starting from 1st January 1970)
 
 The data will always be sent to your webhook. However if you require the data on the spot, you may get it from the completion callback function as follows:
 
 ```swift
-terra.getActivity(type: Resource, startDate: Date, endDate: Date){success, data in 
+terra.getActivity(type: Connections, startDate: Date, endDate: Date){success, data in 
     //success -> A boolean to signify the function completed successfully
     // data -> A data array corresponding to our data models
 }
@@ -127,7 +127,7 @@ try! terra.readGlucoseData()
 To deauthorize a user, all you have to do is run the following:
 
 ```swift
-terra.disconnectTerra(Resource)
+terra.disconnectTerra(Connections)
 ```
 
 ## Connect to Terra's Rest API within this SDK
@@ -145,10 +145,10 @@ Using this client, you may make requests to endpoints such as `/activity`, `/bod
 To do this, you simply have to call:
 
 ```swift
-terra.getDaily(startDate: "TIME INTERVAL", endDate: "TIME INTERVAL" , toWebhook: true)!
+terra.getDaily(startDate: Date, endDate: Date , toWebhook: true)!
 ```
 
-You can specify a UNIX TIMESTAMP in Swift as: `Date.timeIntervalSince1970`. `toWebhook` is default set to true.
+`toWebhook` is default set to true.
 
 Simiarly, you can get Activity, Body, and Sleep using `getActivity()`, `getBody()`, and `getSleep()` respectively. They all use the same arguments. 
 
@@ -158,8 +158,10 @@ These methods return a payload corresponding to our data models and HTTP respons
 For example:
 
 ```swift
-let activityData = terra.getActivity(startDate: startDate.timeIntervalSince1970, endDate: endDate.timeIntervalSince1970, toWebhook: false)!
+let activityData = terra.getActivity(startDate: startDate, endDate: endDate, toWebhook: false)!
 ```
+These functions that take `Date` as an argument, also takes `Time Interval` (Unix timestamp starting from 1st January 1970)
+
 In this case you can access the user data by accessing `activityData.user`, user_id by: `activityData.user.user_id` and the data array by `activityData.data`. This is similar to the structure returned by our [Payloads Models](https://docs.tryterra.co/data-models-mark-ii)
 
 ```json
@@ -197,10 +199,6 @@ You can then deauthenticate a user by:
 terraAuthClient.deauthenticateUser(user_id: "USER_ID")
 
 ```
-
-
-
-
 
 
 
