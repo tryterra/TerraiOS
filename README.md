@@ -55,6 +55,15 @@ let terra: Terra = try! Terra(dev_id: <YOUR DEV ID>,
 - connections: A set of `Connections` you wish to connect through Terra with
 - permissions: A set of `Permissions` you wish to request permissions (from Health Kit) from. 
 
+## Checking Authentication
+You may now check if a user has authenticated with their device to a specific `Connection`:
+
+```swift
+terra.checkAuthentication(connection: Connections)
+```
+This would return a `Boolean` that signifies if the device is registered or not. 
+
+`Connections` is an enum currently taking: `.APPLE_HEALTH` and `.FREESTYLE_LIBRE`
 
 ## Getting Data
 
