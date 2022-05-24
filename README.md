@@ -54,6 +54,7 @@ let terra: Terra = try! Terra(dev_id: <YOUR DEV ID>,
 - bodySleepDailyInterval: The scheduler interval for body, sleep, daily data in seconds.
 - connections: A set of `Connections` you wish to connect through Terra with
 - permissions: A set of `Permissions` you wish to request permissions (from Health Kit) from. 
+- (Optional) customReadTypes: This is defaulted as an empty `Set`. If you want to make a more granular permissions request, you may import HeatlhKit and provide this argument with a Set of `HKObjectType`s. For example: `HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!`. 
 
 ## Checking Authentication
 You may now check if a user has authenticated with their device to a specific `Connection`:
