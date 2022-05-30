@@ -43,9 +43,12 @@ public enum Opcode {
 public class Terra {
   public var authResponseApple: TerraiOS.TerraAuthResponse?
   public var authResponseFSL: TerraiOS.TerraAuthResponse?
-  public init(devId: Swift.String, xAPIKey: Swift.String, referenceId: Swift.String? = nil, bodySleepDailyInterval: Swift.Double = 60*60*8, connections: Swift.Set<TerraiOS.Connections>, permissions: Swift.Set<TerraiOS.Permissions>, customReadTypes: Swift.Set<HealthKit.HKObjectType> = Set([]), completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in }) throws
+  public init(devId: Swift.String, xAPIKey: Swift.String, referenceId: Swift.String? = nil, bodySleepDailyInterval: Swift.Double = 60*60*8, connections: Swift.Set<TerraiOS.Connections>, permissions: Swift.Set<TerraiOS.Permissions>, customReadTypes: Swift.Set<HealthKit.HKObjectType> = Set([]), writePermissions: Swift.Set<TerraiOS.Permissions> = Set([]), completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in }) throws
+  public func initConnection(type: TerraiOS.Connections, completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in})
   public func checkAuthentication(connection: TerraiOS.Connections) -> Swift.Bool
   public func readGlucoseData() throws
+  public func activateSensor() throws
+  public func postNutrition(type: TerraiOS.Connections, payload: TerraiOS.TerraNutritionData, completion: @escaping (Swift.Bool) -> Swift.Void = {success -> Void in })
   public func getAthlete(type: TerraiOS.Connections, completion: @escaping (Swift.Bool, TerraiOS.TerraAthleteData?) -> Swift.Void = {(success, _) -> Void in })
   public func getDaily(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, completion: @escaping (Swift.Bool, [TerraiOS.TerraDailyData]?) -> Swift.Void = {(success, _) -> Void in})
   public func getDaily(type: TerraiOS.Connections, startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraDailyData]?) -> Swift.Void = {(success, _) -> Void in})
@@ -518,8 +521,9 @@ public class AppleHealth {
                                                      HKObjectType.quantityType(forIdentifier: .dietaryWater)!,
                                                      HKObjectType.quantityType(forIdentifier: .bloodGlucose)!,
                                                      HKSeriesType.workoutRoute()
-                                                    ]), shareType: Swift.Set<HealthKit.HKSampleType> = Set(), enableHr: Swift.Bool = false, completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in }) throws
+                                                    ]), shareType: Swift.Set<HealthKit.HKSampleType> = Set([]), enableHr: Swift.Bool = false, completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in }) throws
   public func disconnectFromTerra(user_id: Swift.String)
+  public func postNutrition(_ payload: TerraiOS.TerraNutritionData, completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in})
   public func getAthlete(completion: @escaping (Swift.Bool, TerraiOS.TerraAthleteData?) -> Swift.Void = {(success, _) -> Void in})
   public func getDaily(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraDailyData]?) -> Swift.Void = {(success, _) -> Void in})
   public func getBody(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraBodyData]) -> Swift.Void = {(success, _) -> Void in})
@@ -594,6 +598,7 @@ public struct TerraMenstruationData : Swift.Decodable {
   public init(from decoder: Swift.Decoder) throws
 }
 public struct TerraMacrosModel : Swift.Decodable {
+  public init(sodium_mg: Swift.Double? = nil, protein_g: Swift.Double? = nil, carbohydrates_g: Swift.Double? = nil, fiber_g: Swift.Double? = nil, cholesterol_mg: Swift.Double? = nil, fat_g: Swift.Double? = nil, sugar_g: Swift.Double? = nil, calories: Swift.Double? = nil, alcohol_g: Swift.Double? = nil)
   public var sodium_mg: Swift.Double?
   public var protein_g: Swift.Double?
   public var carbohydrates_g: Swift.Double?
@@ -602,9 +607,11 @@ public struct TerraMacrosModel : Swift.Decodable {
   public var fat_g: Swift.Double?
   public var sugar_g: Swift.Double?
   public var calories: Swift.Double?
+  public var alcohol_g: Swift.Double?
   public init(from decoder: Swift.Decoder) throws
 }
 public struct TerraMicrosModel : Swift.Decodable {
+  public init(biotin_mg: Swift.Double? = nil, caffeine_mg: Swift.Double? = nil, chloride_mg: Swift.Double? = nil, chromium_mg: Swift.Double? = nil, copper_mg: Swift.Double? = nil, calcium_mg: Swift.Double? = nil, folate_mg: Swift.Double? = nil, folic_acid_mg: Swift.Double? = nil, iodine_mg: Swift.Double? = nil, iron_mg: Swift.Double? = nil, magnesium_mg: Swift.Double? = nil, manganese_mg: Swift.Double? = nil, molybdenum_mg: Swift.Double? = nil, niacin_mg: Swift.Double? = nil, pantothenic_acid_mg: Swift.Double? = nil, phosphorus_mg: Swift.Double? = nil, potassium_mg: Swift.Double? = nil, riboflavin_mg: Swift.Double? = nil, selenium_mg: Swift.Double? = nil, thiamin_mg: Swift.Double? = nil, vitamin_A_mg: Swift.Double? = nil, vitamin_B12_mg: Swift.Double? = nil, vitamin_B6_mg: Swift.Double? = nil, vitamin_C_mg: Swift.Double? = nil, vitamin_D_mg: Swift.Double? = nil, vitamin_E_mg: Swift.Double? = nil, vitamin_K_mg: Swift.Double? = nil, zinc_mg: Swift.Double? = nil, saturated_fat_g: Swift.Double? = nil, monounsaturated_fat_g: Swift.Double? = nil, polyunsaturated_fat_g: Swift.Double? = nil)
   public var biotin_mg: Swift.Double?
   public var caffeine_mg: Swift.Double?
   public var chloride_mg: Swift.Double?
@@ -618,11 +625,14 @@ public struct TerraMicrosModel : Swift.Decodable {
   public var magnesium_mg: Swift.Double?
   public var manganese_mg: Swift.Double?
   public var molybdenum_mg: Swift.Double?
+  public var monounsaturated_fat_g: Swift.Double?
   public var niacin_mg: Swift.Double?
   public var pantothenic_acid_mg: Swift.Double?
   public var phosphorus_mg: Swift.Double?
   public var potassium_mg: Swift.Double?
+  public var polyunsaturated_fat_g: Swift.Double?
   public var riboflavin_mg: Swift.Double?
+  public var saturated_fat_g: Swift.Double?
   public var selenium_mg: Swift.Double?
   public var thiamin_mg: Swift.Double?
   public var vitamin_A_mg: Swift.Double?
@@ -636,11 +646,13 @@ public struct TerraMicrosModel : Swift.Decodable {
   public init(from decoder: Swift.Decoder) throws
 }
 public struct TerraQuantityModel : Swift.Decodable {
+  public init(unit: Swift.Int? = nil, amount: Swift.Double? = nil)
   public var unit: Swift.Int?
   public var amount: Swift.Double?
   public init(from decoder: Swift.Decoder) throws
 }
 public struct TerraMealData : Swift.Decodable {
+  public init(quantity: TerraiOS.TerraQuantityModel? = TerraQuantityModel(), name: Swift.String? = nil, macros: TerraiOS.TerraMacrosModel? = TerraMacrosModel(), micros: TerraiOS.TerraMicrosModel? = TerraMicrosModel())
   public var quantity: TerraiOS.TerraQuantityModel?
   public var name: Swift.String?
   public var macros: TerraiOS.TerraMacrosModel?
@@ -648,17 +660,20 @@ public struct TerraMealData : Swift.Decodable {
   public init(from decoder: Swift.Decoder) throws
 }
 public struct TerraNutritonMetaData : Swift.Decodable {
+  public init(start_time: Swift.String? = nil, end_time: Swift.String? = nil)
   public var start_time: Swift.String?
   public var end_time: Swift.String?
   public init(from decoder: Swift.Decoder) throws
 }
 public struct TerraNutritonSummary : Swift.Decodable {
+  public init(macros: TerraiOS.TerraMacrosModel? = TerraMacrosModel(), micros: TerraiOS.TerraMicrosModel? = TerraMicrosModel(), water_ml: Swift.Double? = nil)
   public var macros: TerraiOS.TerraMacrosModel?
   public var micros: TerraiOS.TerraMicrosModel?
   public var water_ml: Swift.Double?
   public init(from decoder: Swift.Decoder) throws
 }
 public struct TerraNutritionData : Swift.Decodable {
+  public init(meals: [TerraiOS.TerraMealData]? = [TerraMealData](), summary: TerraiOS.TerraNutritonSummary? = TerraNutritonSummary(), metadata: TerraiOS.TerraNutritonMetaData? = TerraNutritonMetaData())
   public var meals: [TerraiOS.TerraMealData]?
   public var summary: TerraiOS.TerraNutritonSummary?
   public var metadata: TerraiOS.TerraNutritonMetaData?
@@ -770,6 +785,7 @@ public struct TerraAthleteData : Swift.Decodable {
   public var country: Swift.String?
   public init(from decoder: Swift.Decoder) throws
 }
+public func convertISOFormatStringToDateObject(_ ts: Swift.String?) -> Foundation.Date?
 public struct ActivityLevelSample : Swift.Decodable {
   public var timestamp: Swift.String
   public var activity_level: Swift.Int
