@@ -35,11 +35,10 @@ To use this framework, you will need to be acquainted with a class called `Terra
 You can create one as such:
 
 ```swift
-let terra: Terra = try! Terra(dev_id: <YOUR DEV ID>,
-                         x_api_key: <YOUR X API KEY>, 
-                         reference_id: <YOUR USER REFERENCE ID>, 
+let terra: Terra = try! Terra(devId: <YOUR DEV ID>,
+                         xAPIKey: <YOUR X API KEY>, 
+                         referenceId: <YOUR USER REFERENCE ID>, 
                          bodySleepDailyInterval: 60, 
-                         connections: Set([Connections.APPLE_HEALTH, Connections.FREESTYLE_LIBRE]), 
                          permissions: Set([Permissions.DAILY, Permissions.SLEEP, Permissions.ATHLETE])){success in 
                          // success : Boolean ->  to detect when the initialisation is done.
                          // Can leave this callback empty if not needed, but this allows for you to know when the initialisation is complete. 
@@ -48,13 +47,26 @@ let terra: Terra = try! Terra(dev_id: <YOUR DEV ID>,
 
 **Please note this initialisation can fail by throwing the following errors: TerraError.HealthKitUnavailable, TerraError.UnexpectedError. Catch them and handle appropriately instead of forcing try!**
 
-- dev_id : This is your dev_id given by Terra
-- x_api_key : This is your x_api_key associated to the dev_id given by Terra
-- reference_id: This is used by you to identify a user from your server to a terra user
+- devId : This is your dev_id given by Terra
+- xAPIKey : This is your x_api_key associated to the dev_id given by Terra
+- referenceId: This is used by you to identify a user from your server to a terra user
 - bodySleepDailyInterval: The scheduler interval for body, sleep, daily data in seconds.
-- connections: A set of `Connections` you wish to connect through Terra with
 - permissions: A set of `Permissions` you wish to request permissions (from Health Kit) from. 
 - (Optional) customReadTypes: This is defaulted as an empty `Set`. If you want to make a more granular permissions request, you may import HeatlhKit and provide this argument with a Set of `HKObjectType`s. For example: `HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!`. 
+
+
+## Initialise Connections
+After the initialisation of the Terra object, you can initialise connections as such:
+
+```swift
+initConnection(type: Connections){(success) in 
+ // After connection initialised 
+ // `success` is a boolean determining if it has succeeded or not
+}
+```
+
+**This will pull up any necessary Permissions logs!**
+
 
 ## Checking Authentication
 You may now check if a user has authenticated with their device to a specific `Connection`:
