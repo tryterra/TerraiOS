@@ -43,8 +43,8 @@ public enum Opcode {
 public class Terra {
   public var authResponseApple: TerraiOS.TerraAuthResponse?
   public var authResponseFSL: TerraiOS.TerraAuthResponse?
-  public init(devId: Swift.String, xAPIKey: Swift.String, referenceId: Swift.String? = nil, bodySleepDailyInterval: Swift.Double = 60*60*8, permissions: Swift.Set<TerraiOS.Permissions>, customReadTypes: Swift.Set<HealthKit.HKObjectType> = Set([]), writePermissions: Swift.Set<TerraiOS.Permissions> = Set([]), completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in }) throws
-  public func initConnection(type: TerraiOS.Connections, completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in}) throws
+  public init(devId: Swift.String, xAPIKey: Swift.String, referenceId: Swift.String? = nil, bodySleepDailyInterval: Swift.Double = 60*60*8, connections: Swift.Set<TerraiOS.Connections>, permissions: Swift.Set<TerraiOS.Permissions>, customReadTypes: Swift.Set<HealthKit.HKObjectType> = Set([]), writePermissions: Swift.Set<TerraiOS.Permissions> = Set([]), completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in }) throws
+  public func initConnection(type: TerraiOS.Connections, completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in})
   public func checkAuthentication(connection: TerraiOS.Connections) -> Swift.Bool
   public func readGlucoseData() throws
   public func activateSensor() throws
