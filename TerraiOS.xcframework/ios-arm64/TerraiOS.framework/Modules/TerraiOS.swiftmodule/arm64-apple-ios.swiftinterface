@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TerraiOS
+import BackgroundTasks
 import Combine
 import CoreLocation
 import CoreNFC
@@ -43,8 +44,8 @@ public enum Opcode {
 public class Terra {
   public var authResponseApple: TerraiOS.TerraAuthResponse?
   public var authResponseFSL: TerraiOS.TerraAuthResponse?
-  public init(devId: Swift.String, xAPIKey: Swift.String, referenceId: Swift.String? = nil, bodySleepDailyInterval: Swift.Double = 60*60*8, connections: Swift.Set<TerraiOS.Connections>, permissions: Swift.Set<TerraiOS.Permissions>, customReadTypes: Swift.Set<HealthKit.HKObjectType> = Set([]), writePermissions: Swift.Set<TerraiOS.Permissions> = Set([]), completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in }) throws
-  public func initConnection(type: TerraiOS.Connections, completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in})
+  public init(devId: Swift.String, xAPIKey: Swift.String, referenceId: Swift.String? = nil, bodyTimer: Swift.Double = 60*60*8, dailyTimer: Swift.Double = 60*60*8, nutritionTimer: Swift.Double = 60*60*8, sleepTimer: Swift.Double = 60*60*8, permissions: Swift.Set<TerraiOS.Permissions>, customReadTypes: Swift.Set<HealthKit.HKObjectType> = Set([]), writePermissions: Swift.Set<TerraiOS.Permissions> = Set([]), completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in }) throws
+  public func initConnection(type: TerraiOS.Connections, schedulerOn: Swift.Bool = true, completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in})
   public func checkAuthentication(connection: TerraiOS.Connections) -> Swift.Bool
   public func readGlucoseData() throws
   public func activateSensor() throws
@@ -480,7 +481,7 @@ public func disconnectTerra(dev_id: Swift.String, xAPIKey: Swift.String, user_id
 public class AppleHealth {
   final public let user_id: Swift.String?
   @available(iOS 10.0, *)
-  public init(dev_id: Swift.String, xAPIKey: Swift.String, user_id: Swift.String? = nil, auto: Swift.Bool = true, bodySleepDailyInterval: Swift.Double = 60*60*8, readTypes: Swift.Set<HealthKit.HKObjectType> = Set([HKObjectType.workoutType(),
+  public init(dev_id: Swift.String, xAPIKey: Swift.String, user_id: Swift.String? = nil, auto: Swift.Bool = true, bodyTimer: Swift.Double = 60*60*8, dailyTimer: Swift.Double = 60*60*8, nutritionTimer: Swift.Double = 60*60*8, sleepTimer: Swift.Double = 60*60*8, readTypes: Swift.Set<HealthKit.HKObjectType> = Set([HKObjectType.workoutType(),
                                                      HKObjectType.activitySummaryType(),
                                                      HKObjectType.quantityType(forIdentifier:.activeEnergyBurned)!,
                                                      HKQuantityType.quantityType(forIdentifier: .stepCount)!,
@@ -521,7 +522,8 @@ public class AppleHealth {
                                                      HKObjectType.quantityType(forIdentifier: .dietaryWater)!,
                                                      HKObjectType.quantityType(forIdentifier: .bloodGlucose)!,
                                                      HKSeriesType.workoutRoute()
-                                                    ]), shareType: Swift.Set<HealthKit.HKSampleType> = Set([]), enableHr: Swift.Bool = false, completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in }) throws
+                                                    ]), shareType: Swift.Set<HealthKit.HKSampleType> = Set([]), completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in }) throws
+  public func startScheduler()
   public func disconnectFromTerra(user_id: Swift.String)
   public func postNutrition(_ payload: TerraiOS.TerraNutritionData, completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in})
   public func getAthlete(completion: @escaping (Swift.Bool, TerraiOS.TerraAthleteData?) -> Swift.Void = {(success, _) -> Void in})
@@ -772,6 +774,7 @@ public class LibreToolsViewModel : Combine.ObservableObject {
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
+public func appleHealthScheduler(task: BackgroundTasks.BGProcessingTask)
 public struct TerraAthleteData : Swift.Decodable {
   public var first_name: Swift.String?
   public var last_name: Swift.String?
