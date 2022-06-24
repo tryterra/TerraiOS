@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/TerraiOS-Swift.h</key>
 		<data>
-		y3Ghjh2K5ywlww//mIHud+5ZhF0=
+		afM49LdtVoJXPbE0na96KZ+mYqM=
 		</data>
 		<key>Headers/TerraiOS.h</key>
 		<data>
@@ -14,19 +14,19 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Q/hftGQ/e4zktui4eS7yajNzGqI=
+		aD1oR9/MUkaReEA2aY+8plcKDVs=
 		</data>
 		<key>Modules/TerraiOS.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		NF2BAm+m0WNpx0sW6oGBxKKLJgw=
+		pw3mkJ9csMiipnh2okKKEoQjG9Q=
 		</data>
 		<key>Modules/TerraiOS.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		HwCSP8MYPPexfUkCaAZ0Nlnq81s=
+		b3jwaEiJEAt1kih1a52QlzioNr0=
 		</data>
 		<key>Modules/TerraiOS.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		5tUpkWlSgyBx7Vs+dhrZZkbuF48=
+		aKbXYI2EKZXRQtwu4kkC2aHOKO4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -39,7 +39,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0QhGYdgQp23kdo9/PN1CVDW17JmWauklRJ7P5fP8KII=
+			ioIK01f9gn3VbDxqQCTZbQhaOxkxKBBJD9SlOUFjYSs=
 			</data>
 		</dict>
 		<key>Headers/TerraiOS.h</key>
@@ -53,21 +53,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FvXh4nq5YC+Yj5gBjVywG8PFKIiNzVWnbzsTBuVEiio=
+			F/JhUB9ggKyuRVBUZnz2mr6tN0Nl1poyoPOQh+hWBKM=
 			</data>
 		</dict>
 		<key>Modules/TerraiOS.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5goYGAyRXKSE93ws/utQRYBbftPPUV0u+lmz7mgKhb4=
+			XFYnXZUwL5eBkSwmcJUbaHy+CE6W2JYaMgeCdDMb6w4=
 			</data>
 		</dict>
 		<key>Modules/TerraiOS.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Wy9/A66CoZMrvMasa/6kGPQXV3+HaCr+9fvcWbEVJLc=
+			i7qnGpKBH4wiDH1lsPCmhk9iP1zeN4/5NVnMRKFxUns=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
