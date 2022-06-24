@@ -66,10 +66,10 @@ You can create one as such:
 let terra: Terra = try! Terra(devId: String,
                          // xAPIKey: String, // From 1.0.10 onwards, this is not needed.
                          referenceId: String?,
-                         bodyTimer: Int, 
-                         dailyTimer: Int
-                         nutritionTimer: Int 
-                         sleepTimer: Int)
+                         bodyTimer: Double, 
+                         dailyTimer: Double
+                         nutritionTimer: Double 
+                         sleepTimer: Double)
 ```
 
 **Please note this initialisation can fail by throwing the following errors: TerraError.HealthKitUnavailable, TerraError.UnexpectedError. Catch them and handle appropriately instead of forcing try!**
