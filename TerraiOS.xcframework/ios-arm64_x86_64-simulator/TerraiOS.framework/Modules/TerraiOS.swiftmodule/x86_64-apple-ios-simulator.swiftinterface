@@ -522,6 +522,7 @@ public class AppleHealth {
                                                      HKObjectType.quantityType(forIdentifier: .dietaryEnergyConsumed)!,
                                                      HKObjectType.quantityType(forIdentifier: .dietaryWater)!,
                                                      HKObjectType.quantityType(forIdentifier: .bloodGlucose)!,
+                                                     HKObjectType.categoryType(forIdentifier: .mindfulSession)!,
                                                      HKSeriesType.workoutRoute()
                                                     ]), shareType: Swift.Set<HealthKit.HKSampleType> = Set([]), completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in }) throws
   public func startScheduler()
