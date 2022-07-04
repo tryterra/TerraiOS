@@ -12,6 +12,18 @@ import SwiftUI
 @_exported import TerraiOS
 import UIKit
 import _Concurrency
+@_hasMissingDesignatedInitializers final public class LibreProDataParser {
+  final public var glucoseData: [Swift.UInt16]
+  final public var age: Swift.Int
+  @objc deinit
+}
+extension TerraiOS.LibreProDataParser {
+  public struct CalibrationInfo {
+  }
+}
+extension Foundation.Data {
+  public func bitread(_ offset: Swift.Int, _ bitOffset: Swift.Int, _ bitCount: Swift.Int) -> Swift.Int
+}
 public struct HeartBeatIntervalPayload : Swift.Decodable {
   public init(from decoder: Swift.Decoder) throws
 }
