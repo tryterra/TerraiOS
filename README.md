@@ -172,7 +172,13 @@ You will need to start a scan session for reading FreeStyleLibre1 Sensor data! T
 try! terra.readGlucoseData()
 ```
 
-**N.B Be careful!** This function can throw a **TerraError.SensorExpired** error when attempting to read an expired sensor.
+**N.B Be careful!** This function can throw a **TerraError.SensorExpired** or **TerraError.SensorReadingFailed** error when attempting to read an expired sensor or if the sensor is not ready.
+
+We also provide an activation function to activate Libre 1 and 2 sensors:
+
+```swift
+try! terra.activateSensor()
+```
 
 ## Deauthorize
 
