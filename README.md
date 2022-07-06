@@ -1,6 +1,6 @@
 # TerraiOS
 
-This framework allows developers to connect to Apple Health and Freestylelibre through Terra! It also contains all necessary class and functions to connect to Terra's REST API.
+This framework allows developers to connect to Apple Health and Freestylelibre1 through Terra! It also contains all necessary class and functions to connect to Terra's REST API.
 
 ## Specification (Only read this section if something breaks)
 
@@ -63,16 +63,14 @@ To use this framework, you will need to be acquainted with a class called `Terra
 You can create one as such:
 
 ```swift
-let terra: Terra = try! Terra(devId: String,
+let terra: Terra =  Terra(devId: String,
                          // xAPIKey: String, // From 1.0.10 onwards, this is not needed.
                          referenceId: String?,
-                         bodyTimer: Double, 
-                         dailyTimer: Double
-                         nutritionTimer: Double 
-                         sleepTimer: Double)
+                         bodyTimer: Int, 
+                         dailyTimer: Int
+                         nutritionTimer: Int 
+                         sleepTimer: Int)
 ```
-
-**Please note this initialisation can fail by throwing the following errors: TerraError.HealthKitUnavailable, TerraError.UnexpectedError. Catch them and handle appropriately instead of forcing try!**
 
 - devId : This is your dev_id given by Terra
 - referenceId: This is used by you to identify a user from your server to a terra user
@@ -92,11 +90,13 @@ initConnection(type: Connections, token: String, permissions: Set<Permissions>, 
 - token: A token used for authentication. Generate one here: https://docs.tryterra.co/reference/generate-authentication-token
 - (Optional) permissions: A set of `Permissions` you wish to request permissions for. Enums: ACTIVITY, BODY, DAILY, SLEEP, ATHLETE, NUTRITION. Defaults to all.
 - (Optional) customReadTypes: This is defaulted as an empty `Set`. If you want to make a more granular permissions request, you may import HeatlhKit and provide this argument with a Set of `HKObjectType`s. For example: `HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!`. 
-- (Optional) writePermissions: A set of permissions to write to healthkit. **Currently takes only Nutrition**
+- (Optional) writePermissions: A set of permissions to write to healthkit. **Currently takes only NUTRITION and BODY. You must specify this if you wish to write data to HealthKit!** 
 - (Optional) schedulerOn: A boolean dictating if you wish to turn on the scheduler. Defaults to true. Please see **Scheduler** section for setup.
 - (Optional **RECOMMENDED**) completion: A callback with a boolean dictating if the initialisation succeeds. 
 
 **This will pull up any necessary Permissions logs!**
+
+**Please note this initialisation can fail by throwing the following errors: TerraError.HealthKitUnavailable, TerraError.UnexpectedError. Catch them and handle appropriately instead of forcing try!**
 
 ## Checking Authentication
 You may now check if a user has authenticated with their device to a specific `Connection`:
@@ -163,6 +163,26 @@ terra.getActivity(type: Connections, startDate: Date, endDate: Date){success, da
     // data -> A data array corresponding to our data models
 }
 ```
+
+## Post data
+
+We also provide functions to post data to Apple Health Kit. Currently the following is implemented:
+
+### Nutrition
+
+```swift
+terra.postNutrition(type: Connections, payload: TerraNutritionData, completion: @escaping (Bool) -> Void)
+```
+
+**N.B** `TerraNutritionData` has a public constructor!
+
+### Body
+
+```swift
+terra.postBody(type: Connections, payload: TerraBodyData, completion: @escaping (Bool) -> Void)
+```
+
+**N.B** `TerraBodyData` has a public constructor!
 
 ### FreeStyleLibre Specifications
 
@@ -257,6 +277,3 @@ You can then deauthenticate a user by:
 terraAuthClient.deauthenticateUser(user_id: "USER_ID")
 
 ```
-
-
-
