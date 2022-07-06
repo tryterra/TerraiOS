@@ -102,11 +102,19 @@ initConnection(type: Connections, token: String, permissions: Set<Permissions>, 
 You may now check if a user has authenticated with their device to a specific `Connection`:
 
 ```swift
-terra.checkAuthentication(connection: Connections)
+terra.checkAuthentication(connection: Connections) -> Bool
 ```
 This would return a `Boolean` that signifies if the device is registered or not. 
 
 `Connections` is an enum currently taking: `.APPLE_HEALTH` and `.FREESTYLE_LIBRE`
+
+You may also check the connection's userId as:
+
+```swift
+terra.getUserid(connection: Connections) -> String?
+```
+
+This returns the userId 
 
 ## Getting Data
 
