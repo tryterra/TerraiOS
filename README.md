@@ -214,14 +214,6 @@ We also provide an activation function to activate Libre 1 and 2 sensors:
 try! terra.activateSensor()
 ```
 
-## Deauthorize
-
-To deauthorize a user, all you have to do is run the following:
-
-```swift
-terra.disconnectTerra(Connections)
-```
-
 ## Connect to Terra's Rest API within this SDK
 
 You may if you wish make Terra API request using this SDK as well. 
