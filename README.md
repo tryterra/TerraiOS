@@ -2,6 +2,12 @@
 
 This framework allows developers to connect to Apple Health and Freestylelibre1 through Terra! It also contains all necessary class and functions to connect to Terra's REST API.
 
+## Quick Start
+
+A demo app is provided here to get you started quickly!
+
+https://github.com/tryterra/TerraiOSDemo
+
 ## Specification (Only read this section if something breaks)
 
 This library supports only iOS 13+ and is implemented with Swift 5.0
