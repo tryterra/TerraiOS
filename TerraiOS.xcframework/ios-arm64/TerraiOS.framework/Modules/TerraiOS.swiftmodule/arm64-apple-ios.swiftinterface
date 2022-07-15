@@ -563,7 +563,6 @@ public class AppleHealth {
                                                      HKObjectType.categoryType(forIdentifier: .mindfulSession)!,
                                                      HKSeriesType.workoutRoute()
                                                     ]), shareType: Swift.Set<HealthKit.HKSampleType> = Set([]), completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in }) throws
-  public func startScheduler()
   public func postNutrition(_ payload: TerraiOS.TerraNutritionData, completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in})
   public func postBody(_ payload: TerraiOS.TerraBodyData, completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in})
   public func getAthlete(completion: @escaping (Swift.Bool, TerraiOS.TerraAthleteData?) -> Swift.Void = {(success, _) -> Void in})
