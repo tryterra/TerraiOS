@@ -46,9 +46,11 @@ public struct HeartBeatIntervalPayload : Swift.Decodable {
 public struct HeartBeatInterval : Swift.Decodable {
   public init(from decoder: Swift.Decoder) throws
 }
-public struct FSLSensorDetails {
+public struct FSLSensorDetails : Swift.Codable {
   public var sensor_state: Swift.String
   public var status: Swift.String
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
 @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 public class LibreManager {
