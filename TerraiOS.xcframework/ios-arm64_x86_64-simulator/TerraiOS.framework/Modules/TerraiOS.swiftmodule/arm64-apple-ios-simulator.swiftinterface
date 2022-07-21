@@ -46,10 +46,14 @@ public struct HeartBeatIntervalPayload : Swift.Decodable {
 public struct HeartBeatInterval : Swift.Decodable {
   public init(from decoder: Swift.Decoder) throws
 }
+public struct FSLSensorDetails {
+  public var sensor_state: Swift.String
+  public var status: Swift.String
+}
 @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 public class LibreManager {
   public init(devId: Swift.String, _ unlockCode: Swift.Int? = 0xA4, _ password: Foundation.Data? = Data([0xc2, 0xad, 0x75, 0x21]))
-  public func getGlucoseData() throws
+  public func getGlucoseData(completion: @escaping (TerraiOS.FSLSensorDetails) -> Swift.Void)
   public func activateSensor() throws
   @objc deinit
 }
@@ -76,7 +80,7 @@ public class Terra {
   public func initConnection(type: TerraiOS.Connections, token: Swift.String, permissions: Swift.Set<TerraiOS.Permissions> = Set([Permissions.NUTRITION, Permissions.ACTIVITY, Permissions.ATHLETE, Permissions.SLEEP, Permissions.BODY, Permissions.DAILY]), customReadTypes: Swift.Set<HealthKit.HKObjectType> = Set([]), writePermissions: Swift.Set<TerraiOS.Permissions> = Set([]), schedulerOn: Swift.Bool = true, completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in})
   public func getUserid(type: TerraiOS.Connections) -> Swift.String?
   public func checkAuthentication(connection: TerraiOS.Connections) -> Swift.Bool
-  public func readGlucoseData() throws
+  public func readGlucoseData(completion: @escaping (TerraiOS.FSLSensorDetails?) -> Swift.Void = {_ in })
   public func activateSensor() throws
   public func postNutrition(type: TerraiOS.Connections, payload: TerraiOS.TerraNutritionData, completion: @escaping (Swift.Bool) -> Swift.Void = {success -> Void in })
   public func postBody(type: TerraiOS.Connections, payload: TerraiOS.TerraBodyData, completion: @escaping (Swift.Bool) -> Swift.Void = {success -> Void in})
@@ -484,7 +488,7 @@ public struct DataPayload : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
 }
 public enum Permissions {
-  case DAILY, BODY, SLEEP, ACTIVITY, ATHLETE, NUTRITION
+  case DAILY, BODY, SLEEP, ACTIVITY, ATHLETE, NUTRITION, SAMPLES
   public static func == (a: TerraiOS.Permissions, b: TerraiOS.Permissions) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
