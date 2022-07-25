@@ -49,6 +49,7 @@ public struct HeartBeatInterval : Swift.Decodable {
 public struct FSLSensorDetails : Swift.Codable {
   public var sensor_state: Swift.String
   public var status: Swift.String
+  public var serial_number: Swift.String
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
