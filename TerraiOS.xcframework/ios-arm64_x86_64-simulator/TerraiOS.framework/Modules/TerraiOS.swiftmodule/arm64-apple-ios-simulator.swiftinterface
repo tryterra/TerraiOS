@@ -40,16 +40,11 @@ extension TerraiOS.LibreProDataParser {
 extension Foundation.Data {
   public func bitread(_ offset: Swift.Int, _ bitOffset: Swift.Int, _ bitCount: Swift.Int) -> Swift.Int
 }
-public struct HeartBeatIntervalPayload : Swift.Decodable {
-  public init(from decoder: Swift.Decoder) throws
-}
-public struct HeartBeatInterval : Swift.Decodable {
-  public init(from decoder: Swift.Decoder) throws
-}
 public struct FSLSensorDetails : Swift.Codable {
   public var sensor_state: Swift.String
   public var status: Swift.String
   public var serial_number: Swift.String
+  public var data: TerraiOS.TerraGlucoseData
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -57,24 +52,8 @@ public struct FSLSensorDetails : Swift.Codable {
 public class LibreManager {
   public init(devId: Swift.String, _ unlockCode: Swift.Int? = 0xA4, _ password: Foundation.Data? = Data([0xc2, 0xad, 0x75, 0x21]))
   public func getGlucoseData(completion: @escaping (TerraiOS.FSLSensorDetails) -> Swift.Void)
-  public func activateSensor() throws
+  public func activateSensor(completion: @escaping (Swift.Bool) -> Swift.Void) throws
   @objc deinit
-}
-public enum Opcode {
-  case HEARTRATE
-  case HEARTBEAT_ACK
-  case HELLO
-  case IDENTIFY
-  case READY
-  case DISPATCH
-  case SUBMIT
-  case REPLAY
-  public func getValue() -> Swift.Int
-  public static func == (a: TerraiOS.Opcode, b: TerraiOS.Opcode) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
 }
 public class Terra {
   public var authResponseApple: TerraiOS.TerraAuthResponse?
@@ -84,7 +63,7 @@ public class Terra {
   public func getUserid(type: TerraiOS.Connections) -> Swift.String?
   public func checkAuthentication(connection: TerraiOS.Connections) -> Swift.Bool
   public func readGlucoseData(completion: @escaping (TerraiOS.FSLSensorDetails?) -> Swift.Void = {_ in })
-  public func activateSensor() throws
+  public func activateSensor(completion: @escaping (TerraiOS.FSLSensorDetails?) -> Swift.Void = {_ in })
   public func postNutrition(type: TerraiOS.Connections, payload: TerraiOS.TerraNutritionData, completion: @escaping (Swift.Bool) -> Swift.Void = {success -> Void in })
   public func postBody(type: TerraiOS.Connections, payload: TerraiOS.TerraBodyData, completion: @escaping (Swift.Bool) -> Swift.Void = {success -> Void in})
   public func getAthlete(type: TerraiOS.Connections, completion: @escaping (Swift.Bool, TerraiOS.TerraAthleteData?) -> Swift.Void = {(success, _) -> Void in })
@@ -236,11 +215,12 @@ public struct TerraOxygenData : Swift.Decodable {
   public var vo2_samples: [TerraiOS.Vo2Sample]?
   public init(from decoder: Swift.Decoder) throws
 }
-public struct TerraGlucoseData : Swift.Decodable {
+public struct TerraGlucoseData : Swift.Codable {
   public init(day_avg_blood_glucose_mg_per_dL: Swift.Double? = nil, blood_glucose_samples: [TerraiOS.GlucoseDataSample]? = [GlucoseDataSample](), detailed_blood_glucose_samples: [TerraiOS.GlucoseDataSample]? = [GlucoseDataSample]())
   public var day_avg_blood_glucose_mg_per_dL: Swift.Double?
   public var blood_glucose_samples: [TerraiOS.GlucoseDataSample]?
   public var detailed_blood_glucose_samples: [TerraiOS.GlucoseDataSample]?
+  public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct TerraBodyMetaData : Swift.Decodable {
@@ -387,9 +367,6 @@ public struct TerraActivityData : Swift.Decodable {
   public var position_data: TerraiOS.TerraPositionData?
   public init(from decoder: Swift.Decoder) throws
 }
-public struct GatewaySendPayload : Swift.Encodable {
-  public func encode(to encoder: Swift.Encoder) throws
-}
 public struct TerraBreathsData : Swift.Decodable {
   public var samples: [TerraiOS.BreathSample]?
   public var end_time: Swift.String?
@@ -471,10 +448,6 @@ public struct TerraSleepData : Swift.Decodable {
   public var heart_rate_data: TerraiOS.TerraHeartRateData?
   public init(from decoder: Swift.Decoder) throws
 }
-public struct TokenPayload : Swift.Decodable {
-  public init(from decoder: Swift.Decoder) throws
-}
-public func generateToken(devId: Swift.String, xAPIKey: Swift.String, userId: Swift.String) -> TerraiOS.TokenPayload?
 public func connectTerra(devId: Swift.String, token: Swift.String, referenceId: Swift.String? = nil, resource: Swift.String) -> TerraiOS.TerraAuthResponse?
 public enum Connections {
   case FREESTYLE_LIBRE
@@ -484,11 +457,6 @@ public enum Connections {
   public var hashValue: Swift.Int {
     get
   }
-}
-public struct DataPayload : Swift.Codable {
-  public init(ts: Swift.String, val: Swift.Double, d: Swift.String?)
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
 }
 public enum Permissions {
   case DAILY, BODY, SLEEP, ACTIVITY, ATHLETE, NUTRITION, SAMPLES
@@ -580,14 +548,6 @@ public class AppleHealth {
   public func getWorkout(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraActivityData]) -> Swift.Void = {(success, _) -> Void in})
   @objc deinit
 }
-public struct Identify : Swift.Codable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
-public struct IdentifyPayload : Swift.Codable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
 public struct Reading {
   public let log: Swift.String
   public let sensorData: TerraiOS.SensorData?
@@ -614,13 +574,6 @@ extension Foundation.Date {
     get
   }
   public func toMillisecondsAsInt64() -> Swift.Int64
-}
-public class WebSocketManager {
-  public init(xAPIKey: Swift.String, devId: Swift.String, userId: Swift.String)
-  public func openConnection()
-  public func closeConnection()
-  public func sendData(payload: TerraiOS.DataPayload, type: Swift.String)
-  @objc deinit
 }
 public struct TerraMenstruationDetails : Swift.Decodable {
   public var period_start_date: Swift.String?
@@ -834,7 +787,6 @@ public struct TerraAthleteData : Swift.Decodable {
   public var country: Swift.String?
   public init(from decoder: Swift.Decoder) throws
 }
-public func convertISOFormatStringToDateObject(_ ts: Swift.String?) -> Foundation.Date?
 public struct ActivityLevelSample : Swift.Decodable {
   public var timestamp: Swift.String
   public var activity_level: Swift.Int
@@ -875,12 +827,13 @@ public struct ElevationSample : Swift.Decodable {
   public var timer_duration_seconds: Swift.Double?
   public init(from decoder: Swift.Decoder) throws
 }
-public struct GlucoseDataSample : Swift.Decodable {
+public struct GlucoseDataSample : Swift.Codable {
   public init(timestamp: Swift.String, blood_glucose_mg_per_dL: Swift.Double, glucose_level_flag: Swift.Int? = nil, trend_array: Swift.Int? = nil)
   public var timestamp: Swift.String
   public var blood_glucose_mg_per_dL: Swift.Double
   public var glucose_level_flag: Swift.Int?
   public var trend_array: Swift.Int?
+  public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct HeartRateSample : Swift.Decodable {
@@ -1066,8 +1019,6 @@ extension TerraiOS.SensorData {
   }
   public func rawGlucose(_ record: Swift.UInt16) -> Swift.UInt16
 }
-extension TerraiOS.Opcode : Swift.Equatable {}
-extension TerraiOS.Opcode : Swift.Hashable {}
 extension TerraiOS.LibreSensorState : Swift.Equatable {}
 extension TerraiOS.LibreSensorState : Swift.Hashable {}
 extension TerraiOS.Connections : Swift.Equatable {}
