@@ -566,15 +566,6 @@ extension Swift.Optional {
     get
   }
 }
-extension Foundation.Date {
-  public func isBetween(_ date1: Foundation.Date, and date2: Foundation.Date) -> Swift.Bool
-  public func rounded(on amount: Swift.Int, _ component: Foundation.Calendar.Component) -> Foundation.Date
-  public func floorAllComponents(before component: Foundation.Calendar.Component) -> Foundation.Date
-  public static var LocaleWantsAMPM: Swift.Bool {
-    get
-  }
-  public func toMillisecondsAsInt64() -> Swift.Int64
-}
 public struct TerraMenstruationDetails : Swift.Decodable {
   public var period_start_date: Swift.String?
   public var day_in_cycle: Swift.Double?
