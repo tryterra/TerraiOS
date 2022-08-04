@@ -1,6 +1,6 @@
 # TerraiOS
 
-This framework allows developers to connect to Apple Health and Freestylelibre1 through Terra! It also contains all necessary class and functions to connect to Terra's REST API.
+This framework allows you to any integration offered by [Terra](https://tryterra.co)
 
 ## Quick Start
 
@@ -21,7 +21,7 @@ You will also need to add `TerraiOS` to Frameworks as well!
 
 This will then allow you to import the framework as `import TerraiOS`.
 
-### To connect to APPLE HEALTH
+### For APPLE HEALTH
 
 This library uses HealthKit for iOS v13+. It thus would not work on iPad or MacOS or any platform that does not support [Apple HealthKit](https://developer.apple.com/health-fitness/).
 Please add HealthKit as a capability to the project as well as to Frameworks.
@@ -29,11 +29,11 @@ Please add HealthKit as a capability to the project as well as to Frameworks.
 Also you must include the following keys in your `Info.plist` file:
 `Privacy - Health Share Usage Description` and `Privacy - Health Records Usage Description`
 
-### To connect to FREESTYLELIBRE 
+### For FREESTYLELIBRE 
 
 This library will use "Near Field Communication Tag Reading" capability. Add this to your capabilities and add `Privacy-NFC Scan Usage Description` as a key to your project's `Info.plist`. 
 
-### Scheduler 
+### Scheduler
 
 To enable scheduler, you will have to follow the steps:
 - Enable `Background Modes` in Signing & Capabilities. 
@@ -64,7 +64,7 @@ To enable scheduler, you will have to follow the steps:
   
 ## Time to have some fun ;)
 
-To use this framework, you will need to be acquainted with a class called `Terra`. It will manage all your connections and data getting functionalities. 
+To use this framework for Apple Health and Freestylelibre, you will need to be acquainted with a class called `Terra`. It will manage all your connections and data getting functionalities. 
 
 You can create one as such:
 
@@ -86,7 +86,7 @@ let terra: Terra =  Terra(devId: String,
 - sleepTimer: The sleep timer for scheduler in seconds
 
 ## Initialise Connections
-After the initialisation of the Terra object, you can initialise connections as such:
+After the initialisation of the Terra object, you will need to initialise a connection to the provider you want. 
 
 ```swift
 initConnection(type: Connections, token: String, permissions: Set<Permissions>, customReadTypes: Set<HKObjectType>, writePermissions: Set<Permissions>, schedulerOn: Bool, completion: @escaping (Bool) -> Void))
