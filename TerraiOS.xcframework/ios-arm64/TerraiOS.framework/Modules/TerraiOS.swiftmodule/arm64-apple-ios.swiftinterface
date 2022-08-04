@@ -19,7 +19,7 @@ final public class LibreProActivator {
 extension TerraiOS.LibreProActivator {
   
   #if compiler(>=5.3) && $AsyncAwait
-  final public func activate() async
+  final public func activate(_ session: CoreNFC.NFCTagReaderSession) async
   #endif
 
 }
