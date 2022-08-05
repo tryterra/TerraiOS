@@ -48,7 +48,7 @@ The framework automatically assumes you want to use Background Delivery if you i
 To enable this, you will need to enable a few things:
 
 - Enable Background Delivery in HealthKit Entitlements
-- Add Background Modes as a Capability to your project
+- Add Background Modes as a Capability to your project and enable Background Fetch and Background Processing
 - Add the `Permitted background task scheduler identifiers` key to your `info.plist` with one item:
   - `co.tryterra.data.post.request`
   
