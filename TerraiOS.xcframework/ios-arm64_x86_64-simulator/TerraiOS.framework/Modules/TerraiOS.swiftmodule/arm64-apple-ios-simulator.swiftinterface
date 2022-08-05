@@ -23,11 +23,6 @@ extension TerraiOS.LibreProActivator {
   #endif
 
 }
-extension Swift.String {
-  public var tobytes: Foundation.Data {
-    get
-  }
-}
 @_hasMissingDesignatedInitializers final public class LibreProDataParser {
   final public var glucoseData: [Swift.UInt16]
   final public var age: Swift.Int
@@ -36,9 +31,6 @@ extension Swift.String {
 extension TerraiOS.LibreProDataParser {
   public struct CalibrationInfo {
   }
-}
-extension Foundation.Data {
-  public func bitread(_ offset: Swift.Int, _ bitOffset: Swift.Int, _ bitCount: Swift.Int) -> Swift.Int
 }
 public struct FSLSensorDetails : Swift.Codable {
   public var sensor_state: Swift.String
@@ -58,14 +50,22 @@ public class LibreManager {
 public class Terra {
   public var authResponseApple: TerraiOS.TerraAuthResponse?
   public var authResponseFSL: TerraiOS.TerraAuthResponse?
-  public init(devId: Swift.String, referenceId: Swift.String? = nil, bodyTimer: Swift.Double = 60*60*8, dailyTimer: Swift.Double = 60*60*8, nutritionTimer: Swift.Double = 60*60*8, sleepTimer: Swift.Double = 60*60*8)
-  public func initConnection(type: TerraiOS.Connections, token: Swift.String, permissions: Swift.Set<TerraiOS.Permissions> = Set([Permissions.NUTRITION, Permissions.ACTIVITY, Permissions.ATHLETE, Permissions.SLEEP, Permissions.BODY, Permissions.DAILY]), customReadTypes: Swift.Set<HealthKit.HKObjectType> = Set([]), writePermissions: Swift.Set<TerraiOS.Permissions> = Set([]), schedulerOn: Swift.Bool = true, completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in})
-  public func getUserid(type: TerraiOS.Connections) -> Swift.String?
-  public func checkAuthentication(connection: TerraiOS.Connections) -> Swift.Bool
+  public init(devId: Swift.String, referenceId: Swift.String? = nil, completion: @escaping (Swift.Bool) -> Swift.Void)
+  @objc deinit
+}
+extension TerraiOS.Terra {
+  public func initConnection(type: TerraiOS.Connections, token: Swift.String, customReadTypes: Swift.Set<HealthKit.HKObjectType> = Set([]), schedulerOn: Swift.Bool = true, completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in})
+  public func getUserId(type: TerraiOS.Connections) -> Swift.String?
+}
+extension TerraiOS.Terra {
   public func readGlucoseData(completion: @escaping (TerraiOS.FSLSensorDetails?) -> Swift.Void = {_ in })
   public func activateSensor(completion: @escaping (TerraiOS.FSLSensorDetails?) -> Swift.Void = {_ in })
+}
+extension TerraiOS.Terra {
   public func postNutrition(type: TerraiOS.Connections, payload: TerraiOS.TerraNutritionData, completion: @escaping (Swift.Bool) -> Swift.Void = {success -> Void in })
   public func postBody(type: TerraiOS.Connections, payload: TerraiOS.TerraBodyData, completion: @escaping (Swift.Bool) -> Swift.Void = {success -> Void in})
+}
+extension TerraiOS.Terra {
   public func getAthlete(type: TerraiOS.Connections, completion: @escaping (Swift.Bool, TerraiOS.TerraAthleteData?) -> Swift.Void = {(success, _) -> Void in })
   public func getDaily(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, completion: @escaping (Swift.Bool, [TerraiOS.TerraDailyData]?) -> Swift.Void = {(success, _) -> Void in})
   public func getDaily(type: TerraiOS.Connections, startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraDailyData]?) -> Swift.Void = {(success, _) -> Void in})
@@ -77,23 +77,11 @@ public class Terra {
   public func getNutrition(type: TerraiOS.Connections, startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraNutritionData]?) -> Swift.Void = {(success, _) -> Void in})
   public func getActivity(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, completion: @escaping (Swift.Bool, [TerraiOS.TerraActivityData]?) -> Swift.Void = {(success, _) -> Void in})
   public func getActivity(type: TerraiOS.Connections, startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraActivityData]?) -> Swift.Void = {(success, _) -> Void in})
-  public func disconnectTerra(devId: Swift.String, xAPIKey: Swift.String, userId: Swift.String)
-  @objc deinit
 }
-public enum LibreSensorState {
-  case notYetStarted
-  case starting
-  case ready
-  case expired
-  case shutdown
-  case failure
-  case unknown
-  case end
-  public static func == (a: TerraiOS.LibreSensorState, b: TerraiOS.LibreSensorState) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
+extension TerraiOS.Terra {
+  public static func disconnectTerra(devId: Swift.String, xAPIKey: Swift.String, userId: Swift.String)
+  public static func checkAuthentication(connection: TerraiOS.Connections, devId: Swift.String, completion: @escaping (Swift.Bool) -> Swift.Void)
+  public static func setUpBackgroundDelivery()
 }
 public struct TerraStressData : Swift.Decodable {
   public var medium_stress_duration: Swift.Double?
@@ -448,7 +436,21 @@ public struct TerraSleepData : Swift.Decodable {
   public var heart_rate_data: TerraiOS.TerraHeartRateData?
   public init(from decoder: Swift.Decoder) throws
 }
-public func connectTerra(devId: Swift.String, token: Swift.String, referenceId: Swift.String? = nil, resource: Swift.String) -> TerraiOS.TerraAuthResponse?
+public enum LibreSensorState {
+  case notYetStarted
+  case starting
+  case ready
+  case expired
+  case shutdown
+  case failure
+  case unknown
+  case end
+  public static func == (a: TerraiOS.LibreSensorState, b: TerraiOS.LibreSensorState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public enum Connections {
   case FREESTYLE_LIBRE
   case APPLE_HEALTH
@@ -484,73 +486,28 @@ public class TerraAuthClient {
   public func deauthenticateUser(user_id: Swift.String) -> TerraiOS.deauthenticateUserPayload?
   @objc deinit
 }
-public struct TerraAuthResponse : Swift.Decodable {
-  public var status: Swift.String
-  public var user_id: Swift.String?
-  public var reference_id: Swift.String?
-  public var message: Swift.String?
-  public init(from decoder: Swift.Decoder) throws
-}
-public func disconnectTerra(dev_id: Swift.String, xAPIKey: Swift.String, user_id: Swift.String)
 public class AppleHealth {
-  final public let user_id: Swift.String?
+  final public let userId: Swift.String?
   @available(iOS 10.0, *)
-  public init(dev_id: Swift.String, user_id: Swift.String? = nil, auto: Swift.Bool = true, bodyTimer: Swift.Double = 60*60*8, dailyTimer: Swift.Double = 60*60*8, nutritionTimer: Swift.Double = 60*60*8, sleepTimer: Swift.Double = 60*60*8, readTypes: Swift.Set<HealthKit.HKObjectType> = Set([HKObjectType.workoutType(),
-                                                     HKObjectType.activitySummaryType(),
-                                                     HKObjectType.quantityType(forIdentifier:.activeEnergyBurned)!,
-                                                     HKQuantityType.quantityType(forIdentifier: .stepCount)!,
-                                                     HKObjectType.quantityType(forIdentifier: .heartRate)!,
-                                                     HKObjectType.quantityType(forIdentifier: .heartRateVariabilitySDNN)!,
-                                                     HKObjectType.quantityType(forIdentifier: .vo2Max)!,
-                                                     HKObjectType.quantityType(forIdentifier: .height)!,
-                                                     HKObjectType.quantityType(forIdentifier: .appleExerciseTime)!,
-                                                     HKObjectType.quantityType(forIdentifier: .bodyMass)!,
-                                                     HKObjectType.quantityType(forIdentifier: .flightsClimbed)!,
-                                                     HKObjectType.quantityType(forIdentifier: .bodyMassIndex)!,
-                                                     HKObjectType.quantityType(forIdentifier: .bodyFatPercentage)!,
-                                                     HKObjectType.quantityType(forIdentifier: .distanceSwimming)!,
-                                                     HKObjectType.quantityType(forIdentifier: .distanceCycling)!,
-                                                     HKObjectType.quantityType(forIdentifier: .distanceWalkingRunning)!,
-                                                     HKObjectType.characteristicType(forIdentifier: .biologicalSex)!,
-                                                     HKObjectType.characteristicType(forIdentifier: .dateOfBirth)!,
-                                                     HKObjectType.quantityType(forIdentifier: .basalEnergyBurned)!,
-                                                     HKObjectType.quantityType(forIdentifier: .swimmingStrokeCount)!,
-                                                     HKObjectType.quantityType(forIdentifier: .restingHeartRate)!,
-                                                     HKObjectType.quantityType(forIdentifier: .bloodPressureDiastolic)!,
-                                                     HKObjectType.quantityType(forIdentifier: .bloodPressureSystolic)!,
-                                                     HKObjectType.quantityType(forIdentifier: .bodyTemperature)!,
-                                                     HKObjectType.quantityType(forIdentifier: .leanBodyMass)!,
-                                                     HKObjectType.quantityType(forIdentifier: .oxygenSaturation)!,
-                                                     HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!,
-                                                     HKObjectType.quantityType(forIdentifier: .respiratoryRate)!,
-                                                     HKObjectType.quantityType(forIdentifier: .dietarySodium)!,
-                                                     HKObjectType.quantityType(forIdentifier: .dietaryProtein)!,
-                                                     HKObjectType.quantityType(forIdentifier: .dietaryCarbohydrates)!,
-                                                     HKObjectType.quantityType(forIdentifier: .dietaryFiber)!,
-                                                     HKObjectType.quantityType(forIdentifier: .dietaryCholesterol)!,
-                                                     HKObjectType.quantityType(forIdentifier: .dietaryFatTotal)!,
-                                                     HKObjectType.quantityType(forIdentifier: .dietarySugar)!,
-                                                     HKObjectType.quantityType(forIdentifier: .dietaryVitaminC)!,
-                                                     HKObjectType.quantityType(forIdentifier: .dietaryVitaminA)!,
-                                                     HKObjectType.quantityType(forIdentifier: .dietaryEnergyConsumed)!,
-                                                     HKObjectType.quantityType(forIdentifier: .dietaryWater)!,
-                                                     HKObjectType.quantityType(forIdentifier: .bloodGlucose)!,
-                                                     HKObjectType.categoryType(forIdentifier: .mindfulSession)!,
-                                                     HKSeriesType.workoutRoute()
-                                                    ]), shareType: Swift.Set<HealthKit.HKSampleType> = Set([]), completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in }) throws
+  public init(devId: Swift.String, userId: Swift.String? = nil, auto: Swift.Bool = true, readTypes: Swift.Set<HealthKit.HKObjectType>, shareType: Swift.Set<HealthKit.HKSampleType> = Set([]), completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in }) throws
+  @objc deinit
+}
+extension TerraiOS.AppleHealth {
   public func postNutrition(_ payload: TerraiOS.TerraNutritionData, completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in})
   public func postBody(_ payload: TerraiOS.TerraBodyData, completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in})
+}
+extension TerraiOS.AppleHealth {
   public func getAthlete(completion: @escaping (Swift.Bool, TerraiOS.TerraAthleteData?) -> Swift.Void = {(success, _) -> Void in})
   public func getDaily(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraDailyData]?) -> Swift.Void = {(success, _) -> Void in})
   public func getBody(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraBodyData]) -> Swift.Void = {(success, _) -> Void in})
   public func getSleep(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraSleepData]) -> Swift.Void = {(success, _) -> Void in})
   public func getNutrition(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraNutritionData]) -> Swift.Void = {(success, _) -> Void in})
   public func getWorkout(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraActivityData]) -> Swift.Void = {(success, _) -> Void in})
-  @objc deinit
 }
-public struct Reading {
-  public let log: Swift.String
-  public let sensorData: TerraiOS.SensorData?
+extension Swift.Optional {
+  public var optional: Wrapped? {
+    get
+  }
 }
 extension Foundation.Date {
   public static func mondayAt12AM() -> Foundation.Date
@@ -560,11 +517,6 @@ extension Foundation.Date {
 extension Foundation.Date : Swift.Strideable {
   public func distance(to other: Foundation.Date) -> Foundation.TimeInterval
   public func advanced(by n: Foundation.TimeInterval) -> Foundation.Date
-}
-extension Swift.Optional {
-  public var optional: Wrapped? {
-    get
-  }
 }
 public struct TerraMenstruationDetails : Swift.Decodable {
   public var period_start_date: Swift.String?
@@ -740,6 +692,11 @@ public struct TerraNutritionDataPayloadModel : Swift.Decodable {
   public var status: Swift.String
   public init(from decoder: Swift.Decoder) throws
 }
+extension Swift.String {
+  public var tobytes: Foundation.Data {
+    get
+  }
+}
 public class TerraClient {
   public init(userId: Swift.String, devId: Swift.String, xAPIKey: Swift.String)
   public func getActivity(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true) -> TerraiOS.TerraActivityDataPayloadModel?
@@ -764,7 +721,17 @@ public class LibreToolsViewModel : Combine.ObservableObject {
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
-public func appleHealthScheduler(task: BackgroundTasks.BGProcessingTask)
+public struct TerraAuthResponse : Swift.Codable {
+  public var status: Swift.String
+  public var user_id: Swift.String?
+  public var reference_id: Swift.String?
+  public var message: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension Foundation.Data {
+  public func bitread(_ offset: Swift.Int, _ bitOffset: Swift.Int, _ bitCount: Swift.Int) -> Swift.Int
+}
 public struct TerraAthleteData : Swift.Decodable {
   public var first_name: Swift.String?
   public var last_name: Swift.String?
@@ -1010,9 +977,19 @@ extension TerraiOS.SensorData {
   }
   public func rawGlucose(_ record: Swift.UInt16) -> Swift.UInt16
 }
+public enum DataTypes {
+  case STEPS, HEART_RATE, HEART_RATE_VARIABILITY, CALORIES, DISTANCE
+  public static func == (a: TerraiOS.DataTypes, b: TerraiOS.DataTypes) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 extension TerraiOS.LibreSensorState : Swift.Equatable {}
 extension TerraiOS.LibreSensorState : Swift.Hashable {}
 extension TerraiOS.Connections : Swift.Equatable {}
 extension TerraiOS.Connections : Swift.Hashable {}
 extension TerraiOS.Permissions : Swift.Equatable {}
 extension TerraiOS.Permissions : Swift.Hashable {}
+extension TerraiOS.DataTypes : Swift.Equatable {}
+extension TerraiOS.DataTypes : Swift.Hashable {}
