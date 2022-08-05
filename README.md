@@ -2,6 +2,10 @@
 
 This framework allows you to any integration offered by [Terra](https://tryterra.co)
 
+The docs here are updated to latest version: 1.1.0
+
+For older docs and version please see [here](https://github.com/tryterra/TerraiOS/blob/f0a09fd581515c01fba06425f786567feda53995/README.md)
+
 ## Quick Start
 
 A demo app is provided here to get you started quickly!
@@ -14,7 +18,11 @@ This library supports only iOS 13+ and is implemented with Swift 5.0
 
 ## Setup (The useful stuff)
 
-As said, this framework allows connection to Apple Health and FreeStyleLibre1 through Terra. To fully make use of this package, you will need a developer account enrolled in [Apple's developer program](https://developer.apple.com/programs/). 
+This framework can be divided into two parts. 
+- Connection to in-app providers: APPLE HEALTH and FREESTYLELIBRE
+- Connection to the REST API
+
+To fully make use of this package, you will need a developer account enrolled in [Apple's developer program](https://developer.apple.com/programs/). 
 
 The framework must be added as a dependency to your project. This can be done simply by editting your App's dependencies and adding `TerraiOS` as a dependency with the following location: `https://github.com/tryterra/TerraiOS.git`.
 You will also need to add `TerraiOS` to Frameworks as well!
@@ -33,34 +41,31 @@ Also you must include the following keys in your `Info.plist` file:
 
 This library will use "Near Field Communication Tag Reading" capability. Add this to your capabilities and add `Privacy-NFC Scan Usage Description` as a key to your project's `Info.plist`. 
 
-### Scheduler
+### Background Delivery
 
-To enable scheduler, you will have to follow the steps:
-- Enable `Background Modes` in Signing & Capabilities. 
-- Enable `Background Fetch` and `Background Processing` in Background Modes
-- Add the `Permitted background task scheduler identifiers` key into your `info.plist` and add the following items under this key:
-  - `co.tryterra.applehealth.dailyScheduler`
-  - `co.tryterra.applehealth.nutritionScheduler`
-  - `co.tryterra.applehealth.sleepScheduler`
-  - `co.tryterra.applehealth.bodyScheduler`
-- Finally, in your app delegate, you will have to instantiate the task handlers. Call the following lines under `application:willFinishLaunchingWithOptions` in your `AppDelegate.swift` file:
-  - ```swift
-        BGTaskScheduler.shared.register(forTaskWithIdentifier: "co.tryterra.applehealth.bodyScheduler", using: DispatchQueue.global()) { task in
-            appleHealthScheduler(task: task as! BGProcessingTask)
-        }
+The framework automatically assumes you want to use Background Delivery if you initialise a connection for Apple Health. 
 
-        BGTaskScheduler.shared.register(forTaskWithIdentifier: "co.tryterra.applehealth.dailyScheduler", using: DispatchQueue.global()) { task in
-            appleHealthScheduler(task: task as! BGProcessingTask)
-        }
+To enable this, you will need to enable a few things:
 
-        BGTaskScheduler.shared.register(forTaskWithIdentifier: "co.tryterra.applehealth.sleepScheduler", using: DispatchQueue.global()) { task in
-            appleHealthScheduler(task: task as! BGProcessingTask)
-        }
-
-        BGTaskScheduler.shared.register(forTaskWithIdentifier: "co.tryterra.applehealth.nutritionScheduler", using: DispatchQueue.global()) { task in
-            appleHealthScheduler(task: task as! BGProcessingTask)
-        } 
+- Enable Background Delivery in HealthKit Entitlements
+- Add Background Modes as a Capability to your project
+- Add the `Permitted background task scheduler identifiers` key to your `info.plist` with one item:
+  - `co.tryterra.data.post.request`
   
+After this, you will have to simply run:
+```swift
+Terra.setUpBackgroundDelivery()
+```
+in your app delegate's `didFinishLaunchingWithOptions` delegate function, i.e:
+
+```swift
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        Terra.setUpBackgroundDelivery()
+        // Override point for customization after application launch.
+        return true
+    }
+```
+Thats it!
   
 ## Time to have some fun ;)
 
@@ -70,57 +75,52 @@ You can create one as such:
 
 ```swift
 let terra: Terra =  Terra(devId: String,
-                         // xAPIKey: String, // From 1.0.10 onwards, this is not needed.
                          referenceId: String?,
-                         bodyTimer: Int, 
-                         dailyTimer: Int
-                         nutritionTimer: Int 
-                         sleepTimer: Int)
+                         completion: @escaping (Bool) -> Void)
 ```
 
-- devId : This is your dev_id given by Terra
-- referenceId: This is used by you to identify a user from your server to a terra user
-- bodyTimer: The body timer for scheduler in seconds
-- dailyTimer: The daily timer for scheduler in seconds
-- nutritionTimer: The nutrition timer for scheduler in seconds 
-- sleepTimer: The sleep timer for scheduler in seconds
+- `devId: String` ➡ The developer identifier given to your after you signed up on [Terra](https://dashboard.tryterra.co)
+- `referenceId: String?` ➡ This is used by you to identify a user from your server to a terra user
+- `completion: @escaping (Bool) -> Void` ➡ A callback function that is called when the Terra class is initialised. **Highly recommended to wait for this callback before proceeding**
+
+**You will need to initialise this class everytime your app comes up from terminated or stopped state. It sets up all the previous connections that has been initialised**
 
 ## Initialise Connections
-After the initialisation of the Terra object, you will need to initialise a connection to the provider you want. 
+After the initialisation of the Terra object, you will need to initialise a connection to the provider you want. This only needs to be done once per connection.
 
 ```swift
-initConnection(type: Connections, token: String, permissions: Set<Permissions>, customReadTypes: Set<HKObjectType>, writePermissions: Set<Permissions>, schedulerOn: Bool, completion: @escaping (Bool) -> Void))
+initConnection(type: Connections, token: String, customReadTypes: Set<HKObjectType>, schedulerOn: Bool, completion: @escaping (Bool) -> Void))
 ```
 **Arguments** 
-- type: The connection you wish to initiate for
-- token: A token used for authentication. Generate one here: https://docs.tryterra.co/reference/generate-authentication-token
-- (Optional) permissions: A set of `Permissions` you wish to request permissions for. Enums: ACTIVITY, BODY, DAILY, SLEEP, ATHLETE, NUTRITION. Defaults to all.
-- (Optional) customReadTypes: This is defaulted as an empty `Set`. If you want to make a more granular permissions request, you may import HeatlhKit and provide this argument with a Set of `HKObjectType`s. For example: `HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!`. 
-- (Optional) writePermissions: A set of permissions to write to healthkit. **Currently takes only NUTRITION and BODY. You must specify this if you wish to write data to HealthKit!** 
-- (Optional) schedulerOn: A boolean dictating if you wish to turn on the scheduler. Defaults to true. Please see **Scheduler** section for setup.
-- (Optional **RECOMMENDED**) completion: A callback with a boolean dictating if the initialisation succeeds. 
+- `type: Connections` ➡  An ENUM from the Connections class signifying the connection you wish to initiate for.
+- `token: String` ➡ A token used for authentication. Generate one here: https://docs.tryterra.co/reference/generate-authentication-token
+- (Optional) `customReadTypes: Set<HKObjectType>` ➡ This is defaulted as an empty `Set`. If you want to make a more granular permissions request, you may import HeatlhKit and provide this argument with a Set of `HKObjectType`s. For example: `HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!`. 
+- `schedulerOn: Bool`  ➡ A boolean dictating if you wish turn on background delivery. Defaults to true. Please see **Background Delivery** section for setup.
+- `completion: @escaping (Bool) -> Void`  ➡ A callback with a boolean dictating if the initialisation succeeds. 
 
 **This will pull up any necessary Permissions logs!**
-
-**Please note this initialisation can fail by throwing the following errors: TerraError.HealthKitUnavailable, TerraError.UnexpectedError. Catch them and handle appropriately instead of forcing try!**
 
 ## Checking Authentication
 You may now check if a user has authenticated with their device to a specific `Connection`:
 
 ```swift
-terra.checkAuthentication(connection: Connections) -> Bool
+Terra.checkAuthentication(connection: Connections, devId: String, completion: @escaping(Bool) -> Void)
 ```
-This would return a `Boolean` that signifies if the device is registered or not. 
+When the function's completion function is called, the `Bool` argument signifies if the connection is authenticated or not. 
+**Function not necessary! Mainly for debug purposes**
 
-`Connections` is an enum currently taking: `.APPLE_HEALTH` and `.FREESTYLE_LIBRE`
-
-You may also check the connection's userId as:
+A more useful function for this purpose would be:
 
 ```swift
-terra.getUserid(connection: Connections) -> String?
+terra.getUserid(type: Connections) -> String?
 ```
+This function is synchronous and returns the `user_id` right away or `nil` if none exists.
 
-This returns the userId 
+The framework allows you to disconnect users using our [`deauthenticateUser`](https://docs.tryterra.co/reference/deauthenticate-user) endpoint. However we recommend doing this request from the backend as the API Key is required here. Please only use this for testing purposes.
+
+```swift
+Terra.disconnectTerra(devId: String, xAPIKey: String, userId: String)
+```
 
 ## Getting Data
 
@@ -200,19 +200,31 @@ terra.postBody(type: Connections, payload: TerraBodyData, completion: @escaping 
 
 ### FreeStyleLibre Specifications
 
-You will need to start a scan session for reading FreeStyleLibre1 Sensor data! This can be done by:
+You can activate a sensor using
 
 ```swift
-try! terra.readGlucoseData()
+terra.activateSensor(completion: @escaping (Bool) -> Void)
 ```
 
-**N.B Be careful!** This function can throw a **TerraError.SensorExpired** or **TerraError.SensorReadingFailed** error when attempting to read an expired sensor or if the sensor is not ready.
-
-We also provide an activation function to activate Libre 1 and 2 sensors:
+For reading a sensor you may use:
 
 ```swift
-try! terra.activateSensor()
+getGlucoseData(completion: @escaping (FSLSensorDetails) -> Void)
 ```
+
+`FSLSensorDetails` is a data struct for the data returned by the sensor. It follows the following format:
+
+```swift
+public struct FSLSensorDetails: Codable{
+    public var sensor_state: String
+    public var status: String
+    public var serial_number: String = String()
+    public var data: TerraGlucoseData = TerraGlucoseData()
+}
+```
+
+`TerraGlucoseData` follows the same structure as shown in our [glucose data field from our models](https://docs.tryterra.co/reference/v2#body)
+
 
 ## Connect to Terra's Rest API within this SDK
 
