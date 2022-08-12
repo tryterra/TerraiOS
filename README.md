@@ -209,7 +209,7 @@ terra.activateSensor(completion: @escaping (Bool) -> Void)
 For reading a sensor you may use:
 
 ```swift
-getGlucoseData(completion: @escaping (FSLSensorDetails) -> Void)
+readGlucoseData(completion: @escaping (FSLSensorDetails) -> Void)
 ```
 
 `FSLSensorDetails` is a data struct for the data returned by the sensor. It follows the following format:
