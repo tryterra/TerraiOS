@@ -197,6 +197,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import ObjectiveC;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -213,6 +214,26 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="TerraiOS",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
+
+@class NSString;
+
+SWIFT_CLASS("_TtC8TerraiOS5Terra")
+@interface Terra : NSObject
+- (nonnull instancetype)initWithDevId:(NSString * _Nonnull)devId referenceId:(NSString * _Nullable)referenceId completion:(void (^ _Nonnull)(BOOL))completion OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+
+
+
+@interface Terra (SWIFT_EXTENSION(TerraiOS))
+/// A function to start background delivery. Must be ran in app delegate before app launches as this registers a background task handler.
++ (void)setUpBackgroundDelivery;
+@end
+
 
 
 #if __has_attribute(external_source_symbol)
@@ -419,6 +440,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import ObjectiveC;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -435,6 +457,26 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="TerraiOS",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
+
+@class NSString;
+
+SWIFT_CLASS("_TtC8TerraiOS5Terra")
+@interface Terra : NSObject
+- (nonnull instancetype)initWithDevId:(NSString * _Nonnull)devId referenceId:(NSString * _Nullable)referenceId completion:(void (^ _Nonnull)(BOOL))completion OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+
+
+
+@interface Terra (SWIFT_EXTENSION(TerraiOS))
+/// A function to start background delivery. Must be ran in app delegate before app launches as this registers a background task handler.
++ (void)setUpBackgroundDelivery;
+@end
+
 
 
 #if __has_attribute(external_source_symbol)
