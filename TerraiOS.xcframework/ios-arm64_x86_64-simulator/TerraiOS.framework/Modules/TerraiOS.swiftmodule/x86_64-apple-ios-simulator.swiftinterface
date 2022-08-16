@@ -516,20 +516,20 @@ public enum Connections {
     get
   }
 }
-public enum Permissions : Swift.UInt, Swift.CaseIterable {
-  case ACTIVITY
-  case BODY
-  case DAILY
-  case SLEEP
-  case SAMPLES
-  case NUTRITION
-  case MENSTRUATION
-  case ACTIVITY_WRITE
-  case BODY_WRITE
-  case DAILY_WRITE
-  case SLEEP_WRITE
-  case NUTRITION_WRITE
-  case MENSTRUATION_WRITE
+@objc public enum Permissions : Swift.UInt, Swift.CaseIterable {
+  case ACTIVITY = 0b0000000000001
+  case BODY = 0b0000000000010
+  case DAILY = 0b0000000000100
+  case SLEEP = 0b0000000001000
+  case SAMPLES = 0b0000000010000
+  case NUTRITION = 0b0000000100000
+  case MENSTRUATION = 0b0000001000000
+  case ACTIVITY_WRITE = 0b0000010000000
+  case BODY_WRITE = 0b0000100000000
+  case DAILY_WRITE = 0b0001000000000
+  case SLEEP_WRITE = 0b0010000000000
+  case NUTRITION_WRITE = 0b0100000000000
+  case MENSTRUATION_WRITE = 0b1000000000000
   public init?(rawValue: Swift.UInt)
   public typealias AllCases = [TerraiOS.Permissions]
   public typealias RawValue = Swift.UInt

@@ -215,6 +215,23 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+/// Enum class that maps all Terra Datatypes to the permissions neede by Apple Health.
+typedef SWIFT_ENUM(NSUInteger, Permissions, open) {
+  PermissionsACTIVITY = 0b0000000000001,
+  PermissionsBODY = 0b0000000000010,
+  PermissionsDAILY = 0b0000000000100,
+  PermissionsSLEEP = 0b0000000001000,
+  PermissionsSAMPLES = 0b0000000010000,
+  PermissionsNUTRITION = 0b0000000100000,
+  PermissionsMENSTRUATION = 0b0000001000000,
+  PermissionsACTIVITY_WRITE = 0b0000010000000,
+  PermissionsBODY_WRITE = 0b0000100000000,
+  PermissionsDAILY_WRITE = 0b0001000000000,
+  PermissionsSLEEP_WRITE = 0b0010000000000,
+  PermissionsNUTRITION_WRITE = 0b0100000000000,
+  PermissionsMENSTRUATION_WRITE = 0b1000000000000,
+};
+
 @class NSString;
 
 SWIFT_CLASS("_TtC8TerraiOS5Terra")
@@ -457,6 +474,23 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="TerraiOS",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
+
+/// Enum class that maps all Terra Datatypes to the permissions neede by Apple Health.
+typedef SWIFT_ENUM(NSUInteger, Permissions, open) {
+  PermissionsACTIVITY = 0b0000000000001,
+  PermissionsBODY = 0b0000000000010,
+  PermissionsDAILY = 0b0000000000100,
+  PermissionsSLEEP = 0b0000000001000,
+  PermissionsSAMPLES = 0b0000000010000,
+  PermissionsNUTRITION = 0b0000000100000,
+  PermissionsMENSTRUATION = 0b0000001000000,
+  PermissionsACTIVITY_WRITE = 0b0000010000000,
+  PermissionsBODY_WRITE = 0b0000100000000,
+  PermissionsDAILY_WRITE = 0b0001000000000,
+  PermissionsSLEEP_WRITE = 0b0010000000000,
+  PermissionsNUTRITION_WRITE = 0b0100000000000,
+  PermissionsMENSTRUATION_WRITE = 0b1000000000000,
+};
 
 @class NSString;
 
