@@ -44,7 +44,7 @@ public struct FSLSensorDetails : Swift.Codable {
 public class LibreManager {
   public init(devId: Swift.String)
   public func getGlucoseData(completion: @escaping (TerraiOS.FSLSensorDetails) -> Swift.Void)
-  public func activateSensor(completion: @escaping (Swift.Bool) -> Swift.Void) throws
+  public func activateSensor(completion: @escaping (Swift.Bool) -> Swift.Void)
   @objc deinit
 }
 @objc public class Terra : ObjectiveC.NSObject {
