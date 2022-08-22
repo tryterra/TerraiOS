@@ -22,11 +22,11 @@
 		</data>
 		<key>Modules/TerraiOS.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		olveAJURN1fU9a5eKta3xIhpmqU=
+		dshkSTvBBfaH+kQ6nACc64YAb/E=
 		</data>
 		<key>Modules/TerraiOS.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		NsyoIvbbql9tDfz1w4fBkG9qpNo=
+		qU19yIPEpAdyzasMxlvmgTLs+dE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -60,14 +60,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MFZ5lBOOeXuvd/z6KNKcEFOXeGJOyjQpUFY4mZTsccc=
+			nOCSmdAnGV05RapZAsH5Hliks92i9OiShspsPW0LWR8=
 			</data>
 		</dict>
 		<key>Modules/TerraiOS.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zRF7cq+5TfvXC8aVxfDf0J8WvejMD+mdQMW7Z+hsj/w=
+			s4DsccE1jI0jKPO7vaHenTlmlmJLBX7F8LRYbaiHHKA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

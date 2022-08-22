@@ -37,6 +37,7 @@ public struct FSLSensorDetails : Swift.Codable {
   public var status: Swift.String
   public var serial_number: Swift.String
   public var data: TerraiOS.TerraGlucoseData
+  public var device_data: TerraiOS.TerraDeviceData
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -392,6 +393,10 @@ public struct TerraActivityData : Swift.Codable {
   public var distance_data: TerraiOS.TerraDistanceData?
   public var calories_data: TerraiOS.TerraCaloriesData?
   public var position_data: TerraiOS.TerraPositionData?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ActivationTimestampPayload : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
