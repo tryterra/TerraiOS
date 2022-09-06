@@ -123,7 +123,7 @@ The framework allows you to disconnect users using our [`deauthenticateUser`](ht
 Terra.disconnectTerra(devId: String, xAPIKey: String, userId: String)
 ```
 
-### Subscriptions (new in 1.2.0)
+## Subscriptions (new in 1.2.0)
 
 We have removed the need for callbacks in the getter functions. They were slow, hard to maintain, and wasteful (as most of the data is not processed in the frontend). Instead, we replace it with a subscription system. 
 
