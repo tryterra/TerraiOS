@@ -2,7 +2,7 @@
 
 This framework allows you to any integration offered by [Terra](https://tryterra.co)
 
-The docs here are updated to latest version: 1.1.0
+The docs here are updated to latest version: 1.2.0
 
 For older docs and version please see [here](https://github.com/tryterra/TerraiOS/blob/f0a09fd581515c01fba06425f786567feda53995/README.md)
 
