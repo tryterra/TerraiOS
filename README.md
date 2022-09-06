@@ -66,6 +66,7 @@ in your app delegate's `didFinishLaunchingWithOptions` delegate function, i.e:
     }
 ```
 Thats it!
+
   
 ## Time to have some fun ;)
 
@@ -94,7 +95,7 @@ initConnection(type: Connections, token: String, customReadTypes: Set<HKObjectTy
 **Arguments** 
 - `type: Connections` ➡  An ENUM from the Connections class signifying the connection you wish to initiate for.
 - `token: String` ➡ A token used for authentication. Generate one here: https://docs.tryterra.co/reference/generate-authentication-token
-- (Optional) `customReadTypes: Set<HKObjectType>` ➡ This is defaulted as an empty `Set`. If you want to make a more granular permissions request, you may import HeatlhKit and provide this argument with a Set of `HKObjectType`s. For example: `HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!`. 
+- (Optional) `customReadTypes: Set<CustomPermissions>` ➡ This is defaulted as an empty `Set`. If you want to make a more granular permissions request, you may send us a set of `CustomPermissions`: An enum provided so you do not need to interact with HealthKit. 
 - `schedulerOn: Bool`  ➡ A boolean dictating if you wish turn on background delivery. Defaults to true. Please see **Background Delivery** section for setup.
 - `completion: @escaping (Bool) -> Void`  ➡ A callback with a boolean dictating if the initialisation succeeds. 
 
@@ -121,6 +122,44 @@ The framework allows you to disconnect users using our [`deauthenticateUser`](ht
 ```swift
 Terra.disconnectTerra(devId: String, xAPIKey: String, userId: String)
 ```
+
+### Subscriptions (new in 1.2.0)
+
+We have removed the need for callbacks in the getter functions. They were slow, hard to maintain, and wasteful (as most of the data is not processed in the frontend). Instead, we replace it with a subscription system. 
+
+After you have confirmed a connection with Apple Health, you can pass us an update handler ideally in your app delegate's `didFinishLaunchingWithOptions` function, so it is set everytime the app launches. This can be done as such:
+
+```swift
+Terra.updateHandler = {type: DataTypes, update: Update -> Void in 
+  // process updates in here
+} 
+```
+
+In this case, `DataTypes` are the datatypes you have subscribed to, and `Update` is a data model in this form:
+
+```swift
+public struct Update: Codable{
+    public var lastUpdated: Date?
+    public var samples: [TerraData]
+}
+
+public struct TerraData: Codable{
+    public let value: Double
+    public let timestamp: Date
+}
+```
+
+You can subscribe for datatypes as follows (only needs to be done once):
+
+```swift
+terra.subscribe(forDataTypes: Set<DataTypes>) throws
+```
+
+This call throws `TerraError.Unauthenticated`, please handle it properly.
+
+After the call, your update handler will be called with the corresponding datatypes whenever new ones are available. This includes the next time you open your app. 
+
+Scenario: You subscribed for steps data. You close your app and do not go back for 5 days. The next time you open it, your update handler will be called with all 5 days worth of steps, without you needing to query for it and would execute a lot faster as it is only steps. 
 
 ## Getting Data
 
@@ -169,13 +208,7 @@ terra.getAthlete(type: Connections)
 
 These functions that take `Date` as an argument, also takes `Time Interval` (Unix timestamp starting from 1st January 1970)
 
-The data will always be sent to your webhook. However if you require the data on the spot, you may get it from the completion callback function as follows:
-
-```swift
-terra.getActivity(type: Connections, startDate: Date, endDate: Date){success, data in 
-    //success -> A boolean to signify the function completed successfully
-    // data -> A data array corresponding to our data models
-}
+The data will always be sent to your webhook. 
 ```
 
 ## Post data
