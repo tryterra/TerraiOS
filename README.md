@@ -209,7 +209,6 @@ terra.getAthlete(type: Connections)
 These functions that take `Date` as an argument, also takes `Time Interval` (Unix timestamp starting from 1st January 1970)
 
 The data will always be sent to your webhook. 
-```
 
 ## Post data
 
