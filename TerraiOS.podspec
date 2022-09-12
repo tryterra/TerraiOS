@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name         = "TerraiOS"
-    spec.version      = "1.0.20a"
+    spec.version      = "1.2.1a"
     spec.summary      = "iOS SDKs support for Terra"
     spec.description  = <<-DESC
                 SDKs support for iOS to connect with Terra, including (but not limited to) Apple Health, Freestyle

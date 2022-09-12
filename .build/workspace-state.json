@@ -1,0 +1,23 @@
+{
+  "object" : {
+    "artifacts" : [
+      {
+        "packageRef" : {
+          "identity" : "terraios",
+          "kind" : "root",
+          "location" : "/Users/jaafarrammal/Documents/Repos/TerraiOS",
+          "name" : "TerraiOS"
+        },
+        "path" : "/Users/jaafarrammal/Documents/Repos/TerraiOS/TerraiOS.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "TerraiOS"
+      }
+    ],
+    "dependencies" : [
+
+    ]
+  },
+  "version" : 5
+}
