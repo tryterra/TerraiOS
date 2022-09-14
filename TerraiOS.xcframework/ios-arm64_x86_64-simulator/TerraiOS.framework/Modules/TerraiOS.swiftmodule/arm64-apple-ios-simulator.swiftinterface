@@ -19,7 +19,7 @@ import _Concurrency
   @objc deinit
 }
 extension TerraiOS.Terra {
-  public func initConnection(type: TerraiOS.Connections, token: Swift.String, customReadTypes: Swift.Set<HealthKit.HKObjectType> = Set([]), schedulerOn: Swift.Bool = true, completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in})
+  public func initConnection(type: TerraiOS.Connections, token: Swift.String, customReadTypes: Swift.Set<TerraiOS.CustomPermissions> = Set([]), schedulerOn: Swift.Bool = true, completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in})
   public func getUserId(type: TerraiOS.Connections) -> Swift.String?
   public func subscribe(forDataTypes dataTypes: Swift.Set<TerraiOS.DataTypes>) throws
 }
@@ -28,17 +28,17 @@ extension TerraiOS.Terra {
   public func postBody(type: TerraiOS.Connections, payload: TerraiOS.TerraBodyData, completion: @escaping (Swift.Bool) -> Swift.Void = {success -> Void in})
 }
 extension TerraiOS.Terra {
-  public func getAthlete(type: TerraiOS.Connections, completion: @escaping (Swift.Bool, TerraiOS.TerraAthleteData?) -> Swift.Void = {(_, _) -> Void in })
-  public func getDaily(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, completion: @escaping (Swift.Bool, [TerraiOS.TerraDailyData]?) -> Swift.Void = {(_, _) -> Void in})
-  public func getDaily(type: TerraiOS.Connections, startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraDailyData]?) -> Swift.Void = {(_, _) -> Void in})
-  public func getSleep(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, completion: @escaping (Swift.Bool, [TerraiOS.TerraSleepData]?) -> Swift.Void = {(_, _) -> Void in})
-  public func getSleep(type: TerraiOS.Connections, startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraSleepData]?) -> Swift.Void = {(_, _) -> Void in})
-  public func getBody(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, completion: @escaping (Swift.Bool, [TerraiOS.TerraBodyData]?) -> Swift.Void = {(_, _) -> Void in})
-  public func getBody(type: TerraiOS.Connections, startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraBodyData]?) -> Swift.Void = {(_, _) -> Void in})
-  public func getNutrition(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, completion: @escaping (Swift.Bool, [TerraiOS.TerraNutritionData]?) -> Swift.Void = {(_, _) -> Void in})
-  public func getNutrition(type: TerraiOS.Connections, startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraNutritionData]?) -> Swift.Void = {(_, _) -> Void in})
-  public func getActivity(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, completion: @escaping (Swift.Bool, [TerraiOS.TerraActivityData]?) -> Swift.Void = {(_, _) -> Void in})
-  public func getActivity(type: TerraiOS.Connections, startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraActivityData]?) -> Swift.Void = {(_, _) -> Void in})
+  public func getAthlete(type: TerraiOS.Connections, completion: @escaping (Swift.Bool) -> Swift.Void = {_ in })
+  public func getDaily(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, completion: @escaping (Swift.Bool) -> Swift.Void = {_ in })
+  public func getDaily(type: TerraiOS.Connections, startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool) -> Swift.Void = {_ in })
+  public func getSleep(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, completion: @escaping (Swift.Bool) -> Swift.Void = {_ in })
+  public func getSleep(type: TerraiOS.Connections, startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool) -> Swift.Void = {_ in })
+  public func getBody(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, completion: @escaping (Swift.Bool) -> Swift.Void = {_ in })
+  public func getBody(type: TerraiOS.Connections, startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool) -> Swift.Void = {_ in })
+  public func getNutrition(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, completion: @escaping (Swift.Bool) -> Swift.Void = {_ in })
+  public func getNutrition(type: TerraiOS.Connections, startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool) -> Swift.Void = {_ in })
+  public func getActivity(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, completion: @escaping (Swift.Bool) -> Swift.Void = {_ in })
+  public func getActivity(type: TerraiOS.Connections, startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool) -> Swift.Void = {_ in })
 }
 extension TerraiOS.Terra {
   public static func disconnectTerra(devId: Swift.String, xAPIKey: Swift.String, userId: Swift.String)
@@ -452,6 +452,52 @@ public struct TerraSleepData : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
+public enum CustomPermissions : Swift.String {
+  case WORKOUT_TYPE
+  case ACTIVITY_SUMMARY
+  case LOCATION
+  case CALORIES
+  case STEPS
+  case HEART_RATE
+  case HEART_RATE_VARIABILITY
+  case VO2MAX
+  case HEIGHT
+  case ACTIVE_DURATIONS
+  case WEIGHT
+  case FLIGHTS_CLIMBED
+  case BMI
+  case BODY_FAT
+  case EXERCISE_DISTANCE
+  case GENDER
+  case DATE_OF_BIRTH
+  case BASAL_ENERGY_BURNED
+  case SWIMMING_SUMMARY
+  case RESTING_HEART_RATE
+  case BLOOD_PRESSURE
+  case BLOOD_GLUCOSE
+  case BODY_TEMPERATURE
+  case MINDFULNESS
+  case LEAN_BODY_MASS
+  case OXYGEN_SATURATION
+  case SLEEP_ANALYSIS
+  case RESPIRATORY_RATE
+  case NUTRITION_SODIUM
+  case NUTRITION_PROTEIN
+  case NUTRITION_CARBOHYDRATES
+  case NUTRITION_FIBRE
+  case NUTRITION_FAT_TOTAL
+  case NUTRITION_SUGAR
+  case NUTRITION_VITAMIN_C
+  case NUTRITION_VITAMIN_A
+  case NUTRITION_CALORIES
+  case NUTRITION_WATER
+  case NUTRITION_CHOLESTEROL
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 public enum Connections {
   case FREESTYLE_LIBRE
   case APPLE_HEALTH
@@ -510,12 +556,12 @@ extension TerraiOS.AppleHealth {
   public func postBody(_ payload: TerraiOS.TerraBodyData, completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in})
 }
 extension TerraiOS.AppleHealth {
-  public func getAthlete(completion: @escaping (Swift.Bool, TerraiOS.TerraAthleteData?) -> Swift.Void = {(success, _) -> Void in})
-  public func getDaily(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraDailyData]?) -> Swift.Void = {(success, _) -> Void in})
-  public func getBody(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraBodyData]) -> Swift.Void = {(success, _) -> Void in})
-  public func getSleep(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraSleepData]) -> Swift.Void = {(success, _) -> Void in})
-  public func getNutrition(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraNutritionData]) -> Swift.Void = {(success, _) -> Void in})
-  public func getWorkout(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool, [TerraiOS.TerraActivityData]) -> Swift.Void = {(success, _) -> Void in})
+  public func getAthlete(completion: @escaping (Swift.Bool) -> Swift.Void = {_ in})
+  public func getDaily(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool) -> Swift.Void = {_ in})
+  public func getBody(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool) -> Swift.Void = { _ in })
+  public func getSleep(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool) -> Swift.Void = {_ in})
+  public func getNutrition(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool) -> Swift.Void = {success in})
+  public func getWorkout(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool) -> Swift.Void = {_ in})
 }
 extension Swift.Optional {
   public var optional: Wrapped? {
@@ -1071,6 +1117,9 @@ public enum DataTypes : Swift.String {
     get
   }
 }
+extension TerraiOS.CustomPermissions : Swift.Equatable {}
+extension TerraiOS.CustomPermissions : Swift.Hashable {}
+extension TerraiOS.CustomPermissions : Swift.RawRepresentable {}
 extension TerraiOS.Connections : Swift.Equatable {}
 extension TerraiOS.Connections : Swift.Hashable {}
 extension TerraiOS.Permissions : Swift.Equatable {}

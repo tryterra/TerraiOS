@@ -245,6 +245,7 @@ SWIFT_CLASS("_TtC8TerraiOS5Terra")
 
 
 
+
 @interface Terra (SWIFT_EXTENSION(TerraiOS))
 /// A function to start background delivery. Must be ran in app delegate before app launches as this registers a background task handler.
 + (void)setUpBackgroundDelivery;
@@ -499,6 +500,7 @@ SWIFT_CLASS("_TtC8TerraiOS5Terra")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 
