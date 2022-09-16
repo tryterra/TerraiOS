@@ -41,6 +41,9 @@ Also you must include the following keys in your `Info.plist` file:
 
 This library will use "Near Field Communication Tag Reading" capability. Add this to your capabilities and add `Privacy-NFC Scan Usage Description` as a key to your project's `Info.plist`. 
 
+To use a custom message, add a String field `Terra - NFC Scan Request 
+Message` to your `Info.plist`
+
 ### Background Delivery
 
 The framework automatically assumes you want to use Background Delivery if you initialise a connection for Apple Health. 
