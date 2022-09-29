@@ -70,6 +70,8 @@ extension TerraiOS.Terra {
 }
 extension TerraiOS.Terra {
   public func getAthlete(type: TerraiOS.Connections, completion: @escaping (Swift.Bool) -> Swift.Void = {_ in })
+  public func getMenstruation(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, completion: @escaping (Swift.Bool) -> Swift.Void = {_ in })
+  public func getMenstruation(type: TerraiOS.Connections, startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool) -> Swift.Void = {_ in })
   public func getDaily(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, completion: @escaping (Swift.Bool) -> Swift.Void = {_ in })
   public func getDaily(type: TerraiOS.Connections, startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool) -> Swift.Void = {_ in })
   public func getSleep(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, completion: @escaping (Swift.Bool) -> Swift.Void = {_ in })
@@ -537,6 +539,7 @@ public enum CustomPermissions : Swift.String {
   case NUTRITION_CALORIES
   case NUTRITION_WATER
   case NUTRITION_CHOLESTEROL
+  case MENSTRUATION
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -618,6 +621,7 @@ extension TerraiOS.AppleHealth {
 extension TerraiOS.AppleHealth {
   public func getAthlete(completion: @escaping (Swift.Bool) -> Swift.Void = {_ in})
   public func getDaily(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool) -> Swift.Void = {_ in})
+  public func getMenstruation(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool) -> Swift.Void = { _ in })
   public func getBody(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool) -> Swift.Void = { _ in })
   public func getSleep(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool) -> Swift.Void = {_ in})
   public func getNutrition(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool) -> Swift.Void = {success in})
