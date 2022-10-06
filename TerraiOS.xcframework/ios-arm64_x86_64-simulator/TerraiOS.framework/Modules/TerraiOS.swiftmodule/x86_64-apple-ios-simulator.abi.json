@@ -71730,192 +71730,248 @@
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 264,
+      "length": 2,
+      "value": "30"
+    },
+    {
+      "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 267,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 258,
+      "offset": 298,
       "length": 24,
       "value": "\"co.tryterra.body.timer\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 312,
+      "offset": 352,
       "length": 25,
       "value": "\"co.tryterra.daily.timer\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 371,
+      "offset": 411,
       "length": 29,
       "value": "\"co.tryterra.nutrition.timer\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 430,
+      "offset": 470,
       "length": 25,
       "value": "\"co.tryterra.sleep.timer\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 480,
+      "offset": 520,
       "length": 20,
       "value": "\"co.tryterra.dev.id\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 533,
+      "offset": 573,
       "length": 28,
       "value": "\"co.tryterra.workout.anchor\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 591,
+      "offset": 631,
       "length": 26,
       "value": "\"co.tryterra.steps.anchor\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 656,
+      "offset": 696,
       "length": 36,
       "value": "\"co.tryterra.last.steps.update.time\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 727,
+      "offset": 767,
       "length": 31,
       "value": "\"co.tryterra.heart.rate.anchor\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 801,
+      "offset": 841,
       "length": 41,
       "value": "\"co.tryterra.last.heart.rate.update.time\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 888,
+      "offset": 928,
       "length": 43,
       "value": "\"co.tryterra.heart.rate.variability.anchor\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 985,
+      "offset": 1025,
       "length": 53,
       "value": "\"co.tryterra.last.heart.rate.variability.update.time\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1072,
+      "offset": 1112,
       "length": 29,
       "value": "\"co.tryterra.calories.anchor\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1143,
+      "offset": 1183,
       "length": 39,
       "value": "\"co.tryterra.last.calories.update.time\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1216,
+      "offset": 1256,
       "length": 29,
       "value": "\"co.tryterra.calories.anchor\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1287,
+      "offset": 1327,
       "length": 39,
       "value": "\"co.tryterra.last.distance.update.time\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1357,
+      "offset": 1397,
       "length": 29,
       "value": "\"co.tryterra.app.permissions\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1417,
+      "offset": 1457,
       "length": 30,
       "value": "\"co.tryterra.daily.data.cache\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1481,
+      "offset": 1521,
       "length": 33,
       "value": "\"co.tryterra.activity.data.cache\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1545,
+      "offset": 1585,
       "length": 30,
       "value": "\"co.tryterra.sleep.data.cache\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1605,
+      "offset": 1645,
       "length": 29,
       "value": "\"co.tryterra.body.data.cache\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1669,
+      "offset": 1709,
       "length": 34,
       "value": "\"co.tryterra.nutrition.data.cache\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1741,
+      "offset": 1781,
       "length": 37,
       "value": "\"co.tryterra.menstruation.data.cache\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1814,
+      "offset": 1854,
       "length": 36,
       "value": "\"co.tryterra.subscription.datatypes\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1887,
+      "offset": 1927,
       "length": 45,
       "value": "\"co.tryterra.apple.health.custom.permissions\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1963,
+      "offset": 2003,
       "length": 26,
       "value": "\"co.tryterra.scheduler.on\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2019,
+      "offset": 2059,
       "length": 27,
       "value": "\"co.tryterra.logging.level\""
+    },
+    {
+      "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 2117,
+      "length": 30,
+      "value": "\"co.tryterra.last.called.body\""
+    },
+    {
+      "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 2179,
+      "length": 31,
+      "value": "\"co.tryterra.last.called.sleep\""
+    },
+    {
+      "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 2242,
+      "length": 31,
+      "value": "\"co.tryterra.last.called.daily\""
+    },
+    {
+      "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 2309,
+      "length": 35,
+      "value": "\"co.tryterra.last.called.nutrition\""
+    },
+    {
+      "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 2383,
+      "length": 38,
+      "value": "\"co.tryterra.last.called.menstruation\""
+    },
+    {
+      "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 2464,
+      "length": 43,
+      "value": "\"co.tryterra.last.background.delivery.sent\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Models\/Samples.swift",
@@ -74132,196 +74188,294 @@
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 802,
+      "offset": 917,
+      "length": 35,
+      "value": "\"Deliverying Activity Data (Query)\""
+    },
+    {
+      "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
+      "kind": "StringLiteral",
+      "offset": 990,
+      "length": 10,
+      "value": "\"activity\""
+    },
+    {
+      "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
+      "kind": "StringLiteral",
+      "offset": 1108,
       "length": 30,
       "value": "\"co.tryterra.bgdelivery.queue\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 2937,
+      "offset": 3111,
       "length": 31,
       "value": "\"co.tryterra.data.post.request\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 3036,
+      "offset": 3210,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 3182,
+      "offset": 3356,
       "length": 47,
       "value": "\"Background Delivery Task Submitted (Activity)\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
+      "kind": "StringLiteral",
+      "offset": 4268,
+      "length": 31,
+      "value": "\"Delivering Daily Data (Query)\""
+    },
+    {
+      "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
+      "kind": "StringLiteral",
+      "offset": 4339,
+      "length": 7,
+      "value": "\"daily\""
+    },
+    {
+      "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "IntegerLiteral",
-      "offset": 4195,
+      "offset": 4597,
       "length": 2,
       "value": "1"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 5219,
+      "offset": 5530,
       "length": 31,
       "value": "\"co.tryterra.data.post.request\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 5310,
+      "offset": 5621,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 5449,
+      "offset": 5760,
       "length": 44,
       "value": "\"Background Delivery Task Submitted (Daily)\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
+      "kind": "StringLiteral",
+      "offset": 6878,
+      "length": 30,
+      "value": "\"Delivering Body Data (Query)\""
+    },
+    {
+      "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
+      "kind": "StringLiteral",
+      "offset": 6951,
+      "length": 6,
+      "value": "\"body\""
+    },
+    {
+      "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "IntegerLiteral",
-      "offset": 6678,
+      "offset": 7236,
       "length": 2,
       "value": "1"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 7772,
+      "offset": 8240,
       "length": 31,
       "value": "\"co.tryterra.data.post.request\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 7867,
+      "offset": 8335,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 8022,
+      "offset": 8490,
       "length": 43,
       "value": "\"Background Delivery Task Submitted (Body)\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
+      "kind": "StringLiteral",
+      "offset": 9191,
+      "length": 30,
+      "value": "\"Delivering Body Data (Query)\""
+    },
+    {
+      "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
+      "kind": "StringLiteral",
+      "offset": 9264,
+      "length": 6,
+      "value": "\"body\""
+    },
+    {
+      "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "IntegerLiteral",
-      "offset": 8834,
+      "offset": 9549,
       "length": 2,
       "value": "1"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 9928,
+      "offset": 10553,
       "length": 31,
       "value": "\"co.tryterra.data.post.request\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 10023,
+      "offset": 10648,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 10178,
+      "offset": 10803,
       "length": 43,
       "value": "\"Background Delivery Task Submitted (Body)\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
+      "kind": "StringLiteral",
+      "offset": 11567,
+      "length": 31,
+      "value": "\"Delivering Sleep Data (Query)\""
+    },
+    {
+      "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
+      "kind": "StringLiteral",
+      "offset": 11638,
+      "length": 7,
+      "value": "\"sleep\""
+    },
+    {
+      "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "IntegerLiteral",
-      "offset": 10870,
+      "offset": 11781,
       "length": 2,
       "value": "1"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 11695,
+      "offset": 12463,
       "length": 31,
       "value": "\"co.tryterra.data.post.request\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 11786,
+      "offset": 12554,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 11925,
+      "offset": 12693,
       "length": 44,
       "value": "\"Background Delivery Task Submitted (Sleep)\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
+      "kind": "StringLiteral",
+      "offset": 13364,
+      "length": 35,
+      "value": "\"Delivering Nutrition Data (Query)\""
+    },
+    {
+      "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
+      "kind": "StringLiteral",
+      "offset": 13443,
+      "length": 11,
+      "value": "\"nutrition\""
+    },
+    {
+      "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "IntegerLiteral",
-      "offset": 12701,
+      "offset": 13705,
       "length": 2,
       "value": "1"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 13769,
+      "offset": 14682,
       "length": 31,
       "value": "\"co.tryterra.data.post.request\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 13860,
+      "offset": 14773,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 13999,
+      "offset": 14912,
       "length": 48,
       "value": "\"Background Delivery Task Submitted (Nutrition)\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
+      "kind": "StringLiteral",
+      "offset": 15598,
+      "length": 38,
+      "value": "\"Delivering Menstruation Data (Query)\""
+    },
+    {
+      "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
+      "kind": "StringLiteral",
+      "offset": 15683,
+      "length": 14,
+      "value": "\"menstruation\""
+    },
+    {
+      "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "IntegerLiteral",
-      "offset": 14759,
+      "offset": 15948,
       "length": 2,
       "value": "1"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 15854,
+      "offset": 16939,
       "length": 31,
       "value": "\"co.tryterra.data.post.request\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 15945,
+      "offset": 17030,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 16084,
+      "offset": 17169,
       "length": 51,
       "value": "\"Background Delivery Task Submitted (Menstruation)\""
     },
