@@ -73691,7 +73691,14 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/NFCManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 13932,
+      "offset": 16852,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/NFCManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 17405,
       "length": 1,
       "value": "0"
     },
@@ -74440,42 +74447,42 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 15598,
+      "offset": 15611,
       "length": 38,
       "value": "\"Delivering Menstruation Data (Query)\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 15683,
+      "offset": 15696,
       "length": 14,
       "value": "\"menstruation\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "IntegerLiteral",
-      "offset": 15948,
+      "offset": 15961,
       "length": 2,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 16939,
+      "offset": 16952,
       "length": 31,
       "value": "\"co.tryterra.data.post.request\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 17030,
+      "offset": 17043,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 17169,
+      "offset": 17182,
       "length": 51,
       "value": "\"Background Delivery Task Submitted (Menstruation)\""
     },
