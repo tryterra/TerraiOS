@@ -4,10 +4,8 @@
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import BackgroundTasks
 import Combine
-import CoreLocation
 import CoreNFC
 import Foundation
-import HealthKit
 import Swift
 import SwiftUI
 @_exported import TerraiOS
@@ -51,14 +49,12 @@ public class LibreManager {
 @objc public class Terra : ObjectiveC.NSObject {
   public var authResponseApple: TerraiOS.TerraAuthResponse?
   public var authResponseFSL: TerraiOS.TerraAuthResponse?
-  public static var updateHandler: ((TerraiOS.DataTypes, TerraiOS.Update) -> Swift.Void)?
   @objc public init(devId: Swift.String, referenceId: Swift.String? = nil, completion: @escaping (Swift.Bool) -> Swift.Void)
   @objc deinit
 }
 extension TerraiOS.Terra {
   public func initConnection(type: TerraiOS.Connections, token: Swift.String, customReadTypes: Swift.Set<TerraiOS.CustomPermissions> = Set([]), schedulerOn: Swift.Bool = true, completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in})
   public func getUserId(type: TerraiOS.Connections) -> Swift.String?
-  public func subscribe(forDataTypes dataTypes: Swift.Set<TerraiOS.DataTypes>) throws
 }
 extension TerraiOS.Terra {
   public func readGlucoseData(completion: @escaping (TerraiOS.FSLSensorDetails?) -> Swift.Void = {_ in })
@@ -499,53 +495,6 @@ public struct TerraSleepData : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-public enum CustomPermissions : Swift.String {
-  case WORKOUT_TYPE
-  case ACTIVITY_SUMMARY
-  case LOCATION
-  case CALORIES
-  case STEPS
-  case HEART_RATE
-  case HEART_RATE_VARIABILITY
-  case VO2MAX
-  case HEIGHT
-  case ACTIVE_DURATIONS
-  case WEIGHT
-  case FLIGHTS_CLIMBED
-  case BMI
-  case BODY_FAT
-  case EXERCISE_DISTANCE
-  case GENDER
-  case DATE_OF_BIRTH
-  case BASAL_ENERGY_BURNED
-  case SWIMMING_SUMMARY
-  case RESTING_HEART_RATE
-  case BLOOD_PRESSURE
-  case BLOOD_GLUCOSE
-  case BODY_TEMPERATURE
-  case MINDFULNESS
-  case LEAN_BODY_MASS
-  case OXYGEN_SATURATION
-  case SLEEP_ANALYSIS
-  case RESPIRATORY_RATE
-  case NUTRITION_SODIUM
-  case NUTRITION_PROTEIN
-  case NUTRITION_CARBOHYDRATES
-  case NUTRITION_FIBRE
-  case NUTRITION_FAT_TOTAL
-  case NUTRITION_SUGAR
-  case NUTRITION_VITAMIN_C
-  case NUTRITION_VITAMIN_A
-  case NUTRITION_CALORIES
-  case NUTRITION_WATER
-  case NUTRITION_CHOLESTEROL
-  case MENSTRUATION
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
 public enum LibreSensorState {
   case notYetStarted
   case starting
@@ -570,30 +519,6 @@ public enum Connections {
     get
   }
 }
-@objc public enum Permissions : Swift.UInt, Swift.CaseIterable {
-  case ACTIVITY = 0b0000000000001
-  case BODY = 0b0000000000010
-  case DAILY = 0b0000000000100
-  case SLEEP = 0b0000000001000
-  case SAMPLES = 0b0000000010000
-  case NUTRITION = 0b0000000100000
-  case MENSTRUATION = 0b0000001000000
-  case ACTIVITY_WRITE = 0b0000010000000
-  case BODY_WRITE = 0b0000100000000
-  case DAILY_WRITE = 0b0001000000000
-  case SLEEP_WRITE = 0b0010000000000
-  case NUTRITION_WRITE = 0b0100000000000
-  case MENSTRUATION_WRITE = 0b1000000000000
-  public init?(rawValue: Swift.UInt)
-  public typealias AllCases = [TerraiOS.Permissions]
-  public typealias RawValue = Swift.UInt
-  public static var allCases: [TerraiOS.Permissions] {
-    get
-  }
-  public var rawValue: Swift.UInt {
-    get
-  }
-}
 public struct AuthenticateUserPayload : Swift.Codable {
   public var status: Swift.String?
   public var auth_url: Swift.String?
@@ -607,25 +532,6 @@ public struct DeauthenticateUserPayload : Swift.Codable {
   public var message: Swift.String?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
-}
-public class AppleHealth {
-  final public let userId: Swift.String?
-  @available(iOS 10.0, *)
-  public init(devId: Swift.String, userId: Swift.String? = nil, auto: Swift.Bool = true, readTypes: Swift.Set<HealthKit.HKObjectType>, shareType: Swift.Set<HealthKit.HKSampleType> = Set([]), completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in }) throws
-  @objc deinit
-}
-extension TerraiOS.AppleHealth {
-  public func postNutrition(_ payload: TerraiOS.TerraNutritionData, completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in})
-  public func postBody(_ payload: TerraiOS.TerraBodyData, completion: @escaping (Swift.Bool) -> Swift.Void = {(success) -> Void in})
-}
-extension TerraiOS.AppleHealth {
-  public func getAthlete(completion: @escaping (Swift.Bool) -> Swift.Void = {_ in})
-  public func getDaily(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool) -> Swift.Void = {_ in})
-  public func getMenstruation(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool) -> Swift.Void = { _ in })
-  public func getBody(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool) -> Swift.Void = { _ in })
-  public func getSleep(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool) -> Swift.Void = {_ in})
-  public func getNutrition(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool) -> Swift.Void = {success in})
-  public func getWorkout(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), completion: @escaping (Swift.Bool) -> Swift.Void = {_ in})
 }
 extension Swift.Optional {
   public var optional: Wrapped? {
@@ -915,6 +821,53 @@ public struct TerraAuthResponse : Swift.Codable {
 extension Foundation.Data {
   public func bitread(_ offset: Swift.Int, _ bitOffset: Swift.Int, _ bitCount: Swift.Int) -> Swift.Int
 }
+public enum CustomPermissions : Swift.String {
+  case WORKOUT_TYPE
+  case ACTIVITY_SUMMARY
+  case LOCATION
+  case CALORIES
+  case STEPS
+  case HEART_RATE
+  case HEART_RATE_VARIABILITY
+  case VO2MAX
+  case HEIGHT
+  case ACTIVE_DURATIONS
+  case WEIGHT
+  case FLIGHTS_CLIMBED
+  case BMI
+  case BODY_FAT
+  case EXERCISE_DISTANCE
+  case GENDER
+  case DATE_OF_BIRTH
+  case BASAL_ENERGY_BURNED
+  case SWIMMING_SUMMARY
+  case RESTING_HEART_RATE
+  case BLOOD_PRESSURE
+  case BLOOD_GLUCOSE
+  case BODY_TEMPERATURE
+  case MINDFULNESS
+  case LEAN_BODY_MASS
+  case OXYGEN_SATURATION
+  case SLEEP_ANALYSIS
+  case RESPIRATORY_RATE
+  case NUTRITION_SODIUM
+  case NUTRITION_PROTEIN
+  case NUTRITION_CARBOHYDRATES
+  case NUTRITION_FIBRE
+  case NUTRITION_FAT_TOTAL
+  case NUTRITION_SUGAR
+  case NUTRITION_VITAMIN_C
+  case NUTRITION_VITAMIN_A
+  case NUTRITION_CALORIES
+  case NUTRITION_WATER
+  case NUTRITION_CHOLESTEROL
+  case MENSTRUATION
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 public struct Update : Swift.Codable {
   public var lastUpdated: Foundation.Date?
   public var samples: [TerraiOS.TerraData]
@@ -1201,31 +1154,13 @@ extension TerraiOS.SensorData {
   }
   public func rawGlucose(_ record: Swift.UInt16) -> Swift.UInt16
 }
-public enum DataTypes : Swift.String {
-  case STEPS
-  case HEART_RATE
-  case HEART_RATE_VARIABILITY
-  case CALORIES
-  case DISTANCE
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-extension TerraiOS.CustomPermissions : Swift.Equatable {}
-extension TerraiOS.CustomPermissions : Swift.Hashable {}
-extension TerraiOS.CustomPermissions : Swift.RawRepresentable {}
 extension TerraiOS.LibreSensorState : Swift.Equatable {}
 extension TerraiOS.LibreSensorState : Swift.Hashable {}
 extension TerraiOS.Connections : Swift.Equatable {}
 extension TerraiOS.Connections : Swift.Hashable {}
-extension TerraiOS.Permissions : Swift.Equatable {}
-extension TerraiOS.Permissions : Swift.Hashable {}
-extension TerraiOS.Permissions : Swift.RawRepresentable {}
 extension TerraiOS.Resource : Swift.Equatable {}
 extension TerraiOS.Resource : Swift.Hashable {}
 extension TerraiOS.Resource : Swift.RawRepresentable {}
-extension TerraiOS.DataTypes : Swift.Equatable {}
-extension TerraiOS.DataTypes : Swift.Hashable {}
-extension TerraiOS.DataTypes : Swift.RawRepresentable {}
+extension TerraiOS.CustomPermissions : Swift.Equatable {}
+extension TerraiOS.CustomPermissions : Swift.Hashable {}
+extension TerraiOS.CustomPermissions : Swift.RawRepresentable {}
