@@ -330,3 +330,20 @@ You can then deauthenticate a user by:
 terraAuthClient.deauthenticateUser(user_id: "USER_ID")
 
 ```
+
+# Common Tasks
+
+## Handling app re-installs: when to show a "connect Apple Health" button (same applies to any other connection)
+
+In your app, you may want to know when the user has previously already consented to sharing Apple Health data, so that you know how to handle showing the "Connect to Apple" button (or equivalent) in your UI.
+
+To achieve this, you may use the instance method `getUserid` function, passing in Apple as a connection. If the return value is null, you may show the button and if not, you may show a "Disconnect" button instead, or "Already connected" status, as per your requirements.
+
+Below you'll find an explanation of the situation in different scenarios
+
+### App re-install on same device
+If the user uninstalls the app, and reinstalls the app on the same device, assuming you're initializing Terra with the same devId on the same app, you'll receive the user ID you already authenticated previously
+
+### App re-install on new device
+
+If the user installs the app on a new device, you'll receive `nil`, and it is appropriate to show a connect button, as if the user had never connected. If the user is marked as having that device connection in your database, it may also be worth explaining to them that they're connecting a new device and replacing the old one, or handle it appropriately according to your use case
