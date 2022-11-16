@@ -2,19 +2,13 @@
 
 This framework allows you to any integration offered by [Terra](https://tryterra.co)
 
-The docs here are updated to latest version: 1.2.13
+The docs here are updated to latest version: 1.2.15
 
 For older docs and version please see [here](https://github.com/tryterra/TerraiOS/blob/f0a09fd581515c01fba06425f786567feda53995/README.md)
 
-## Quick Start
-
-A demo app is provided here to get you started quickly!
-
-https://github.com/tryterra/TerraiOSDemo
-
 ## Specification (Only read this section if something breaks)
 
-This library supports only iOS 13+ and is implemented with Swift 5.0
+This library supports only iOS 13+ and is implemented with Swift 5.7
 
 ## Setup (The useful stuff)
 
