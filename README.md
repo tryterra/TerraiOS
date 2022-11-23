@@ -267,27 +267,22 @@ let terra: TerraClient = TerraClient(user_id: <TERRA USER ID>, dev_id: <YOUR DEV
 
 Using this client, you may make requests to endpoints such as `/activity`, `/body`, etc. (More info [here](https://docs.tryterra.co/http-endpoints)).
 
+
 To do this, you simply have to call:
 
 ```swift
-terra.getDaily(startDate: Date, endDate: Date , toWebhook: true)!
+terra.getDaily(startDate: Date, endDate: Date, toWebhook: Bool = true, completion: @escaping(TerraDailyDataPayloadModel) -> Void)
 ```
 
 `toWebhook` is default set to true.
 
 Simiarly, you can get Activity, Body, and Sleep using `getActivity()`, `getBody()`, and `getSleep()` respectively. They all use the same arguments. 
 
-You may also get Athlete data by `getAthlete(toWebhook: true)` where the date arguments are not needed.
+You may also get Athlete data by `getAthlete(toWebhook: Bool, completion: @escaping(TerraAthleteDataPayloadModel) -> Void)` where the date arguments are not needed.
 
-These methods return a payload corresponding to our data models and HTTP responses. 
-For example:
-
-```swift
-let activityData = terra.getActivity(startDate: startDate, endDate: endDate, toWebhook: false)!
-```
 These functions that take `Date` as an argument, also takes `Time Interval` (Unix timestamp starting from 1st January 1970)
 
-In this case you can access the user data by accessing `activityData.user`, user_id by: `activityData.user.user_id` and the data array by `activityData.data`. This is similar to the structure returned by our [Payloads Models](https://docs.tryterra.co/data-models-mark-ii)
+Each function has a completion callback with the models built in!
 
 ```json
 {
@@ -306,22 +301,16 @@ In this case you can access the user data by accessing `activityData.user`, user
 
 This package also embeds the `/authenticateUser` and `/deauthenticateUser` endpoint.
 
-This can be called by using the `TerraAuthClient` class:
-
-```swift 
-let terraAuthClient: TerraAuthClient = TerraAuthClient(dev_id: DEVID, xAPIKey: XAPIKEY)
-```
-
 And then you can generate an authentication url (code uses FITBIT as an example) by running:
 
 ```swift
-terraAuthClient.authenticateUser(resource: "FITBIT")
+terraClient.authenticateUser(resource: Resource, completion: @escaping (AuthenticateUserPayload) -> Void)
 ```
 
 You can then deauthenticate a user by:
 
 ```swift
-terraAuthClient.deauthenticateUser(user_id: "USER_ID")
+terraClient.deauthenticateUser(forUser userId: String, completion: @escaping (DeauthenticateUserPayload) -> Void)
 
 ```
 
