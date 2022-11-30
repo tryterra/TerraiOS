@@ -89,7 +89,7 @@ public struct TerraMETData : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
 }
 public struct TerraHeartRateSummaryData : Swift.Codable {
-  public init(user_max_hr_bpm: Swift.Double? = nil, min_hr_bpm: Swift.Double? = nil, avg_hrv_sdnn: Swift.Double? = nil, avg_hrv_rmssd: Swift.Double? = nil, avg_hr_bpm: Swift.Double? = nil, resting_hr_bpm: Swift.Double? = nil, max_hr_bpm: Swift.Double? = nil)
+  public init(user_max_hr_bpm: Swift.Double? = nil, min_hr_bpm: Swift.Double? = nil, avg_hrv_sdnn: Swift.Double? = nil, avg_hrv_rmssd: Swift.Double? = nil, avg_hr_bpm: Swift.Double? = nil, resting_hr_bpm: Swift.Double? = nil, max_hr_bpm: Swift.Double? = nil, hr_zone_data: [TerraiOS.TerraHeartRateZoneData]? = [TerraHeartRateZoneData]())
   public var user_max_hr_bpm: Swift.Double?
   public var min_hr_bpm: Swift.Double?
   public var avg_hrv_sdnn: Swift.Double?
@@ -97,6 +97,7 @@ public struct TerraHeartRateSummaryData : Swift.Codable {
   public var avg_hr_bpm: Swift.Double?
   public var resting_hr_bpm: Swift.Double?
   public var max_hr_bpm: Swift.Double?
+  public var hr_zone_data: [TerraiOS.TerraHeartRateZoneData]?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -351,6 +352,15 @@ public struct TerraPositionData : Swift.Codable {
   public var position_samples: [TerraiOS.PositionSample]?
   public var center_pos_lat_lng_deg: [Swift.Double]?
   public var end_pos_lat_lng_deg: [Swift.Double]?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraHeartRateZoneData : Swift.Codable {
+  public var zone: Swift.Int?
+  public var start_percentage: Swift.Double?
+  public var end_percentage: Swift.Double?
+  public var name: Swift.String?
+  public var duration_seconds: Swift.Double?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -777,72 +787,72 @@ public struct TerraUserModel : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
 }
 public struct TerraBodyDataPayloadModel : Swift.Codable {
-  public var user: TerraiOS.TerraUserModel
+  public var user: TerraiOS.TerraUserModel?
   public var data: [TerraiOS.TerraBodyData]?
   public var message: Swift.String?
   public var reference: Swift.String?
   public var type: Swift.String?
-  public var status: Swift.String
+  public var status: Swift.String?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct TerraAthleteDataPayloadModel : Swift.Codable {
-  public var user: TerraiOS.TerraUserModel
+  public var user: TerraiOS.TerraUserModel?
   public var data: [TerraiOS.TerraAthleteData]?
   public var message: Swift.String?
   public var reference: Swift.String?
   public var type: Swift.String?
-  public var status: Swift.String
+  public var status: Swift.String?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct TerraActivityDataPayloadModel : Swift.Codable {
-  public var user: TerraiOS.TerraUserModel
+  public var user: TerraiOS.TerraUserModel?
   public var data: [TerraiOS.TerraActivityData]?
   public var message: Swift.String?
   public var reference: Swift.String?
   public var type: Swift.String?
-  public var status: Swift.String
+  public var status: Swift.String?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct TerraSleepDataPayloadModel : Swift.Codable {
-  public var user: TerraiOS.TerraUserModel
+  public var user: TerraiOS.TerraUserModel?
   public var data: [TerraiOS.TerraSleepData]?
   public var message: Swift.String?
   public var reference: Swift.String?
   public var type: Swift.String?
-  public var status: Swift.String
+  public var status: Swift.String?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct TerraDailyDataPayloadModel : Swift.Codable {
-  public var user: TerraiOS.TerraUserModel
+  public var user: TerraiOS.TerraUserModel?
   public var data: [TerraiOS.TerraDailyData]?
   public var message: Swift.String?
   public var reference: Swift.String?
   public var type: Swift.String?
-  public var status: Swift.String
+  public var status: Swift.String?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct TerraMenstruationDataPayloadModel : Swift.Codable {
-  public var user: TerraiOS.TerraUserModel
+  public var user: TerraiOS.TerraUserModel?
   public var data: [TerraiOS.TerraMenstruationData]?
   public var message: Swift.String?
   public var reference: Swift.String?
   public var type: Swift.String?
-  public var status: Swift.String
+  public var status: Swift.String?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct TerraNutritionDataPayloadModel : Swift.Codable {
-  public var user: TerraiOS.TerraUserModel
+  public var user: TerraiOS.TerraUserModel?
   public var data: [TerraiOS.TerraNutritionData]?
   public var message: Swift.String?
   public var reference: Swift.String?
   public var type: Swift.String?
-  public var status: Swift.String
+  public var status: Swift.String?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -913,63 +923,63 @@ public struct TerraData : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
 }
 public struct ActivityLevelSample : Swift.Codable {
-  public var timestamp: Swift.String
-  public var activity_level: Swift.Int
+  public var timestamp: Swift.String?
+  public var activity_level: Swift.Int?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct BreathSample : Swift.Codable {
-  public var timestamp: Swift.String
-  public var breaths_per_min: Swift.Double
+  public var timestamp: Swift.String?
+  public var breaths_per_min: Swift.Double?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct CadenceSample : Swift.Codable {
-  public var timestamp: Swift.String
-  public var cadence_rpm: Swift.Double
+  public var timestamp: Swift.String?
+  public var cadence_rpm: Swift.Double?
   public var timer_duration_seconds: Swift.Double?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct SpeedSample : Swift.Codable {
-  public var timestamp: Swift.String
+  public var timestamp: Swift.String?
   public var speed_meters_per_seconds: Swift.Double?
   public var timer_duration_seconds: Swift.Double?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct StepSample : Swift.Codable {
-  public var timestamp: Swift.String
+  public var timestamp: Swift.String?
   public var steps: Swift.Double?
   public var timer_duration_seconds: Swift.Double?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct LapSample : Swift.Codable {
-  public var start_time: Swift.String
+  public var start_time: Swift.String?
   public var distance_meters: Swift.Double?
   public var calories: Swift.Double?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct DistanceSample : Swift.Codable {
-  public var timestamp: Swift.String
-  public var distance_meters: Swift.Double
+  public var timestamp: Swift.String?
+  public var distance_meters: Swift.Double?
   public var timer_duration_seconds: Swift.Double?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct ElevationSample : Swift.Codable {
-  public var timestamp: Swift.String
-  public var elev_meters: Swift.Double
+  public var timestamp: Swift.String?
+  public var elev_meters: Swift.Double?
   public var timer_duration_seconds: Swift.Double?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct GlucoseDataSample : Swift.Codable {
   public init(timestamp: Swift.String, blood_glucose_mg_per_dL: Swift.Double, glucose_level_flag: Swift.Int? = nil, trend_array: Swift.Int? = nil)
-  public var timestamp: Swift.String
-  public var blood_glucose_mg_per_dL: Swift.Double
+  public var timestamp: Swift.String?
+  public var blood_glucose_mg_per_dL: Swift.Double?
   public var glucose_level_flag: Swift.Int?
   public var trend_array: Swift.Int?
   public func encode(to encoder: Swift.Encoder) throws
@@ -977,73 +987,73 @@ public struct GlucoseDataSample : Swift.Codable {
 }
 public struct HeartRateSample : Swift.Codable {
   public init(timestamp: Swift.String, bpm: Swift.Double)
-  public var timestamp: Swift.String
-  public var bpm: Swift.Double
+  public var timestamp: Swift.String?
+  public var bpm: Swift.Double?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct HeartRatesVariabilitySampleSDNN : Swift.Codable {
   public init(hrv_sdnn: Swift.Double, timestamp: Swift.String)
-  public var hrv_sdnn: Swift.Double
-  public var timestamp: Swift.String
+  public var hrv_sdnn: Swift.Double?
+  public var timestamp: Swift.String?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct HeartRatesVariabilitySampleRMSSD : Swift.Codable {
-  public var hrv_rmssd: Swift.Double
-  public var timestamp: Swift.String
+  public var hrv_rmssd: Swift.Double?
+  public var timestamp: Swift.String?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct HypnogramSample : Swift.Codable {
-  public var level: Swift.Int
-  public var timestamp: Swift.String
+  public var level: Swift.Int?
+  public var timestamp: Swift.String?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct METSample : Swift.Codable {
-  public var level: Swift.Double
-  public var timestamp: Swift.String
+  public var level: Swift.Double?
+  public var timestamp: Swift.String?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct OxygenSaturationSample : Swift.Codable {
   public init(percentage: Swift.Double, timestamp: Swift.String)
-  public var percentage: Swift.Double
-  public var timestamp: Swift.String
+  public var percentage: Swift.Double?
+  public var timestamp: Swift.String?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct PositionSample : Swift.Codable {
-  public var timestamp: Swift.String
-  public var coords_lat_lng_deg: [Swift.Double]
+  public var timestamp: Swift.String?
+  public var coords_lat_lng_deg: [Swift.Double]?
   public var timer_duration_seconds: Swift.Double?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct PowerSample : Swift.Codable {
-  public var timestamp: Swift.String
-  public var watts: Swift.Double
+  public var timestamp: Swift.String?
+  public var watts: Swift.Double?
   public var timer_duration_seconds: Swift.Double?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct SPO2Sample : Swift.Codable {
   public init(timestamp: Swift.String, percentage: Swift.Double)
-  public var timestamp: Swift.String
-  public var percentage: Swift.Double
+  public var timestamp: Swift.String?
+  public var percentage: Swift.Double?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct SnoringSample : Swift.Codable {
-  public var duration_seconds: Swift.Double
-  public var timestamp: Swift.String
+  public var duration_seconds: Swift.Double?
+  public var timestamp: Swift.String?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct StressSample : Swift.Codable {
-  public var level: Swift.Double
-  public var timestamp: Swift.String
+  public var level: Swift.Double?
+  public var timestamp: Swift.String?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -1069,9 +1079,9 @@ public struct OtherDeviceData : Swift.Codable {
 }
 public struct BloodPressureSample : Swift.Codable {
   public init(timestamp: Swift.String, diastolic_bp: Swift.Double, systolic_bp: Swift.Double)
-  public var timestamp: Swift.String
-  public var diastolic_bp: Swift.Double
-  public var systolic_bp: Swift.Double
+  public var timestamp: Swift.String?
+  public var diastolic_bp: Swift.Double?
+  public var systolic_bp: Swift.Double?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -1098,29 +1108,29 @@ public struct MeasurementDataSample : Swift.Codable {
 }
 public struct TemperatureSample : Swift.Codable {
   public init(timestamp: Swift.String, temperature_celsius: Swift.Double)
-  public var timestamp: Swift.String
-  public var temperature_celsius: Swift.Double
+  public var timestamp: Swift.String?
+  public var temperature_celsius: Swift.Double?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct HydrationLevelSample : Swift.Codable {
   public init(timestamp: Swift.String, hydration_level: Swift.Double)
-  public var timestamp: Swift.String
-  public var hydration_level: Swift.Double
+  public var timestamp: Swift.String?
+  public var hydration_level: Swift.Double?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct HydrationMeasurementSample : Swift.Codable {
   public init(timestamp: Swift.String, hydration_kg: Swift.Double)
-  public var timestamp: Swift.String
-  public var hydration_kg: Swift.Double
+  public var timestamp: Swift.String?
+  public var hydration_kg: Swift.Double?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct Vo2Sample : Swift.Codable {
   public init(timestamp: Swift.String, vo2max_ml_per_min_per_kg: Swift.Double)
-  public var timestamp: Swift.String
-  public var vo2max_ml_per_min_per_kg: Swift.Double
+  public var timestamp: Swift.String?
+  public var vo2max_ml_per_min_per_kg: Swift.Double?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
