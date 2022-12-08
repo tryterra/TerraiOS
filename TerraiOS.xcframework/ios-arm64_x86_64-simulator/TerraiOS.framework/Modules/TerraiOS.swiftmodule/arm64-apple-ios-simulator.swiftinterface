@@ -24,7 +24,8 @@ extension TerraiOS.LibreProActivator {
   #endif
 }
 @_hasMissingDesignatedInitializers final public class LibreProDataParser {
-  final public var glucoseData: [Swift.UInt16]
+  final public var history: [Swift.UInt16]
+  final public var trend: [Swift.UInt16]
   final public var age: Swift.Int
   @objc deinit
 }
@@ -1007,11 +1008,11 @@ public struct ElevationSample : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
 }
 public struct GlucoseDataSample : Swift.Codable {
-  public init(timestamp: Swift.String, blood_glucose_mg_per_dL: Swift.Double, glucose_level_flag: Swift.Int? = nil, trend_array: Swift.Int? = nil)
+  public init(timestamp: Swift.String, blood_glucose_mg_per_dL: Swift.Double, glucose_level_flag: Swift.Int? = nil, trend_arrow: Swift.Int? = nil)
   public var timestamp: Swift.String?
   public var blood_glucose_mg_per_dL: Swift.Double?
   public var glucose_level_flag: Swift.Int?
-  public var trend_array: Swift.Int?
+  public var trend_arrow: Swift.Int?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -1188,7 +1189,7 @@ public struct DrinkSample : Swift.Codable {
 }
 public struct SensorData {
   public var patchUid: Swift.String?
-  public init?(uuid: Foundation.Data, bytes: [Swift.UInt8], date: Foundation.Date = Date(), patchInfo: Swift.String?)
+  public init(uuid: Foundation.Data, bytes: [Swift.UInt8], date: Foundation.Date = Date(), patchInfo: Swift.String?)
 }
 extension TerraiOS.SensorData {
   public var history: [Swift.UInt8] {
