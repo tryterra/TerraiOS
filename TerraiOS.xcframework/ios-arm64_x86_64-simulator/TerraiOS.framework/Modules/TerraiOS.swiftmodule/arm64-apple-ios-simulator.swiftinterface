@@ -330,8 +330,8 @@ public struct TerraMovementData : Swift.Codable {
   public var max_torque_newton_meters: Swift.Double?
   public var avg_speed_meters_per_second: Swift.Double?
   public var max_velocity_meters_per_second: Swift.Double?
-  public var cadence_samples: [TerraiOS.CadenceSample]
-  public var speed_samples: [TerraiOS.SpeedSample]
+  public var cadence_samples: [TerraiOS.CadenceSample]?
+  public var speed_samples: [TerraiOS.SpeedSample]?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -448,7 +448,7 @@ public struct TerraRespirationData : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
 }
 public struct TerraSleepMetaData : Swift.Codable {
-  public var upload_type: Swift.Int
+  public var upload_type: Swift.Int?
   public var end_time: Swift.String?
   public var start_time: Swift.String?
   public func encode(to encoder: Swift.Encoder) throws
