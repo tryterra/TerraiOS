@@ -2939,6 +2939,36 @@
           },
           {
             "kind": "Function",
+            "name": "overwriteLogLevel",
+            "printedName": "overwriteLogLevel(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@TerraiOS@objc(cs)Terra(cm)overwriteLogLevel:",
+            "mangledName": "$s8TerraiOS5TerraC17overwriteLogLevelyySSFZ",
+            "moduleName": "TerraiOS",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "setUpBackgroundDelivery",
             "printedName": "setUpBackgroundDelivery()",
             "children": [
@@ -74503,134 +74533,134 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "Array",
+      "offset": 361,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "Array",
+      "offset": 411,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "IntegerLiteral",
+      "offset": 448,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "IntegerLiteral",
+      "offset": 451,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "IntegerLiteral",
+      "offset": 454,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "IntegerLiteral",
+      "offset": 485,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "IntegerLiteral",
+      "offset": 488,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "IntegerLiteral",
+      "offset": 491,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "IntegerLiteral",
+      "offset": 526,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "IntegerLiteral",
+      "offset": 529,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "IntegerLiteral",
+      "offset": 532,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "IntegerLiteral",
+      "offset": 563,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "IntegerLiteral",
+      "offset": 566,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "IntegerLiteral",
+      "offset": 569,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
       "kind": "StringLiteral",
-      "offset": 227,
+      "offset": 606,
       "length": 6,
       "value": "\"info\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
       "kind": "Array",
-      "offset": 387,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "Array",
-      "offset": 437,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "IntegerLiteral",
-      "offset": 474,
-      "length": 2,
-      "value": "60"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "IntegerLiteral",
-      "offset": 477,
-      "length": 2,
-      "value": "60"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "IntegerLiteral",
-      "offset": 480,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "IntegerLiteral",
-      "offset": 511,
-      "length": 2,
-      "value": "60"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "IntegerLiteral",
-      "offset": 514,
-      "length": 2,
-      "value": "60"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "IntegerLiteral",
-      "offset": 517,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "IntegerLiteral",
-      "offset": 552,
-      "length": 2,
-      "value": "60"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "IntegerLiteral",
-      "offset": 555,
-      "length": 2,
-      "value": "60"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "IntegerLiteral",
-      "offset": 558,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "IntegerLiteral",
-      "offset": 589,
-      "length": 2,
-      "value": "60"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "IntegerLiteral",
-      "offset": 592,
-      "length": 2,
-      "value": "60"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "IntegerLiteral",
-      "offset": 595,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "Array",
-      "offset": 771,
+      "offset": 787,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
       "kind": "StringLiteral",
-      "offset": 291,
+      "offset": 265,
       "length": 5,
       "value": "\"TerraiOS.Terra\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
       "kind": "Array",
-      "offset": 1972,
+      "offset": 1994,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
       "kind": "BooleanLiteral",
-      "offset": 1997,
+      "offset": 2019,
       "length": 4,
       "value": "true"
     },
@@ -74658,56 +74688,56 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 319,
+      "offset": 321,
       "length": 7,
       "value": "\"🚫 \""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 347,
+      "offset": 349,
       "length": 9,
       "value": "\"⚠️ \""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 378,
+      "offset": 380,
       "length": 7,
       "value": "\"👀 \""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 406,
+      "offset": 408,
       "length": 7,
       "value": "\"🔎 \""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 319,
+      "offset": 321,
       "length": 7,
       "value": "\"🚫 \""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 347,
+      "offset": 349,
       "length": 9,
       "value": "\"⚠️ \""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 378,
+      "offset": 380,
       "length": 7,
       "value": "\"👀 \""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 406,
+      "offset": 408,
       "length": 7,
       "value": "\"🔎 \""
     },

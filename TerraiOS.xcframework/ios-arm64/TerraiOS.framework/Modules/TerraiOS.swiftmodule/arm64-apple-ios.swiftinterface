@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TerraiOS
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import BackgroundTasks
@@ -87,6 +87,7 @@ extension TerraiOS.Terra {
 extension TerraiOS.Terra {
   public static func disconnectTerra(devId: Swift.String, xAPIKey: Swift.String, userId: Swift.String)
   public static func checkAuthentication(connection: TerraiOS.Connections, devId: Swift.String, completion: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public static func overwriteLogLevel(_ level: Swift.String)
   @objc public static func setUpBackgroundDelivery()
 }
 public struct TerraStressData : Swift.Codable {
