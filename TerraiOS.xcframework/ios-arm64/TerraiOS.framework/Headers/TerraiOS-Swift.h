@@ -283,7 +283,6 @@ SWIFT_CLASS("_TtC8TerraiOS5Terra")
 
 
 @interface Terra (SWIFT_EXTENSION(TerraiOS))
-+ (void)overwriteLogLevel:(NSString * _Nonnull)level;
 /// A function to start background delivery. Must be ran in app delegate before app launches as this registers a background task handler.
 + (void)setUpBackgroundDelivery;
 @end

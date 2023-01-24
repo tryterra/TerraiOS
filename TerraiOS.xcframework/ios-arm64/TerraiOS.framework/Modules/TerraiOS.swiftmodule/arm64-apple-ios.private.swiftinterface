@@ -5,7 +5,6 @@
 import BackgroundTasks
 import Combine
 import CoreLocation
-import CoreNFC
 import Foundation
 import HealthKit
 import Swift
@@ -14,15 +13,6 @@ import SwiftUI
 import UIKit
 import _Concurrency
 import _StringProcessing
-final public class LibreProActivator {
-  public init(tag: CoreNFC.NFCISO15693Tag, rawData: [Swift.UInt8])
-  @objc deinit
-}
-extension TerraiOS.LibreProActivator {
-  #if compiler(>=5.3) && $AsyncAwait
-  final public func activate(_ session: CoreNFC.NFCTagReaderSession, completion: @escaping (Swift.Bool) -> Swift.Void) async
-  #endif
-}
 @_hasMissingDesignatedInitializers final public class LibreProDataParser {
   final public var history: [Swift.UInt16]
   final public var trend: [Swift.UInt16]
@@ -45,8 +35,6 @@ public struct FSLSensorDetails : Swift.Codable {
 @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 public class LibreManager {
   public init(devId: Swift.String)
-  public func getGlucoseData(completion: @escaping (TerraiOS.FSLSensorDetails) -> Swift.Void)
-  public func activateSensor(completion: @escaping (Swift.Bool) -> Swift.Void)
   @objc deinit
 }
 @objc public class Terra : ObjectiveC.NSObject {
@@ -87,7 +75,6 @@ extension TerraiOS.Terra {
 extension TerraiOS.Terra {
   public static func disconnectTerra(devId: Swift.String, xAPIKey: Swift.String, userId: Swift.String)
   public static func checkAuthentication(connection: TerraiOS.Connections, devId: Swift.String, completion: @escaping (Swift.Bool) -> Swift.Void)
-  @objc public static func overwriteLogLevel(_ level: Swift.String)
   @objc public static func setUpBackgroundDelivery()
 }
 public struct TerraStressData : Swift.Codable {
@@ -331,8 +318,8 @@ public struct TerraMovementData : Swift.Codable {
   public var max_torque_newton_meters: Swift.Double?
   public var avg_speed_meters_per_second: Swift.Double?
   public var max_velocity_meters_per_second: Swift.Double?
-  public var cadence_samples: [TerraiOS.CadenceSample]?
-  public var speed_samples: [TerraiOS.SpeedSample]?
+  public var cadence_samples: [TerraiOS.CadenceSample]
+  public var speed_samples: [TerraiOS.SpeedSample]
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -449,7 +436,7 @@ public struct TerraRespirationData : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
 }
 public struct TerraSleepMetaData : Swift.Codable {
-  public var upload_type: Swift.Int?
+  public var upload_type: Swift.Int
   public var end_time: Swift.String?
   public var start_time: Swift.String?
   public func encode(to encoder: Swift.Encoder) throws
@@ -908,13 +895,6 @@ extension TerraiOS.TerraClient {
   public func getSleep(startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraSleepDataPayloadModel) -> Swift.Void)
   public func getNutrition(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraNutritionDataPayloadModel) -> Swift.Void)
   public func getNutrition(startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraNutritionDataPayloadModel) -> Swift.Void)
-}
-@_hasMissingDesignatedInitializers @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
-public class LibreToolsViewModel : Combine.ObservableObject {
-  public func activate(completion: @escaping (Swift.Bool) -> Swift.Void)
-  public func readHistory(completion: @escaping (TerraiOS.SensorData?) -> Swift.Void)
-  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
-  @objc deinit
 }
 public struct TerraAuthResponse : Swift.Codable {
   public var status: Swift.String

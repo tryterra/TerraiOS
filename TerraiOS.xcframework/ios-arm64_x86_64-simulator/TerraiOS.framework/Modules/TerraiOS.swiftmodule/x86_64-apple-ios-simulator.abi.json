@@ -15,125 +15,6 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "CoreNFC",
-        "printedName": "CoreNFC",
-        "declKind": "Import",
-        "moduleName": "TerraiOS"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "LibreProActivator",
-        "printedName": "LibreProActivator",
-        "children": [
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(tag:rawData:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "LibreProActivator",
-                "printedName": "TerraiOS.LibreProActivator",
-                "usr": "s:8TerraiOS17LibreProActivatorC"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "NFCISO15693Tag",
-                "printedName": "CoreNFC.NFCISO15693Tag",
-                "usr": "c:objc(pl)NFCISO15693Tag"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[Swift.UInt8]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UInt8",
-                    "printedName": "Swift.UInt8",
-                    "usr": "s:s5UInt8V"
-                  }
-                ],
-                "usr": "s:Sa"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:8TerraiOS17LibreProActivatorC3tag7rawDataACSo14NFCISO15693Tag_p_Says5UInt8VGtcfc",
-            "mangledName": "$s8TerraiOS17LibreProActivatorC3tag7rawDataACSo14NFCISO15693Tag_p_Says5UInt8VGtcfc",
-            "moduleName": "TerraiOS",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "activate",
-            "printedName": "activate(_:completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "NFCTagReaderSession",
-                "printedName": "CoreNFC.NFCTagReaderSession",
-                "usr": "c:objc(cs)NFCTagReaderSession"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Swift.Bool) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8TerraiOS17LibreProActivatorC8activate_10completionySo19NFCTagReaderSessionC_ySbctYaF",
-            "mangledName": "$s8TerraiOS17LibreProActivatorC8activate_10completionySo19NFCTagReaderSessionC_ySbctYaF",
-            "moduleName": "TerraiOS",
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:8TerraiOS17LibreProActivatorC",
-        "mangledName": "$s8TerraiOS17LibreProActivatorC",
-        "moduleName": "TerraiOS",
-        "declAttributes": [
-          "AccessControl",
-          "Final"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "TerraiOS",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "TypeDecl",
         "name": "LibreProDataParser",
         "printedName": "LibreProDataParser",
@@ -1134,82 +1015,6 @@
               "AccessControl"
             ],
             "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "getGlucoseData",
-            "printedName": "getGlucoseData(completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TerraiOS.FSLSensorDetails) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "FSLSensorDetails",
-                    "printedName": "TerraiOS.FSLSensorDetails",
-                    "usr": "s:8TerraiOS16FSLSensorDetailsV"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8TerraiOS12LibreManagerC14getGlucoseData10completionyyAA16FSLSensorDetailsVc_tF",
-            "mangledName": "$s8TerraiOS12LibreManagerC14getGlucoseData10completionyyAA16FSLSensorDetailsVc_tF",
-            "moduleName": "TerraiOS",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "activateSensor",
-            "printedName": "activateSensor(completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Swift.Bool) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8TerraiOS12LibreManagerC14activateSensor10completionyySbc_tF",
-            "mangledName": "$s8TerraiOS12LibreManagerC14activateSensor10completionyySbc_tF",
-            "moduleName": "TerraiOS",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -2933,36 +2738,6 @@
               "Final",
               "AccessControl",
               "RawDocComment"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "overwriteLogLevel",
-            "printedName": "overwriteLogLevel(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@CM@TerraiOS@objc(cs)Terra(cm)overwriteLogLevel:",
-            "mangledName": "$s8TerraiOS5TerraC17overwriteLogLevelyySSFZ",
-            "moduleName": "TerraiOS",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "ObjC"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -20080,8 +19855,34 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[TerraiOS.CadenceSample]?",
+                "name": "Array",
+                "printedName": "[TerraiOS.CadenceSample]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CadenceSample",
+                    "printedName": "TerraiOS.CadenceSample",
+                    "usr": "s:8TerraiOS13CadenceSampleV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8TerraiOS17TerraMovementDataV15cadence_samplesSayAA13CadenceSampleVGvp",
+            "mangledName": "$s8TerraiOS17TerraMovementDataV15cadence_samplesSayAA13CadenceSampleVGvp",
+            "moduleName": "TerraiOS",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -20098,51 +19899,9 @@
                     "usr": "s:Sa"
                   }
                 ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8TerraiOS17TerraMovementDataV15cadence_samplesSayAA13CadenceSampleVGSgvp",
-            "mangledName": "$s8TerraiOS17TerraMovementDataV15cadence_samplesSayAA13CadenceSampleVGSgvp",
-            "moduleName": "TerraiOS",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "[TerraiOS.CadenceSample]?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[TerraiOS.CadenceSample]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "CadenceSample",
-                            "printedName": "TerraiOS.CadenceSample",
-                            "usr": "s:8TerraiOS13CadenceSampleV"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS17TerraMovementDataV15cadence_samplesSayAA13CadenceSampleVGSgvg",
-                "mangledName": "$s8TerraiOS17TerraMovementDataV15cadence_samplesSayAA13CadenceSampleVGSgvg",
+                "usr": "s:8TerraiOS17TerraMovementDataV15cadence_samplesSayAA13CadenceSampleVGvg",
+                "mangledName": "$s8TerraiOS17TerraMovementDataV15cadence_samplesSayAA13CadenceSampleVGvg",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "get"
@@ -20159,30 +19918,22 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "[TerraiOS.CadenceSample]?",
+                    "name": "Array",
+                    "printedName": "[TerraiOS.CadenceSample]",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[TerraiOS.CadenceSample]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "CadenceSample",
-                            "printedName": "TerraiOS.CadenceSample",
-                            "usr": "s:8TerraiOS13CadenceSampleV"
-                          }
-                        ],
-                        "usr": "s:Sa"
+                        "name": "CadenceSample",
+                        "printedName": "TerraiOS.CadenceSample",
+                        "usr": "s:8TerraiOS13CadenceSampleV"
                       }
                     ],
-                    "usr": "s:Sq"
+                    "usr": "s:Sa"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS17TerraMovementDataV15cadence_samplesSayAA13CadenceSampleVGSgvs",
-                "mangledName": "$s8TerraiOS17TerraMovementDataV15cadence_samplesSayAA13CadenceSampleVGSgvs",
+                "usr": "s:8TerraiOS17TerraMovementDataV15cadence_samplesSayAA13CadenceSampleVGvs",
+                "mangledName": "$s8TerraiOS17TerraMovementDataV15cadence_samplesSayAA13CadenceSampleVGvs",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "set"
@@ -20199,8 +19950,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS17TerraMovementDataV15cadence_samplesSayAA13CadenceSampleVGSgvM",
-                "mangledName": "$s8TerraiOS17TerraMovementDataV15cadence_samplesSayAA13CadenceSampleVGSgvM",
+                "usr": "s:8TerraiOS17TerraMovementDataV15cadence_samplesSayAA13CadenceSampleVGvM",
+                "mangledName": "$s8TerraiOS17TerraMovementDataV15cadence_samplesSayAA13CadenceSampleVGvM",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -20214,8 +19965,34 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[TerraiOS.SpeedSample]?",
+                "name": "Array",
+                "printedName": "[TerraiOS.SpeedSample]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SpeedSample",
+                    "printedName": "TerraiOS.SpeedSample",
+                    "usr": "s:8TerraiOS11SpeedSampleV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8TerraiOS17TerraMovementDataV13speed_samplesSayAA11SpeedSampleVGvp",
+            "mangledName": "$s8TerraiOS17TerraMovementDataV13speed_samplesSayAA11SpeedSampleVGvp",
+            "moduleName": "TerraiOS",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -20232,51 +20009,9 @@
                     "usr": "s:Sa"
                   }
                 ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8TerraiOS17TerraMovementDataV13speed_samplesSayAA11SpeedSampleVGSgvp",
-            "mangledName": "$s8TerraiOS17TerraMovementDataV13speed_samplesSayAA11SpeedSampleVGSgvp",
-            "moduleName": "TerraiOS",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "[TerraiOS.SpeedSample]?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[TerraiOS.SpeedSample]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "SpeedSample",
-                            "printedName": "TerraiOS.SpeedSample",
-                            "usr": "s:8TerraiOS11SpeedSampleV"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS17TerraMovementDataV13speed_samplesSayAA11SpeedSampleVGSgvg",
-                "mangledName": "$s8TerraiOS17TerraMovementDataV13speed_samplesSayAA11SpeedSampleVGSgvg",
+                "usr": "s:8TerraiOS17TerraMovementDataV13speed_samplesSayAA11SpeedSampleVGvg",
+                "mangledName": "$s8TerraiOS17TerraMovementDataV13speed_samplesSayAA11SpeedSampleVGvg",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "get"
@@ -20293,30 +20028,22 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "[TerraiOS.SpeedSample]?",
+                    "name": "Array",
+                    "printedName": "[TerraiOS.SpeedSample]",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[TerraiOS.SpeedSample]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "SpeedSample",
-                            "printedName": "TerraiOS.SpeedSample",
-                            "usr": "s:8TerraiOS11SpeedSampleV"
-                          }
-                        ],
-                        "usr": "s:Sa"
+                        "name": "SpeedSample",
+                        "printedName": "TerraiOS.SpeedSample",
+                        "usr": "s:8TerraiOS11SpeedSampleV"
                       }
                     ],
-                    "usr": "s:Sq"
+                    "usr": "s:Sa"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS17TerraMovementDataV13speed_samplesSayAA11SpeedSampleVGSgvs",
-                "mangledName": "$s8TerraiOS17TerraMovementDataV13speed_samplesSayAA11SpeedSampleVGSgvs",
+                "usr": "s:8TerraiOS17TerraMovementDataV13speed_samplesSayAA11SpeedSampleVGvs",
+                "mangledName": "$s8TerraiOS17TerraMovementDataV13speed_samplesSayAA11SpeedSampleVGvs",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "set"
@@ -20333,8 +20060,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS17TerraMovementDataV13speed_samplesSayAA11SpeedSampleVGSgvM",
-                "mangledName": "$s8TerraiOS17TerraMovementDataV13speed_samplesSayAA11SpeedSampleVGSgvM",
+                "usr": "s:8TerraiOS17TerraMovementDataV13speed_samplesSayAA11SpeedSampleVGvM",
+                "mangledName": "$s8TerraiOS17TerraMovementDataV13speed_samplesSayAA11SpeedSampleVGvM",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -28416,22 +28143,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Int?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
             "declKind": "Var",
-            "usr": "s:8TerraiOS18TerraSleepMetaDataV11upload_typeSiSgvp",
-            "mangledName": "$s8TerraiOS18TerraSleepMetaDataV11upload_typeSiSgvp",
+            "usr": "s:8TerraiOS18TerraSleepMetaDataV11upload_typeSivp",
+            "mangledName": "$s8TerraiOS18TerraSleepMetaDataV11upload_typeSivp",
             "moduleName": "TerraiOS",
             "declAttributes": [
               "HasInitialValue",
@@ -28447,22 +28166,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.Int?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Int",
-                        "printedName": "Swift.Int",
-                        "usr": "s:Si"
-                      }
-                    ],
-                    "usr": "s:Sq"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS18TerraSleepMetaDataV11upload_typeSiSgvg",
-                "mangledName": "$s8TerraiOS18TerraSleepMetaDataV11upload_typeSiSgvg",
+                "usr": "s:8TerraiOS18TerraSleepMetaDataV11upload_typeSivg",
+                "mangledName": "$s8TerraiOS18TerraSleepMetaDataV11upload_typeSivg",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "get"
@@ -28479,22 +28190,14 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.Int?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Int",
-                        "printedName": "Swift.Int",
-                        "usr": "s:Si"
-                      }
-                    ],
-                    "usr": "s:Sq"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS18TerraSleepMetaDataV11upload_typeSiSgvs",
-                "mangledName": "$s8TerraiOS18TerraSleepMetaDataV11upload_typeSiSgvs",
+                "usr": "s:8TerraiOS18TerraSleepMetaDataV11upload_typeSivs",
+                "mangledName": "$s8TerraiOS18TerraSleepMetaDataV11upload_typeSivs",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "set"
@@ -28511,8 +28214,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS18TerraSleepMetaDataV11upload_typeSiSgvM",
-                "mangledName": "$s8TerraiOS18TerraSleepMetaDataV11upload_typeSiSgvM",
+                "usr": "s:8TerraiOS18TerraSleepMetaDataV11upload_typeSivM",
+                "mangledName": "$s8TerraiOS18TerraSleepMetaDataV11upload_typeSivM",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -37114,30 +36817,6 @@
         "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "TerraiOS"
-      },
-      {
-        "kind": "Import",
-        "name": "CoreNFC",
-        "printedName": "CoreNFC",
-        "declKind": "Import",
-        "moduleName": "TerraiOS",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Combine",
-        "printedName": "Combine",
-        "declKind": "Import",
-        "moduleName": "TerraiOS"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "TerraiOS"
       },
@@ -54972,154 +54651,6 @@
         "moduleName": "TerraiOS",
         "declAttributes": [
           "AccessControl"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "TerraiOS",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Combine",
-        "printedName": "Combine",
-        "declKind": "Import",
-        "moduleName": "TerraiOS"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "LibreToolsViewModel",
-        "printedName": "LibreToolsViewModel",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "activate",
-            "printedName": "activate(completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Swift.Bool) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8TerraiOS19LibreToolsViewModelC8activate10completionyySbc_tF",
-            "mangledName": "$s8TerraiOS19LibreToolsViewModelC8activate10completionyySbc_tF",
-            "moduleName": "TerraiOS",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "readHistory",
-            "printedName": "readHistory(completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TerraiOS.SensorData?) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "TerraiOS.SensorData?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "SensorData",
-                        "printedName": "TerraiOS.SensorData",
-                        "usr": "s:8TerraiOS10SensorDataV"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8TerraiOS19LibreToolsViewModelC11readHistory10completionyyAA10SensorDataVSgc_tF",
-            "mangledName": "$s8TerraiOS19LibreToolsViewModelC11readHistory10completionyyAA10SensorDataVSgc_tF",
-            "moduleName": "TerraiOS",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:8TerraiOS19LibreToolsViewModelC",
-        "mangledName": "$s8TerraiOS19LibreToolsViewModelC",
-        "moduleName": "TerraiOS",
-        "intro_Macosx": "10.15",
-        "intro_iOS": "13.0",
-        "intro_tvOS": "13.0",
-        "intro_watchOS": "6.0",
-        "declAttributes": [
-          "AccessControl",
-          "Available",
-          "Available",
-          "Available",
-          "Available"
-        ],
-        "hasMissingDesignatedInitializers": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "ObservableObject",
-            "printedName": "ObservableObject",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "ObjectWillChangePublisher",
-                "printedName": "ObjectWillChangePublisher",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ObservableObjectPublisher",
-                    "printedName": "Combine.ObservableObjectPublisher",
-                    "usr": "s:7Combine25ObservableObjectPublisherC"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:7Combine16ObservableObjectP",
-            "mangledName": "$s7Combine16ObservableObjectP"
-          }
         ]
       },
       {
@@ -74189,13 +73720,6 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/LibreProActivator.swift",
-      "kind": "Array",
-      "offset": 348,
-      "length": 24,
-      "value": "[0xc2, 0xad, 0x00, 0x90]"
-    },
-    {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/LibreProDataParser.swift",
       "kind": "IntegerLiteral",
       "offset": 6201,
@@ -74533,134 +74057,134 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "Array",
-      "offset": 361,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "Array",
-      "offset": 411,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "IntegerLiteral",
-      "offset": 448,
-      "length": 2,
-      "value": "60"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "IntegerLiteral",
-      "offset": 451,
-      "length": 2,
-      "value": "60"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "IntegerLiteral",
-      "offset": 454,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "IntegerLiteral",
-      "offset": 485,
-      "length": 2,
-      "value": "60"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "IntegerLiteral",
-      "offset": 488,
-      "length": 2,
-      "value": "60"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "IntegerLiteral",
-      "offset": 491,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "IntegerLiteral",
-      "offset": 526,
-      "length": 2,
-      "value": "60"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "IntegerLiteral",
-      "offset": 529,
-      "length": 2,
-      "value": "60"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "IntegerLiteral",
-      "offset": 532,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "IntegerLiteral",
-      "offset": 563,
-      "length": 2,
-      "value": "60"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "IntegerLiteral",
-      "offset": 566,
-      "length": 2,
-      "value": "60"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
-      "kind": "IntegerLiteral",
-      "offset": 569,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
       "kind": "StringLiteral",
-      "offset": 606,
+      "offset": 227,
       "length": 6,
       "value": "\"info\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
       "kind": "Array",
-      "offset": 787,
+      "offset": 387,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "Array",
+      "offset": 437,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "IntegerLiteral",
+      "offset": 474,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "IntegerLiteral",
+      "offset": 477,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "IntegerLiteral",
+      "offset": 480,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "IntegerLiteral",
+      "offset": 511,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "IntegerLiteral",
+      "offset": 514,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "IntegerLiteral",
+      "offset": 517,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "IntegerLiteral",
+      "offset": 552,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "IntegerLiteral",
+      "offset": 555,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "IntegerLiteral",
+      "offset": 558,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "IntegerLiteral",
+      "offset": 589,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "IntegerLiteral",
+      "offset": 592,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "IntegerLiteral",
+      "offset": 595,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
+      "kind": "Array",
+      "offset": 771,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
       "kind": "StringLiteral",
-      "offset": 265,
+      "offset": 291,
       "length": 5,
       "value": "\"TerraiOS.Terra\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
       "kind": "Array",
-      "offset": 1994,
+      "offset": 1972,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
       "kind": "BooleanLiteral",
-      "offset": 2019,
+      "offset": 1997,
       "length": 4,
       "value": "true"
     },
@@ -74688,532 +74212,525 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 321,
+      "offset": 319,
       "length": 7,
       "value": "\"🚫 \""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 349,
+      "offset": 347,
       "length": 9,
       "value": "\"⚠️ \""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 380,
+      "offset": 378,
       "length": 7,
       "value": "\"👀 \""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 408,
+      "offset": 406,
       "length": 7,
       "value": "\"🔎 \""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 321,
+      "offset": 319,
       "length": 7,
       "value": "\"🚫 \""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 349,
+      "offset": 347,
       "length": 9,
       "value": "\"⚠️ \""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 380,
+      "offset": 378,
       "length": 7,
       "value": "\"👀 \""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Logger.swift",
       "kind": "StringLiteral",
-      "offset": 408,
+      "offset": 406,
       "length": 7,
       "value": "\"🔎 \""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "StringLiteral",
-      "offset": 822,
+      "offset": 777,
       "length": 25,
       "value": "\"Unsupported sensor type\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 1039,
+      "offset": 994,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 1053,
+      "offset": 1008,
       "length": 2,
       "value": "40"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 1151,
+      "offset": 1106,
       "length": 6,
       "value": "0xcadc"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 1211,
+      "offset": 1166,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 1220,
+      "offset": 1175,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 1285,
+      "offset": 1240,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 1294,
+      "offset": 1249,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 1300,
+      "offset": 1255,
       "length": 4,
       "value": "0x44"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "StringLiteral",
-      "offset": 1337,
+      "offset": 1292,
       "length": 25,
       "value": "\"Unsupported sensor type\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 1438,
+      "offset": 1393,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 1444,
+      "offset": 1399,
       "length": 2,
       "value": "43"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 1623,
+      "offset": 1578,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 1627,
+      "offset": 1582,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 1667,
+      "offset": 1622,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 1707,
+      "offset": 1662,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 1711,
+      "offset": 1666,
       "length": 1,
       "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1706,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1712,
+      "length": 1,
+      "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
       "offset": 1751,
       "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1757,
-      "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 1796,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1800,
+      "offset": 1755,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 1840,
+      "offset": 1795,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 1880,
+      "offset": 1835,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 1884,
+      "offset": 1839,
       "length": 1,
       "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1879,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1885,
+      "length": 1,
+      "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
       "offset": 1924,
       "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1930,
-      "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 1969,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1973,
+      "offset": 1928,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 2013,
+      "offset": 1968,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 2053,
+      "offset": 2008,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 2057,
+      "offset": 2012,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 2097,
+      "offset": 2052,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 2103,
+      "offset": 2058,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 2142,
+      "offset": 2097,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 2146,
+      "offset": 2101,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 2186,
+      "offset": 2141,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 2226,
+      "offset": 2181,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 2230,
+      "offset": 2185,
       "length": 1,
       "value": "7"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 2270,
+      "offset": 2225,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 2276,
+      "offset": 2231,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
-      "kind": "StringLiteral",
-      "offset": 2317,
-      "length": 19,
-      "value": "\"Libre 2 decoded: \""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 2729,
+      "offset": 2611,
       "length": 4,
       "value": "0x1b"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 2738,
+      "offset": 2620,
       "length": 6,
       "value": "0x1b6a"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 2771,
+      "offset": 2653,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 2777,
+      "offset": 2659,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 2792,
+      "offset": 2674,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 2798,
+      "offset": 2680,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 2804,
+      "offset": 2686,
       "length": 4,
       "value": "0x63"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 2837,
+      "offset": 2719,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 2846,
+      "offset": 2728,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 2852,
+      "offset": 2734,
       "length": 4,
       "value": "0x63"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 2988,
+      "offset": 2870,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 2994,
+      "offset": 2876,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 3058,
+      "offset": 2940,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 3123,
+      "offset": 3005,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 3129,
+      "offset": 3011,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 3193,
+      "offset": 3075,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 3258,
+      "offset": 3140,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 3264,
+      "offset": 3146,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 3328,
+      "offset": 3210,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 3393,
+      "offset": 3275,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 3399,
+      "offset": 3281,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 3463,
+      "offset": 3345,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 3528,
+      "offset": 3410,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 3534,
+      "offset": 3416,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "IntegerLiteral",
-      "offset": 3633,
+      "offset": 3515,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "StringLiteral",
-      "offset": 3868,
+      "offset": 3750,
       "length": 27,
       "value": "\"BLE data decrytion failed\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/Libre2.swift",
       "kind": "Array",
-      "offset": 4240,
+      "offset": 4122,
       "length": 32,
       "value": "[0xA0C5, 0x6860, 0x0000, 0x14C6]"
     },
@@ -75251,6 +74768,13 @@
       "offset": 411,
       "length": 4,
       "value": "0xA1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Models\/TerraSleepData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1326,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
@@ -76205,55 +75729,6 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/NFCManager.swift",
-      "kind": "StringLiteral",
-      "offset": 604,
-      "length": 21,
-      "value": "\"NFCManager.nfcQueue\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/NFCManager.swift",
-      "kind": "StringLiteral",
-      "offset": 678,
-      "length": 24,
-      "value": "\"NFCManager.accessQueue\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/NFCManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1145,
-      "length": 4,
-      "value": "0xA4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/NFCManager.swift",
-      "kind": "Array",
-      "offset": 1188,
-      "length": 24,
-      "value": "[0xc2, 0xad, 0x75, 0x21]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/NFCManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 18294,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/NFCManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 21724,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/NFCManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 22268,
-      "length": 1,
-      "value": "0"
-    },
-    {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
       "offset": 155,
@@ -77141,20 +76616,6 @@
       "offset": 7084,
       "length": 4,
       "value": "true"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/LibreToolsViewModel.swift",
-      "kind": "StringLiteral",
-      "offset": 409,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/LibreToolsViewModel.swift",
-      "kind": "StringLiteral",
-      "offset": 442,
-      "length": 2,
-      "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
