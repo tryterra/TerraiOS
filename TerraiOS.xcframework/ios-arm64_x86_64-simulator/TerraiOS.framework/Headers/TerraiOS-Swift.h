@@ -268,11 +268,9 @@ typedef SWIFT_ENUM(NSUInteger, Permissions, open) {
   PermissionsMENSTRUATION_WRITE = 0b1000000000000,
 };
 
-@class NSString;
 
-SWIFT_CLASS("_TtC8TerraiOS5Terra")
-@interface Terra : NSObject
-- (nonnull instancetype)initWithDevId:(NSString * _Nonnull)devId referenceId:(NSString * _Nullable)referenceId completion:(void (^ _Nonnull)(BOOL))completion OBJC_DESIGNATED_INITIALIZER;
+SWIFT_CLASS("_TtC8TerraiOS12TerraManager")
+@interface TerraManager : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -280,12 +278,14 @@ SWIFT_CLASS("_TtC8TerraiOS5Terra")
 
 
 
+@class NSString;
 
-
-@interface Terra (SWIFT_EXTENSION(TerraiOS))
+@interface TerraManager (SWIFT_EXTENSION(TerraiOS))
++ (void)overwriteLogLevel:(NSString * _Nonnull)level;
 /// A function to start background delivery. Must be ran in app delegate before app launches as this registers a background task handler.
 + (void)setUpBackgroundDelivery;
 @end
+
 
 
 
@@ -567,11 +567,9 @@ typedef SWIFT_ENUM(NSUInteger, Permissions, open) {
   PermissionsMENSTRUATION_WRITE = 0b1000000000000,
 };
 
-@class NSString;
 
-SWIFT_CLASS("_TtC8TerraiOS5Terra")
-@interface Terra : NSObject
-- (nonnull instancetype)initWithDevId:(NSString * _Nonnull)devId referenceId:(NSString * _Nullable)referenceId completion:(void (^ _Nonnull)(BOOL))completion OBJC_DESIGNATED_INITIALIZER;
+SWIFT_CLASS("_TtC8TerraiOS12TerraManager")
+@interface TerraManager : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -579,12 +577,14 @@ SWIFT_CLASS("_TtC8TerraiOS5Terra")
 
 
 
+@class NSString;
 
-
-@interface Terra (SWIFT_EXTENSION(TerraiOS))
+@interface TerraManager (SWIFT_EXTENSION(TerraiOS))
++ (void)overwriteLogLevel:(NSString * _Nonnull)level;
 /// A function to start background delivery. Must be ran in app delegate before app launches as this registers a background task handler.
 + (void)setUpBackgroundDelivery;
 @end
+
 
 
 
