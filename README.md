@@ -2,9 +2,9 @@
 
 This framework allows you to any integration offered by [Terra](https://tryterra.co)
 
-The docs here are updated to latest version: 1.2.15
+The docs here are updated to latest version: 1.3.+
 
-For older docs and version please see [here](https://github.com/tryterra/TerraiOS/blob/f0a09fd581515c01fba06425f786567feda53995/README.md)
+For older docs and version please see [here](https://github.com/tryterra/TerraiOS/blob/52d1f4b442473bbe41f74940a366558a421bbe02/README.md)
 
 ## Specification (Only read this section if something breaks)
 
@@ -67,19 +67,17 @@ Thats it!
   
 ## Time to have some fun ;)
 
-To use this framework for Apple Health and Freestylelibre, you will need to be acquainted with a class called `Terra`. It will manage all your connections and data getting functionalities. 
+To use this framework for Apple Health and Freestylelibre, you will need to be acquainted with a class called `TerraManager`. It will manage all your connections and data getting functionalities. 
 
 You can create one as such:
 
 ```swift
-let terra: Terra =  Terra(devId: String,
-                         referenceId: String?,
-                         completion: @escaping (Bool) -> Void)
+Terra.instance(devId: String, referenceId: String?, completion: @escaping (TerraManager?, TerraError?) -> Void)
 ```
 
 - `devId: String` ➡ The developer identifier given to your after you signed up on [Terra](https://dashboard.tryterra.co)
 - `referenceId: String?` ➡ This is used by you to identify a user from your server to a terra user
-- `completion: @escaping (Bool) -> Void` ➡ A callback function that is called when the Terra class is initialised. **Highly recommended to wait for this callback before proceeding**
+- `completion: @escaping (TerraManager?, TerraError?) -> Void` ➡ A callback function that is called when the TerraManager class is initialised. If an error has occurred in creation, then the completion will return a TerraError class. **Highly recommended to wait for this callback before proceeding**
 
 **You will need to initialise this class everytime your app comes up from terminated or stopped state. It sets up all the previous connections that has been initialised**
 
@@ -87,14 +85,14 @@ let terra: Terra =  Terra(devId: String,
 After the initialisation of the Terra object, you will need to initialise a connection to the provider you want. This only needs to be done once per connection.
 
 ```swift
-initConnection(type: Connections, token: String, customReadTypes: Set<HKObjectType>, schedulerOn: Bool, completion: @escaping (Bool) -> Void))
+initConnection(type: Connections, token: String, customReadTypes: Set<HKObjectType>, schedulerOn: Bool, completion: @escaping (Bool, TerraError?) -> Void))
 ```
 **Arguments** 
 - `type: Connections` ➡  An ENUM from the Connections class signifying the connection you wish to initiate for.
 - `token: String` ➡ A token used for authentication. Generate one here: https://docs.tryterra.co/reference/generate-authentication-token
 - (Optional) `customReadTypes: Set<CustomPermissions>` ➡ This is defaulted as an empty `Set`. If you want to make a more granular permissions request, you may send us a set of `CustomPermissions`: An enum provided so you do not need to interact with HealthKit. 
 - `schedulerOn: Bool`  ➡ A boolean dictating if you wish turn on background delivery. Defaults to true. Please see **Background Delivery** section for setup.
-- `completion: @escaping (Bool) -> Void`  ➡ A callback with a boolean dictating if the initialisation succeeds. 
+- `completion: @escaping (Bool, TerraError?) -> Void`  ➡ A callback with a boolean dictating if the initialisation succeeds. 
 
 **This will pull up any necessary Permissions logs!**
 
@@ -149,10 +147,15 @@ public struct TerraData: Codable{
 You can subscribe for datatypes as follows (only needs to be done once):
 
 ```swift
-terra.subscribe(forDataTypes: Set<DataTypes>) throws
+func subscribe(forDataTypes dataTypes: Set<DataTypes>, completion: @escaping(Bool, TerraError?) -> Void)
 ```
 
-This call throws `TerraError.Unauthenticated`, please handle it properly.
+DataTypes can be:
+STEPS
+HEART_RATE
+HEART_RATE_VARIABILITY
+CALORIES
+DISTANCE
 
 After the call, your update handler will be called with the corresponding datatypes whenever new ones are available. This includes the next time you open your app. 
 
@@ -167,45 +170,53 @@ However, you may also obtain data manually.
 ### Body Data
 
 ```swift
-terra.getBody(type: Connections, startDate: Date, endDate: Date)
+getBody(type: Connections, startDate: Date, endDate: Date, toWebhook: Bool, completion: @escaping (Bool, TerraBodyDataPayloadModel?, TerraError?) -> Void)
 ```
 
 ### Activity Data
 
 ```swift
-terra.getActivity(type: Connections, startDate: Date, endDate: Date)
+getActivity(type: Connections, startDate: Date, endDate: Date, toWebhook: Bool, completion: @escaping (Bool, TerraActivityDataPayloadModel?, TerraError?) -> Void)
 ```
 
 
 ### Daily Data
 
 ```swift
-terra.getBody(type: Connections, startDate: Date, endDate: Date)
+getDaily(type: Connections, startDate: Date, endDate: Date, toWebhook: Bool, completion: @escaping (Bool, TerraDailyDataPayloadModel?, TerraError?) -> Void)
 ```
 
 
 ### Sleep Data
 
 ```swift
-terra.getSleep(type: Connections, startDate: Date, endDate: Date)
+getSleep(type: Connections, startDate: Date, endDate: Date, toWebhook: Bool, completion: @escaping (Bool, TerraSleepDataPayloadModel?, TerraError?) -> Void)
 ```
 
 
 ### Nutrition Data
 
 ```swift
-terra.getNutrition(type: Connections, startDate: Date, endDate: Date)
+getNutrition(type: Connections, startDate: Date, endDate: Date, toWebhook: Bool, completion: @escaping (Bool, TerraNutritionDataPayloadModel?, TerraError?) -> Void)
+```
+
+### Menstruation Data
+
+```swift
+getMenstruation(type: Connections, startDate: Date, endDate: Date, toWebhook: Bool, completion: @escaping (Bool, TerraMenstruationDataPayloadModel?, TerraError?) -> Void)
 ```
 
 ### Athlete Data
 
 ```swift
-terra.getAthlete(type: Connections)
+terra.getAthlete(type: Connections, toWebhook: Bool, completion: @escaping (Bool, TerraAthleteDataPayloadModel?, TerraError?) -> Void)
 ```
 
 These functions that take `Date` as an argument, also takes `Time Interval` (Unix timestamp starting from 1st January 1970)
 
-The data will always be sent to your webhook. 
+The completion will be called with 3 arguments:
+- Bool -> If the request was successful or not. If not, a TerraError instance will also be called
+- TerreDataPayload -> A payload for each data type. If `toWebhook` is set to true, this returns a class with a property `reference` referring to the payload reference sent to your webhook. If `toWebhook` is set to false, then this returns the entire Terra normalised payload. 
 
 ## Post data
 
@@ -265,8 +276,7 @@ You will simply need to instantiate a `TerraClient` class as follows:
 let terra: TerraClient = TerraClient(user_id: <TERRA USER ID>, dev_id: <YOUR DEV ID>, xAPIKey: <YOUR X API KEY>)
 ```
 
-Using this client, you may make requests to endpoints such as `/activity`, `/body`, etc. (More info [here](https://docs.tryterra.co/http-endpoints)).
-
+Using this client, you may make requests to endpoints such as `/activity`, `/body`, etc. (More info [here](https://docs.tryterra.co/reference/http-requests)).
 
 To do this, you simply have to call:
 
@@ -313,20 +323,3 @@ You can then deauthenticate a user by:
 terraClient.deauthenticateUser(forUser userId: String, completion: @escaping (DeauthenticateUserPayload) -> Void)
 
 ```
-
-# Common Tasks
-
-## Handling app re-installs: when to show a "connect Apple Health" button (same applies to any other connection)
-
-In your app, you may want to know when the user has previously already consented to sharing Apple Health data, so that you know how to handle showing the "Connect to Apple" button (or equivalent) in your UI.
-
-To achieve this, you may use the instance method `getUserid` function, passing in Apple as a connection. If the return value is null, you may show the button and if not, you may show a "Disconnect" button instead, or "Already connected" status, as per your requirements.
-
-Below you'll find an explanation of the situation in different scenarios
-
-### App re-install on same device
-If the user uninstalls the app, and reinstalls the app on the same device, assuming you're initializing Terra with the same devId on the same app, you'll receive the user ID you already authenticated previously
-
-### App re-install on new device
-
-If the user installs the app on a new device, you'll receive `nil`, and it is appropriate to show a connect button, as if the user had never connected. If the user is marked as having that device connection in your database, it may also be worth explaining to them that they're connecting a new device and replacing the old one, or handle it appropriately according to your use case
