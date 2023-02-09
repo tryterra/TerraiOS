@@ -2875,156 +2875,6 @@
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "disconnectTerra",
-            "printedName": "disconnectTerra(devId:xAPIKey:userId:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8TerraiOS12TerraManagerC010disconnectC05devId7xAPIKey04userG0ySS_S2StFZ",
-            "mangledName": "$s8TerraiOS12TerraManagerC010disconnectC05devId7xAPIKey04userG0ySS_S2StFZ",
-            "moduleName": "TerraiOS",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "checkAuthentication",
-            "printedName": "checkAuthentication(connection:devId:completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Connections",
-                "printedName": "TerraiOS.Connections",
-                "usr": "s:8TerraiOS11ConnectionsO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Swift.Bool) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8TerraiOS12TerraManagerC19checkAuthentication10connection5devId10completionyAA11ConnectionsO_SSySbctFZ",
-            "mangledName": "$s8TerraiOS12TerraManagerC19checkAuthentication10connection5devId10completionyAA11ConnectionsO_SSySbctFZ",
-            "moduleName": "TerraiOS",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "overwriteLogLevel",
-            "printedName": "overwriteLogLevel(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@CM@TerraiOS@objc(cs)TerraManager(cm)overwriteLogLevel:",
-            "mangledName": "$s8TerraiOS12TerraManagerC17overwriteLogLevelyySSFZ",
-            "moduleName": "TerraiOS",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "ObjC"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "setUpBackgroundDelivery",
-            "printedName": "setUpBackgroundDelivery()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@CM@TerraiOS@objc(cs)TerraManager(cm)setUpBackgroundDelivery",
-            "mangledName": "$s8TerraiOS12TerraManagerC23setUpBackgroundDeliveryyyFZ",
-            "moduleName": "TerraiOS",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -57858,6 +57708,35 @@
               "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "overwriteLogLevel",
+            "printedName": "overwriteLogLevel(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8TerraiOS5TerraC17overwriteLogLevelyySSFZ",
+            "mangledName": "$s8TerraiOS5TerraC17overwriteLogLevelyySSFZ",
+            "moduleName": "TerraiOS",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -74049,84 +73928,84 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
       "kind": "BooleanLiteral",
-      "offset": 10860,
+      "offset": 10596,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
       "kind": "BooleanLiteral",
-      "offset": 11857,
+      "offset": 11593,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
       "kind": "BooleanLiteral",
-      "offset": 13497,
+      "offset": 12942,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
       "kind": "BooleanLiteral",
-      "offset": 14464,
+      "offset": 13909,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
       "kind": "BooleanLiteral",
-      "offset": 16057,
+      "offset": 15236,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
       "kind": "BooleanLiteral",
-      "offset": 17025,
+      "offset": 16204,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
       "kind": "BooleanLiteral",
-      "offset": 18617,
+      "offset": 17539,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
       "kind": "BooleanLiteral",
-      "offset": 19481,
+      "offset": 18403,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
       "kind": "BooleanLiteral",
-      "offset": 21078,
+      "offset": 19735,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
       "kind": "BooleanLiteral",
-      "offset": 22060,
+      "offset": 20717,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
       "kind": "BooleanLiteral",
-      "offset": 23676,
+      "offset": 22063,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Terra.swift",
       "kind": "BooleanLiteral",
-      "offset": 24655,
+      "offset": 23042,
       "length": 4,
       "value": "true"
     },
@@ -75666,49 +75545,49 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/TerraAppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 3855,
+      "offset": 3850,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/TerraAppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 4988,
+      "offset": 5075,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/TerraAppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 7390,
+      "offset": 7664,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/TerraAppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 9868,
+      "offset": 10358,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/TerraAppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 12278,
+      "offset": 12976,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/TerraAppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 14698,
+      "offset": 15605,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/TerraAppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 17107,
+      "offset": 18227,
       "length": 4,
       "value": "true"
     },

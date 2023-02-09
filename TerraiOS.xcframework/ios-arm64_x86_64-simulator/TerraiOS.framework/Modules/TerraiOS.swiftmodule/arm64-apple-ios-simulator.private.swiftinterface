@@ -68,12 +68,6 @@ extension TerraiOS.TerraManager {
   final public func getActivity(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraActivityDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = {_,_,_ in })
   final public func getActivity(type: TerraiOS.Connections, startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraActivityDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = {_, _, _ in })
 }
-extension TerraiOS.TerraManager {
-  public static func disconnectTerra(devId: Swift.String, xAPIKey: Swift.String, userId: Swift.String)
-  public static func checkAuthentication(connection: TerraiOS.Connections, devId: Swift.String, completion: @escaping (Swift.Bool) -> Swift.Void)
-  @objc public static func overwriteLogLevel(_ level: Swift.String)
-  @objc public static func setUpBackgroundDelivery()
-}
 public struct TerraStressData : Swift.Codable {
   public var medium_stress_duration_seconds: Swift.Double?
   public var low_stress_duration_seconds: Swift.Double?
@@ -926,6 +920,7 @@ public struct TerraAthleteData : Swift.Codable {
   public static func disconnectTerra(devId: Swift.String, xAPIKey: Swift.String, userId: Swift.String)
   public static func checkAuthentication(connection: TerraiOS.Connections, devId: Swift.String, completion: @escaping (Swift.Bool) -> Swift.Void)
   @objc public static func setUpBackgroundDelivery()
+  @objc public static func overwriteLogLevel(_ level: Swift.String)
   @objc deinit
 }
 public struct TerraData : Swift.Codable {
