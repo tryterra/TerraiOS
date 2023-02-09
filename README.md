@@ -81,7 +81,7 @@ Terra.instance(devId: String, referenceId: String?, completion: @escaping (Terra
 
 **You will need to initialise this class everytime your app comes up from terminated or stopped state. It sets up all the previous connections that has been initialised**
 
-## Initialise Connections
+## TerraManager Instance Methods
 After the initialisation of the Terra object, you will need to initialise a connection to the provider you want. This only needs to be done once per connection.
 
 ```swift
@@ -96,7 +96,7 @@ initConnection(type: Connections, token: String, customReadTypes: Set<HKObjectTy
 
 **This will pull up any necessary Permissions logs!**
 
-## Checking Authentication
+### Checking Authentication
 You may now check if a user has authenticated with their device to a specific `Connection`:
 
 ```swift
@@ -108,7 +108,7 @@ When the function's completion function is called, the `Bool` argument signifies
 A more useful function for this purpose would be:
 
 ```swift
-terra.getUserid(type: Connections) -> String?
+getUserid(type: Connections) -> String?
 ```
 This function is synchronous and returns the `user_id` right away or `nil` if none exists.
 
@@ -118,7 +118,7 @@ The framework allows you to disconnect users using our [`deauthenticateUser`](ht
 Terra.disconnectTerra(devId: String, xAPIKey: String, userId: String)
 ```
 
-## Subscriptions (new in 1.2.0)
+### Subscriptions (new in 1.2.0)
 
 We have removed the need for callbacks in the getter functions. They were slow, hard to maintain, and wasteful (as most of the data is not processed in the frontend). Instead, we replace it with a subscription system. 
 
@@ -147,7 +147,7 @@ public struct TerraData: Codable{
 You can subscribe for datatypes as follows (only needs to be done once):
 
 ```swift
-func subscribe(forDataTypes dataTypes: Set<DataTypes>, completion: @escaping(Bool, TerraError?) -> Void)
+subscribe(forDataTypes dataTypes: Set<DataTypes>, completion: @escaping(Bool, TerraError?) -> Void)
 ```
 
 DataTypes can be:
@@ -161,11 +161,7 @@ After the call, your update handler will be called with the corresponding dataty
 
 Scenario: You subscribed for steps data. You close your app and do not go back for 5 days. The next time you open it, your update handler will be called with all 5 days worth of steps, without you needing to query for it and would execute a lot faster as it is only steps. 
 
-## Getting Data
-
-Data will ideally be sent to your webhook by the scheduler (can only run whenever the app is open). 
-
-However, you may also obtain data manually. 
+---
 
 ### Body Data
 
@@ -217,20 +213,17 @@ These functions that take `Date` as an argument, also takes `Time Interval` (Uni
 The completion will be called with 3 arguments:
 - Bool -> If the request was successful or not. If not, a TerraError instance will also be called
 - TerreDataPayload -> A payload for each data type. If `toWebhook` is set to true, this returns a class with a property `reference` referring to the payload reference sent to your webhook. If `toWebhook` is set to false, then this returns the entire Terra normalised payload. 
+- TerraError -> Returned if any error occurred while retrieving data
 
-## Post data
-
-We also provide functions to post data to Apple Health Kit. Currently the following is implemented:
-
-### Nutrition
+### Write Nutrition
 
 ```swift
-terra.postNutrition(type: Connections, payload: TerraNutritionData, completion: @escaping (Bool) -> Void)
+postNutrition(type: Connections, payload: TerraNutritionData, completion: @escaping (Bool) -> Void)
 ```
 
 **N.B** `TerraNutritionData` has a public constructor!
 
-### Body
+### Write Body
 
 ```swift
 terra.postBody(type: Connections, payload: TerraBodyData, completion: @escaping (Bool) -> Void)
@@ -243,7 +236,7 @@ terra.postBody(type: Connections, payload: TerraBodyData, completion: @escaping 
 You can activate a sensor using
 
 ```swift
-terra.activateSensor(completion: @escaping (Bool) -> Void)
+activateSensor(completion: @escaping (Bool) -> Void)
 ```
 
 For reading a sensor you may use:
