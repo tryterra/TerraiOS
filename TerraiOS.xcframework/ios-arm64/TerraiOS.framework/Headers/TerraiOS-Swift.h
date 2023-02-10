@@ -268,6 +268,16 @@ typedef SWIFT_ENUM(NSUInteger, Permissions, open) {
   PermissionsMENSTRUATION_WRITE = 0b1000000000000,
 };
 
+@class NSString;
+
+SWIFT_CLASS("_TtC8TerraiOS5Terra")
+@interface Terra : NSObject
+/// A function to start background delivery. Must be ran in app delegate before app launches as this registers a background task handler.
++ (void)setUpBackgroundDelivery;
++ (void)overwriteLogLevel:(NSString * _Nonnull)level;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC8TerraiOS12TerraManager")
 @interface TerraManager : NSObject

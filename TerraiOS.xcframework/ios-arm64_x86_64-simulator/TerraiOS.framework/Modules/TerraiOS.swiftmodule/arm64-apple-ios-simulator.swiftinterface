@@ -914,13 +914,14 @@ public struct TerraAthleteData : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-@_hasMissingDesignatedInitializers final public class Terra {
+@_inheritsConvenienceInitializers @objc final public class Terra : ObjectiveC.NSObject {
   public static var updateHandler: ((TerraiOS.DataTypes, TerraiOS.Update) -> Swift.Void)?
   public static func instance(devId: Swift.String, referenceId: Swift.String?, completion: @escaping (TerraiOS.TerraManager?, TerraiOS.TerraError?) -> Swift.Void)
   public static func disconnectTerra(devId: Swift.String, xAPIKey: Swift.String, userId: Swift.String)
   public static func checkAuthentication(connection: TerraiOS.Connections, devId: Swift.String, completion: @escaping (Swift.Bool) -> Swift.Void)
   @objc public static func setUpBackgroundDelivery()
   @objc public static func overwriteLogLevel(_ level: Swift.String)
+  @objc override dynamic public init()
   @objc deinit
 }
 public struct TerraData : Swift.Codable {
