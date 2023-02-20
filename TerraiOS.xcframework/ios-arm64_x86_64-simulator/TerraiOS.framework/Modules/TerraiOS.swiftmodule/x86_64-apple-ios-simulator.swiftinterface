@@ -600,29 +600,59 @@ extension Swift.Optional {
   }
 }
 public enum Resource : Swift.String {
+  case BIOSTRAP
+  case CARDIOMOOD
   case CONCEPT2
   case COROS
+  case CRONOMETER
+  case DEXCOM
+  case EATTHISMUCH
   case EIGHTSLEEP
   case FATSECRET
+  case FINALSURGE
   case FITBIT
   case FREESTYLELIBRE
   case GARMIN
   case GOOGLE
+  case HAMMERHEAD
+  case HUAWEI
   case IFIT
-  case MYFTINESSPAL
+  case INBODY
+  case KOMOOT
   case NUTRACHECK
   case OMRON
+  case OMRONUS
   case OURA
   case PELOTON
   case POLAR
   case PUL
+  case RENPHO
+  case RIDEWITHGPS
+  case ROUVY
   case SUUNTO
   case TEMPO
+  case TECHNOGYM
+  case TRIDOT
+  case TRAINERROAD
   case TRAININGPEAKS
   case UNDERARMOUR
+  case VIRTUAGYM
   case WAHOO
+  case WHOOP
   case WITHINGS
+  case XERT
+  case XOSS
   case ZWIFT
+  case BRYTONSPORT
+  case TODAYSPLAN
+  case WGER
+  case VELOHERO
+  case CYCLINGANALYTICS
+  case NOLIO
+  case TRAINXHALE
+  case KETOMOJOUS
+  case KETOMOJOEU
+  case STRAVA
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
