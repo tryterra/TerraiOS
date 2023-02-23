@@ -894,23 +894,23 @@ public class TerraClient {
   @objc deinit
 }
 extension TerraiOS.TerraClient {
-  public func authenticateUser(forResource resource: TerraiOS.Resource, completion: @escaping (TerraiOS.AuthenticateUserPayload) -> Swift.Void)
-  public func deauthenticateUser(forUser userId: Swift.String, completion: @escaping (TerraiOS.DeauthenticateUserPayload) -> Swift.Void)
+  public func authenticateUser(forResource resource: TerraiOS.Resource, completion: @escaping (TerraiOS.AuthenticateUserPayload?) -> Swift.Void)
+  public func deauthenticateUser(forUser userId: Swift.String, completion: @escaping (TerraiOS.DeauthenticateUserPayload?) -> Swift.Void)
 }
 extension TerraiOS.TerraClient {
-  public func getActivity(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraActivityDataPayloadModel) -> Swift.Void)
-  public func getActivity(startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraActivityDataPayloadModel) -> Swift.Void)
-  public func getDaily(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraDailyDataPayloadModel) -> Swift.Void)
-  public func getDaily(startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraDailyDataPayloadModel) -> Swift.Void)
-  public func getBody(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraBodyDataPayloadModel) -> Swift.Void)
-  public func getBody(startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraBodyDataPayloadModel) -> Swift.Void)
-  public func getAthlete(toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraAthleteDataPayloadModel) -> Swift.Void)
-  public func getMenstruation(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraMenstruationDataPayloadModel) -> Swift.Void)
-  public func getMenstruation(startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraMenstruationDataPayloadModel) -> Swift.Void)
-  public func getSleep(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraSleepDataPayloadModel) -> Swift.Void)
-  public func getSleep(startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraSleepDataPayloadModel) -> Swift.Void)
-  public func getNutrition(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraNutritionDataPayloadModel) -> Swift.Void)
-  public func getNutrition(startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraNutritionDataPayloadModel) -> Swift.Void)
+  public func getActivity(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraActivityDataPayloadModel?) -> Swift.Void)
+  public func getActivity(startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraActivityDataPayloadModel?) -> Swift.Void)
+  public func getDaily(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraDailyDataPayloadModel?) -> Swift.Void)
+  public func getDaily(startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraDailyDataPayloadModel?) -> Swift.Void)
+  public func getBody(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraBodyDataPayloadModel?) -> Swift.Void)
+  public func getBody(startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraBodyDataPayloadModel?) -> Swift.Void)
+  public func getAthlete(toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraAthleteDataPayloadModel?) -> Swift.Void)
+  public func getMenstruation(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraMenstruationDataPayloadModel?) -> Swift.Void)
+  public func getMenstruation(startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraMenstruationDataPayloadModel?) -> Swift.Void)
+  public func getSleep(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraSleepDataPayloadModel?) -> Swift.Void)
+  public func getSleep(startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraSleepDataPayloadModel?) -> Swift.Void)
+  public func getNutrition(startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraNutritionDataPayloadModel?) -> Swift.Void)
+  public func getNutrition(startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraNutritionDataPayloadModel?) -> Swift.Void)
 }
 public struct TerraAuthResponse : Swift.Codable {
   public var status: Swift.String

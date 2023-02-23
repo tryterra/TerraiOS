@@ -55349,7 +55349,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(TerraiOS.AuthenticateUserPayload) -> ()",
+                "printedName": "(TerraiOS.AuthenticateUserPayload?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -55358,16 +55358,24 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "AuthenticateUserPayload",
-                    "printedName": "TerraiOS.AuthenticateUserPayload",
-                    "usr": "s:8TerraiOS23AuthenticateUserPayloadV"
+                    "name": "Optional",
+                    "printedName": "TerraiOS.AuthenticateUserPayload?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AuthenticateUserPayload",
+                        "printedName": "TerraiOS.AuthenticateUserPayload",
+                        "usr": "s:8TerraiOS23AuthenticateUserPayloadV"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ]
               }
             ],
             "declKind": "Func",
-            "usr": "s:8TerraiOS11TerraClientC16authenticateUser11forResource10completionyAA0H0O_yAA012AuthenticateF7PayloadVctF",
-            "mangledName": "$s8TerraiOS11TerraClientC16authenticateUser11forResource10completionyAA0H0O_yAA012AuthenticateF7PayloadVctF",
+            "usr": "s:8TerraiOS11TerraClientC16authenticateUser11forResource10completionyAA0H0O_yAA012AuthenticateF7PayloadVSgctF",
+            "mangledName": "$s8TerraiOS11TerraClientC16authenticateUser11forResource10completionyAA0H0O_yAA012AuthenticateF7PayloadVSgctF",
             "moduleName": "TerraiOS",
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -55391,7 +55399,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(TerraiOS.DeauthenticateUserPayload) -> ()",
+                "printedName": "(TerraiOS.DeauthenticateUserPayload?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -55400,16 +55408,24 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "DeauthenticateUserPayload",
-                    "printedName": "TerraiOS.DeauthenticateUserPayload",
-                    "usr": "s:8TerraiOS25DeauthenticateUserPayloadV"
+                    "name": "Optional",
+                    "printedName": "TerraiOS.DeauthenticateUserPayload?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DeauthenticateUserPayload",
+                        "printedName": "TerraiOS.DeauthenticateUserPayload",
+                        "usr": "s:8TerraiOS25DeauthenticateUserPayloadV"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ]
               }
             ],
             "declKind": "Func",
-            "usr": "s:8TerraiOS11TerraClientC18deauthenticateUser03forF010completionySS_yAA014DeauthenticateF7PayloadVctF",
-            "mangledName": "$s8TerraiOS11TerraClientC18deauthenticateUser03forF010completionySS_yAA014DeauthenticateF7PayloadVctF",
+            "usr": "s:8TerraiOS11TerraClientC18deauthenticateUser03forF010completionySS_yAA014DeauthenticateF7PayloadVSgctF",
+            "mangledName": "$s8TerraiOS11TerraClientC18deauthenticateUser03forF010completionySS_yAA014DeauthenticateF7PayloadVSgctF",
             "moduleName": "TerraiOS",
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -55448,7 +55464,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(TerraiOS.TerraActivityDataPayloadModel) -> ()",
+                "printedName": "(TerraiOS.TerraActivityDataPayloadModel?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -55457,16 +55473,24 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "TerraActivityDataPayloadModel",
-                    "printedName": "TerraiOS.TerraActivityDataPayloadModel",
-                    "usr": "s:8TerraiOS29TerraActivityDataPayloadModelV"
+                    "name": "Optional",
+                    "printedName": "TerraiOS.TerraActivityDataPayloadModel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TerraActivityDataPayloadModel",
+                        "printedName": "TerraiOS.TerraActivityDataPayloadModel",
+                        "usr": "s:8TerraiOS29TerraActivityDataPayloadModelV"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ]
               }
             ],
             "declKind": "Func",
-            "usr": "s:8TerraiOS11TerraClientC11getActivity9startDate03endH09toWebhook10completiony10Foundation0H0V_AKSbyAA0cF16DataPayloadModelVctF",
-            "mangledName": "$s8TerraiOS11TerraClientC11getActivity9startDate03endH09toWebhook10completiony10Foundation0H0V_AKSbyAA0cF16DataPayloadModelVctF",
+            "usr": "s:8TerraiOS11TerraClientC11getActivity9startDate03endH09toWebhook10completiony10Foundation0H0V_AKSbyAA0cF16DataPayloadModelVSgctF",
+            "mangledName": "$s8TerraiOS11TerraClientC11getActivity9startDate03endH09toWebhook10completiony10Foundation0H0V_AKSbyAA0cF16DataPayloadModelVSgctF",
             "moduleName": "TerraiOS",
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -55505,7 +55529,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(TerraiOS.TerraActivityDataPayloadModel) -> ()",
+                "printedName": "(TerraiOS.TerraActivityDataPayloadModel?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -55514,16 +55538,24 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "TerraActivityDataPayloadModel",
-                    "printedName": "TerraiOS.TerraActivityDataPayloadModel",
-                    "usr": "s:8TerraiOS29TerraActivityDataPayloadModelV"
+                    "name": "Optional",
+                    "printedName": "TerraiOS.TerraActivityDataPayloadModel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TerraActivityDataPayloadModel",
+                        "printedName": "TerraiOS.TerraActivityDataPayloadModel",
+                        "usr": "s:8TerraiOS29TerraActivityDataPayloadModelV"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ]
               }
             ],
             "declKind": "Func",
-            "usr": "s:8TerraiOS11TerraClientC11getActivity9startDate03endH09toWebhook10completionySd_SdSbyAA0cF16DataPayloadModelVctF",
-            "mangledName": "$s8TerraiOS11TerraClientC11getActivity9startDate03endH09toWebhook10completionySd_SdSbyAA0cF16DataPayloadModelVctF",
+            "usr": "s:8TerraiOS11TerraClientC11getActivity9startDate03endH09toWebhook10completionySd_SdSbyAA0cF16DataPayloadModelVSgctF",
+            "mangledName": "$s8TerraiOS11TerraClientC11getActivity9startDate03endH09toWebhook10completionySd_SdSbyAA0cF16DataPayloadModelVSgctF",
             "moduleName": "TerraiOS",
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -55562,7 +55594,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(TerraiOS.TerraDailyDataPayloadModel) -> ()",
+                "printedName": "(TerraiOS.TerraDailyDataPayloadModel?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -55571,16 +55603,24 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "TerraDailyDataPayloadModel",
-                    "printedName": "TerraiOS.TerraDailyDataPayloadModel",
-                    "usr": "s:8TerraiOS26TerraDailyDataPayloadModelV"
+                    "name": "Optional",
+                    "printedName": "TerraiOS.TerraDailyDataPayloadModel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TerraDailyDataPayloadModel",
+                        "printedName": "TerraiOS.TerraDailyDataPayloadModel",
+                        "usr": "s:8TerraiOS26TerraDailyDataPayloadModelV"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ]
               }
             ],
             "declKind": "Func",
-            "usr": "s:8TerraiOS11TerraClientC8getDaily9startDate03endH09toWebhook10completiony10Foundation0H0V_AKSbyAA0cF16DataPayloadModelVctF",
-            "mangledName": "$s8TerraiOS11TerraClientC8getDaily9startDate03endH09toWebhook10completiony10Foundation0H0V_AKSbyAA0cF16DataPayloadModelVctF",
+            "usr": "s:8TerraiOS11TerraClientC8getDaily9startDate03endH09toWebhook10completiony10Foundation0H0V_AKSbyAA0cF16DataPayloadModelVSgctF",
+            "mangledName": "$s8TerraiOS11TerraClientC8getDaily9startDate03endH09toWebhook10completiony10Foundation0H0V_AKSbyAA0cF16DataPayloadModelVSgctF",
             "moduleName": "TerraiOS",
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -55619,7 +55659,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(TerraiOS.TerraDailyDataPayloadModel) -> ()",
+                "printedName": "(TerraiOS.TerraDailyDataPayloadModel?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -55628,16 +55668,24 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "TerraDailyDataPayloadModel",
-                    "printedName": "TerraiOS.TerraDailyDataPayloadModel",
-                    "usr": "s:8TerraiOS26TerraDailyDataPayloadModelV"
+                    "name": "Optional",
+                    "printedName": "TerraiOS.TerraDailyDataPayloadModel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TerraDailyDataPayloadModel",
+                        "printedName": "TerraiOS.TerraDailyDataPayloadModel",
+                        "usr": "s:8TerraiOS26TerraDailyDataPayloadModelV"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ]
               }
             ],
             "declKind": "Func",
-            "usr": "s:8TerraiOS11TerraClientC8getDaily9startDate03endH09toWebhook10completionySd_SdSbyAA0cF16DataPayloadModelVctF",
-            "mangledName": "$s8TerraiOS11TerraClientC8getDaily9startDate03endH09toWebhook10completionySd_SdSbyAA0cF16DataPayloadModelVctF",
+            "usr": "s:8TerraiOS11TerraClientC8getDaily9startDate03endH09toWebhook10completionySd_SdSbyAA0cF16DataPayloadModelVSgctF",
+            "mangledName": "$s8TerraiOS11TerraClientC8getDaily9startDate03endH09toWebhook10completionySd_SdSbyAA0cF16DataPayloadModelVSgctF",
             "moduleName": "TerraiOS",
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -55676,7 +55724,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(TerraiOS.TerraBodyDataPayloadModel) -> ()",
+                "printedName": "(TerraiOS.TerraBodyDataPayloadModel?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -55685,16 +55733,24 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "TerraBodyDataPayloadModel",
-                    "printedName": "TerraiOS.TerraBodyDataPayloadModel",
-                    "usr": "s:8TerraiOS25TerraBodyDataPayloadModelV"
+                    "name": "Optional",
+                    "printedName": "TerraiOS.TerraBodyDataPayloadModel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TerraBodyDataPayloadModel",
+                        "printedName": "TerraiOS.TerraBodyDataPayloadModel",
+                        "usr": "s:8TerraiOS25TerraBodyDataPayloadModelV"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ]
               }
             ],
             "declKind": "Func",
-            "usr": "s:8TerraiOS11TerraClientC7getBody9startDate03endH09toWebhook10completiony10Foundation0H0V_AKSbyAA0cF16DataPayloadModelVctF",
-            "mangledName": "$s8TerraiOS11TerraClientC7getBody9startDate03endH09toWebhook10completiony10Foundation0H0V_AKSbyAA0cF16DataPayloadModelVctF",
+            "usr": "s:8TerraiOS11TerraClientC7getBody9startDate03endH09toWebhook10completiony10Foundation0H0V_AKSbyAA0cF16DataPayloadModelVSgctF",
+            "mangledName": "$s8TerraiOS11TerraClientC7getBody9startDate03endH09toWebhook10completiony10Foundation0H0V_AKSbyAA0cF16DataPayloadModelVSgctF",
             "moduleName": "TerraiOS",
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -55733,7 +55789,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(TerraiOS.TerraBodyDataPayloadModel) -> ()",
+                "printedName": "(TerraiOS.TerraBodyDataPayloadModel?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -55742,16 +55798,24 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "TerraBodyDataPayloadModel",
-                    "printedName": "TerraiOS.TerraBodyDataPayloadModel",
-                    "usr": "s:8TerraiOS25TerraBodyDataPayloadModelV"
+                    "name": "Optional",
+                    "printedName": "TerraiOS.TerraBodyDataPayloadModel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TerraBodyDataPayloadModel",
+                        "printedName": "TerraiOS.TerraBodyDataPayloadModel",
+                        "usr": "s:8TerraiOS25TerraBodyDataPayloadModelV"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ]
               }
             ],
             "declKind": "Func",
-            "usr": "s:8TerraiOS11TerraClientC7getBody9startDate03endH09toWebhook10completionySd_SdSbyAA0cF16DataPayloadModelVctF",
-            "mangledName": "$s8TerraiOS11TerraClientC7getBody9startDate03endH09toWebhook10completionySd_SdSbyAA0cF16DataPayloadModelVctF",
+            "usr": "s:8TerraiOS11TerraClientC7getBody9startDate03endH09toWebhook10completionySd_SdSbyAA0cF16DataPayloadModelVSgctF",
+            "mangledName": "$s8TerraiOS11TerraClientC7getBody9startDate03endH09toWebhook10completionySd_SdSbyAA0cF16DataPayloadModelVSgctF",
             "moduleName": "TerraiOS",
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -55776,7 +55840,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(TerraiOS.TerraAthleteDataPayloadModel) -> ()",
+                "printedName": "(TerraiOS.TerraAthleteDataPayloadModel?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -55785,16 +55849,24 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "TerraAthleteDataPayloadModel",
-                    "printedName": "TerraiOS.TerraAthleteDataPayloadModel",
-                    "usr": "s:8TerraiOS28TerraAthleteDataPayloadModelV"
+                    "name": "Optional",
+                    "printedName": "TerraiOS.TerraAthleteDataPayloadModel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TerraAthleteDataPayloadModel",
+                        "printedName": "TerraiOS.TerraAthleteDataPayloadModel",
+                        "usr": "s:8TerraiOS28TerraAthleteDataPayloadModelV"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ]
               }
             ],
             "declKind": "Func",
-            "usr": "s:8TerraiOS11TerraClientC10getAthlete9toWebhook10completionySb_yAA0cF16DataPayloadModelVctF",
-            "mangledName": "$s8TerraiOS11TerraClientC10getAthlete9toWebhook10completionySb_yAA0cF16DataPayloadModelVctF",
+            "usr": "s:8TerraiOS11TerraClientC10getAthlete9toWebhook10completionySb_yAA0cF16DataPayloadModelVSgctF",
+            "mangledName": "$s8TerraiOS11TerraClientC10getAthlete9toWebhook10completionySb_yAA0cF16DataPayloadModelVSgctF",
             "moduleName": "TerraiOS",
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -55833,7 +55905,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(TerraiOS.TerraMenstruationDataPayloadModel) -> ()",
+                "printedName": "(TerraiOS.TerraMenstruationDataPayloadModel?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -55842,16 +55914,24 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "TerraMenstruationDataPayloadModel",
-                    "printedName": "TerraiOS.TerraMenstruationDataPayloadModel",
-                    "usr": "s:8TerraiOS33TerraMenstruationDataPayloadModelV"
+                    "name": "Optional",
+                    "printedName": "TerraiOS.TerraMenstruationDataPayloadModel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TerraMenstruationDataPayloadModel",
+                        "printedName": "TerraiOS.TerraMenstruationDataPayloadModel",
+                        "usr": "s:8TerraiOS33TerraMenstruationDataPayloadModelV"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ]
               }
             ],
             "declKind": "Func",
-            "usr": "s:8TerraiOS11TerraClientC15getMenstruation9startDate03endH09toWebhook10completiony10Foundation0H0V_AKSbyAA0cF16DataPayloadModelVctF",
-            "mangledName": "$s8TerraiOS11TerraClientC15getMenstruation9startDate03endH09toWebhook10completiony10Foundation0H0V_AKSbyAA0cF16DataPayloadModelVctF",
+            "usr": "s:8TerraiOS11TerraClientC15getMenstruation9startDate03endH09toWebhook10completiony10Foundation0H0V_AKSbyAA0cF16DataPayloadModelVSgctF",
+            "mangledName": "$s8TerraiOS11TerraClientC15getMenstruation9startDate03endH09toWebhook10completiony10Foundation0H0V_AKSbyAA0cF16DataPayloadModelVSgctF",
             "moduleName": "TerraiOS",
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -55890,7 +55970,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(TerraiOS.TerraMenstruationDataPayloadModel) -> ()",
+                "printedName": "(TerraiOS.TerraMenstruationDataPayloadModel?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -55899,16 +55979,24 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "TerraMenstruationDataPayloadModel",
-                    "printedName": "TerraiOS.TerraMenstruationDataPayloadModel",
-                    "usr": "s:8TerraiOS33TerraMenstruationDataPayloadModelV"
+                    "name": "Optional",
+                    "printedName": "TerraiOS.TerraMenstruationDataPayloadModel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TerraMenstruationDataPayloadModel",
+                        "printedName": "TerraiOS.TerraMenstruationDataPayloadModel",
+                        "usr": "s:8TerraiOS33TerraMenstruationDataPayloadModelV"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ]
               }
             ],
             "declKind": "Func",
-            "usr": "s:8TerraiOS11TerraClientC15getMenstruation9startDate03endH09toWebhook10completionySd_SdSbyAA0cF16DataPayloadModelVctF",
-            "mangledName": "$s8TerraiOS11TerraClientC15getMenstruation9startDate03endH09toWebhook10completionySd_SdSbyAA0cF16DataPayloadModelVctF",
+            "usr": "s:8TerraiOS11TerraClientC15getMenstruation9startDate03endH09toWebhook10completionySd_SdSbyAA0cF16DataPayloadModelVSgctF",
+            "mangledName": "$s8TerraiOS11TerraClientC15getMenstruation9startDate03endH09toWebhook10completionySd_SdSbyAA0cF16DataPayloadModelVSgctF",
             "moduleName": "TerraiOS",
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -55947,7 +56035,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(TerraiOS.TerraSleepDataPayloadModel) -> ()",
+                "printedName": "(TerraiOS.TerraSleepDataPayloadModel?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -55956,16 +56044,24 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "TerraSleepDataPayloadModel",
-                    "printedName": "TerraiOS.TerraSleepDataPayloadModel",
-                    "usr": "s:8TerraiOS26TerraSleepDataPayloadModelV"
+                    "name": "Optional",
+                    "printedName": "TerraiOS.TerraSleepDataPayloadModel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TerraSleepDataPayloadModel",
+                        "printedName": "TerraiOS.TerraSleepDataPayloadModel",
+                        "usr": "s:8TerraiOS26TerraSleepDataPayloadModelV"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ]
               }
             ],
             "declKind": "Func",
-            "usr": "s:8TerraiOS11TerraClientC8getSleep9startDate03endH09toWebhook10completiony10Foundation0H0V_AKSbyAA0cF16DataPayloadModelVctF",
-            "mangledName": "$s8TerraiOS11TerraClientC8getSleep9startDate03endH09toWebhook10completiony10Foundation0H0V_AKSbyAA0cF16DataPayloadModelVctF",
+            "usr": "s:8TerraiOS11TerraClientC8getSleep9startDate03endH09toWebhook10completiony10Foundation0H0V_AKSbyAA0cF16DataPayloadModelVSgctF",
+            "mangledName": "$s8TerraiOS11TerraClientC8getSleep9startDate03endH09toWebhook10completiony10Foundation0H0V_AKSbyAA0cF16DataPayloadModelVSgctF",
             "moduleName": "TerraiOS",
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -56004,7 +56100,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(TerraiOS.TerraSleepDataPayloadModel) -> ()",
+                "printedName": "(TerraiOS.TerraSleepDataPayloadModel?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -56013,16 +56109,24 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "TerraSleepDataPayloadModel",
-                    "printedName": "TerraiOS.TerraSleepDataPayloadModel",
-                    "usr": "s:8TerraiOS26TerraSleepDataPayloadModelV"
+                    "name": "Optional",
+                    "printedName": "TerraiOS.TerraSleepDataPayloadModel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TerraSleepDataPayloadModel",
+                        "printedName": "TerraiOS.TerraSleepDataPayloadModel",
+                        "usr": "s:8TerraiOS26TerraSleepDataPayloadModelV"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ]
               }
             ],
             "declKind": "Func",
-            "usr": "s:8TerraiOS11TerraClientC8getSleep9startDate03endH09toWebhook10completionySd_SdSbyAA0cF16DataPayloadModelVctF",
-            "mangledName": "$s8TerraiOS11TerraClientC8getSleep9startDate03endH09toWebhook10completionySd_SdSbyAA0cF16DataPayloadModelVctF",
+            "usr": "s:8TerraiOS11TerraClientC8getSleep9startDate03endH09toWebhook10completionySd_SdSbyAA0cF16DataPayloadModelVSgctF",
+            "mangledName": "$s8TerraiOS11TerraClientC8getSleep9startDate03endH09toWebhook10completionySd_SdSbyAA0cF16DataPayloadModelVSgctF",
             "moduleName": "TerraiOS",
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -56061,7 +56165,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(TerraiOS.TerraNutritionDataPayloadModel) -> ()",
+                "printedName": "(TerraiOS.TerraNutritionDataPayloadModel?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -56070,16 +56174,24 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "TerraNutritionDataPayloadModel",
-                    "printedName": "TerraiOS.TerraNutritionDataPayloadModel",
-                    "usr": "s:8TerraiOS30TerraNutritionDataPayloadModelV"
+                    "name": "Optional",
+                    "printedName": "TerraiOS.TerraNutritionDataPayloadModel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TerraNutritionDataPayloadModel",
+                        "printedName": "TerraiOS.TerraNutritionDataPayloadModel",
+                        "usr": "s:8TerraiOS30TerraNutritionDataPayloadModelV"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ]
               }
             ],
             "declKind": "Func",
-            "usr": "s:8TerraiOS11TerraClientC12getNutrition9startDate03endH09toWebhook10completiony10Foundation0H0V_AKSbyAA0cF16DataPayloadModelVctF",
-            "mangledName": "$s8TerraiOS11TerraClientC12getNutrition9startDate03endH09toWebhook10completiony10Foundation0H0V_AKSbyAA0cF16DataPayloadModelVctF",
+            "usr": "s:8TerraiOS11TerraClientC12getNutrition9startDate03endH09toWebhook10completiony10Foundation0H0V_AKSbyAA0cF16DataPayloadModelVSgctF",
+            "mangledName": "$s8TerraiOS11TerraClientC12getNutrition9startDate03endH09toWebhook10completiony10Foundation0H0V_AKSbyAA0cF16DataPayloadModelVSgctF",
             "moduleName": "TerraiOS",
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -56118,7 +56230,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(TerraiOS.TerraNutritionDataPayloadModel) -> ()",
+                "printedName": "(TerraiOS.TerraNutritionDataPayloadModel?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -56127,16 +56239,24 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "TerraNutritionDataPayloadModel",
-                    "printedName": "TerraiOS.TerraNutritionDataPayloadModel",
-                    "usr": "s:8TerraiOS30TerraNutritionDataPayloadModelV"
+                    "name": "Optional",
+                    "printedName": "TerraiOS.TerraNutritionDataPayloadModel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TerraNutritionDataPayloadModel",
+                        "printedName": "TerraiOS.TerraNutritionDataPayloadModel",
+                        "usr": "s:8TerraiOS30TerraNutritionDataPayloadModelV"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ]
               }
             ],
             "declKind": "Func",
-            "usr": "s:8TerraiOS11TerraClientC12getNutrition9startDate03endH09toWebhook10completionySd_SdSbyAA0cF16DataPayloadModelVctF",
-            "mangledName": "$s8TerraiOS11TerraClientC12getNutrition9startDate03endH09toWebhook10completionySd_SdSbyAA0cF16DataPayloadModelVctF",
+            "usr": "s:8TerraiOS11TerraClientC12getNutrition9startDate03endH09toWebhook10completionySd_SdSbyAA0cF16DataPayloadModelVSgctF",
+            "mangledName": "$s8TerraiOS11TerraClientC12getNutrition9startDate03endH09toWebhook10completionySd_SdSbyAA0cF16DataPayloadModelVSgctF",
             "moduleName": "TerraiOS",
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -78410,35 +78530,35 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/TerraClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 2219,
+      "offset": 2214,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/TerraClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 2678,
+      "offset": 2674,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/TerraClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 3038,
+      "offset": 3035,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/TerraClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 3485,
+      "offset": 3483,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/TerraClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 3835,
+      "offset": 3834,
       "length": 4,
       "value": "true"
     },
@@ -78452,49 +78572,49 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/TerraClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 4559,
+      "offset": 4560,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/TerraClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 4968,
+      "offset": 4970,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/TerraClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 5436,
+      "offset": 5439,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/TerraClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 5818,
+      "offset": 5822,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/TerraClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 6265,
+      "offset": 6270,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/TerraClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 6625,
+      "offset": 6631,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/TerraClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 7084,
+      "offset": 7091,
       "length": 4,
       "value": "true"
     },
