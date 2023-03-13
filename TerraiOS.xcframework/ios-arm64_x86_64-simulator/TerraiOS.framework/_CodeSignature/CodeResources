@@ -18,7 +18,7 @@
 		</data>
 		<key>Modules/TerraiOS.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		nrL4ObMn7s2HDwAyRlb98wuD/DM=
+		0anEjZD+q2rpGsF9NgyqCwpj90c=
 		</data>
 		<key>Modules/TerraiOS.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/TerraiOS.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		nrL4ObMn7s2HDwAyRlb98wuD/DM=
+		0anEjZD+q2rpGsF9NgyqCwpj90c=
 		</data>
 		<key>Modules/TerraiOS.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -81,7 +81,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8UBN624i92AzVKat9P0QlSyZoL5tSLRyNZdkdaQ5hN4=
+			baEdJuuXHVuEotHeYJMYgIuvcvSngJEA6SsTlRurlok=
 			</data>
 		</dict>
 		<key>Modules/TerraiOS.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -116,7 +116,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8UBN624i92AzVKat9P0QlSyZoL5tSLRyNZdkdaQ5hN4=
+			baEdJuuXHVuEotHeYJMYgIuvcvSngJEA6SsTlRurlok=
 			</data>
 		</dict>
 		<key>Modules/TerraiOS.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
