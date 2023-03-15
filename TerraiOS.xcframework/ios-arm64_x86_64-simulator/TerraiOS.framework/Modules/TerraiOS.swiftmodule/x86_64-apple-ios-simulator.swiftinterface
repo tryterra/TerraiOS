@@ -33,6 +33,7 @@ public struct FSLSensorDetails : Swift.Codable {
   public var serial_number: Swift.String
   public var data: TerraiOS.TerraGlucoseData
   public var device_data: TerraiOS.TerraDeviceData
+  public var last_reading: Swift.Double?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
