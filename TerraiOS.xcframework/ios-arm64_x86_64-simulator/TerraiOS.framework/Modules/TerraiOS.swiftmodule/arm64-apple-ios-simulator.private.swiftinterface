@@ -22,6 +22,7 @@ final public class LibreProActivator {
   final public var history: [Swift.UInt16]
   final public var trend: [Swift.UInt16]
   final public var age: Swift.Int
+  final public var isCalibrated: Swift.Bool
   @objc deinit
 }
 extension TerraiOS.LibreProDataParser {
@@ -34,6 +35,7 @@ public struct FSLSensorDetails : Swift.Codable {
   public var serial_number: Swift.String
   public var data: TerraiOS.TerraGlucoseData
   public var device_data: TerraiOS.TerraDeviceData
+  public var last_reading: Swift.Double?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -62,7 +64,7 @@ extension TerraiOS.TerraManager {
   final public func getSleep(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraSleepDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = {_, _, _ in })
   final public func getSleep(type: TerraiOS.Connections, startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraSleepDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = {_, _, _ in })
   final public func getBody(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraBodyDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = {_,_,_ in })
-  final public func getBody(type: TerraiOS.Connections, startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraBodyDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = {_,_,_ in })
+  final public func getBody(type: TerraiOS.Connections, startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, latestReading: Swift.Bool = false, completion: @escaping (Swift.Bool, TerraiOS.TerraBodyDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = {_,_,_ in })
   final public func getNutrition(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraNutritionDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = {_,_,_ in })
   final public func getNutrition(type: TerraiOS.Connections, startDate: Foundation.Date = Date.todayAt12AM(date: Date()), endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraNutritionDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = {_, _, _ in })
   final public func getActivity(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.todayAt12AM(date: Date()).timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraActivityDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = {_,_,_ in })
