@@ -78528,287 +78528,287 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 3111,
+      "offset": 3151,
       "length": 31,
       "value": "\"co.tryterra.data.post.request\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 3210,
+      "offset": 3250,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 3356,
+      "offset": 3396,
       "length": 47,
       "value": "\"Background Delivery Task Submitted (Activity)\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 4268,
+      "offset": 4308,
       "length": 31,
       "value": "\"Delivering Daily Data (Query)\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 4339,
+      "offset": 4379,
       "length": 7,
       "value": "\"daily\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "IntegerLiteral",
-      "offset": 4597,
+      "offset": 4637,
       "length": 2,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 5530,
+      "offset": 5570,
       "length": 31,
       "value": "\"co.tryterra.data.post.request\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 5621,
+      "offset": 5661,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 5760,
+      "offset": 5800,
       "length": 44,
       "value": "\"Background Delivery Task Submitted (Daily)\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 6878,
+      "offset": 6945,
       "length": 30,
       "value": "\"Delivering Body Data (Query)\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 6951,
+      "offset": 7018,
       "length": 6,
       "value": "\"body\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "IntegerLiteral",
-      "offset": 7236,
+      "offset": 7303,
       "length": 2,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 7506,
+      "offset": 7573,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 8262,
+      "offset": 8329,
       "length": 31,
       "value": "\"co.tryterra.data.post.request\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 8357,
+      "offset": 8424,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 8512,
+      "offset": 8579,
       "length": 43,
       "value": "\"Background Delivery Task Submitted (Body)\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 9213,
+      "offset": 9307,
       "length": 30,
       "value": "\"Delivering Body Data (Query)\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 9286,
+      "offset": 9380,
       "length": 6,
       "value": "\"body\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "IntegerLiteral",
-      "offset": 9571,
+      "offset": 9665,
       "length": 2,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 9841,
+      "offset": 9935,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 10597,
+      "offset": 10691,
       "length": 31,
       "value": "\"co.tryterra.data.post.request\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 10692,
+      "offset": 10786,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 10847,
+      "offset": 10941,
       "length": 43,
       "value": "\"Background Delivery Task Submitted (Body)\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 11611,
+      "offset": 11728,
       "length": 31,
       "value": "\"Delivering Sleep Data (Query)\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 11682,
+      "offset": 11799,
       "length": 7,
       "value": "\"sleep\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "IntegerLiteral",
-      "offset": 11825,
+      "offset": 11942,
       "length": 2,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 12507,
+      "offset": 12624,
       "length": 31,
       "value": "\"co.tryterra.data.post.request\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 12598,
+      "offset": 12715,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 12737,
+      "offset": 12854,
       "length": 44,
       "value": "\"Background Delivery Task Submitted (Sleep)\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 13408,
+      "offset": 13548,
       "length": 35,
       "value": "\"Delivering Nutrition Data (Query)\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 13487,
+      "offset": 13627,
       "length": 11,
       "value": "\"nutrition\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "IntegerLiteral",
-      "offset": 13749,
+      "offset": 13889,
       "length": 2,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 14726,
+      "offset": 14866,
       "length": 31,
       "value": "\"co.tryterra.data.post.request\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 14817,
+      "offset": 14957,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 14956,
+      "offset": 15096,
       "length": 48,
       "value": "\"Background Delivery Task Submitted (Nutrition)\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 15655,
+      "offset": 15818,
       "length": 38,
       "value": "\"Delivering Menstruation Data (Query)\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 15740,
+      "offset": 15903,
       "length": 14,
       "value": "\"menstruation\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "IntegerLiteral",
-      "offset": 16005,
+      "offset": 16168,
       "length": 2,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 16996,
+      "offset": 17159,
       "length": 31,
       "value": "\"co.tryterra.data.post.request\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 17087,
+      "offset": 17250,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 17226,
+      "offset": 17389,
       "length": 51,
       "value": "\"Background Delivery Task Submitted (Menstruation)\""
     },
