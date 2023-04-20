@@ -77226,21 +77226,21 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/NFCManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 19839,
+      "offset": 22709,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/NFCManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 23269,
+      "offset": 26139,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/NFCManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 23813,
+      "offset": 26683,
       "length": 1,
       "value": "0"
     },
@@ -78941,112 +78941,112 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "StringLiteral",
-      "offset": 2903,
+      "offset": 2934,
       "length": 9,
       "value": "\"Unknown\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "IntegerLiteral",
-      "offset": 3053,
+      "offset": 3084,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "IntegerLiteral",
-      "offset": 3093,
+      "offset": 3124,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "IntegerLiteral",
-      "offset": 3099,
+      "offset": 3130,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "StringLiteral",
-      "offset": 3152,
+      "offset": 3183,
       "length": 4,
       "value": "\"70\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "StringLiteral",
-      "offset": 3191,
+      "offset": 3222,
       "length": 7,
       "value": "\"Pro\/H\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "StringLiteral",
-      "offset": 3220,
+      "offset": 3251,
       "length": 4,
       "value": "\"9D\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "StringLiteral",
-      "offset": 3259,
+      "offset": 3290,
       "length": 3,
       "value": "\"2\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "StringLiteral",
-      "offset": 3284,
+      "offset": 3315,
       "length": 4,
       "value": "\"DF\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "StringLiteral",
-      "offset": 3323,
+      "offset": 3354,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "StringLiteral",
-      "offset": 3348,
+      "offset": 3379,
       "length": 4,
       "value": "\"E5\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "StringLiteral",
-      "offset": 3387,
+      "offset": 3418,
       "length": 12,
       "value": "\"US 14 Days\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "StringLiteral",
-      "offset": 3421,
+      "offset": 3452,
       "length": 4,
       "value": "\"A2\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "StringLiteral",
-      "offset": 3460,
+      "offset": 3491,
       "length": 7,
       "value": "\"1 New\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "StringLiteral",
-      "offset": 3526,
+      "offset": 3557,
       "length": 9,
       "value": "\"Unknown\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "StringLiteral",
-      "offset": 3604,
+      "offset": 3635,
       "length": 9,
       "value": "\"Unknown\""
     },
