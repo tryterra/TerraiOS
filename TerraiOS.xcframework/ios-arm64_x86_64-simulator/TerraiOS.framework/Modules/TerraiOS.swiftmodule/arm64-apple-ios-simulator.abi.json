@@ -33526,6 +33526,43 @@
           },
           {
             "kind": "Var",
+            "name": "INTERBEAT",
+            "printedName": "INTERBEAT",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TerraiOS.CustomPermissions.Type) -> TerraiOS.CustomPermissions",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CustomPermissions",
+                    "printedName": "TerraiOS.CustomPermissions",
+                    "usr": "s:8TerraiOS17CustomPermissionsO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TerraiOS.CustomPermissions.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CustomPermissions",
+                        "printedName": "TerraiOS.CustomPermissions",
+                        "usr": "s:8TerraiOS17CustomPermissionsO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TerraiOS17CustomPermissionsO9INTERBEATyA2CmF",
+            "mangledName": "$s8TerraiOS17CustomPermissionsO9INTERBEATyA2CmF",
+            "moduleName": "TerraiOS"
+          },
+          {
+            "kind": "Var",
             "name": "LEAN_BODY_MASS",
             "printedName": "LEAN_BODY_MASS",
             "children": [
@@ -75350,7 +75387,7 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Models\/Samples.swift",
       "kind": "IntegerLiteral",
-      "offset": 3953,
+      "offset": 4070,
       "length": 1,
       "value": "0"
     },
@@ -76351,112 +76388,119 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1122,
+      "offset": 1117,
+      "length": 11,
+      "value": "\"INTERBEAT\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
+      "kind": "StringLiteral",
+      "offset": 1155,
       "length": 16,
       "value": "\"LEAN_BODY_MASS\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1168,
+      "offset": 1201,
       "length": 19,
       "value": "\"OXYGEN_SATURATION\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1214,
+      "offset": 1247,
       "length": 16,
       "value": "\"SLEEP_ANALYSIS\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1259,
+      "offset": 1292,
       "length": 18,
       "value": "\"RESPIRATORY_RATE\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1306,
+      "offset": 1339,
       "length": 18,
       "value": "\"NUTRITION_SODIUM\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1354,
+      "offset": 1387,
       "length": 19,
       "value": "\"NUTRITION_PROTEIN\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1409,
+      "offset": 1442,
       "length": 25,
       "value": "\"NUTRITION_CARBOHYDRATES\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1462,
+      "offset": 1495,
       "length": 17,
       "value": "\"NUTRITION_FIBRE\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1511,
+      "offset": 1544,
       "length": 21,
       "value": "\"NUTRITION_FAT_TOTAL\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1560,
+      "offset": 1593,
       "length": 17,
       "value": "\"NUTRITION_SUGAR\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1609,
+      "offset": 1642,
       "length": 21,
       "value": "\"NUTRITION_VITAMIN_C\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1662,
+      "offset": 1695,
       "length": 21,
       "value": "\"NUTRITION_VITAMIN_A\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1714,
+      "offset": 1747,
       "length": 20,
       "value": "\"NUTRITION_CALORIES\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1762,
+      "offset": 1795,
       "length": 17,
       "value": "\"NUTRITION_WATER\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1813,
+      "offset": 1846,
       "length": 23,
       "value": "\"NUTRITION_CHOLESTEROL\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1861,
+      "offset": 1894,
       "length": 14,
       "value": "\"MENSTRUATION\""
     },
@@ -76631,112 +76675,119 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1122,
+      "offset": 1117,
+      "length": 11,
+      "value": "\"INTERBEAT\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
+      "kind": "StringLiteral",
+      "offset": 1155,
       "length": 16,
       "value": "\"LEAN_BODY_MASS\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1168,
+      "offset": 1201,
       "length": 19,
       "value": "\"OXYGEN_SATURATION\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1214,
+      "offset": 1247,
       "length": 16,
       "value": "\"SLEEP_ANALYSIS\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1259,
+      "offset": 1292,
       "length": 18,
       "value": "\"RESPIRATORY_RATE\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1306,
+      "offset": 1339,
       "length": 18,
       "value": "\"NUTRITION_SODIUM\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1354,
+      "offset": 1387,
       "length": 19,
       "value": "\"NUTRITION_PROTEIN\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1409,
+      "offset": 1442,
       "length": 25,
       "value": "\"NUTRITION_CARBOHYDRATES\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1462,
+      "offset": 1495,
       "length": 17,
       "value": "\"NUTRITION_FIBRE\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1511,
+      "offset": 1544,
       "length": 21,
       "value": "\"NUTRITION_FAT_TOTAL\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1560,
+      "offset": 1593,
       "length": 17,
       "value": "\"NUTRITION_SUGAR\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1609,
+      "offset": 1642,
       "length": 21,
       "value": "\"NUTRITION_VITAMIN_C\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1662,
+      "offset": 1695,
       "length": 21,
       "value": "\"NUTRITION_VITAMIN_A\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1714,
+      "offset": 1747,
       "length": 20,
       "value": "\"NUTRITION_CALORIES\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1762,
+      "offset": 1795,
       "length": 17,
       "value": "\"NUTRITION_WATER\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1813,
+      "offset": 1846,
       "length": 23,
       "value": "\"NUTRITION_CHOLESTEROL\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Enums\/CustomPermissions.swift",
       "kind": "StringLiteral",
-      "offset": 1861,
+      "offset": 1894,
       "length": 14,
       "value": "\"MENSTRUATION\""
     },
@@ -77128,63 +77179,63 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/TerraAppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 3850,
+      "offset": 4066,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/TerraAppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 5075,
+      "offset": 5291,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/TerraAppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 7664,
+      "offset": 7880,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/TerraAppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 10358,
+      "offset": 10574,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/TerraAppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 10386,
+      "offset": 10602,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/TerraAppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 13065,
+      "offset": 13281,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/TerraAppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 15694,
+      "offset": 15910,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/TerraAppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 18316,
+      "offset": 18532,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/TerraAppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 23781,
+      "offset": 23997,
       "length": 5,
       "value": "false"
     },
@@ -77226,21 +77277,21 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/NFCManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 22758,
+      "offset": 23240,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/NFCManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 26188,
+      "offset": 26670,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/NFCManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 26732,
+      "offset": 27214,
       "length": 1,
       "value": "0"
     },
@@ -78009,8 +78060,15 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Models\/Activity.swift",
+      "kind": "BooleanLiteral",
+      "offset": 183,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Models\/Activity.swift",
       "kind": "IntegerLiteral",
-      "offset": 214,
+      "offset": 244,
       "length": 1,
       "value": "0"
     },
@@ -78941,112 +78999,112 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "StringLiteral",
-      "offset": 2934,
+      "offset": 2968,
       "length": 9,
       "value": "\"Unknown\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "IntegerLiteral",
-      "offset": 3084,
+      "offset": 3118,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "IntegerLiteral",
-      "offset": 3124,
+      "offset": 3158,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "IntegerLiteral",
-      "offset": 3130,
+      "offset": 3164,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "StringLiteral",
-      "offset": 3183,
+      "offset": 3217,
       "length": 4,
       "value": "\"70\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "StringLiteral",
-      "offset": 3222,
+      "offset": 3256,
       "length": 7,
       "value": "\"Pro\/H\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "StringLiteral",
-      "offset": 3251,
+      "offset": 3285,
       "length": 4,
       "value": "\"9D\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "StringLiteral",
-      "offset": 3290,
+      "offset": 3324,
       "length": 3,
       "value": "\"2\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "StringLiteral",
-      "offset": 3315,
+      "offset": 3349,
       "length": 4,
       "value": "\"DF\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "StringLiteral",
-      "offset": 3354,
+      "offset": 3388,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "StringLiteral",
-      "offset": 3379,
+      "offset": 3413,
       "length": 4,
       "value": "\"E5\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "StringLiteral",
-      "offset": 3418,
+      "offset": 3452,
       "length": 12,
       "value": "\"US 14 Days\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "StringLiteral",
-      "offset": 3452,
+      "offset": 3486,
       "length": 4,
       "value": "\"A2\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "StringLiteral",
-      "offset": 3491,
+      "offset": 3525,
       "length": 7,
       "value": "\"1 New\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "StringLiteral",
-      "offset": 3557,
+      "offset": 3591,
       "length": 9,
       "value": "\"Unknown\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorData.swift",
       "kind": "StringLiteral",
-      "offset": 3635,
+      "offset": 3669,
       "length": 9,
       "value": "\"Unknown\""
     },

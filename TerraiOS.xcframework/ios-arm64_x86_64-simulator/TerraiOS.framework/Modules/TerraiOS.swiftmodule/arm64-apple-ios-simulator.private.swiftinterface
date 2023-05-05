@@ -512,6 +512,7 @@ public enum CustomPermissions : Swift.String {
   case BLOOD_GLUCOSE
   case BODY_TEMPERATURE
   case MINDFULNESS
+  case INTERBEAT
   case LEAN_BODY_MASS
   case OXYGEN_SATURATION
   case SLEEP_ANALYSIS
