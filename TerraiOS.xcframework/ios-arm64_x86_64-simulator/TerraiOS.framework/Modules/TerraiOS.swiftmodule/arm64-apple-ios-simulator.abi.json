@@ -78586,7 +78586,7 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 344,
+      "offset": 339,
       "length": 40,
       "value": "\"HealthKit not supported on this device\""
     },
