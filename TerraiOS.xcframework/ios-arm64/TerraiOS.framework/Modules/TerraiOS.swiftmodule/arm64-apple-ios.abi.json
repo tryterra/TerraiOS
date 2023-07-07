@@ -10662,9 +10662,119 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "TerraDistanceSummaryData",
-        "printedName": "TerraDistanceSummaryData",
+        "name": "TerraDailyDistanceData",
+        "printedName": "TerraDailyDistanceData",
         "children": [
+          {
+            "kind": "Var",
+            "name": "detailed",
+            "printedName": "detailed",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "TerraiOS.TerraDistanceDetailedData?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TerraDistanceDetailedData",
+                    "printedName": "TerraiOS.TerraDistanceDetailedData",
+                    "usr": "s:8TerraiOS25TerraDistanceDetailedDataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8TerraiOS22TerraDailyDistanceDataV8detailedAA0ce8DetailedF0VSgvp",
+            "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV8detailedAA0ce8DetailedF0VSgvp",
+            "moduleName": "TerraiOS",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "TerraiOS.TerraDistanceDetailedData?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TerraDistanceDetailedData",
+                        "printedName": "TerraiOS.TerraDistanceDetailedData",
+                        "usr": "s:8TerraiOS25TerraDistanceDetailedDataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS22TerraDailyDistanceDataV8detailedAA0ce8DetailedF0VSgvg",
+                "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV8detailedAA0ce8DetailedF0VSgvg",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "TerraiOS.TerraDistanceDetailedData?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TerraDistanceDetailedData",
+                        "printedName": "TerraiOS.TerraDistanceDetailedData",
+                        "usr": "s:8TerraiOS25TerraDistanceDetailedDataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS22TerraDailyDistanceDataV8detailedAA0ce8DetailedF0VSgvs",
+                "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV8detailedAA0ce8DetailedF0VSgvs",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS22TerraDailyDistanceDataV8detailedAA0ce8DetailedF0VSgvM",
+                "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV8detailedAA0ce8DetailedF0VSgvM",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
           {
             "kind": "Var",
             "name": "floors_climbed",
@@ -10686,8 +10796,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:8TerraiOS24TerraDistanceSummaryDataV14floors_climbedSdSgvp",
-            "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV14floors_climbedSdSgvp",
+            "usr": "s:8TerraiOS22TerraDailyDistanceDataV14floors_climbedSdSgvp",
+            "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV14floors_climbedSdSgvp",
             "moduleName": "TerraiOS",
             "declAttributes": [
               "HasInitialValue",
@@ -10717,8 +10827,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV14floors_climbedSdSgvg",
-                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV14floors_climbedSdSgvg",
+                "usr": "s:8TerraiOS22TerraDailyDistanceDataV14floors_climbedSdSgvg",
+                "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV14floors_climbedSdSgvg",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "get"
@@ -10749,8 +10859,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV14floors_climbedSdSgvs",
-                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV14floors_climbedSdSgvs",
+                "usr": "s:8TerraiOS22TerraDailyDistanceDataV14floors_climbedSdSgvs",
+                "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV14floors_climbedSdSgvs",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "set"
@@ -10767,8 +10877,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV14floors_climbedSdSgvM",
-                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV14floors_climbedSdSgvM",
+                "usr": "s:8TerraiOS22TerraDailyDistanceDataV14floors_climbedSdSgvM",
+                "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV14floors_climbedSdSgvM",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -10796,8 +10906,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:8TerraiOS24TerraDistanceSummaryDataV5stepsSdSgvp",
-            "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV5stepsSdSgvp",
+            "usr": "s:8TerraiOS22TerraDailyDistanceDataV5stepsSdSgvp",
+            "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV5stepsSdSgvp",
             "moduleName": "TerraiOS",
             "declAttributes": [
               "HasInitialValue",
@@ -10827,8 +10937,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV5stepsSdSgvg",
-                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV5stepsSdSgvg",
+                "usr": "s:8TerraiOS22TerraDailyDistanceDataV5stepsSdSgvg",
+                "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV5stepsSdSgvg",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "get"
@@ -10859,8 +10969,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV5stepsSdSgvs",
-                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV5stepsSdSgvs",
+                "usr": "s:8TerraiOS22TerraDailyDistanceDataV5stepsSdSgvs",
+                "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV5stepsSdSgvs",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "set"
@@ -10877,8 +10987,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV5stepsSdSgvM",
-                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV5stepsSdSgvM",
+                "usr": "s:8TerraiOS22TerraDailyDistanceDataV5stepsSdSgvM",
+                "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV5stepsSdSgvM",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -10906,8 +11016,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:8TerraiOS24TerraDistanceSummaryDataV15distance_metersSdSgvp",
-            "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV15distance_metersSdSgvp",
+            "usr": "s:8TerraiOS22TerraDailyDistanceDataV15distance_metersSdSgvp",
+            "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV15distance_metersSdSgvp",
             "moduleName": "TerraiOS",
             "declAttributes": [
               "HasInitialValue",
@@ -10937,8 +11047,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV15distance_metersSdSgvg",
-                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV15distance_metersSdSgvg",
+                "usr": "s:8TerraiOS22TerraDailyDistanceDataV15distance_metersSdSgvg",
+                "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV15distance_metersSdSgvg",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "get"
@@ -10969,8 +11079,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV15distance_metersSdSgvs",
-                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV15distance_metersSdSgvs",
+                "usr": "s:8TerraiOS22TerraDailyDistanceDataV15distance_metersSdSgvs",
+                "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV15distance_metersSdSgvs",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "set"
@@ -10987,8 +11097,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV15distance_metersSdSgvM",
-                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV15distance_metersSdSgvM",
+                "usr": "s:8TerraiOS22TerraDailyDistanceDataV15distance_metersSdSgvM",
+                "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV15distance_metersSdSgvM",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -11016,8 +11126,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:8TerraiOS24TerraDistanceSummaryDataV8swimmingAA0c8SwimmingF0VSgvp",
-            "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV8swimmingAA0c8SwimmingF0VSgvp",
+            "usr": "s:8TerraiOS22TerraDailyDistanceDataV8swimmingAA0c8SwimmingF0VSgvp",
+            "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV8swimmingAA0c8SwimmingF0VSgvp",
             "moduleName": "TerraiOS",
             "declAttributes": [
               "HasInitialValue",
@@ -11047,8 +11157,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV8swimmingAA0c8SwimmingF0VSgvg",
-                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV8swimmingAA0c8SwimmingF0VSgvg",
+                "usr": "s:8TerraiOS22TerraDailyDistanceDataV8swimmingAA0c8SwimmingF0VSgvg",
+                "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV8swimmingAA0c8SwimmingF0VSgvg",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "get"
@@ -11079,8 +11189,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV8swimmingAA0c8SwimmingF0VSgvs",
-                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV8swimmingAA0c8SwimmingF0VSgvs",
+                "usr": "s:8TerraiOS22TerraDailyDistanceDataV8swimmingAA0c8SwimmingF0VSgvs",
+                "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV8swimmingAA0c8SwimmingF0VSgvs",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "set"
@@ -11097,8 +11207,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV8swimmingAA0c8SwimmingF0VSgvM",
-                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV8swimmingAA0c8SwimmingF0VSgvM",
+                "usr": "s:8TerraiOS22TerraDailyDistanceDataV8swimmingAA0c8SwimmingF0VSgvM",
+                "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV8swimmingAA0c8SwimmingF0VSgvM",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -11126,8 +11236,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:8TerraiOS24TerraDistanceSummaryDataV9elevationAA0c9ElevationF0VSgvp",
-            "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV9elevationAA0c9ElevationF0VSgvp",
+            "usr": "s:8TerraiOS22TerraDailyDistanceDataV9elevationAA0c9ElevationF0VSgvp",
+            "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV9elevationAA0c9ElevationF0VSgvp",
             "moduleName": "TerraiOS",
             "declAttributes": [
               "HasInitialValue",
@@ -11157,8 +11267,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV9elevationAA0c9ElevationF0VSgvg",
-                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV9elevationAA0c9ElevationF0VSgvg",
+                "usr": "s:8TerraiOS22TerraDailyDistanceDataV9elevationAA0c9ElevationF0VSgvg",
+                "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV9elevationAA0c9ElevationF0VSgvg",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "get"
@@ -11189,8 +11299,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV9elevationAA0c9ElevationF0VSgvs",
-                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV9elevationAA0c9ElevationF0VSgvs",
+                "usr": "s:8TerraiOS22TerraDailyDistanceDataV9elevationAA0c9ElevationF0VSgvs",
+                "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV9elevationAA0c9ElevationF0VSgvs",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "set"
@@ -11207,8 +11317,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV9elevationAA0c9ElevationF0VSgvM",
-                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV9elevationAA0c9ElevationF0VSgvM",
+                "usr": "s:8TerraiOS22TerraDailyDistanceDataV9elevationAA0c9ElevationF0VSgvM",
+                "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV9elevationAA0c9ElevationF0VSgvM",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -11222,9 +11332,9 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "TerraDistanceSummaryData",
-                "printedName": "TerraiOS.TerraDistanceSummaryData",
-                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV"
+                "name": "TerraDailyDistanceData",
+                "printedName": "TerraiOS.TerraDailyDistanceData",
+                "usr": "s:8TerraiOS22TerraDailyDistanceDataV"
               },
               {
                 "kind": "TypeNominal",
@@ -11234,8 +11344,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:8TerraiOS24TerraDistanceSummaryDataV4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV4fromACs7Decoder_p_tKcfc",
+            "usr": "s:8TerraiOS22TerraDailyDistanceDataV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV4fromACs7Decoder_p_tKcfc",
             "moduleName": "TerraiOS",
             "implicit": true,
             "throwing": true,
@@ -11259,8 +11369,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:8TerraiOS24TerraDistanceSummaryDataV6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV6encode2toys7Encoder_p_tKF",
+            "usr": "s:8TerraiOS22TerraDailyDistanceDataV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV6encode2toys7Encoder_p_tKF",
             "moduleName": "TerraiOS",
             "implicit": true,
             "throwing": true,
@@ -11268,8 +11378,8 @@
           }
         ],
         "declKind": "Struct",
-        "usr": "s:8TerraiOS24TerraDistanceSummaryDataV",
-        "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV",
+        "usr": "s:8TerraiOS22TerraDailyDistanceDataV",
+        "mangledName": "$s8TerraiOS22TerraDailyDistanceDataV",
         "moduleName": "TerraiOS",
         "declAttributes": [
           "AccessControl"
@@ -12485,21 +12595,21 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "TerraiOS.TerraDistanceData?",
+                "printedName": "TerraiOS.TerraDailyDistanceData?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "TerraDistanceData",
-                    "printedName": "TerraiOS.TerraDistanceData",
-                    "usr": "s:8TerraiOS17TerraDistanceDataV"
+                    "name": "TerraDailyDistanceData",
+                    "printedName": "TerraiOS.TerraDailyDistanceData",
+                    "usr": "s:8TerraiOS22TerraDailyDistanceDataV"
                   }
                 ],
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:8TerraiOS14TerraDailyDataV13distance_dataAA0c8DistanceE0VSgvp",
-            "mangledName": "$s8TerraiOS14TerraDailyDataV13distance_dataAA0c8DistanceE0VSgvp",
+            "usr": "s:8TerraiOS14TerraDailyDataV13distance_dataAA0cd8DistanceE0VSgvp",
+            "mangledName": "$s8TerraiOS14TerraDailyDataV13distance_dataAA0cd8DistanceE0VSgvp",
             "moduleName": "TerraiOS",
             "declAttributes": [
               "HasInitialValue",
@@ -12516,21 +12626,21 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "TerraiOS.TerraDistanceData?",
+                    "printedName": "TerraiOS.TerraDailyDistanceData?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "TerraDistanceData",
-                        "printedName": "TerraiOS.TerraDistanceData",
-                        "usr": "s:8TerraiOS17TerraDistanceDataV"
+                        "name": "TerraDailyDistanceData",
+                        "printedName": "TerraiOS.TerraDailyDistanceData",
+                        "usr": "s:8TerraiOS22TerraDailyDistanceDataV"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS14TerraDailyDataV13distance_dataAA0c8DistanceE0VSgvg",
-                "mangledName": "$s8TerraiOS14TerraDailyDataV13distance_dataAA0c8DistanceE0VSgvg",
+                "usr": "s:8TerraiOS14TerraDailyDataV13distance_dataAA0cd8DistanceE0VSgvg",
+                "mangledName": "$s8TerraiOS14TerraDailyDataV13distance_dataAA0cd8DistanceE0VSgvg",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "get"
@@ -12548,21 +12658,21 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "TerraiOS.TerraDistanceData?",
+                    "printedName": "TerraiOS.TerraDailyDistanceData?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "TerraDistanceData",
-                        "printedName": "TerraiOS.TerraDistanceData",
-                        "usr": "s:8TerraiOS17TerraDistanceDataV"
+                        "name": "TerraDailyDistanceData",
+                        "printedName": "TerraiOS.TerraDailyDistanceData",
+                        "usr": "s:8TerraiOS22TerraDailyDistanceDataV"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS14TerraDailyDataV13distance_dataAA0c8DistanceE0VSgvs",
-                "mangledName": "$s8TerraiOS14TerraDailyDataV13distance_dataAA0c8DistanceE0VSgvs",
+                "usr": "s:8TerraiOS14TerraDailyDataV13distance_dataAA0cd8DistanceE0VSgvs",
+                "mangledName": "$s8TerraiOS14TerraDailyDataV13distance_dataAA0cd8DistanceE0VSgvs",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "set"
@@ -12579,8 +12689,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS14TerraDailyDataV13distance_dataAA0c8DistanceE0VSgvM",
-                "mangledName": "$s8TerraiOS14TerraDailyDataV13distance_dataAA0c8DistanceE0VSgvM",
+                "usr": "s:8TerraiOS14TerraDailyDataV13distance_dataAA0cd8DistanceE0VSgvM",
+                "mangledName": "$s8TerraiOS14TerraDailyDataV13distance_dataAA0cd8DistanceE0VSgvM",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -22489,32 +22599,32 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "TerraDistanceData",
-        "printedName": "TerraDistanceData",
+        "name": "TerraDistanceSummaryData",
+        "printedName": "TerraDistanceSummaryData",
         "children": [
           {
             "kind": "Var",
-            "name": "summary",
-            "printedName": "summary",
+            "name": "floors_climbed",
+            "printedName": "floors_climbed",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "TerraiOS.TerraDistanceSummaryData?",
+                "printedName": "Swift.Double?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "TerraDistanceSummaryData",
-                    "printedName": "TerraiOS.TerraDistanceSummaryData",
-                    "usr": "s:8TerraiOS24TerraDistanceSummaryDataV"
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
                   }
                 ],
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:8TerraiOS17TerraDistanceDataV7summaryAA0cd7SummaryE0VSgvp",
-            "mangledName": "$s8TerraiOS17TerraDistanceDataV7summaryAA0cd7SummaryE0VSgvp",
+            "usr": "s:8TerraiOS24TerraDistanceSummaryDataV14floors_climbedSdSgvp",
+            "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV14floors_climbedSdSgvp",
             "moduleName": "TerraiOS",
             "declAttributes": [
               "HasInitialValue",
@@ -22531,21 +22641,21 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "TerraiOS.TerraDistanceSummaryData?",
+                    "printedName": "Swift.Double?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "TerraDistanceSummaryData",
-                        "printedName": "TerraiOS.TerraDistanceSummaryData",
-                        "usr": "s:8TerraiOS24TerraDistanceSummaryDataV"
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS17TerraDistanceDataV7summaryAA0cd7SummaryE0VSgvg",
-                "mangledName": "$s8TerraiOS17TerraDistanceDataV7summaryAA0cd7SummaryE0VSgvg",
+                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV14floors_climbedSdSgvg",
+                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV14floors_climbedSdSgvg",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "get"
@@ -22563,21 +22673,21 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "TerraiOS.TerraDistanceSummaryData?",
+                    "printedName": "Swift.Double?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "TerraDistanceSummaryData",
-                        "printedName": "TerraiOS.TerraDistanceSummaryData",
-                        "usr": "s:8TerraiOS24TerraDistanceSummaryDataV"
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS17TerraDistanceDataV7summaryAA0cd7SummaryE0VSgvs",
-                "mangledName": "$s8TerraiOS17TerraDistanceDataV7summaryAA0cd7SummaryE0VSgvs",
+                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV14floors_climbedSdSgvs",
+                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV14floors_climbedSdSgvs",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "set"
@@ -22594,8 +22704,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS17TerraDistanceDataV7summaryAA0cd7SummaryE0VSgvM",
-                "mangledName": "$s8TerraiOS17TerraDistanceDataV7summaryAA0cd7SummaryE0VSgvM",
+                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV14floors_climbedSdSgvM",
+                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV14floors_climbedSdSgvM",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -22604,27 +22714,27 @@
           },
           {
             "kind": "Var",
-            "name": "detailed",
-            "printedName": "detailed",
+            "name": "steps",
+            "printedName": "steps",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "TerraiOS.TerraDistanceDetailedData?",
+                "printedName": "Swift.Double?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "TerraDistanceDetailedData",
-                    "printedName": "TerraiOS.TerraDistanceDetailedData",
-                    "usr": "s:8TerraiOS25TerraDistanceDetailedDataV"
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
                   }
                 ],
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:8TerraiOS17TerraDistanceDataV8detailedAA0cd8DetailedE0VSgvp",
-            "mangledName": "$s8TerraiOS17TerraDistanceDataV8detailedAA0cd8DetailedE0VSgvp",
+            "usr": "s:8TerraiOS24TerraDistanceSummaryDataV5stepsSdSgvp",
+            "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV5stepsSdSgvp",
             "moduleName": "TerraiOS",
             "declAttributes": [
               "HasInitialValue",
@@ -22641,21 +22751,21 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "TerraiOS.TerraDistanceDetailedData?",
+                    "printedName": "Swift.Double?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "TerraDistanceDetailedData",
-                        "printedName": "TerraiOS.TerraDistanceDetailedData",
-                        "usr": "s:8TerraiOS25TerraDistanceDetailedDataV"
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS17TerraDistanceDataV8detailedAA0cd8DetailedE0VSgvg",
-                "mangledName": "$s8TerraiOS17TerraDistanceDataV8detailedAA0cd8DetailedE0VSgvg",
+                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV5stepsSdSgvg",
+                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV5stepsSdSgvg",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "get"
@@ -22673,21 +22783,21 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "TerraiOS.TerraDistanceDetailedData?",
+                    "printedName": "Swift.Double?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "TerraDistanceDetailedData",
-                        "printedName": "TerraiOS.TerraDistanceDetailedData",
-                        "usr": "s:8TerraiOS25TerraDistanceDetailedDataV"
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS17TerraDistanceDataV8detailedAA0cd8DetailedE0VSgvs",
-                "mangledName": "$s8TerraiOS17TerraDistanceDataV8detailedAA0cd8DetailedE0VSgvs",
+                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV5stepsSdSgvs",
+                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV5stepsSdSgvs",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "set"
@@ -22704,8 +22814,338 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS17TerraDistanceDataV8detailedAA0cd8DetailedE0VSgvM",
-                "mangledName": "$s8TerraiOS17TerraDistanceDataV8detailedAA0cd8DetailedE0VSgvM",
+                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV5stepsSdSgvM",
+                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV5stepsSdSgvM",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "distance_meters",
+            "printedName": "distance_meters",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8TerraiOS24TerraDistanceSummaryDataV15distance_metersSdSgvp",
+            "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV15distance_metersSdSgvp",
+            "moduleName": "TerraiOS",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Double?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV15distance_metersSdSgvg",
+                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV15distance_metersSdSgvg",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Double?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV15distance_metersSdSgvs",
+                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV15distance_metersSdSgvs",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV15distance_metersSdSgvM",
+                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV15distance_metersSdSgvM",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "swimming",
+            "printedName": "swimming",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "TerraiOS.TerraSwimmingData?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TerraSwimmingData",
+                    "printedName": "TerraiOS.TerraSwimmingData",
+                    "usr": "s:8TerraiOS17TerraSwimmingDataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8TerraiOS24TerraDistanceSummaryDataV8swimmingAA0c8SwimmingF0VSgvp",
+            "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV8swimmingAA0c8SwimmingF0VSgvp",
+            "moduleName": "TerraiOS",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "TerraiOS.TerraSwimmingData?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TerraSwimmingData",
+                        "printedName": "TerraiOS.TerraSwimmingData",
+                        "usr": "s:8TerraiOS17TerraSwimmingDataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV8swimmingAA0c8SwimmingF0VSgvg",
+                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV8swimmingAA0c8SwimmingF0VSgvg",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "TerraiOS.TerraSwimmingData?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TerraSwimmingData",
+                        "printedName": "TerraiOS.TerraSwimmingData",
+                        "usr": "s:8TerraiOS17TerraSwimmingDataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV8swimmingAA0c8SwimmingF0VSgvs",
+                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV8swimmingAA0c8SwimmingF0VSgvs",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV8swimmingAA0c8SwimmingF0VSgvM",
+                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV8swimmingAA0c8SwimmingF0VSgvM",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "elevation",
+            "printedName": "elevation",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "TerraiOS.TerraElevationData?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TerraElevationData",
+                    "printedName": "TerraiOS.TerraElevationData",
+                    "usr": "s:8TerraiOS18TerraElevationDataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8TerraiOS24TerraDistanceSummaryDataV9elevationAA0c9ElevationF0VSgvp",
+            "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV9elevationAA0c9ElevationF0VSgvp",
+            "moduleName": "TerraiOS",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "TerraiOS.TerraElevationData?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TerraElevationData",
+                        "printedName": "TerraiOS.TerraElevationData",
+                        "usr": "s:8TerraiOS18TerraElevationDataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV9elevationAA0c9ElevationF0VSgvg",
+                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV9elevationAA0c9ElevationF0VSgvg",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "TerraiOS.TerraElevationData?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TerraElevationData",
+                        "printedName": "TerraiOS.TerraElevationData",
+                        "usr": "s:8TerraiOS18TerraElevationDataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV9elevationAA0c9ElevationF0VSgvs",
+                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV9elevationAA0c9ElevationF0VSgvs",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV9elevationAA0c9ElevationF0VSgvM",
+                "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV9elevationAA0c9ElevationF0VSgvM",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -22719,9 +23159,9 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "TerraDistanceData",
-                "printedName": "TerraiOS.TerraDistanceData",
-                "usr": "s:8TerraiOS17TerraDistanceDataV"
+                "name": "TerraDistanceSummaryData",
+                "printedName": "TerraiOS.TerraDistanceSummaryData",
+                "usr": "s:8TerraiOS24TerraDistanceSummaryDataV"
               },
               {
                 "kind": "TypeNominal",
@@ -22731,8 +23171,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:8TerraiOS17TerraDistanceDataV4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s8TerraiOS17TerraDistanceDataV4fromACs7Decoder_p_tKcfc",
+            "usr": "s:8TerraiOS24TerraDistanceSummaryDataV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV4fromACs7Decoder_p_tKcfc",
             "moduleName": "TerraiOS",
             "implicit": true,
             "throwing": true,
@@ -22756,8 +23196,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:8TerraiOS17TerraDistanceDataV6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s8TerraiOS17TerraDistanceDataV6encode2toys7Encoder_p_tKF",
+            "usr": "s:8TerraiOS24TerraDistanceSummaryDataV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV6encode2toys7Encoder_p_tKF",
             "moduleName": "TerraiOS",
             "implicit": true,
             "throwing": true,
@@ -22765,8 +23205,309 @@
           }
         ],
         "declKind": "Struct",
-        "usr": "s:8TerraiOS17TerraDistanceDataV",
-        "mangledName": "$s8TerraiOS17TerraDistanceDataV",
+        "usr": "s:8TerraiOS24TerraDistanceSummaryDataV",
+        "mangledName": "$s8TerraiOS24TerraDistanceSummaryDataV",
+        "moduleName": "TerraiOS",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TerraActivityDistanceData",
+        "printedName": "TerraActivityDistanceData",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "detailed",
+            "printedName": "detailed",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "TerraiOS.TerraDistanceDetailedData?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TerraDistanceDetailedData",
+                    "printedName": "TerraiOS.TerraDistanceDetailedData",
+                    "usr": "s:8TerraiOS25TerraDistanceDetailedDataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8TerraiOS25TerraActivityDistanceDataV8detailedAA0ce8DetailedF0VSgvp",
+            "mangledName": "$s8TerraiOS25TerraActivityDistanceDataV8detailedAA0ce8DetailedF0VSgvp",
+            "moduleName": "TerraiOS",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "TerraiOS.TerraDistanceDetailedData?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TerraDistanceDetailedData",
+                        "printedName": "TerraiOS.TerraDistanceDetailedData",
+                        "usr": "s:8TerraiOS25TerraDistanceDetailedDataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS25TerraActivityDistanceDataV8detailedAA0ce8DetailedF0VSgvg",
+                "mangledName": "$s8TerraiOS25TerraActivityDistanceDataV8detailedAA0ce8DetailedF0VSgvg",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "TerraiOS.TerraDistanceDetailedData?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TerraDistanceDetailedData",
+                        "printedName": "TerraiOS.TerraDistanceDetailedData",
+                        "usr": "s:8TerraiOS25TerraDistanceDetailedDataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS25TerraActivityDistanceDataV8detailedAA0ce8DetailedF0VSgvs",
+                "mangledName": "$s8TerraiOS25TerraActivityDistanceDataV8detailedAA0ce8DetailedF0VSgvs",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS25TerraActivityDistanceDataV8detailedAA0ce8DetailedF0VSgvM",
+                "mangledName": "$s8TerraiOS25TerraActivityDistanceDataV8detailedAA0ce8DetailedF0VSgvM",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "summary",
+            "printedName": "summary",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "TerraiOS.TerraDistanceSummaryData?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TerraDistanceSummaryData",
+                    "printedName": "TerraiOS.TerraDistanceSummaryData",
+                    "usr": "s:8TerraiOS24TerraDistanceSummaryDataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8TerraiOS25TerraActivityDistanceDataV7summaryAA0ce7SummaryF0VSgvp",
+            "mangledName": "$s8TerraiOS25TerraActivityDistanceDataV7summaryAA0ce7SummaryF0VSgvp",
+            "moduleName": "TerraiOS",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "TerraiOS.TerraDistanceSummaryData?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TerraDistanceSummaryData",
+                        "printedName": "TerraiOS.TerraDistanceSummaryData",
+                        "usr": "s:8TerraiOS24TerraDistanceSummaryDataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS25TerraActivityDistanceDataV7summaryAA0ce7SummaryF0VSgvg",
+                "mangledName": "$s8TerraiOS25TerraActivityDistanceDataV7summaryAA0ce7SummaryF0VSgvg",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "TerraiOS.TerraDistanceSummaryData?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TerraDistanceSummaryData",
+                        "printedName": "TerraiOS.TerraDistanceSummaryData",
+                        "usr": "s:8TerraiOS24TerraDistanceSummaryDataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS25TerraActivityDistanceDataV7summaryAA0ce7SummaryF0VSgvs",
+                "mangledName": "$s8TerraiOS25TerraActivityDistanceDataV7summaryAA0ce7SummaryF0VSgvs",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS25TerraActivityDistanceDataV7summaryAA0ce7SummaryF0VSgvM",
+                "mangledName": "$s8TerraiOS25TerraActivityDistanceDataV7summaryAA0ce7SummaryF0VSgvM",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TerraActivityDistanceData",
+                "printedName": "TerraiOS.TerraActivityDistanceData",
+                "usr": "s:8TerraiOS25TerraActivityDistanceDataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8TerraiOS25TerraActivityDistanceDataV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s8TerraiOS25TerraActivityDistanceDataV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "TerraiOS",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8TerraiOS25TerraActivityDistanceDataV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s8TerraiOS25TerraActivityDistanceDataV6encode2toys7Encoder_p_tKF",
+            "moduleName": "TerraiOS",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:8TerraiOS25TerraActivityDistanceDataV",
+        "mangledName": "$s8TerraiOS25TerraActivityDistanceDataV",
         "moduleName": "TerraiOS",
         "declAttributes": [
           "AccessControl"
@@ -25661,21 +26402,21 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "TerraiOS.TerraDistanceData?",
+                "printedName": "TerraiOS.TerraActivityDistanceData?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "TerraDistanceData",
-                    "printedName": "TerraiOS.TerraDistanceData",
-                    "usr": "s:8TerraiOS17TerraDistanceDataV"
+                    "name": "TerraActivityDistanceData",
+                    "printedName": "TerraiOS.TerraActivityDistanceData",
+                    "usr": "s:8TerraiOS25TerraActivityDistanceDataV"
                   }
                 ],
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:8TerraiOS17TerraActivityDataV13distance_dataAA0c8DistanceE0VSgvp",
-            "mangledName": "$s8TerraiOS17TerraActivityDataV13distance_dataAA0c8DistanceE0VSgvp",
+            "usr": "s:8TerraiOS17TerraActivityDataV13distance_dataAA0cd8DistanceE0VSgvp",
+            "mangledName": "$s8TerraiOS17TerraActivityDataV13distance_dataAA0cd8DistanceE0VSgvp",
             "moduleName": "TerraiOS",
             "declAttributes": [
               "HasInitialValue",
@@ -25692,21 +26433,21 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "TerraiOS.TerraDistanceData?",
+                    "printedName": "TerraiOS.TerraActivityDistanceData?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "TerraDistanceData",
-                        "printedName": "TerraiOS.TerraDistanceData",
-                        "usr": "s:8TerraiOS17TerraDistanceDataV"
+                        "name": "TerraActivityDistanceData",
+                        "printedName": "TerraiOS.TerraActivityDistanceData",
+                        "usr": "s:8TerraiOS25TerraActivityDistanceDataV"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS17TerraActivityDataV13distance_dataAA0c8DistanceE0VSgvg",
-                "mangledName": "$s8TerraiOS17TerraActivityDataV13distance_dataAA0c8DistanceE0VSgvg",
+                "usr": "s:8TerraiOS17TerraActivityDataV13distance_dataAA0cd8DistanceE0VSgvg",
+                "mangledName": "$s8TerraiOS17TerraActivityDataV13distance_dataAA0cd8DistanceE0VSgvg",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "get"
@@ -25724,21 +26465,21 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "TerraiOS.TerraDistanceData?",
+                    "printedName": "TerraiOS.TerraActivityDistanceData?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "TerraDistanceData",
-                        "printedName": "TerraiOS.TerraDistanceData",
-                        "usr": "s:8TerraiOS17TerraDistanceDataV"
+                        "name": "TerraActivityDistanceData",
+                        "printedName": "TerraiOS.TerraActivityDistanceData",
+                        "usr": "s:8TerraiOS25TerraActivityDistanceDataV"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS17TerraActivityDataV13distance_dataAA0c8DistanceE0VSgvs",
-                "mangledName": "$s8TerraiOS17TerraActivityDataV13distance_dataAA0c8DistanceE0VSgvs",
+                "usr": "s:8TerraiOS17TerraActivityDataV13distance_dataAA0cd8DistanceE0VSgvs",
+                "mangledName": "$s8TerraiOS17TerraActivityDataV13distance_dataAA0cd8DistanceE0VSgvs",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "set"
@@ -25755,8 +26496,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS17TerraActivityDataV13distance_dataAA0c8DistanceE0VSgvM",
-                "mangledName": "$s8TerraiOS17TerraActivityDataV13distance_dataAA0c8DistanceE0VSgvM",
+                "usr": "s:8TerraiOS17TerraActivityDataV13distance_dataAA0cd8DistanceE0VSgvM",
+                "mangledName": "$s8TerraiOS17TerraActivityDataV13distance_dataAA0cd8DistanceE0VSgvM",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -68863,7 +69604,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(measurement_time:fat_percentage:BMI:muscle_mass_g:skin_fold_mm:BMR:height_cm:estimated_fitness_age:bone_mass_g:water_percentage:RMR:weight_kg:lean_mass_g:insulin_units:insulin_type:urine_color:)",
+            "printedName": "init(measurement_time:bodyfat_percentage:BMI:muscle_mass_g:skin_fold_mm:BMR:height_cm:estimated_fitness_age:bone_mass_g:water_percentage:RMR:weight_kg:lean_mass_g:insulin_units:insulin_type:urine_color:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -69113,8 +69854,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:8TerraiOS21MeasurementDataSampleV16measurement_time14fat_percentage3BMI13muscle_mass_g12skin_fold_mm3BMR9height_cm21estimated_fitness_age05bone_L2_g06water_I03RMR9weight_kg05lean_L2_g13insulin_units12insulin_type11urine_colorACSSSg_SdSgA12u2Ttcfc",
-            "mangledName": "$s8TerraiOS21MeasurementDataSampleV16measurement_time14fat_percentage3BMI13muscle_mass_g12skin_fold_mm3BMR9height_cm21estimated_fitness_age05bone_L2_g06water_I03RMR9weight_kg05lean_L2_g13insulin_units12insulin_type11urine_colorACSSSg_SdSgA12u2Ttcfc",
+            "usr": "s:8TerraiOS21MeasurementDataSampleV16measurement_time18bodyfat_percentage3BMI13muscle_mass_g12skin_fold_mm3BMR9height_cm21estimated_fitness_age05bone_L2_g06water_I03RMR9weight_kg05lean_L2_g13insulin_units12insulin_type11urine_colorACSSSg_SdSgA12u2Ttcfc",
+            "mangledName": "$s8TerraiOS21MeasurementDataSampleV16measurement_time18bodyfat_percentage3BMI13muscle_mass_g12skin_fold_mm3BMR9height_cm21estimated_fitness_age05bone_L2_g06water_I03RMR9weight_kg05lean_L2_g13insulin_units12insulin_type11urine_colorACSSSg_SdSgA12u2Ttcfc",
             "moduleName": "TerraiOS",
             "declAttributes": [
               "AccessControl"
@@ -69233,8 +69974,8 @@
           },
           {
             "kind": "Var",
-            "name": "fat_percentage",
-            "printedName": "fat_percentage",
+            "name": "bodyfat_percentage",
+            "printedName": "bodyfat_percentage",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -69252,8 +69993,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:8TerraiOS21MeasurementDataSampleV14fat_percentageSdSgvp",
-            "mangledName": "$s8TerraiOS21MeasurementDataSampleV14fat_percentageSdSgvp",
+            "usr": "s:8TerraiOS21MeasurementDataSampleV18bodyfat_percentageSdSgvp",
+            "mangledName": "$s8TerraiOS21MeasurementDataSampleV18bodyfat_percentageSdSgvp",
             "moduleName": "TerraiOS",
             "declAttributes": [
               "HasInitialValue",
@@ -69283,8 +70024,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS21MeasurementDataSampleV14fat_percentageSdSgvg",
-                "mangledName": "$s8TerraiOS21MeasurementDataSampleV14fat_percentageSdSgvg",
+                "usr": "s:8TerraiOS21MeasurementDataSampleV18bodyfat_percentageSdSgvg",
+                "mangledName": "$s8TerraiOS21MeasurementDataSampleV18bodyfat_percentageSdSgvg",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "get"
@@ -69315,8 +70056,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS21MeasurementDataSampleV14fat_percentageSdSgvs",
-                "mangledName": "$s8TerraiOS21MeasurementDataSampleV14fat_percentageSdSgvs",
+                "usr": "s:8TerraiOS21MeasurementDataSampleV18bodyfat_percentageSdSgvs",
+                "mangledName": "$s8TerraiOS21MeasurementDataSampleV18bodyfat_percentageSdSgvs",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "set"
@@ -69333,8 +70074,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TerraiOS21MeasurementDataSampleV14fat_percentageSdSgvM",
-                "mangledName": "$s8TerraiOS21MeasurementDataSampleV14fat_percentageSdSgvM",
+                "usr": "s:8TerraiOS21MeasurementDataSampleV18bodyfat_percentageSdSgvM",
+                "mangledName": "$s8TerraiOS21MeasurementDataSampleV18bodyfat_percentageSdSgvM",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "_modify"

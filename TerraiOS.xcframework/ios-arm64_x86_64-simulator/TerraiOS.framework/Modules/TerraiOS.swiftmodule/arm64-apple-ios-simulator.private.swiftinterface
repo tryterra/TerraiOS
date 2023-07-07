@@ -169,7 +169,8 @@ public struct TerraElevationData : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-public struct TerraDistanceSummaryData : Swift.Codable {
+public struct TerraDailyDistanceData : Swift.Codable {
+  public var detailed: TerraiOS.TerraDistanceDetailedData?
   public var floors_climbed: Swift.Double?
   public var steps: Swift.Double?
   public var distance_meters: Swift.Double?
@@ -193,7 +194,7 @@ public struct TerraDailyData : Swift.Codable {
   public var heart_rate_data: TerraiOS.TerraHeartRateData?
   public var active_durations_data: TerraiOS.TerraActiveDurationsData?
   public var device_data: TerraiOS.TerraDeviceData?
-  public var distance_data: TerraiOS.TerraDistanceData?
+  public var distance_data: TerraiOS.TerraDailyDistanceData?
   public var calories_data: TerraiOS.TerraCaloriesData?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
@@ -346,9 +347,18 @@ public struct TerraDistanceDetailedData : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-public struct TerraDistanceData : Swift.Codable {
-  public var summary: TerraiOS.TerraDistanceSummaryData?
+public struct TerraDistanceSummaryData : Swift.Codable {
+  public var floors_climbed: Swift.Double?
+  public var steps: Swift.Double?
+  public var distance_meters: Swift.Double?
+  public var swimming: TerraiOS.TerraSwimmingData?
+  public var elevation: TerraiOS.TerraElevationData?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TerraActivityDistanceData : Swift.Codable {
   public var detailed: TerraiOS.TerraDistanceDetailedData?
+  public var summary: TerraiOS.TerraDistanceSummaryData?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -384,7 +394,7 @@ public struct TerraActivityData : Swift.Codable {
   public var TSS_data: TerraiOS.TerraTSSData?
   public var device_data: TerraiOS.TerraDeviceData?
   public var work_data: TerraiOS.TerraWorkData?
-  public var distance_data: TerraiOS.TerraDistanceData?
+  public var distance_data: TerraiOS.TerraActivityDistanceData?
   public var calories_data: TerraiOS.TerraCaloriesData?
   public var position_data: TerraiOS.TerraPositionData?
   public func encode(to encoder: Swift.Encoder) throws
@@ -1127,9 +1137,9 @@ public struct BloodPressureSample : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
 }
 public struct MeasurementDataSample : Swift.Codable {
-  public init(measurement_time: Swift.String? = nil, fat_percentage: Swift.Double? = nil, BMI: Swift.Double? = nil, muscle_mass_g: Swift.Double? = nil, skin_fold_mm: Swift.Double? = nil, BMR: Swift.Double? = nil, height_cm: Swift.Double? = nil, estimated_fitness_age: Swift.Double? = nil, bone_mass_g: Swift.Double? = nil, water_percentage: Swift.Double? = nil, RMR: Swift.Double? = nil, weight_kg: Swift.Double? = nil, lean_mass_g: Swift.Double? = nil, insulin_units: Swift.Double? = nil, insulin_type: Swift.String? = nil, urine_color: Swift.String? = nil)
+  public init(measurement_time: Swift.String? = nil, bodyfat_percentage: Swift.Double? = nil, BMI: Swift.Double? = nil, muscle_mass_g: Swift.Double? = nil, skin_fold_mm: Swift.Double? = nil, BMR: Swift.Double? = nil, height_cm: Swift.Double? = nil, estimated_fitness_age: Swift.Double? = nil, bone_mass_g: Swift.Double? = nil, water_percentage: Swift.Double? = nil, RMR: Swift.Double? = nil, weight_kg: Swift.Double? = nil, lean_mass_g: Swift.Double? = nil, insulin_units: Swift.Double? = nil, insulin_type: Swift.String? = nil, urine_color: Swift.String? = nil)
   public var measurement_time: Swift.String?
-  public var fat_percentage: Swift.Double?
+  public var bodyfat_percentage: Swift.Double?
   public var BMI: Swift.Double?
   public var muscle_mass_g: Swift.Double?
   public var skin_fold_mm: Swift.Double?
