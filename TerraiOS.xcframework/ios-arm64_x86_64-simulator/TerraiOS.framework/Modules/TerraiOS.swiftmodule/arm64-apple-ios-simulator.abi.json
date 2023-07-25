@@ -76177,7 +76177,7 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Models\/Samples.swift",
       "kind": "IntegerLiteral",
-      "offset": 4070,
+      "offset": 4095,
       "length": 1,
       "value": "0"
     },
@@ -77948,49 +77948,49 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/TerraAppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 7176,
+      "offset": 7188,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/TerraAppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 10112,
+      "offset": 10136,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/TerraAppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 10140,
+      "offset": 10164,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/TerraAppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 13018,
+      "offset": 13054,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/TerraAppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 15841,
+      "offset": 15889,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/TerraAppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 18648,
+      "offset": 18708,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/TerraAppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 23555,
+      "offset": 23615,
       "length": 5,
       "value": "false"
     },
