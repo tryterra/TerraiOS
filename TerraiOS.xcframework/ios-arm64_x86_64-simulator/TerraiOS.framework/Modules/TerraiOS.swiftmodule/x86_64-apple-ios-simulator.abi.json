@@ -12808,6 +12808,116 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "oxygen_data",
+            "printedName": "oxygen_data",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "TerraiOS.TerraOxygenData?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TerraOxygenData",
+                    "printedName": "TerraiOS.TerraOxygenData",
+                    "usr": "s:8TerraiOS15TerraOxygenDataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8TerraiOS14TerraDailyDataV11oxygen_dataAA0c6OxygenE0VSgvp",
+            "mangledName": "$s8TerraiOS14TerraDailyDataV11oxygen_dataAA0c6OxygenE0VSgvp",
+            "moduleName": "TerraiOS",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "TerraiOS.TerraOxygenData?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TerraOxygenData",
+                        "printedName": "TerraiOS.TerraOxygenData",
+                        "usr": "s:8TerraiOS15TerraOxygenDataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS14TerraDailyDataV11oxygen_dataAA0c6OxygenE0VSgvg",
+                "mangledName": "$s8TerraiOS14TerraDailyDataV11oxygen_dataAA0c6OxygenE0VSgvg",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "TerraiOS.TerraOxygenData?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TerraOxygenData",
+                        "printedName": "TerraiOS.TerraOxygenData",
+                        "usr": "s:8TerraiOS15TerraOxygenDataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS14TerraDailyDataV11oxygen_dataAA0c6OxygenE0VSgvs",
+                "mangledName": "$s8TerraiOS14TerraDailyDataV11oxygen_dataAA0c6OxygenE0VSgvs",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS14TerraDailyDataV11oxygen_dataAA0c6OxygenE0VSgvM",
+                "mangledName": "$s8TerraiOS14TerraDailyDataV11oxygen_dataAA0c6OxygenE0VSgvM",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(from:)",
@@ -50830,6 +50940,226 @@
                 "declKind": "Accessor",
                 "usr": "s:8TerraiOS14TerraUserModelV7user_idSSSgvM",
                 "mangledName": "$s8TerraiOS14TerraUserModelV7user_idSSSgvM",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "scopes",
+            "printedName": "scopes",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8TerraiOS14TerraUserModelV6scopesSSSgvp",
+            "mangledName": "$s8TerraiOS14TerraUserModelV6scopesSSSgvp",
+            "moduleName": "TerraiOS",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS14TerraUserModelV6scopesSSSgvg",
+                "mangledName": "$s8TerraiOS14TerraUserModelV6scopesSSSgvg",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS14TerraUserModelV6scopesSSSgvs",
+                "mangledName": "$s8TerraiOS14TerraUserModelV6scopesSSSgvs",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS14TerraUserModelV6scopesSSSgvM",
+                "mangledName": "$s8TerraiOS14TerraUserModelV6scopesSSSgvM",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "reference_id",
+            "printedName": "reference_id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8TerraiOS14TerraUserModelV12reference_idSSSgvp",
+            "mangledName": "$s8TerraiOS14TerraUserModelV12reference_idSSSgvp",
+            "moduleName": "TerraiOS",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS14TerraUserModelV12reference_idSSSgvg",
+                "mangledName": "$s8TerraiOS14TerraUserModelV12reference_idSSSgvg",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS14TerraUserModelV12reference_idSSSgvs",
+                "mangledName": "$s8TerraiOS14TerraUserModelV12reference_idSSSgvs",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS14TerraUserModelV12reference_idSSSgvM",
+                "mangledName": "$s8TerraiOS14TerraUserModelV12reference_idSSSgvM",
                 "moduleName": "TerraiOS",
                 "implicit": true,
                 "accessorKind": "_modify"

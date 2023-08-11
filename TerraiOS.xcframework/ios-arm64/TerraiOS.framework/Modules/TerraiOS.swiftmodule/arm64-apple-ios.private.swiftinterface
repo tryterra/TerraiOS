@@ -196,6 +196,7 @@ public struct TerraDailyData : Swift.Codable {
   public var device_data: TerraiOS.TerraDeviceData?
   public var distance_data: TerraiOS.TerraDailyDistanceData?
   public var calories_data: TerraiOS.TerraCaloriesData?
+  public var oxygen_data: TerraiOS.TerraOxygenData?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -829,6 +830,8 @@ public struct TerraUserModel : Swift.Codable {
   public var last_webhook_update: Swift.String?
   public var provider: Swift.String?
   public var user_id: Swift.String?
+  public var scopes: Swift.String?
+  public var reference_id: Swift.String?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
