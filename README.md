@@ -1,6 +1,6 @@
 # TerraiOS
 
-This framework allows you to any integration offered by [Terra](https://tryterra.co)
+This framework allows you to access any integration offered by [Terra](https://tryterra.co)
 
 The docs here are updated to latest version: 1.3.+
 
