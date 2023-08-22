@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
 // swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TerraiOS
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import BackgroundTasks
@@ -196,7 +196,6 @@ public struct TerraDailyData : Swift.Codable {
   public var device_data: TerraiOS.TerraDeviceData?
   public var distance_data: TerraiOS.TerraDailyDistanceData?
   public var calories_data: TerraiOS.TerraCaloriesData?
-  public var oxygen_data: TerraiOS.TerraOxygenData?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -498,7 +497,7 @@ public struct TerraSleepData : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public enum CustomPermissions : Swift.String {
+public enum CustomPermissions : Swift.String, Swift.CaseIterable {
   case WORKOUT_TYPE
   case ACTIVITY_SUMMARY
   case LOCATION
@@ -540,8 +539,13 @@ public enum CustomPermissions : Swift.String {
   case NUTRITION_WATER
   case NUTRITION_CHOLESTEROL
   case MENSTRUATION
+  case HEART_RATE_SERIES
   public init?(rawValue: Swift.String)
+  public typealias AllCases = [TerraiOS.CustomPermissions]
   public typealias RawValue = Swift.String
+  public static var allCases: [TerraiOS.CustomPermissions] {
+    get
+  }
   public var rawValue: Swift.String {
     get
   }
@@ -830,8 +834,6 @@ public struct TerraUserModel : Swift.Codable {
   public var last_webhook_update: Swift.String?
   public var provider: Swift.String?
   public var user_id: Swift.String?
-  public var scopes: Swift.String?
-  public var reference_id: Swift.String?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
