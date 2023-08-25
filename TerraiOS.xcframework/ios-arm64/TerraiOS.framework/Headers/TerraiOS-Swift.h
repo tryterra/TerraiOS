@@ -306,11 +306,11 @@ typedef SWIFT_ENUM(NSUInteger, Permissions, open) {
 
 SWIFT_CLASS("_TtC8TerraiOS5Terra")
 @interface Terra : NSObject
-/// Starts background delivery of Apple Health Data
-/// Must be run in the AppDelegate <code>didFinishLaunchingWithOptions</code>
-/// \param isBGTaskSchedulerEnabled Always leave set to its default value TRUE
-///
-+ (void)setUpBackgroundDeliveryWithIsBGTaskSchedulerEnabled:(BOOL)isBGTaskSchedulerEnabled;
+/// Starts background delivery of Apple Health data.
+/// Must be run in the AppDelegate <code>didFinishLaunchingWithOptions</code>.
++ (void)setUpBackgroundDelivery;
+/// Please use <code>setUpBackgroundDelivery</code> instead.
++ (void)setUpBackgroundDeliveryWithoutBGTasks;
 + (void)overwriteLogLevel:(NSString * _Nonnull)level;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end

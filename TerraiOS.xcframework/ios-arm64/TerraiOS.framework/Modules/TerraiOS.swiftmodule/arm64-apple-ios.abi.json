@@ -60403,27 +60403,43 @@
           {
             "kind": "Function",
             "name": "setUpBackgroundDelivery",
-            "printedName": "setUpBackgroundDelivery(isBGTaskSchedulerEnabled:)",
+            "printedName": "setUpBackgroundDelivery()",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@TerraiOS@objc(cs)Terra(cm)setUpBackgroundDeliveryWithIsBGTaskSchedulerEnabled:",
-            "mangledName": "$s8TerraiOS5TerraC23setUpBackgroundDelivery24isBGTaskSchedulerEnabledySb_tFZ",
+            "usr": "c:@M@TerraiOS@objc(cs)Terra(cm)setUpBackgroundDelivery",
+            "mangledName": "$s8TerraiOS5TerraC23setUpBackgroundDeliveryyyFZ",
             "moduleName": "TerraiOS",
             "static": true,
-            "objc_name": "setUpBackgroundDeliveryWithIsBGTaskSchedulerEnabled:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setUpBackgroundDeliveryWithoutBGTasks",
+            "printedName": "setUpBackgroundDeliveryWithoutBGTasks()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@TerraiOS@objc(cs)Terra(cm)setUpBackgroundDeliveryWithoutBGTasks",
+            "mangledName": "$s8TerraiOS5TerraC37setUpBackgroundDeliveryWithoutBGTasksyyFZ",
+            "moduleName": "TerraiOS",
+            "static": true,
             "declAttributes": [
               "Final",
               "AccessControl",
@@ -87235,7 +87251,7 @@
       "kind": "StringLiteral",
       "offset": 215,
       "length": 7,
-      "value": "\"1.4.1\""
+      "value": "\"1.4.2\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
@@ -87348,13 +87364,6 @@
       "offset": 4009,
       "length": 9,
       "value": "\"success\""
-    },
-    {
-      "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4369,
-      "length": 4,
-      "value": "true"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/WorkoutData.swift",
