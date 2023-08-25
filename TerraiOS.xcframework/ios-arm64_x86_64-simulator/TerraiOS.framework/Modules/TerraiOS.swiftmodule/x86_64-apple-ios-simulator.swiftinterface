@@ -196,6 +196,7 @@ public struct TerraDailyData : Swift.Codable {
   public var device_data: TerraiOS.TerraDeviceData?
   public var distance_data: TerraiOS.TerraDailyDistanceData?
   public var calories_data: TerraiOS.TerraCaloriesData?
+  public var oxygen_data: TerraiOS.TerraOxygenData?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -539,6 +540,7 @@ public enum CustomPermissions : Swift.String, Swift.CaseIterable {
   case NUTRITION_WATER
   case NUTRITION_CHOLESTEROL
   case MENSTRUATION
+  case HEART_RATE_SERIES
   public init?(rawValue: Swift.String)
   public typealias AllCases = [TerraiOS.CustomPermissions]
   public typealias RawValue = Swift.String
@@ -833,6 +835,8 @@ public struct TerraUserModel : Swift.Codable {
   public var last_webhook_update: Swift.String?
   public var provider: Swift.String?
   public var user_id: Swift.String?
+  public var scopes: Swift.String?
+  public var reference_id: Swift.String?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -966,7 +970,7 @@ public struct TerraAthleteData : Swift.Codable {
   public static func instance(devId: Swift.String, referenceId: Swift.String?, completion: @escaping (TerraiOS.TerraManager?, TerraiOS.TerraError?) -> Swift.Void)
   public static func disconnectTerra(devId: Swift.String, xAPIKey: Swift.String, userId: Swift.String)
   public static func checkAuthentication(connection: TerraiOS.Connections, devId: Swift.String, completion: @escaping (Swift.Bool) -> Swift.Void)
-  @objc public static func setUpBackgroundDelivery()
+  @objc public static func setUpBackgroundDelivery(isBGTaskSchedulerEnabled: Swift.Bool = true)
   @objc public static func overwriteLogLevel(_ level: Swift.String)
   @objc override dynamic public init()
   @objc deinit
