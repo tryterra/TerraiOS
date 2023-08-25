@@ -87234,125 +87234,125 @@
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
       "offset": 215,
-      "length": 14,
-      "value": "\"1.4.0-beta.2\""
+      "length": 7,
+      "value": "\"1.4.1\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 1101,
+      "offset": 1094,
       "length": 20,
       "value": "\"Version \""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 1120,
+      "offset": 1113,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 2388,
+      "offset": 2381,
       "length": 8,
       "value": "\"dev-id\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 2405,
+      "offset": 2398,
       "length": 11,
       "value": "\"x-api-key\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 2448,
+      "offset": 2441,
       "length": 55,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 2460,
+      "offset": 2453,
       "length": 1,
       "value": "\"\/auth\/deauthenticateUser?user_id=\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 2502,
+      "offset": 2495,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 3283,
+      "offset": 3276,
       "length": 8,
       "value": "\"dev-id\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 3467,
+      "offset": 3460,
       "length": 85,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 3479,
+      "offset": 3472,
       "length": 1,
       "value": "\"\/auth\/apple\/check_auth?resource_user_identifier=\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 3551,
+      "offset": 3544,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 3672,
+      "offset": 3665,
       "length": 9,
       "value": "\"success\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 3795,
+      "offset": 3788,
       "length": 101,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 3807,
+      "offset": 3800,
       "length": 1,
       "value": "\"\/auth\/freestylelibresdk\/check_auth?resource_user_identifier=\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 3891,
+      "offset": 3884,
       "length": 4,
       "value": "\"afsl\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 4016,
+      "offset": 4009,
       "length": 9,
       "value": "\"success\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "BooleanLiteral",
-      "offset": 4376,
+      "offset": 4369,
       "length": 4,
       "value": "true"
     },
