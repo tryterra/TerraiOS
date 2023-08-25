@@ -282,6 +282,9 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #if defined(__OBJC__)
 
+
+
+
 /// Enum class that maps all Terra Datatypes to the permissions needed by Apple Health.
 typedef SWIFT_ENUM(NSUInteger, Permissions, open) {
   PermissionsACTIVITY = 0b0000000000001,
@@ -303,11 +306,15 @@ typedef SWIFT_ENUM(NSUInteger, Permissions, open) {
 
 SWIFT_CLASS("_TtC8TerraiOS5Terra")
 @interface Terra : NSObject
-/// A function to start background delivery. Must be ran in app delegate before app launches as this registers a background task handler.
-+ (void)setUpBackgroundDelivery;
+/// Starts background delivery of Apple Health Data
+/// Must be run in the AppDelegate <code>didFinishLaunchingWithOptions</code>
+/// \param isBGTaskSchedulerEnabled Always leave set to its default value TRUE
+///
++ (void)setUpBackgroundDeliveryWithIsBGTaskSchedulerEnabled:(BOOL)isBGTaskSchedulerEnabled;
 + (void)overwriteLogLevel:(NSString * _Nonnull)level;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 SWIFT_CLASS("_TtC8TerraiOS12TerraManager")
@@ -615,6 +622,9 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #if defined(__OBJC__)
 
+
+
+
 /// Enum class that maps all Terra Datatypes to the permissions needed by Apple Health.
 typedef SWIFT_ENUM(NSUInteger, Permissions, open) {
   PermissionsACTIVITY = 0b0000000000001,
@@ -636,11 +646,15 @@ typedef SWIFT_ENUM(NSUInteger, Permissions, open) {
 
 SWIFT_CLASS("_TtC8TerraiOS5Terra")
 @interface Terra : NSObject
-/// A function to start background delivery. Must be ran in app delegate before app launches as this registers a background task handler.
-+ (void)setUpBackgroundDelivery;
+/// Starts background delivery of Apple Health Data
+/// Must be run in the AppDelegate <code>didFinishLaunchingWithOptions</code>
+/// \param isBGTaskSchedulerEnabled Always leave set to its default value TRUE
+///
++ (void)setUpBackgroundDeliveryWithIsBGTaskSchedulerEnabled:(BOOL)isBGTaskSchedulerEnabled;
 + (void)overwriteLogLevel:(NSString * _Nonnull)level;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 SWIFT_CLASS("_TtC8TerraiOS12TerraManager")
