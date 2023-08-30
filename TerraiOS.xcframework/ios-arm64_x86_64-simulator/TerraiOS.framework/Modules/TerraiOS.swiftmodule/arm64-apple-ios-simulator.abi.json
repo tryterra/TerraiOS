@@ -50713,8 +50713,8 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
+        "name": "UIKit",
+        "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "TerraiOS",
         "declAttributes": [
@@ -77540,7 +77540,7 @@
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3308,
+      "offset": 3337,
       "length": 14,
       "value": "\"co.tryterra.\""
     },
@@ -86045,294 +86045,329 @@
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 1814,
+      "offset": 2007,
       "length": 32,
       "value": "\"Setting up background delivery\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 2645,
+      "offset": 2130,
+      "length": 73,
+      "value": "\"Please disable Low Power mode in Settings to enable background delivery\""
+    },
+    {
+      "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
+      "kind": "StringLiteral",
+      "offset": 2348,
+      "length": 80,
+      "value": "\"Please enable Background App Refresh in Settings to enable background delivery\""
+    },
+    {
+      "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
+      "kind": "StringLiteral",
+      "offset": 3420,
       "length": 53,
       "value": "\"Failed to disable all background delivery: \""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 2697,
+      "offset": 3472,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 3044,
+      "offset": 3819,
       "length": 48,
       "value": "\"Failed to enable background delivery: \""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 3091,
+      "offset": 3866,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 3675,
+      "offset": 4450,
       "length": 79,
       "value": "\"Failed to setup background observer for \""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 3738,
+      "offset": 4513,
       "length": 4,
       "value": "\" data: \""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 3753,
+      "offset": 4528,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 4195,
+      "offset": 4970,
       "length": 79,
       "value": "\"Failed to setup background observer for \""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 4258,
+      "offset": 5033,
       "length": 4,
       "value": "\" data: \""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 4273,
+      "offset": 5048,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 8255,
+      "offset": 8859,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9995,
+      "length": 2,
+      "value": "-8"
+    },
+    {
+      "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10000,
+      "length": 4,
+      "value": "3600"
+    },
+    {
+      "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 11310,
+      "offset": 11944,
       "length": 46,
       "value": "\"No new \""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 11340,
+      "offset": 11974,
       "length": 4,
       "value": "\" data available\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 11488,
+      "offset": 12122,
       "length": 42,
       "value": "\"\/hooks\/apple\/\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 11524,
+      "offset": 12158,
       "length": 1,
       "value": "\"\/push\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "Dictionary",
-      "offset": 11583,
+      "offset": 12217,
       "length": 34,
       "value": "[(\"triggered_by_scheduler\", \"true\")]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 11711,
+      "offset": 12345,
       "length": 40,
       "value": "\"Posted new \""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 11745,
+      "offset": 12379,
       "length": 4,
       "value": "\" data\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 11828,
+      "offset": 12462,
       "length": 48,
       "value": "\"Posting new \""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 11863,
+      "offset": 12497,
       "length": 4,
       "value": "\" data failed\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 12765,
+      "offset": 13399,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 12931,
+      "offset": 13565,
       "length": 63,
       "value": "\"Submitted background task to post \""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 12988,
+      "offset": 13622,
       "length": 4,
       "value": "\" data\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 13261,
+      "offset": 13895,
       "length": 36,
       "value": "\"Executing background delivery task\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 14509,
+      "offset": 15143,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 16951,
+      "offset": 17584,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 17278,
+      "offset": 17917,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 17359,
+      "offset": 17998,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
+      "kind": "BooleanLiteral",
+      "offset": 18072,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "Dictionary",
-      "offset": 17604,
+      "offset": 18317,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "Dictionary",
-      "offset": 17644,
+      "offset": 18357,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 17834,
+      "offset": 18547,
       "length": 8,
       "value": "\"dev-id\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 17869,
+      "offset": 18582,
       "length": 17,
       "value": "\"ios-sdk-version\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 18110,
+      "offset": 18823,
       "length": 18,
       "value": "\"resource_user_id\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 18414,
+      "offset": 19127,
       "length": 29,
       "value": "\"Failed to form url: \""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 18442,
+      "offset": 19155,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 18468,
+      "offset": 19181,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 18673,
+      "offset": 19386,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 19118,
+      "offset": 19831,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 19245,
+      "offset": 19958,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 19407,
+      "offset": 20120,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 19478,
+      "offset": 20191,
       "length": 5,
       "value": "false"
     },
@@ -87251,119 +87286,133 @@
       "kind": "StringLiteral",
       "offset": 215,
       "length": 7,
-      "value": "\"1.4.2\""
+      "value": "\"1.4.3\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
       "offset": 1094,
-      "length": 20,
-      "value": "\"Version \""
+      "length": 22,
+      "value": "\"TerraiOS v\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 1113,
+      "offset": 1115,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 2381,
+      "offset": 2383,
       "length": 8,
       "value": "\"dev-id\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 2398,
+      "offset": 2400,
       "length": 11,
       "value": "\"x-api-key\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 2441,
+      "offset": 2443,
       "length": 55,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 2453,
+      "offset": 2455,
       "length": 1,
       "value": "\"\/auth\/deauthenticateUser?user_id=\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 2495,
+      "offset": 2497,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 3276,
+      "offset": 3278,
       "length": 8,
       "value": "\"dev-id\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 3460,
+      "offset": 3462,
       "length": 85,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 3472,
+      "offset": 3474,
       "length": 1,
       "value": "\"\/auth\/apple\/check_auth?resource_user_identifier=\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 3544,
+      "offset": 3546,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 3665,
+      "offset": 3667,
       "length": 9,
       "value": "\"success\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 3788,
+      "offset": 3790,
       "length": 101,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 3800,
+      "offset": 3802,
       "length": 1,
       "value": "\"\/auth\/freestylelibresdk\/check_auth?resource_user_identifier=\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 3884,
+      "offset": 3886,
       "length": 4,
       "value": "\"afsl\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
       "kind": "StringLiteral",
-      "offset": 4009,
+      "offset": 4011,
       "length": 9,
       "value": "\"success\""
+    },
+    {
+      "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4283,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4757,
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/WorkoutData.swift",
