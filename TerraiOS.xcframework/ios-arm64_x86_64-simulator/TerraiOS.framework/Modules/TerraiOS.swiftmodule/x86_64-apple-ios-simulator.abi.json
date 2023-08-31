@@ -81614,147 +81614,147 @@
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/DataType.swift",
       "kind": "StringLiteral",
-      "offset": 6858,
+      "offset": 6857,
       "length": 67,
       "value": "\"HKClinicalTypeIdentifier\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/DataType.swift",
       "kind": "StringLiteral",
-      "offset": 6917,
+      "offset": 6916,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/DataType.swift",
       "kind": "StringLiteral",
-      "offset": 6924,
+      "offset": 6923,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/DataType.swift",
       "kind": "StringLiteral",
-      "offset": 8728,
+      "offset": 8727,
       "length": 20,
       "value": "\"AudioExposureEvent\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/DataType.swift",
       "kind": "StringLiteral",
-      "offset": 10404,
+      "offset": 10403,
       "length": 67,
       "value": "\"HKCategoryTypeIdentifier\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/DataType.swift",
       "kind": "StringLiteral",
-      "offset": 10463,
+      "offset": 10462,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/DataType.swift",
       "kind": "StringLiteral",
-      "offset": 10470,
+      "offset": 10469,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/DataType.swift",
       "kind": "StringLiteral",
-      "offset": 8728,
+      "offset": 8727,
       "length": 20,
       "value": "\"AudioExposureEvent\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/DataType.swift",
       "kind": "StringLiteral",
-      "offset": 11258,
+      "offset": 11257,
       "length": 8,
       "value": "\"VO2Max\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/DataType.swift",
       "kind": "StringLiteral",
-      "offset": 13856,
+      "offset": 13855,
       "length": 12,
       "value": "\"UVExposure\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/DataType.swift",
       "kind": "StringLiteral",
-      "offset": 14059,
+      "offset": 14058,
       "length": 67,
       "value": "\"HKQuantityTypeIdentifier\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/DataType.swift",
       "kind": "StringLiteral",
-      "offset": 14118,
+      "offset": 14117,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/DataType.swift",
       "kind": "StringLiteral",
-      "offset": 14125,
+      "offset": 14124,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/DataType.swift",
       "kind": "IntegerLiteral",
-      "offset": 15166,
+      "offset": 15165,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/DataType.swift",
       "kind": "IntegerLiteral",
-      "offset": 15233,
+      "offset": 15232,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/DataType.swift",
       "kind": "StringLiteral",
-      "offset": 11258,
+      "offset": 11257,
       "length": 8,
       "value": "\"VO2Max\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/DataType.swift",
       "kind": "StringLiteral",
-      "offset": 13856,
+      "offset": 13855,
       "length": 12,
       "value": "\"UVExposure\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/DataType.swift",
       "kind": "StringLiteral",
-      "offset": 21441,
+      "offset": 21440,
       "length": 22,
       "value": "\"HKSampleQuery failed\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/DataType.swift",
       "kind": "Array",
-      "offset": 21506,
+      "offset": 21505,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/DataType.swift",
       "kind": "IntegerLiteral",
-      "offset": 22040,
+      "offset": 22039,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/DataType.swift",
       "kind": "StringLiteral",
-      "offset": 22232,
+      "offset": 22231,
       "length": 36,
       "value": "\"HKStatisticsCollectionQuery failed\""
     },
@@ -81852,70 +81852,70 @@
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/Permissions.swift",
       "kind": "Array",
-      "offset": 2058,
+      "offset": 2226,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/Permissions.swift",
       "kind": "StringLiteral",
-      "offset": 2785,
+      "offset": 2985,
       "length": 10,
       "value": "\"activity\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/Permissions.swift",
       "kind": "StringLiteral",
-      "offset": 2835,
+      "offset": 3035,
       "length": 6,
       "value": "\"body\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/Permissions.swift",
       "kind": "StringLiteral",
-      "offset": 2882,
+      "offset": 3082,
       "length": 7,
       "value": "\"daily\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/Permissions.swift",
       "kind": "StringLiteral",
-      "offset": 2930,
+      "offset": 3130,
       "length": 7,
       "value": "\"sleep\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/Permissions.swift",
       "kind": "StringLiteral",
-      "offset": 2982,
+      "offset": 3182,
       "length": 11,
       "value": "\"nutrition\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/Permissions.swift",
       "kind": "StringLiteral",
-      "offset": 3041,
+      "offset": 3241,
       "length": 14,
       "value": "\"menstruation\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/Permissions.swift",
       "kind": "StringLiteral",
-      "offset": 3092,
+      "offset": 3292,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/Permissions.swift",
       "kind": "StringLiteral",
-      "offset": 3971,
+      "offset": 4171,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/Permissions.swift",
       "kind": "Array",
-      "offset": 15727,
+      "offset": 15927,
       "length": 2,
       "value": "[]"
     },
@@ -82013,21 +82013,21 @@
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/Permissions.swift",
       "kind": "Array",
-      "offset": 15887,
+      "offset": 16087,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/Permissions.swift",
       "kind": "IntegerLiteral",
-      "offset": 15935,
+      "offset": 16135,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/Permissions.swift",
       "kind": "IntegerLiteral",
-      "offset": 16046,
+      "offset": 16246,
       "length": 1,
       "value": "0"
     },
@@ -87286,7 +87286,7 @@
       "kind": "StringLiteral",
       "offset": 215,
       "length": 7,
-      "value": "\"1.4.3\""
+      "value": "\"1.4.4\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
