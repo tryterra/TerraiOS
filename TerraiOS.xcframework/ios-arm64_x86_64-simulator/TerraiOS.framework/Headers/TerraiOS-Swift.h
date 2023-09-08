@@ -285,6 +285,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
+
 /// Enum class that maps all Terra Datatypes to the permissions needed by Apple Health.
 typedef SWIFT_ENUM(NSUInteger, Permissions, open) {
   PermissionsACTIVITY = 0b0000000000001,
@@ -621,6 +622,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 #if defined(__OBJC__)
+
 
 
 
