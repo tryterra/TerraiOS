@@ -8013,6 +8013,226 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "standing_seconds",
+            "printedName": "standing_seconds",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8TerraiOS24TerraActiveDurationsDataV16standing_secondsSdSgvp",
+            "mangledName": "$s8TerraiOS24TerraActiveDurationsDataV16standing_secondsSdSgvp",
+            "moduleName": "TerraiOS",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Double?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS24TerraActiveDurationsDataV16standing_secondsSdSgvg",
+                "mangledName": "$s8TerraiOS24TerraActiveDurationsDataV16standing_secondsSdSgvg",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Double?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS24TerraActiveDurationsDataV16standing_secondsSdSgvs",
+                "mangledName": "$s8TerraiOS24TerraActiveDurationsDataV16standing_secondsSdSgvs",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS24TerraActiveDurationsDataV16standing_secondsSdSgvM",
+                "mangledName": "$s8TerraiOS24TerraActiveDurationsDataV16standing_secondsSdSgvM",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "standing_hours_count",
+            "printedName": "standing_hours_count",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8TerraiOS24TerraActiveDurationsDataV20standing_hours_countSdSgvp",
+            "mangledName": "$s8TerraiOS24TerraActiveDurationsDataV20standing_hours_countSdSgvp",
+            "moduleName": "TerraiOS",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Double?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS24TerraActiveDurationsDataV20standing_hours_countSdSgvg",
+                "mangledName": "$s8TerraiOS24TerraActiveDurationsDataV20standing_hours_countSdSgvg",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Double?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS24TerraActiveDurationsDataV20standing_hours_countSdSgvs",
+                "mangledName": "$s8TerraiOS24TerraActiveDurationsDataV20standing_hours_countSdSgvs",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TerraiOS24TerraActiveDurationsDataV20standing_hours_countSdSgvM",
+                "mangledName": "$s8TerraiOS24TerraActiveDurationsDataV20standing_hours_countSdSgvM",
+                "moduleName": "TerraiOS",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(from:)",
@@ -94052,175 +94272,175 @@
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/DailyData.swift",
       "kind": "BooleanLiteral",
-      "offset": 8976,
+      "offset": 9519,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/DailyData.swift",
       "kind": "Array",
-      "offset": 9137,
+      "offset": 9680,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/DailyData.swift",
       "kind": "Array",
-      "offset": 9145,
+      "offset": 9688,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/DailyData.swift",
       "kind": "Array",
-      "offset": 9337,
+      "offset": 9880,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/DailyData.swift",
       "kind": "Array",
-      "offset": 9345,
+      "offset": 9888,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/DailyData.swift",
       "kind": "Array",
-      "offset": 9513,
+      "offset": 10056,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/DailyData.swift",
       "kind": "Array",
-      "offset": 10104,
+      "offset": 10647,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/DailyData.swift",
       "kind": "Array",
-      "offset": 10112,
+      "offset": 10655,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/DailyData.swift",
       "kind": "BooleanLiteral",
-      "offset": 10640,
+      "offset": 11183,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/DailyData.swift",
       "kind": "Array",
-      "offset": 10778,
+      "offset": 11321,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/DailyData.swift",
       "kind": "IntegerLiteral",
-      "offset": 10782,
+      "offset": 11325,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/DailyData.swift",
       "kind": "IntegerLiteral",
-      "offset": 10865,
+      "offset": 11408,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/DailyData.swift",
       "kind": "Array",
-      "offset": 10918,
+      "offset": 11461,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/DailyData.swift",
       "kind": "StringLiteral",
-      "offset": 11041,
+      "offset": 11584,
       "length": 18,
       "value": "\"HKWasUserEntered\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/DailyData.swift",
       "kind": "IntegerLiteral",
-      "offset": 11072,
+      "offset": 11615,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/DailyData.swift",
       "kind": "IntegerLiteral",
-      "offset": 11078,
+      "offset": 11621,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/DailyData.swift",
       "kind": "IntegerLiteral",
-      "offset": 11119,
+      "offset": 11662,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/DailyData.swift",
       "kind": "BooleanLiteral",
-      "offset": 12214,
+      "offset": 12757,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/DailyData.swift",
       "kind": "Array",
-      "offset": 12365,
+      "offset": 12908,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/DailyData.swift",
       "kind": "Array",
-      "offset": 12481,
+      "offset": 13024,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/DailyData.swift",
       "kind": "IntegerLiteral",
-      "offset": 13924,
+      "offset": 14467,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/DailyData.swift",
       "kind": "BooleanLiteral",
-      "offset": 14011,
+      "offset": 14554,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/DailyData.swift",
       "kind": "StringLiteral",
-      "offset": 14323,
+      "offset": 14866,
       "length": 19,
       "value": "\"No data retrieved\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/DailyData.swift",
       "kind": "StringLiteral",
-      "offset": 16284,
+      "offset": 16827,
       "length": 23,
       "value": "\"HKMetadataKeyTimeZone\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/DailyData.swift",
       "kind": "BooleanLiteral",
-      "offset": 17361,
+      "offset": 17904,
       "length": 4,
       "value": "true"
     },
@@ -95445,317 +95665,324 @@
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "BooleanLiteral",
-      "offset": 4778,
+      "offset": 4864,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "Array",
-      "offset": 5045,
+      "offset": 5131,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "StringLiteral",
-      "offset": 5384,
+      "offset": 5470,
       "length": 18,
       "value": "\"HKWasUserEntered\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "IntegerLiteral",
-      "offset": 5415,
+      "offset": 5501,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "StringLiteral",
-      "offset": 5931,
+      "offset": 6017,
       "length": 7,
       "value": "\"awake\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "StringLiteral",
-      "offset": 6199,
+      "offset": 6285,
       "length": 8,
       "value": "\"asleep\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "StringLiteral",
-      "offset": 6467,
+      "offset": 6553,
       "length": 7,
       "value": "\"inBed\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "StringLiteral",
-      "offset": 6739,
+      "offset": 6825,
       "length": 6,
       "value": "\"deep\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "StringLiteral",
-      "offset": 7009,
+      "offset": 7095,
       "length": 5,
       "value": "\"rem\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "StringLiteral",
-      "offset": 7279,
+      "offset": 7365,
       "length": 6,
       "value": "\"core\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "StringLiteral",
-      "offset": 7715,
+      "offset": 7801,
       "length": 7,
       "value": "\"awake\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "StringLiteral",
-      "offset": 7983,
+      "offset": 8069,
       "length": 8,
       "value": "\"asleep\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "StringLiteral",
-      "offset": 8251,
+      "offset": 8337,
       "length": 7,
       "value": "\"inBed\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "Array",
-      "offset": 9908,
+      "offset": 9994,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "BooleanLiteral",
-      "offset": 10602,
+      "offset": 10688,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "IntegerLiteral",
-      "offset": 11504,
+      "offset": 11590,
       "length": 4,
       "value": "3600"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "IntegerLiteral",
-      "offset": 11837,
+      "offset": 11923,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "IntegerLiteral",
-      "offset": 11842,
+      "offset": 11928,
       "length": 4,
       "value": "3600"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "StringLiteral",
-      "offset": 12235,
+      "offset": 12321,
       "length": 7,
       "value": "\"inBed\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "StringLiteral",
-      "offset": 12708,
+      "offset": 12794,
       "length": 6,
       "value": "\"core\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "StringLiteral",
-      "offset": 12729,
+      "offset": 12815,
       "length": 5,
       "value": "\"rem\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "StringLiteral",
-      "offset": 12749,
+      "offset": 12835,
       "length": 6,
       "value": "\"deep\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "StringLiteral",
-      "offset": 12789,
+      "offset": 12875,
       "length": 6,
       "value": "\"core\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "StringLiteral",
-      "offset": 12810,
+      "offset": 12896,
       "length": 5,
       "value": "\"rem\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "StringLiteral",
-      "offset": 12830,
+      "offset": 12916,
       "length": 6,
       "value": "\"deep\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "StringLiteral",
-      "offset": 12851,
+      "offset": 12937,
       "length": 7,
       "value": "\"awake\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "StringLiteral",
-      "offset": 12891,
+      "offset": 12977,
       "length": 8,
       "value": "\"asleep\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "StringLiteral",
-      "offset": 12914,
+      "offset": 13000,
       "length": 7,
       "value": "\"awake\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "Array",
-      "offset": 13048,
+      "offset": 13134,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "StringLiteral",
-      "offset": 13620,
+      "offset": 13706,
       "length": 7,
       "value": "\"inBed\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "Array",
-      "offset": 13972,
+      "offset": 14058,
       "length": 17,
       "value": "[(nil, nil, nil)]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "Array",
-      "offset": 14064,
+      "offset": 14150,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "IntegerLiteral",
-      "offset": 15023,
+      "offset": 15109,
       "length": 4,
       "value": "7200"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "IntegerLiteral",
-      "offset": 16142,
+      "offset": 16228,
       "length": 4,
       "value": "7200"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "StringLiteral",
-      "offset": 16442,
+      "offset": 16528,
       "length": 7,
       "value": "\"inBed\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/SleepData.swift",
       "kind": "StringLiteral",
-      "offset": 17141,
+      "offset": 17227,
       "length": 7,
       "value": "\"inBed\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Backend\/Models\/TerraDailyData.swift",
       "kind": "IntegerLiteral",
-      "offset": 3945,
+      "offset": 4043,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Backend\/Models\/TerraDailyData.swift",
       "kind": "FloatLiteral",
-      "offset": 7564,
+      "offset": 7662,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Backend\/Models\/TerraDailyData.swift",
       "kind": "IntegerLiteral",
-      "offset": 8241,
+      "offset": 8339,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Backend\/Models\/TerraDailyData.swift",
       "kind": "FloatLiteral",
-      "offset": 8523,
+      "offset": 8621,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Backend\/Models\/TerraDailyData.swift",
       "kind": "IntegerLiteral",
-      "offset": 8931,
+      "offset": 9029,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Backend\/Models\/TerraDailyData.swift",
       "kind": "IntegerLiteral",
-      "offset": 9233,
+      "offset": 9331,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Backend\/Models\/TerraDailyData.swift",
       "kind": "FloatLiteral",
-      "offset": 9938,
+      "offset": 10036,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Backend\/Models\/TerraDailyData.swift",
       "kind": "IntegerLiteral",
-      "offset": 10629,
+      "offset": 10727,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Backend\/Models\/TerraDailyData.swift",
       "kind": "Array",
-      "offset": 11293,
+      "offset": 11391,
       "length": 2,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Backend\/Models\/TerraDailyData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11559,
+      "length": 4,
+      "value": "3600"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/FreeStyleLibre\/SensorSerialNumber.swift",
@@ -100429,84 +100656,84 @@
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Backend\/Models\/TerraNormaliser.swift",
       "kind": "StringLiteral",
-      "offset": 1292,
+      "offset": 1275,
       "length": 8,
       "value": "\"iPhone\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Backend\/Models\/TerraNormaliser.swift",
       "kind": "StringLiteral",
-      "offset": 1392,
+      "offset": 1375,
       "length": 66,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Backend\/Models\/TerraNormaliser.swift",
       "kind": "StringLiteral",
-      "offset": 1423,
+      "offset": 1406,
       "length": 1,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Backend\/Models\/TerraNormaliser.swift",
       "kind": "StringLiteral",
-      "offset": 1457,
+      "offset": 1440,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Backend\/Models\/TerraNormaliser.swift",
       "kind": "StringLiteral",
-      "offset": 1486,
+      "offset": 1469,
       "length": 7,
       "value": "\"Apple\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Backend\/Models\/TerraNormaliser.swift",
       "kind": "Array",
-      "offset": 1994,
+      "offset": 1977,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Backend\/Models\/TerraNormaliser.swift",
       "kind": "Array",
-      "offset": 2708,
+      "offset": 2691,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Backend\/Models\/TerraNormaliser.swift",
       "kind": "Dictionary",
-      "offset": 3488,
+      "offset": 3471,
       "length": 152,
       "value": "[(\"inBed\", 0), (\"awake\", 1), (\"asleep\", 2), (\"core\", 4), (\"deep\", 5), (\"rem\", 6)]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Backend\/Models\/TerraNormaliser.swift",
       "kind": "Dictionary",
-      "offset": 3749,
+      "offset": 3732,
       "length": 132,
       "value": "[(\"unknown\", 0), (\"none\", 1), (\"light\", 2), (\"medium\", 3), (\"heavy\", 4)]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Backend\/Models\/TerraNormaliser.swift",
       "kind": "Dictionary",
-      "offset": 3978,
+      "offset": 3961,
       "length": 64,
       "value": "[(1, 2), (0, 1), (2, 4)]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Backend\/Models\/TerraNormaliser.swift",
       "kind": "Dictionary",
-      "offset": 4144,
+      "offset": 4127,
       "length": 127,
       "value": "[(3, \"backstroke\"), (4, \"breaststroke\"), (5, \"butterfly\"), (2, \"freestyle\")]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Backend\/Models\/TerraNormaliser.swift",
       "kind": "Dictionary",
-      "offset": 4375,
+      "offset": 4358,
       "length": 2395,
       "value": "[(2, \"Archery\"), (7, \"Bowling\"), (18, \"Fencing\"), (22, \"Gymnastics\"), (49, \"Track and Field\"), (1, \"American Football\"), (3, \"Australian Football\"), (5, \"Baseball\"), (6, \"Basketball\"), (10, \"Cricket\"), (75, \"Disc Sports\"), (23, \"Handball\"), (25, \"Hockey\"), (27, \"Lacrosse\"), (36, \"Rugby\"), (41, \"Soccer\"), (42, \"Softball\"), (51, \"Volleyball\"), (33, \"Preparation and Recovery\"), (62, \"Flexibility\"), (80, \"Cooldown\"), (52, \"Walking\"), (37, \"Running\"), (70, \"Wheelchair Walk Pace\"), (71, \"Wheelchar Run Pace\"), (13, \"Cycling\"), (74, \"Handcycling\"), (59, \"Core Training\"), (16, \"Elliptical\"), (20, \"Functional Strength Training\"), (50, \"Traditional Strength Training\"), (11, \"Cross Training\"), (73, \"Mixed Cardio\"), (63, \"HIIT\"), (64, \"Jump Rope\"), (44, \"Stairs Climbing\"), (68, \"Stairs\"), (69, \"Step Training\"), (76, \"Fitness Gaming\"), (58, \"Barre\"), (77, \"Cardio Dance\"), (78, \"Social Dance\"), (57, \"Yoga\"), (29, \"Mind and Body\"), (66, \"Pilates\"), (4, \"Badminton\"), (79, \"Pickleball\"), (34, \"Racquetball\"), (43, \"Squash\"), (47, \"Table Tennis\"), (48, \"Tennis\"), (9, \"Climbing\"), (17, \"Equestrian Sports\"), (19, \"Fishing\"), (21, \"Golf\"), (24, \"Hiking\"), (26, \"Hunting\"), (32, \"Play\"), (60, \"Cross Country Skiing\"), (12, \"Curling\"), (61, \"Downhill Skiing\"), (40, \"Snow Sports\"), (67, \"Snow boarding\"), (39, \"Skating Sports\"), (31, \"Paddle Sports\"), (35, \"Rowing\"), (38, \"Sailing\"), (45, \"Surfing Sports\"), (46, \"Swimming\"), (53, \"Water Fitness\"), (54, \"Water Polo\"), (55, \"Water Sports\"), (8, \"Boxing\"), (65, \"Kick Boxing\"), (28, \"Martial Arts\"), (72, \"Tai Chi\"), (56, \"Wrestling\"), (3000, \"Other\")]"
     },
@@ -101647,7 +101874,7 @@
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/Permissions.swift",
       "kind": "Array",
-      "offset": 16234,
+      "offset": 16318,
       "length": 2,
       "value": "[]"
     },
@@ -101745,21 +101972,21 @@
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/Permissions.swift",
       "kind": "Array",
-      "offset": 16394,
+      "offset": 16478,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/Permissions.swift",
       "kind": "IntegerLiteral",
-      "offset": 16442,
+      "offset": 16526,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/Enums\/Permissions.swift",
       "kind": "IntegerLiteral",
-      "offset": 16553,
+      "offset": 16637,
       "length": 1,
       "value": "0"
     },
@@ -104522,6 +104749,34 @@
       "value": "0"
     },
     {
+      "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Models\/Activity.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1196,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Models\/Activity.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1229,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Models\/Activity.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1260,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Models\/Activity.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1296,
+      "length": 1,
+      "value": "0"
+    },
+    {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/BodyData.swift",
       "kind": "StringLiteral",
       "offset": 649,
@@ -104531,147 +104786,147 @@
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/BodyData.swift",
       "kind": "IntegerLiteral",
-      "offset": 7397,
+      "offset": 7491,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/BodyData.swift",
       "kind": "BooleanLiteral",
-      "offset": 7484,
+      "offset": 7578,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/BodyData.swift",
       "kind": "StringLiteral",
-      "offset": 7796,
+      "offset": 7890,
       "length": 19,
       "value": "\"No data retrieved\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/BodyData.swift",
       "kind": "StringLiteral",
-      "offset": 12800,
+      "offset": 12894,
       "length": 23,
       "value": "\"HKMetadataKeyTimeZone\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/BodyData.swift",
       "kind": "BooleanLiteral",
-      "offset": 16530,
+      "offset": 16624,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/BodyData.swift",
       "kind": "IntegerLiteral",
-      "offset": 17386,
+      "offset": 17480,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/BodyData.swift",
       "kind": "IntegerLiteral",
-      "offset": 17422,
+      "offset": 17516,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/BodyData.swift",
       "kind": "IntegerLiteral",
-      "offset": 17464,
+      "offset": 17558,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/BodyData.swift",
       "kind": "IntegerLiteral",
-      "offset": 17507,
+      "offset": 17601,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/BodyData.swift",
       "kind": "IntegerLiteral",
-      "offset": 17548,
+      "offset": 17642,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/BodyData.swift",
       "kind": "IntegerLiteral",
-      "offset": 17583,
+      "offset": 17677,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/BodyData.swift",
       "kind": "BooleanLiteral",
-      "offset": 20237,
+      "offset": 20331,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/BodyData.swift",
       "kind": "Array",
-      "offset": 20953,
+      "offset": 21047,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/BodyData.swift",
       "kind": "IntegerLiteral",
-      "offset": 21039,
+      "offset": 21133,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/BodyData.swift",
       "kind": "Array",
-      "offset": 21069,
+      "offset": 21163,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/BodyData.swift",
       "kind": "FloatLiteral",
-      "offset": 21160,
+      "offset": 21254,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/BodyData.swift",
       "kind": "IntegerLiteral",
-      "offset": 21199,
+      "offset": 21293,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/BodyData.swift",
       "kind": "Array",
-      "offset": 21345,
+      "offset": 21439,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/BodyData.swift",
       "kind": "IntegerLiteral",
-      "offset": 21707,
+      "offset": 21801,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/BodyData.swift",
       "kind": "IntegerLiteral",
-      "offset": 22140,
+      "offset": 22234,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Getters\/BodyData.swift",
       "kind": "IntegerLiteral",
-      "offset": 22503,
+      "offset": 22597,
       "length": 1,
       "value": "1"
     },
@@ -105434,238 +105689,238 @@
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 8809,
+      "offset": 8811,
       "length": 55,
       "value": "\"Failed to fetch new mindful sessions: \""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 8863,
+      "offset": 8865,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 10350,
+      "offset": 10354,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 13422,
+      "offset": 13426,
       "length": 46,
       "value": "\"No new \""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 13452,
+      "offset": 13456,
       "length": 4,
       "value": "\" data available\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 13600,
+      "offset": 13604,
       "length": 42,
       "value": "\"\/hooks\/apple\/\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 13636,
+      "offset": 13640,
       "length": 1,
       "value": "\"\/push\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "Dictionary",
-      "offset": 13695,
+      "offset": 13699,
       "length": 34,
       "value": "[(\"triggered_by_scheduler\", \"true\")]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 13823,
+      "offset": 13827,
       "length": 40,
       "value": "\"Posted new \""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 13857,
+      "offset": 13861,
       "length": 4,
       "value": "\" data\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 13988,
+      "offset": 13992,
       "length": 48,
       "value": "\"Posting new \""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 14023,
+      "offset": 14027,
       "length": 4,
       "value": "\" data failed\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 14925,
+      "offset": 14929,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 15091,
+      "offset": 15095,
       "length": 63,
       "value": "\"Submitted background task to post \""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 15148,
+      "offset": 15152,
       "length": 4,
       "value": "\" data\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 15421,
+      "offset": 15425,
       "length": 36,
       "value": "\"Executing background delivery task\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 16665,
+      "offset": 16669,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 18789,
+      "offset": 18793,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 19122,
+      "offset": 19126,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 19203,
+      "offset": 19207,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 19277,
+      "offset": 19281,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "Dictionary",
-      "offset": 19796,
+      "offset": 19800,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "Dictionary",
-      "offset": 19836,
+      "offset": 19840,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 20026,
+      "offset": 20030,
       "length": 8,
       "value": "\"dev-id\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 20061,
+      "offset": 20065,
       "length": 17,
       "value": "\"ios-sdk-version\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 20302,
+      "offset": 20306,
       "length": 18,
       "value": "\"resource_user_id\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 20606,
+      "offset": 20610,
       "length": 29,
       "value": "\"Failed to form url: \""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 20634,
+      "offset": 20638,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 20660,
+      "offset": 20664,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 20865,
+      "offset": 20869,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 21310,
+      "offset": 21314,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 21437,
+      "offset": 21441,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 21599,
+      "offset": 21603,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 21670,
+      "offset": 21674,
       "length": 5,
       "value": "false"
     },
@@ -106605,7 +106860,7 @@
       "kind": "StringLiteral",
       "offset": 215,
       "length": 7,
-      "value": "\"1.4.5\""
+      "value": "\"1.4.6\""
     },
     {
       "filePath": "\/Users\/jackfinnid\/Developer\/Terra\/TerraiOSPackage\/TerraiOS\/TerraInterface.swift",
