@@ -130,6 +130,8 @@ public struct TerraActiveDurationsData : Swift.Codable {
   public var activity_levels_samples: [TerraiOS.ActivityLevelSample]?
   public var moderate_intensity_seconds: Swift.Double?
   public var vigorous_intensity_seconds: Swift.Double?
+  public var standing_seconds: Swift.Double?
+  public var standing_hours_count: Swift.Double?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
