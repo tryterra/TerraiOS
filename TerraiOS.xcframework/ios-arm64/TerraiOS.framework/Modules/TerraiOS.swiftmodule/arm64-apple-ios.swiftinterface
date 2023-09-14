@@ -43,7 +43,7 @@ public struct FSLSensorDetails : Swift.Codable {
   @objc deinit
 }
 extension TerraiOS.TerraManager {
-  final public func initConnection(type: TerraiOS.Connections, token: Swift.String, customReadTypes: Swift.Set<TerraiOS.CustomPermissions> = Set([]), schedulerOn: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraError?) -> Swift.Void = { _, _ in })
+  final public func initConnection(type: TerraiOS.Connections, token: Swift.String, customReadTypes: Swift.Set<TerraiOS.CustomPermissions> = [], schedulerOn: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraError?) -> Swift.Void = { _, _ in })
   final public func getUserId(type: TerraiOS.Connections) -> Swift.String?
   final public func subscribe(forDataTypes dataTypes: Swift.Set<TerraiOS.DataTypes>, completion: @escaping (Swift.Bool, TerraiOS.TerraError?) -> Swift.Void)
 }
@@ -94,7 +94,7 @@ public struct TerraMETData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraHeartRateSummaryData : Swift.Codable {
-  public init(user_max_hr_bpm: Swift.Double? = nil, min_hr_bpm: Swift.Double? = nil, avg_hrv_sdnn: Swift.Double? = nil, avg_hrv_rmssd: Swift.Double? = nil, avg_hr_bpm: Swift.Double? = nil, resting_hr_bpm: Swift.Double? = nil, max_hr_bpm: Swift.Double? = nil, hr_zone_data: [TerraiOS.TerraHeartRateZoneData]? = [TerraHeartRateZoneData]())
+  public init(user_max_hr_bpm: Swift.Double? = nil, min_hr_bpm: Swift.Double? = nil, avg_hrv_sdnn: Swift.Double? = nil, avg_hrv_rmssd: Swift.Double? = nil, avg_hr_bpm: Swift.Double? = nil, resting_hr_bpm: Swift.Double? = nil, max_hr_bpm: Swift.Double? = nil, hr_zone_data: [TerraiOS.TerraHeartRateZoneData]? = [])
   public var user_max_hr_bpm: Swift.Double?
   public var min_hr_bpm: Swift.Double?
   public var avg_hrv_sdnn: Swift.Double?
@@ -107,7 +107,7 @@ public struct TerraHeartRateSummaryData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraHeartRateDetailedData : Swift.Codable {
-  public init(hrv_samples_rmssd: [TerraiOS.HeartRatesVariabilitySampleRMSSD]? = [HeartRatesVariabilitySampleRMSSD](), hrv_samples_sdnn: [TerraiOS.HeartRatesVariabilitySampleSDNN]? = [HeartRatesVariabilitySampleSDNN](), hr_samples: [TerraiOS.HeartRateSample]? = [HeartRateSample]())
+  public init(hrv_samples_rmssd: [TerraiOS.HeartRatesVariabilitySampleRMSSD]? = [], hrv_samples_sdnn: [TerraiOS.HeartRatesVariabilitySampleSDNN]? = [], hr_samples: [TerraiOS.HeartRateSample]? = [])
   public var hrv_samples_rmssd: [TerraiOS.HeartRatesVariabilitySampleRMSSD]?
   public var hrv_samples_sdnn: [TerraiOS.HeartRatesVariabilitySampleSDNN]?
   public var hr_samples: [TerraiOS.HeartRateSample]?
@@ -115,7 +115,7 @@ public struct TerraHeartRateDetailedData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraHeartRateData : Swift.Codable {
-  public init(summary: TerraiOS.TerraHeartRateSummaryData? = TerraHeartRateSummaryData(), detailed: TerraiOS.TerraHeartRateDetailedData? = TerraHeartRateDetailedData())
+  public init(summary: TerraiOS.TerraHeartRateSummaryData? = .init(), detailed: TerraiOS.TerraHeartRateDetailedData? = .init())
   public var summary: TerraiOS.TerraHeartRateSummaryData?
   public var detailed: TerraiOS.TerraHeartRateDetailedData?
   public func encode(to encoder: any Swift.Encoder) throws
@@ -143,7 +143,7 @@ public struct TerraDailyMetaData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraDeviceData : Swift.Codable {
-  public init(software_version: Swift.String? = nil, manufacturer: Swift.String? = nil, serial_number: Swift.String? = nil, name: Swift.String? = nil, hardware_version: Swift.String? = nil, activation_timestamp: Swift.String? = nil, other_devices: [TerraiOS.OtherDeviceData]? = [OtherDeviceData]())
+  public init(software_version: Swift.String? = nil, manufacturer: Swift.String? = nil, serial_number: Swift.String? = nil, name: Swift.String? = nil, hardware_version: Swift.String? = nil, activation_timestamp: Swift.String? = nil, other_devices: [TerraiOS.OtherDeviceData]? = [])
   public var software_version: Swift.String?
   public var manufacturer: Swift.String?
   public var serial_number: Swift.String?
@@ -227,7 +227,7 @@ public struct TerraDailyData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraOxygenData : Swift.Codable {
-  public init(avg_saturation_percentage: Swift.Double? = nil, vo2max_ml_per_min_per_kg: Swift.Double? = nil, saturation_samples: [TerraiOS.OxygenSaturationSample]? = [OxygenSaturationSample](), vo2_samples: [TerraiOS.Vo2Sample]? = [Vo2Sample]())
+  public init(avg_saturation_percentage: Swift.Double? = nil, vo2max_ml_per_min_per_kg: Swift.Double? = nil, saturation_samples: [TerraiOS.OxygenSaturationSample]? = [], vo2_samples: [TerraiOS.Vo2Sample]? = [])
   public var avg_saturation_percentage: Swift.Double?
   public var vo2max_ml_per_min_per_kg: Swift.Double?
   public var saturation_samples: [TerraiOS.OxygenSaturationSample]?
@@ -236,7 +236,7 @@ public struct TerraOxygenData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraGlucoseData : Swift.Codable {
-  public init(day_avg_blood_glucose_mg_per_dL: Swift.Double? = nil, blood_glucose_samples: [TerraiOS.GlucoseDataSample]? = [GlucoseDataSample](), detailed_blood_glucose_samples: [TerraiOS.GlucoseDataSample]? = [GlucoseDataSample](), gmi: Swift.Double? = nil, time_in_range: Swift.Double? = nil, sensor_usage: Swift.Int? = nil, daily_patterns: [TerraiOS.DailyPatternSample]? = [DailyPatternSample]())
+  public init(day_avg_blood_glucose_mg_per_dL: Swift.Double? = nil, blood_glucose_samples: [TerraiOS.GlucoseDataSample]? = [], detailed_blood_glucose_samples: [TerraiOS.GlucoseDataSample]? = [], gmi: Swift.Double? = nil, time_in_range: Swift.Double? = nil, sensor_usage: Swift.Int? = nil, daily_patterns: [TerraiOS.DailyPatternSample]? = [])
   public var day_avg_blood_glucose_mg_per_dL: Swift.Double?
   public var blood_glucose_samples: [TerraiOS.GlucoseDataSample]?
   public var detailed_blood_glucose_samples: [TerraiOS.GlucoseDataSample]?
@@ -259,11 +259,14 @@ public struct TerraECGReading : Swift.Codable {
   public var avg_hr_bpm: Swift.Double?
   public var afib_classfication: Swift.Int?
   public var raw_signal: [TerraiOS.RawECGSample]?
+  public var terra_afib_classification: TerraiOS.TerraAFibClassification? {
+    get
+  }
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraBodyHeartData : Swift.Codable {
-  public init(pulse_wave_velocity_samples: [TerraiOS.PulseVelocitySample]? = [PulseVelocitySample](), heart_rate_data: TerraiOS.TerraHeartRateData? = TerraHeartRateData(), afib_classification_samples: [TerraiOS.AFibClassificationSample]? = [AFibClassificationSample](), ecg_signal: [TerraiOS.TerraECGReading]? = [TerraECGReading](), rr_interval_samples: [TerraiOS.RRIntervalSample]? = [RRIntervalSample]())
+  public init(pulse_wave_velocity_samples: [TerraiOS.PulseVelocitySample]? = [], heart_rate_data: TerraiOS.TerraHeartRateData? = .init(), afib_classification_samples: [TerraiOS.AFibClassificationSample]? = [], ecg_signal: [TerraiOS.TerraECGReading]? = [], rr_interval_samples: [TerraiOS.RRIntervalSample]? = [])
   public var pulse_wave_velocity_samples: [TerraiOS.PulseVelocitySample]?
   public var heart_rate_data: TerraiOS.TerraHeartRateData?
   public var afib_classification_samples: [TerraiOS.AFibClassificationSample]?
@@ -273,20 +276,20 @@ public struct TerraBodyHeartData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraBloodPressureData : Swift.Codable {
-  public init(blood_pressure_samples: [TerraiOS.BloodPressureSample]? = [BloodPressureSample]())
+  public init(blood_pressure_samples: [TerraiOS.BloodPressureSample]? = [])
   public var blood_pressure_samples: [TerraiOS.BloodPressureSample]?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraHydrationData : Swift.Codable {
-  public init(hydration_amount_samples: [TerraiOS.HydrationMeasurementSample]? = [HydrationMeasurementSample](), day_total_water_consumption_ml: Swift.Double? = nil)
+  public init(hydration_amount_samples: [TerraiOS.HydrationMeasurementSample]? = [], day_total_water_consumption_ml: Swift.Double? = nil)
   public var hydration_amount_samples: [TerraiOS.HydrationMeasurementSample]?
   public var day_total_water_consumption_ml: Swift.Double?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraTemperatureData : Swift.Codable {
-  public init(ambient_temperature_samples: [TerraiOS.TemperatureSample]? = [TemperatureSample](), skin_temperature_samples: [TerraiOS.TemperatureSample]? = [TemperatureSample](), body_temperature_samples: [TerraiOS.TemperatureSample]? = [TemperatureSample]())
+  public init(ambient_temperature_samples: [TerraiOS.TemperatureSample]? = [], skin_temperature_samples: [TerraiOS.TemperatureSample]? = [], body_temperature_samples: [TerraiOS.TemperatureSample]? = [])
   public var ambient_temperature_samples: [TerraiOS.TemperatureSample]?
   public var skin_temperature_samples: [TerraiOS.TemperatureSample]?
   public var body_temperature_samples: [TerraiOS.TemperatureSample]?
@@ -294,7 +297,7 @@ public struct TerraTemperatureData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraMeasurementData : Swift.Codable {
-  public init(measurements: [TerraiOS.MeasurementDataSample]? = [MeasurementDataSample]())
+  public init(measurements: [TerraiOS.MeasurementDataSample]? = [])
   public var measurements: [TerraiOS.MeasurementDataSample]?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -305,7 +308,7 @@ public struct TerraKetoneData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraBodyData : Swift.Codable {
-  public init(metadata: TerraiOS.TerraBodyMetaData? = TerraBodyMetaData(), oxygen_data: TerraiOS.TerraOxygenData? = TerraOxygenData(), glucose_data: TerraiOS.TerraGlucoseData? = TerraGlucoseData(), heart_data: TerraiOS.TerraBodyHeartData? = TerraBodyHeartData(), blood_pressure_data: TerraiOS.TerraBloodPressureData? = TerraBloodPressureData(), hydration_data: TerraiOS.TerraHydrationData? = TerraHydrationData(), temperature_data: TerraiOS.TerraTemperatureData? = TerraTemperatureData(), measurements_data: TerraiOS.TerraMeasurementData? = TerraMeasurementData(), device_data: TerraiOS.TerraDeviceData? = TerraDeviceData())
+  public init(metadata: TerraiOS.TerraBodyMetaData? = .init(), oxygen_data: TerraiOS.TerraOxygenData? = .init(), glucose_data: TerraiOS.TerraGlucoseData? = .init(), heart_data: TerraiOS.TerraBodyHeartData? = .init(), blood_pressure_data: TerraiOS.TerraBloodPressureData? = .init(), hydration_data: TerraiOS.TerraHydrationData? = .init(), temperature_data: TerraiOS.TerraTemperatureData? = .init(), measurements_data: TerraiOS.TerraMeasurementData? = .init(), device_data: TerraiOS.TerraDeviceData? = .init())
   public var metadata: TerraiOS.TerraBodyMetaData?
   public var oxygen_data: TerraiOS.TerraOxygenData?
   public var glucose_data: TerraiOS.TerraGlucoseData?
@@ -453,139 +456,6 @@ public struct TerraActivityData : Swift.Codable {
   public var cheat_detection: Swift.Double?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
-}
-public enum TerraActivityType : Swift.Int {
-  case IN_VEHICLE
-  case BIKING
-  case STILL
-  case UNKNOWN
-  case TILTING
-  case WALKING
-  case RUNNING
-  case AEROBICS
-  case BADMINTON
-  case BASEBALL
-  case BASKETBALL
-  case BIATHLON
-  case HANDBIKING
-  case MOUNTAIN_BIKING
-  case ROAD_BIKING
-  case SPINNING
-  case STATIONARY_BIKING
-  case UTILITY_BIKING
-  case BOXING
-  case CALISTHENICS
-  case CIRCUIT_TRAINING
-  case CRICKET
-  case DANCING
-  case ELLIPTICAL
-  case FENCING
-  case AMERICAN_FOOTBALL
-  case AUSTRALIAN_FOOTBALL
-  case ENGLISH_FOOTBALL
-  case FRISBEE
-  case GARDENING
-  case GOLF
-  case GYMNASTICS
-  case HANDBALL
-  case HIKING
-  case HOCKEY
-  case HORSEBACK_RIDING
-  case HOUSEWORK
-  case JUMPING_ROPE
-  case KAYAKING
-  case KETTLEBELL_TRAINING
-  case KICKBOXING
-  case KITESURFING
-  case MARTIAL_ARTS
-  case MEDITATION
-  case MIXED_MARTIAL_ARTS
-  case P90X_EXERCISES
-  case PARAGLIDING
-  case PILATES
-  case POLO
-  case RACQUETBALL
-  case ROCK_CLIMBING
-  case ROWING
-  case ROWING_MACHINE
-  case RUGBY
-  case JOGGING
-  case RUNNING_ON_SAND
-  case TREADMILL_RUNNING
-  case SAILING
-  case SCUBA_DIVING
-  case SKATEBOARDING
-  case SKATING
-  case CROSS_SKATING
-  case INDOOR_ROLLERBLADING
-  case SKIING
-  case BACK_COUNTRY_SKIING
-  case CROSS_COUNTRY_SKIING
-  case DOWNHILL_SKIING
-  case KITE_SKIING
-  case ROLLER_SKIING
-  case SLEDDING
-  case SNOWBOARDING
-  case SNOWMOBILE
-  case SNOWSHOEING
-  case SQUASH
-  case STAIR_CLIMBING
-  case STAIR_CLIMBING_MACHINE
-  case STAND_UP_PADDLEBOARDING
-  case STRENGTH_TRAINING
-  case SURFING
-  case SWIMMING
-  case SWIMMING_SWIMMING_POOL
-  case SWIMMING_OPEN_WATER
-  case TABLE_TENNIS
-  case TEAM_SPORTS
-  case TENNIS
-  case TREADMILL
-  case VOLLEYBALL
-  case VOLLEYBALL_BEACH
-  case VOLLEYBALL_INDOOR
-  case WAKEBOARDING
-  case WALKING_FITNESS
-  case NORDIC_WALKING
-  case WALKING_TREADMILL
-  case WATERPOLO
-  case WEIGHTLIFTING
-  case WHEELCHAIR
-  case WINDSURFING
-  case YOGA
-  case ZUMBA
-  case DIVING
-  case ERGOMETER
-  case ICE_SKATING
-  case INDOOR_SKATING
-  case CURLING
-  case OTHER
-  case CROSSFIT
-  case HIIT
-  case INTERVAL_TRAINING
-  case WALKING_STROLLER
-  case ELEVATOR
-  case ESCALATOR
-  case ARCHERY
-  case SOFTBALL
-  case GUIDED_BREATHING
-  case CARDIO_TRAINING
-  case LACROSSE
-  case STRETCHING
-  case TRIATHLON
-  case INLINE_SKATING
-  case SKY_DIVING
-  case PADDLING
-  case MOUNTAINEERING
-  case FISHING
-  case WATER_SKIING
-  case INDOOR_RUNNING
-  case PADEL_TENNIS
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
 }
 extension Foundation.DateFormatter {
   public static let terraFormatter: Foundation.DateFormatter
@@ -777,6 +647,177 @@ public enum Connections {
     get
   }
 }
+public enum TerraAFibClassification : Swift.Int {
+  case NEGATIVE
+  case POSITIVE
+  case INCONCLUSIVE
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum TerraActivityLevel : Swift.Int {
+  case UNKNOWN
+  case REST
+  case INACTIVE
+  case LOW_INTENSITY
+  case MEDIUM_INTENSITY
+  case HIGH_INTENSITY
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum TerraHeartRateZone : Swift.Int {
+  case ZONE_0
+  case ZONE_1
+  case ZONE_2
+  case ZONE_3
+  case ZONE_4
+  case ZONE_5
+  case OTHER
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum TerraSleepLevel : Swift.Int {
+  case UNKNOWN
+  case AWAKE
+  case ASLEEP
+  case OUT_OF_BED
+  case LIGHT
+  case DEEP
+  case REM
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum TerraUploadType : Swift.Int {
+  case UNKNOWN
+  case AUTOMATIC
+  case MANUAL
+  case UPDATE
+  case DELETE
+  case PENDING
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum TerraSleepUploadType : Swift.Int {
+  case UNKNOWN
+  case MANUAL
+  case AUTOMATIC
+  case TENTATIVE
+  case INDETERMINATE
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum TerraStrokeType : Swift.String {
+  case OTHER
+  case FREESTYLE
+  case BACKSTROKE
+  case BREASTSTROKE
+  case BUTTERFLY
+  case REST
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum TerraGlucoseFlag : Swift.Int {
+  case NORMAL
+  case HIGH
+  case LOW
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum TerraNutritionUnit : Swift.Int {
+  case UNKNOWN
+  case GRAM
+  case TEASPOON
+  case TABLESPOON
+  case CUP
+  case MEDIUM_EGG
+  case LARGE_EGG
+  case SMALL_EGG
+  case MILLILITER
+  case OUNCE
+  case COUNT
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum TerraRecoveryLevel : Swift.Int {
+  case UNKNOWN
+  case VERY_POOR
+  case POOR
+  case COMPROMISED
+  case OK
+  case GOOD
+  case VERY_GOOD
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum TerraTrendArrow : Swift.Int {
+  case UNKNOWN
+  case FALLING_QUICKLY
+  case FALLING
+  case FLAT
+  case RISING
+  case RISING_QUICKLY
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum TerraMenstrualFlow : Swift.Int {
+  case UNKNOWN
+  case NONE
+  case LIGHT
+  case MEDIUM
+  case HEAVY
+  case HAD
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum TerraMealType : Swift.Int {
+  case UNKNOWN
+  case BREAKFAST
+  case MORNING_SNACK
+  case LUNCH
+  case AFTERNOON_SNACK
+  case DINNER
+  case SNACK
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 @objc public enum Permissions : Swift.UInt, Swift.CaseIterable {
   case ACTIVITY = 0b0000000000001
   case BODY = 0b0000000000010
@@ -926,6 +967,139 @@ public struct TerraMenstruationData : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public enum TerraActivityType : Swift.Int {
+  case IN_VEHICLE
+  case BIKING
+  case STILL
+  case UNKNOWN
+  case TILTING
+  case WALKING
+  case RUNNING
+  case AEROBICS
+  case BADMINTON
+  case BASEBALL
+  case BASKETBALL
+  case BIATHLON
+  case HANDBIKING
+  case MOUNTAIN_BIKING
+  case ROAD_BIKING
+  case SPINNING
+  case STATIONARY_BIKING
+  case UTILITY_BIKING
+  case BOXING
+  case CALISTHENICS
+  case CIRCUIT_TRAINING
+  case CRICKET
+  case DANCING
+  case ELLIPTICAL
+  case FENCING
+  case AMERICAN_FOOTBALL
+  case AUSTRALIAN_FOOTBALL
+  case ENGLISH_FOOTBALL
+  case FRISBEE
+  case GARDENING
+  case GOLF
+  case GYMNASTICS
+  case HANDBALL
+  case HIKING
+  case HOCKEY
+  case HORSEBACK_RIDING
+  case HOUSEWORK
+  case JUMPING_ROPE
+  case KAYAKING
+  case KETTLEBELL_TRAINING
+  case KICKBOXING
+  case KITESURFING
+  case MARTIAL_ARTS
+  case MEDITATION
+  case MIXED_MARTIAL_ARTS
+  case P90X_EXERCISES
+  case PARAGLIDING
+  case PILATES
+  case POLO
+  case RACQUETBALL
+  case ROCK_CLIMBING
+  case ROWING
+  case ROWING_MACHINE
+  case RUGBY
+  case JOGGING
+  case RUNNING_ON_SAND
+  case TREADMILL_RUNNING
+  case SAILING
+  case SCUBA_DIVING
+  case SKATEBOARDING
+  case SKATING
+  case CROSS_SKATING
+  case INDOOR_ROLLERBLADING
+  case SKIING
+  case BACK_COUNTRY_SKIING
+  case CROSS_COUNTRY_SKIING
+  case DOWNHILL_SKIING
+  case KITE_SKIING
+  case ROLLER_SKIING
+  case SLEDDING
+  case SNOWBOARDING
+  case SNOWMOBILE
+  case SNOWSHOEING
+  case SQUASH
+  case STAIR_CLIMBING
+  case STAIR_CLIMBING_MACHINE
+  case STAND_UP_PADDLEBOARDING
+  case STRENGTH_TRAINING
+  case SURFING
+  case SWIMMING
+  case SWIMMING_SWIMMING_POOL
+  case SWIMMING_OPEN_WATER
+  case TABLE_TENNIS
+  case TEAM_SPORTS
+  case TENNIS
+  case TREADMILL
+  case VOLLEYBALL
+  case VOLLEYBALL_BEACH
+  case VOLLEYBALL_INDOOR
+  case WAKEBOARDING
+  case WALKING_FITNESS
+  case NORDIC_WALKING
+  case WALKING_TREADMILL
+  case WATERPOLO
+  case WEIGHTLIFTING
+  case WHEELCHAIR
+  case WINDSURFING
+  case YOGA
+  case ZUMBA
+  case DIVING
+  case ERGOMETER
+  case ICE_SKATING
+  case INDOOR_SKATING
+  case CURLING
+  case OTHER
+  case CROSSFIT
+  case HIIT
+  case INTERVAL_TRAINING
+  case WALKING_STROLLER
+  case ELEVATOR
+  case ESCALATOR
+  case ARCHERY
+  case SOFTBALL
+  case GUIDED_BREATHING
+  case CARDIO_TRAINING
+  case LACROSSE
+  case STRETCHING
+  case TRIATHLON
+  case INLINE_SKATING
+  case SKY_DIVING
+  case PADDLING
+  case MOUNTAINEERING
+  case FISHING
+  case WATER_SKIING
+  case INDOOR_RUNNING
+  case PADEL_TENNIS
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 public enum TerraError : Swift.Int, Swift.Error {
   case HealthKitUnavailable
   case ServiceUnavailable
@@ -1027,7 +1201,7 @@ public struct TerraQuantityModel : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraMealData : Swift.Codable {
-  public init(quantity: TerraiOS.TerraQuantityModel? = TerraQuantityModel(), name: Swift.String? = nil, macros: TerraiOS.TerraMacrosModel? = TerraMacrosModel(), micros: TerraiOS.TerraMicrosModel? = TerraMicrosModel())
+  public init(quantity: TerraiOS.TerraQuantityModel? = .init(), name: Swift.String? = nil, macros: TerraiOS.TerraMacrosModel? = .init(), micros: TerraiOS.TerraMicrosModel? = .init())
   public var quantity: TerraiOS.TerraQuantityModel?
   public var name: Swift.String?
   public var timestamp: Swift.String?
@@ -1046,7 +1220,7 @@ public struct TerraNutritonMetaData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraNutritonSummary : Swift.Codable {
-  public init(macros: TerraiOS.TerraMacrosModel? = TerraMacrosModel(), micros: TerraiOS.TerraMicrosModel? = TerraMicrosModel(), water_ml: Swift.Double? = nil, drink_ml: Swift.Double? = nil)
+  public init(macros: TerraiOS.TerraMacrosModel? = .init(), micros: TerraiOS.TerraMicrosModel? = .init(), water_ml: Swift.Double? = nil, drink_ml: Swift.Double? = nil)
   public var macros: TerraiOS.TerraMacrosModel?
   public var micros: TerraiOS.TerraMicrosModel?
   public var water_ml: Swift.Double?
@@ -1055,7 +1229,7 @@ public struct TerraNutritonSummary : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraNutritionData : Swift.Codable {
-  public init(meals: [TerraiOS.TerraMealData]? = [TerraMealData](), summary: TerraiOS.TerraNutritonSummary? = TerraNutritonSummary(), metadata: TerraiOS.TerraNutritonMetaData? = TerraNutritonMetaData(), drink_samples: [TerraiOS.DrinkSample]? = [DrinkSample]())
+  public init(meals: [TerraiOS.TerraMealData]? = [], summary: TerraiOS.TerraNutritonSummary? = .init(), metadata: TerraiOS.TerraNutritonMetaData? = .init(), drink_samples: [TerraiOS.DrinkSample]? = [])
   public var meals: [TerraiOS.TerraMealData]?
   public var drink_samples: [TerraiOS.DrinkSample]?
   public var summary: TerraiOS.TerraNutritonSummary?
@@ -1182,6 +1356,12 @@ public struct Update : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public struct TerraData : Swift.Codable {
+  public let value: Swift.Double
+  public let timestamp: Foundation.Date
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 public struct TerraAthleteData : Swift.Codable {
   public var first_name: Swift.String?
   public var last_name: Swift.String?
@@ -1208,12 +1388,6 @@ public struct TerraAthleteData : Swift.Codable {
   @objc public static func overwriteLogLevel(_ level: Swift.String)
   @objc override dynamic public init()
   @objc deinit
-}
-public struct TerraData : Swift.Codable {
-  public let value: Swift.Double
-  public let timestamp: Foundation.Date
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
 }
 public struct ActivityLevelSample : Swift.Codable {
   public var timestamp: Swift.String?
@@ -1444,6 +1618,9 @@ public struct AFibClassificationSample : Swift.Codable {
   public init(timestamp: Swift.String? = nil, afib_classification: Swift.Int? = nil)
   public var timestamp: Swift.String?
   public var afib_classification: Swift.Int?
+  public var terra_afib_classification: TerraiOS.TerraAFibClassification? {
+    get
+  }
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -1524,9 +1701,6 @@ public enum DataTypes : Swift.String {
     get
   }
 }
-extension TerraiOS.TerraActivityType : Swift.Equatable {}
-extension TerraiOS.TerraActivityType : Swift.Hashable {}
-extension TerraiOS.TerraActivityType : Swift.RawRepresentable {}
 extension TerraiOS.CustomPermissions : Swift.Equatable {}
 extension TerraiOS.CustomPermissions : Swift.Hashable {}
 extension TerraiOS.CustomPermissions : Swift.RawRepresentable {}
@@ -1534,12 +1708,54 @@ extension TerraiOS.LibreSensorState : Swift.Equatable {}
 extension TerraiOS.LibreSensorState : Swift.Hashable {}
 extension TerraiOS.Connections : Swift.Equatable {}
 extension TerraiOS.Connections : Swift.Hashable {}
+extension TerraiOS.TerraAFibClassification : Swift.Equatable {}
+extension TerraiOS.TerraAFibClassification : Swift.Hashable {}
+extension TerraiOS.TerraAFibClassification : Swift.RawRepresentable {}
+extension TerraiOS.TerraActivityLevel : Swift.Equatable {}
+extension TerraiOS.TerraActivityLevel : Swift.Hashable {}
+extension TerraiOS.TerraActivityLevel : Swift.RawRepresentable {}
+extension TerraiOS.TerraHeartRateZone : Swift.Equatable {}
+extension TerraiOS.TerraHeartRateZone : Swift.Hashable {}
+extension TerraiOS.TerraHeartRateZone : Swift.RawRepresentable {}
+extension TerraiOS.TerraSleepLevel : Swift.Equatable {}
+extension TerraiOS.TerraSleepLevel : Swift.Hashable {}
+extension TerraiOS.TerraSleepLevel : Swift.RawRepresentable {}
+extension TerraiOS.TerraUploadType : Swift.Equatable {}
+extension TerraiOS.TerraUploadType : Swift.Hashable {}
+extension TerraiOS.TerraUploadType : Swift.RawRepresentable {}
+extension TerraiOS.TerraSleepUploadType : Swift.Equatable {}
+extension TerraiOS.TerraSleepUploadType : Swift.Hashable {}
+extension TerraiOS.TerraSleepUploadType : Swift.RawRepresentable {}
+extension TerraiOS.TerraStrokeType : Swift.Equatable {}
+extension TerraiOS.TerraStrokeType : Swift.Hashable {}
+extension TerraiOS.TerraStrokeType : Swift.RawRepresentable {}
+extension TerraiOS.TerraGlucoseFlag : Swift.Equatable {}
+extension TerraiOS.TerraGlucoseFlag : Swift.Hashable {}
+extension TerraiOS.TerraGlucoseFlag : Swift.RawRepresentable {}
+extension TerraiOS.TerraNutritionUnit : Swift.Equatable {}
+extension TerraiOS.TerraNutritionUnit : Swift.Hashable {}
+extension TerraiOS.TerraNutritionUnit : Swift.RawRepresentable {}
+extension TerraiOS.TerraRecoveryLevel : Swift.Equatable {}
+extension TerraiOS.TerraRecoveryLevel : Swift.Hashable {}
+extension TerraiOS.TerraRecoveryLevel : Swift.RawRepresentable {}
+extension TerraiOS.TerraTrendArrow : Swift.Equatable {}
+extension TerraiOS.TerraTrendArrow : Swift.Hashable {}
+extension TerraiOS.TerraTrendArrow : Swift.RawRepresentable {}
+extension TerraiOS.TerraMenstrualFlow : Swift.Equatable {}
+extension TerraiOS.TerraMenstrualFlow : Swift.Hashable {}
+extension TerraiOS.TerraMenstrualFlow : Swift.RawRepresentable {}
+extension TerraiOS.TerraMealType : Swift.Equatable {}
+extension TerraiOS.TerraMealType : Swift.Hashable {}
+extension TerraiOS.TerraMealType : Swift.RawRepresentable {}
 extension TerraiOS.Permissions : Swift.Equatable {}
 extension TerraiOS.Permissions : Swift.Hashable {}
 extension TerraiOS.Permissions : Swift.RawRepresentable {}
 extension TerraiOS.Resource : Swift.Equatable {}
 extension TerraiOS.Resource : Swift.Hashable {}
 extension TerraiOS.Resource : Swift.RawRepresentable {}
+extension TerraiOS.TerraActivityType : Swift.Equatable {}
+extension TerraiOS.TerraActivityType : Swift.Hashable {}
+extension TerraiOS.TerraActivityType : Swift.RawRepresentable {}
 extension TerraiOS.TerraError : Swift.Equatable {}
 extension TerraiOS.TerraError : Swift.Hashable {}
 extension TerraiOS.TerraError : Swift.RawRepresentable {}
