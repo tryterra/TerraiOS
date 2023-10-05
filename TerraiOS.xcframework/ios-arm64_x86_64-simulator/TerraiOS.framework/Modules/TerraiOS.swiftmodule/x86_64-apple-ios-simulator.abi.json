@@ -47637,6 +47637,43 @@
         "children": [
           {
             "kind": "Var",
+            "name": "AKTIIA",
+            "printedName": "AKTIIA",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TerraiOS.Resource.Type) -> TerraiOS.Resource",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Resource",
+                    "printedName": "TerraiOS.Resource",
+                    "usr": "s:8TerraiOS8ResourceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TerraiOS.Resource.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Resource",
+                        "printedName": "TerraiOS.Resource",
+                        "usr": "s:8TerraiOS8ResourceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TerraiOS8ResourceO6AKTIIAyA2CmF",
+            "mangledName": "$s8TerraiOS8ResourceO6AKTIIAyA2CmF",
+            "moduleName": "TerraiOS"
+          },
+          {
+            "kind": "Var",
             "name": "BIOSTRAP",
             "printedName": "BIOSTRAP",
             "children": [
@@ -47707,6 +47744,43 @@
             "declKind": "EnumElement",
             "usr": "s:8TerraiOS8ResourceO10CARDIOMOODyA2CmF",
             "mangledName": "$s8TerraiOS8ResourceO10CARDIOMOODyA2CmF",
+            "moduleName": "TerraiOS"
+          },
+          {
+            "kind": "Var",
+            "name": "CLUE",
+            "printedName": "CLUE",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TerraiOS.Resource.Type) -> TerraiOS.Resource",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Resource",
+                    "printedName": "TerraiOS.Resource",
+                    "usr": "s:8TerraiOS8ResourceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TerraiOS.Resource.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Resource",
+                        "printedName": "TerraiOS.Resource",
+                        "usr": "s:8TerraiOS8ResourceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TerraiOS8ResourceO4CLUEyA2CmF",
+            "mangledName": "$s8TerraiOS8ResourceO4CLUEyA2CmF",
             "moduleName": "TerraiOS"
           },
           {
@@ -47822,6 +47896,43 @@
           },
           {
             "kind": "Var",
+            "name": "DECATHLON",
+            "printedName": "DECATHLON",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TerraiOS.Resource.Type) -> TerraiOS.Resource",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Resource",
+                    "printedName": "TerraiOS.Resource",
+                    "usr": "s:8TerraiOS8ResourceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TerraiOS.Resource.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Resource",
+                        "printedName": "TerraiOS.Resource",
+                        "usr": "s:8TerraiOS8ResourceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TerraiOS8ResourceO9DECATHLONyA2CmF",
+            "mangledName": "$s8TerraiOS8ResourceO9DECATHLONyA2CmF",
+            "moduleName": "TerraiOS"
+          },
+          {
+            "kind": "Var",
             "name": "DEXCOM",
             "printedName": "DEXCOM",
             "children": [
@@ -47855,6 +47966,80 @@
             "declKind": "EnumElement",
             "usr": "s:8TerraiOS8ResourceO6DEXCOMyA2CmF",
             "mangledName": "$s8TerraiOS8ResourceO6DEXCOMyA2CmF",
+            "moduleName": "TerraiOS"
+          },
+          {
+            "kind": "Var",
+            "name": "DEXCOM_EU",
+            "printedName": "DEXCOM_EU",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TerraiOS.Resource.Type) -> TerraiOS.Resource",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Resource",
+                    "printedName": "TerraiOS.Resource",
+                    "usr": "s:8TerraiOS8ResourceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TerraiOS.Resource.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Resource",
+                        "printedName": "TerraiOS.Resource",
+                        "usr": "s:8TerraiOS8ResourceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TerraiOS8ResourceO9DEXCOM_EUyA2CmF",
+            "mangledName": "$s8TerraiOS8ResourceO9DEXCOM_EUyA2CmF",
+            "moduleName": "TerraiOS"
+          },
+          {
+            "kind": "Var",
+            "name": "DEXCOM_JP",
+            "printedName": "DEXCOM_JP",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TerraiOS.Resource.Type) -> TerraiOS.Resource",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Resource",
+                    "printedName": "TerraiOS.Resource",
+                    "usr": "s:8TerraiOS8ResourceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TerraiOS.Resource.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Resource",
+                        "printedName": "TerraiOS.Resource",
+                        "usr": "s:8TerraiOS8ResourceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TerraiOS8ResourceO9DEXCOM_JPyA2CmF",
+            "mangledName": "$s8TerraiOS8ResourceO9DEXCOM_JPyA2CmF",
             "moduleName": "TerraiOS"
           },
           {
@@ -48044,6 +48229,43 @@
           },
           {
             "kind": "Var",
+            "name": "FLO",
+            "printedName": "FLO",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TerraiOS.Resource.Type) -> TerraiOS.Resource",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Resource",
+                    "printedName": "TerraiOS.Resource",
+                    "usr": "s:8TerraiOS8ResourceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TerraiOS.Resource.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Resource",
+                        "printedName": "TerraiOS.Resource",
+                        "usr": "s:8TerraiOS8ResourceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TerraiOS8ResourceO3FLOyA2CmF",
+            "mangledName": "$s8TerraiOS8ResourceO3FLOyA2CmF",
+            "moduleName": "TerraiOS"
+          },
+          {
+            "kind": "Var",
             "name": "FREESTYLELIBRE",
             "printedName": "FREESTYLELIBRE",
             "children": [
@@ -48188,6 +48410,43 @@
             "declKind": "EnumElement",
             "usr": "s:8TerraiOS8ResourceO10HAMMERHEADyA2CmF",
             "mangledName": "$s8TerraiOS8ResourceO10HAMMERHEADyA2CmF",
+            "moduleName": "TerraiOS"
+          },
+          {
+            "kind": "Var",
+            "name": "HEALTHGAUGE",
+            "printedName": "HEALTHGAUGE",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TerraiOS.Resource.Type) -> TerraiOS.Resource",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Resource",
+                    "printedName": "TerraiOS.Resource",
+                    "usr": "s:8TerraiOS8ResourceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TerraiOS.Resource.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Resource",
+                        "printedName": "TerraiOS.Resource",
+                        "usr": "s:8TerraiOS8ResourceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TerraiOS8ResourceO11HEALTHGAUGEyA2CmF",
+            "mangledName": "$s8TerraiOS8ResourceO11HEALTHGAUGEyA2CmF",
             "moduleName": "TerraiOS"
           },
           {
@@ -48340,6 +48599,117 @@
           },
           {
             "kind": "Var",
+            "name": "NOLIO",
+            "printedName": "NOLIO",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TerraiOS.Resource.Type) -> TerraiOS.Resource",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Resource",
+                    "printedName": "TerraiOS.Resource",
+                    "usr": "s:8TerraiOS8ResourceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TerraiOS.Resource.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Resource",
+                        "printedName": "TerraiOS.Resource",
+                        "usr": "s:8TerraiOS8ResourceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TerraiOS8ResourceO5NOLIOyA2CmF",
+            "mangledName": "$s8TerraiOS8ResourceO5NOLIOyA2CmF",
+            "moduleName": "TerraiOS"
+          },
+          {
+            "kind": "Var",
+            "name": "LEZYNE",
+            "printedName": "LEZYNE",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TerraiOS.Resource.Type) -> TerraiOS.Resource",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Resource",
+                    "printedName": "TerraiOS.Resource",
+                    "usr": "s:8TerraiOS8ResourceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TerraiOS.Resource.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Resource",
+                        "printedName": "TerraiOS.Resource",
+                        "usr": "s:8TerraiOS8ResourceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TerraiOS8ResourceO6LEZYNEyA2CmF",
+            "mangledName": "$s8TerraiOS8ResourceO6LEZYNEyA2CmF",
+            "moduleName": "TerraiOS"
+          },
+          {
+            "kind": "Var",
+            "name": "LIVEROWING",
+            "printedName": "LIVEROWING",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TerraiOS.Resource.Type) -> TerraiOS.Resource",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Resource",
+                    "printedName": "TerraiOS.Resource",
+                    "usr": "s:8TerraiOS8ResourceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TerraiOS.Resource.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Resource",
+                        "printedName": "TerraiOS.Resource",
+                        "usr": "s:8TerraiOS8ResourceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TerraiOS8ResourceO10LIVEROWINGyA2CmF",
+            "mangledName": "$s8TerraiOS8ResourceO10LIVEROWINGyA2CmF",
+            "moduleName": "TerraiOS"
+          },
+          {
+            "kind": "Var",
             "name": "NUTRACHECK",
             "printedName": "NUTRACHECK",
             "children": [
@@ -48373,6 +48743,154 @@
             "declKind": "EnumElement",
             "usr": "s:8TerraiOS8ResourceO10NUTRACHECKyA2CmF",
             "mangledName": "$s8TerraiOS8ResourceO10NUTRACHECKyA2CmF",
+            "moduleName": "TerraiOS"
+          },
+          {
+            "kind": "Var",
+            "name": "MACROFIRST",
+            "printedName": "MACROFIRST",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TerraiOS.Resource.Type) -> TerraiOS.Resource",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Resource",
+                    "printedName": "TerraiOS.Resource",
+                    "usr": "s:8TerraiOS8ResourceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TerraiOS.Resource.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Resource",
+                        "printedName": "TerraiOS.Resource",
+                        "usr": "s:8TerraiOS8ResourceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TerraiOS8ResourceO10MACROFIRSTyA2CmF",
+            "mangledName": "$s8TerraiOS8ResourceO10MACROFIRSTyA2CmF",
+            "moduleName": "TerraiOS"
+          },
+          {
+            "kind": "Var",
+            "name": "MAPMYTRACKS",
+            "printedName": "MAPMYTRACKS",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TerraiOS.Resource.Type) -> TerraiOS.Resource",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Resource",
+                    "printedName": "TerraiOS.Resource",
+                    "usr": "s:8TerraiOS8ResourceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TerraiOS.Resource.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Resource",
+                        "printedName": "TerraiOS.Resource",
+                        "usr": "s:8TerraiOS8ResourceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TerraiOS8ResourceO11MAPMYTRACKSyA2CmF",
+            "mangledName": "$s8TerraiOS8ResourceO11MAPMYTRACKSyA2CmF",
+            "moduleName": "TerraiOS"
+          },
+          {
+            "kind": "Var",
+            "name": "MYFITNESSPAL",
+            "printedName": "MYFITNESSPAL",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TerraiOS.Resource.Type) -> TerraiOS.Resource",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Resource",
+                    "printedName": "TerraiOS.Resource",
+                    "usr": "s:8TerraiOS8ResourceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TerraiOS.Resource.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Resource",
+                        "printedName": "TerraiOS.Resource",
+                        "usr": "s:8TerraiOS8ResourceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TerraiOS8ResourceO12MYFITNESSPALyA2CmF",
+            "mangledName": "$s8TerraiOS8ResourceO12MYFITNESSPALyA2CmF",
+            "moduleName": "TerraiOS"
+          },
+          {
+            "kind": "Var",
+            "name": "MOXY",
+            "printedName": "MOXY",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TerraiOS.Resource.Type) -> TerraiOS.Resource",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Resource",
+                    "printedName": "TerraiOS.Resource",
+                    "usr": "s:8TerraiOS8ResourceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TerraiOS.Resource.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Resource",
+                        "printedName": "TerraiOS.Resource",
+                        "usr": "s:8TerraiOS8ResourceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TerraiOS8ResourceO4MOXYyA2CmF",
+            "mangledName": "$s8TerraiOS8ResourceO4MOXYyA2CmF",
             "moduleName": "TerraiOS"
           },
           {
@@ -48858,6 +49376,43 @@
           },
           {
             "kind": "Var",
+            "name": "TREDICT",
+            "printedName": "TREDICT",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TerraiOS.Resource.Type) -> TerraiOS.Resource",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Resource",
+                    "printedName": "TerraiOS.Resource",
+                    "usr": "s:8TerraiOS8ResourceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TerraiOS.Resource.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Resource",
+                        "printedName": "TerraiOS.Resource",
+                        "usr": "s:8TerraiOS8ResourceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TerraiOS8ResourceO7TREDICTyA2CmF",
+            "mangledName": "$s8TerraiOS8ResourceO7TREDICTyA2CmF",
+            "moduleName": "TerraiOS"
+          },
+          {
+            "kind": "Var",
             "name": "TRAINERROAD",
             "printedName": "TRAINERROAD",
             "children": [
@@ -48895,6 +49450,43 @@
           },
           {
             "kind": "Var",
+            "name": "TRAINASONE",
+            "printedName": "TRAINASONE",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TerraiOS.Resource.Type) -> TerraiOS.Resource",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Resource",
+                    "printedName": "TerraiOS.Resource",
+                    "usr": "s:8TerraiOS8ResourceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TerraiOS.Resource.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Resource",
+                        "printedName": "TerraiOS.Resource",
+                        "usr": "s:8TerraiOS8ResourceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TerraiOS8ResourceO10TRAINASONEyA2CmF",
+            "mangledName": "$s8TerraiOS8ResourceO10TRAINASONEyA2CmF",
+            "moduleName": "TerraiOS"
+          },
+          {
+            "kind": "Var",
             "name": "TRAININGPEAKS",
             "printedName": "TRAININGPEAKS",
             "children": [
@@ -48928,6 +49520,43 @@
             "declKind": "EnumElement",
             "usr": "s:8TerraiOS8ResourceO13TRAININGPEAKSyA2CmF",
             "mangledName": "$s8TerraiOS8ResourceO13TRAININGPEAKSyA2CmF",
+            "moduleName": "TerraiOS"
+          },
+          {
+            "kind": "Var",
+            "name": "TODAYSPLAN",
+            "printedName": "TODAYSPLAN",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TerraiOS.Resource.Type) -> TerraiOS.Resource",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Resource",
+                    "printedName": "TerraiOS.Resource",
+                    "usr": "s:8TerraiOS8ResourceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TerraiOS.Resource.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Resource",
+                        "printedName": "TerraiOS.Resource",
+                        "usr": "s:8TerraiOS8ResourceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TerraiOS8ResourceO10TODAYSPLANyA2CmF",
+            "mangledName": "$s8TerraiOS8ResourceO10TODAYSPLANyA2CmF",
             "moduleName": "TerraiOS"
           },
           {
@@ -49265,43 +49894,6 @@
           },
           {
             "kind": "Var",
-            "name": "TODAYSPLAN",
-            "printedName": "TODAYSPLAN",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TerraiOS.Resource.Type) -> TerraiOS.Resource",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Resource",
-                    "printedName": "TerraiOS.Resource",
-                    "usr": "s:8TerraiOS8ResourceO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TerraiOS.Resource.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Resource",
-                        "printedName": "TerraiOS.Resource",
-                        "usr": "s:8TerraiOS8ResourceO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:8TerraiOS8ResourceO10TODAYSPLANyA2CmF",
-            "mangledName": "$s8TerraiOS8ResourceO10TODAYSPLANyA2CmF",
-            "moduleName": "TerraiOS"
-          },
-          {
-            "kind": "Var",
             "name": "WGER",
             "printedName": "WGER",
             "children": [
@@ -49409,43 +50001,6 @@
             "declKind": "EnumElement",
             "usr": "s:8TerraiOS8ResourceO16CYCLINGANALYTICSyA2CmF",
             "mangledName": "$s8TerraiOS8ResourceO16CYCLINGANALYTICSyA2CmF",
-            "moduleName": "TerraiOS"
-          },
-          {
-            "kind": "Var",
-            "name": "NOLIO",
-            "printedName": "NOLIO",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TerraiOS.Resource.Type) -> TerraiOS.Resource",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Resource",
-                    "printedName": "TerraiOS.Resource",
-                    "usr": "s:8TerraiOS8ResourceO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TerraiOS.Resource.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Resource",
-                        "printedName": "TerraiOS.Resource",
-                        "usr": "s:8TerraiOS8ResourceO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:8TerraiOS8ResourceO5NOLIOyA2CmF",
-            "mangledName": "$s8TerraiOS8ResourceO5NOLIOyA2CmF",
             "moduleName": "TerraiOS"
           },
           {
@@ -49594,6 +50149,43 @@
             "declKind": "EnumElement",
             "usr": "s:8TerraiOS8ResourceO6STRAVAyA2CmF",
             "mangledName": "$s8TerraiOS8ResourceO6STRAVAyA2CmF",
+            "moduleName": "TerraiOS"
+          },
+          {
+            "kind": "Var",
+            "name": "XIAOMI",
+            "printedName": "XIAOMI",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TerraiOS.Resource.Type) -> TerraiOS.Resource",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Resource",
+                    "printedName": "TerraiOS.Resource",
+                    "usr": "s:8TerraiOS8ResourceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TerraiOS.Resource.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Resource",
+                        "printedName": "TerraiOS.Resource",
+                        "usr": "s:8TerraiOS8ResourceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TerraiOS8ResourceO6XIAOMIyA2CmF",
+            "mangledName": "$s8TerraiOS8ResourceO6XIAOMIyA2CmF",
             "moduleName": "TerraiOS"
           },
           {
@@ -98474,293 +99066,293 @@
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 151,
-      "length": 14,
-      "value": "\"1.4.7-beta.2\""
+      "length": 7,
+      "value": "\"1.4.9\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 181,
+      "offset": 174,
       "length": 28,
       "value": "\"https:\/\/api.tryterra.co\/v2\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 226,
+      "offset": 219,
       "length": 18,
       "value": "\"WoWsUcHPrOKeYEnc\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 268,
+      "offset": 261,
       "length": 31,
       "value": "\"co.tryterra.data.post.request\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 334,
+      "offset": 327,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 336,
+      "offset": 329,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 368,
+      "offset": 361,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 371,
+      "offset": 364,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 406,
+      "offset": 399,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 445,
+      "offset": 438,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 486,
+      "offset": 479,
       "length": 1,
       "value": "7"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 535,
+      "offset": 528,
       "length": 27,
       "value": "\"co.tryterra.logging.level\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 579,
+      "offset": 572,
       "length": 20,
       "value": "\"co.tryterra.dev.id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 621,
+      "offset": 614,
       "length": 29,
       "value": "\"co.tryterra.app.permissions\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 670,
+      "offset": 663,
       "length": 45,
       "value": "\"co.tryterra.apple.health.custom.permissions\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 743,
+      "offset": 736,
       "length": 36,
       "value": "\"co.tryterra.subscription.datatypes\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 802,
+      "offset": 795,
       "length": 26,
       "value": "\"co.tryterra.scheduler.on\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 873,
+      "offset": 866,
       "length": 28,
       "value": "\"co.tryterra.workout.anchor\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 929,
+      "offset": 922,
       "length": 32,
       "value": "\"co.tryterra.mindfulness.anchor\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 987,
+      "offset": 980,
       "length": 31,
       "value": "\"co.tryterra.heart.rate.anchor\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1055,
+      "offset": 1048,
       "length": 43,
       "value": "\"co.tryterra.heart.rate.variability.anchor\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1123,
+      "offset": 1116,
       "length": 29,
       "value": "\"co.tryterra.calories.anchor\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1177,
+      "offset": 1170,
       "length": 29,
       "value": "\"co.tryterra.calories.anchor\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1227,
+      "offset": 1220,
       "length": 26,
       "value": "\"co.tryterra.steps.anchor\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1280,
+      "offset": 1273,
       "length": 36,
       "value": "\"co.tryterra.last.steps.update.time\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1346,
+      "offset": 1339,
       "length": 41,
       "value": "\"co.tryterra.last.heart.rate.update.time\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1428,
+      "offset": 1421,
       "length": 53,
       "value": "\"co.tryterra.last.heart.rate.variability.update.time\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1510,
+      "offset": 1503,
       "length": 39,
       "value": "\"co.tryterra.last.calories.update.time\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1578,
+      "offset": 1571,
       "length": 39,
       "value": "\"co.tryterra.last.distance.update.time\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1639,
+      "offset": 1632,
       "length": 30,
       "value": "\"co.tryterra.daily.data.cache\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1693,
+      "offset": 1686,
       "length": 33,
       "value": "\"co.tryterra.activity.data.cache\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1747,
+      "offset": 1740,
       "length": 30,
       "value": "\"co.tryterra.sleep.data.cache\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1797,
+      "offset": 1790,
       "length": 29,
       "value": "\"co.tryterra.body.data.cache\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1851,
+      "offset": 1844,
       "length": 34,
       "value": "\"co.tryterra.nutrition.data.cache\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1913,
+      "offset": 1906,
       "length": 37,
       "value": "\"co.tryterra.menstruation.data.cache\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1975,
+      "offset": 1968,
       "length": 34,
       "value": "\"co.tryterra.terra.chunking.daily\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2037,
+      "offset": 2030,
       "length": 38,
       "value": "\"co.tryterra.terra.chunking.nutrition\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2106,
+      "offset": 2099,
       "length": 41,
       "value": "\"co.tryterra.terra.chunking.menstruation\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2171,
+      "offset": 2164,
       "length": 34,
       "value": "\"co.tryterra.terra.chunking.sleep\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2228,
+      "offset": 2221,
       "length": 33,
       "value": "\"co.tryterra.terra.chunking.body\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2288,
+      "offset": 2281,
       "length": 36,
       "value": "\"co.tryterra.terra.chunking.workout\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2354,
+      "offset": 2347,
       "length": 43,
       "value": "\"co.tryterra.last.background.delivery.sent\""
     },
@@ -102372,49 +102964,49 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/AppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 5630,
+      "offset": 5632,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/AppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 8480,
+      "offset": 8482,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/AppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 8508,
+      "offset": 8510,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/AppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 11309,
+      "offset": 11311,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/AppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 14055,
+      "offset": 14057,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/AppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 16856,
+      "offset": 16858,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/AppleHealth.swift",
       "kind": "BooleanLiteral",
-      "offset": 21350,
+      "offset": 21352,
       "length": 5,
       "value": "false"
     },
@@ -102597,743 +103189,967 @@
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
       "offset": 163,
+      "length": 8,
+      "value": "\"aktiia\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 202,
       "length": 10,
       "value": "\"biostrap\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 204,
+      "offset": 243,
       "length": 12,
       "value": "\"cardiomood\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 247,
+      "offset": 286,
+      "length": 6,
+      "value": "\"clue\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 323,
       "length": 10,
       "value": "\"concept2\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 288,
+      "offset": 364,
       "length": 7,
       "value": "\"coros\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 326,
+      "offset": 402,
       "length": 12,
       "value": "\"cronometer\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 369,
+      "offset": 445,
+      "length": 11,
+      "value": "\"decathlon\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 487,
       "length": 8,
       "value": "\"dexcom\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 408,
+      "offset": 526,
+      "length": 11,
+      "value": "\"dexcom_eu\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 568,
+      "length": 11,
+      "value": "\"dexcom_jp\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 610,
       "length": 13,
       "value": "\"eatthismuch\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 452,
+      "offset": 654,
       "length": 7,
       "value": "\"eight\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 490,
+      "offset": 692,
       "length": 11,
       "value": "\"fatsecret\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 532,
+      "offset": 734,
       "length": 12,
       "value": "\"finalsurge\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 575,
+      "offset": 777,
       "length": 8,
       "value": "\"fitbit\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 614,
+      "offset": 816,
+      "length": 5,
+      "value": "\"flo\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 852,
       "length": 16,
       "value": "\"freestylelibre\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 661,
+      "offset": 899,
       "length": 8,
       "value": "\"garmin\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 700,
+      "offset": 938,
       "length": 8,
       "value": "\"google\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 739,
+      "offset": 977,
       "length": 12,
       "value": "\"hammerhead\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 782,
+      "offset": 1020,
+      "length": 13,
+      "value": "\"healthgauge\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1064,
       "length": 8,
       "value": "\"huawei\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 821,
+      "offset": 1103,
       "length": 6,
       "value": "\"ifit\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 858,
+      "offset": 1140,
       "length": 8,
       "value": "\"inbody\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 897,
+      "offset": 1179,
       "length": 8,
       "value": "\"komoot\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 936,
-      "length": 12,
-      "value": "\"nutracheck\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 979,
-      "length": 7,
-      "value": "\"omron\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1017,
-      "length": 9,
-      "value": "\"omronus\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1057,
-      "length": 6,
-      "value": "\"oura\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1094,
-      "length": 9,
-      "value": "\"peloton\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1134,
-      "length": 7,
-      "value": "\"polar\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1172,
-      "length": 5,
-      "value": "\"pul\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1208,
-      "length": 8,
-      "value": "\"renpho\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1247,
-      "length": 13,
-      "value": "\"ridewithgps\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1291,
-      "length": 7,
-      "value": "\"rouvy\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1329,
-      "length": 8,
-      "value": "\"suunto\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1368,
-      "length": 7,
-      "value": "\"tempo\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1406,
-      "length": 11,
-      "value": "\"technogym\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1448,
-      "length": 8,
-      "value": "\"tridot\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1487,
-      "length": 13,
-      "value": "\"trainerroad\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1531,
-      "length": 15,
-      "value": "\"trainingpeaks\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1577,
-      "length": 13,
-      "value": "\"underarmour\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1621,
-      "length": 11,
-      "value": "\"virtuagym\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1663,
-      "length": 7,
-      "value": "\"wahoo\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1701,
-      "length": 7,
-      "value": "\"whoop\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1739,
-      "length": 10,
-      "value": "\"withings\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1780,
-      "length": 6,
-      "value": "\"xert\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1817,
-      "length": 6,
-      "value": "\"xoss\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1854,
-      "length": 7,
-      "value": "\"zwift\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1892,
-      "length": 13,
-      "value": "\"brytonsport\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1936,
-      "length": 12,
-      "value": "\"todaysplan\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1979,
-      "length": 6,
-      "value": "\"wger\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 2016,
-      "length": 10,
-      "value": "\"velohero\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 2057,
-      "length": 18,
-      "value": "\"cyclinganalytics\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 2106,
+      "offset": 1218,
       "length": 7,
       "value": "\"nolio\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 2144,
+      "offset": 1256,
+      "length": 8,
+      "value": "\"lezyne\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1295,
+      "length": 12,
+      "value": "\"liverowing\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1338,
+      "length": 12,
+      "value": "\"nutracheck\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1381,
+      "length": 12,
+      "value": "\"macrofirst\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1424,
+      "length": 13,
+      "value": "\"mapmytracks\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1468,
+      "length": 14,
+      "value": "\"myfitnesspal\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1513,
+      "length": 6,
+      "value": "\"moxy\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1550,
+      "length": 7,
+      "value": "\"omron\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1588,
+      "length": 9,
+      "value": "\"omronus\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1628,
+      "length": 6,
+      "value": "\"oura\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1665,
+      "length": 9,
+      "value": "\"peloton\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1705,
+      "length": 7,
+      "value": "\"polar\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1743,
+      "length": 5,
+      "value": "\"pul\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1779,
+      "length": 8,
+      "value": "\"renpho\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1818,
+      "length": 13,
+      "value": "\"ridewithgps\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1862,
+      "length": 7,
+      "value": "\"rouvy\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1900,
+      "length": 8,
+      "value": "\"suunto\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1939,
+      "length": 7,
+      "value": "\"tempo\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1977,
+      "length": 11,
+      "value": "\"technogym\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2019,
+      "length": 8,
+      "value": "\"tridot\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2058,
+      "length": 9,
+      "value": "\"tredict\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2098,
+      "length": 13,
+      "value": "\"trainerroad\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2142,
+      "length": 12,
+      "value": "\"trainasone\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2185,
+      "length": 15,
+      "value": "\"trainingpeaks\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2231,
+      "length": 12,
+      "value": "\"todaysplan\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2274,
+      "length": 13,
+      "value": "\"underarmour\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2318,
+      "length": 11,
+      "value": "\"virtuagym\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2360,
+      "length": 7,
+      "value": "\"wahoo\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2398,
+      "length": 7,
+      "value": "\"whoop\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2436,
+      "length": 10,
+      "value": "\"withings\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2477,
+      "length": 6,
+      "value": "\"xert\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2514,
+      "length": 6,
+      "value": "\"xoss\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2551,
+      "length": 7,
+      "value": "\"zwift\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2589,
+      "length": 13,
+      "value": "\"brytonsport\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2633,
+      "length": 6,
+      "value": "\"wger\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2670,
+      "length": 10,
+      "value": "\"velohero\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2711,
+      "length": 18,
+      "value": "\"cyclinganalytics\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2760,
       "length": 12,
       "value": "\"trainxhale\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 2187,
+      "offset": 2803,
       "length": 12,
       "value": "\"ketomojous\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 2230,
+      "offset": 2846,
       "length": 12,
       "value": "\"ketomojoeu\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 2273,
+      "offset": 2889,
       "length": 8,
       "value": "\"strava\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2928,
+      "length": 8,
+      "value": "\"xiaomi\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
       "offset": 163,
+      "length": 8,
+      "value": "\"aktiia\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 202,
       "length": 10,
       "value": "\"biostrap\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 204,
+      "offset": 243,
       "length": 12,
       "value": "\"cardiomood\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 247,
+      "offset": 286,
+      "length": 6,
+      "value": "\"clue\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 323,
       "length": 10,
       "value": "\"concept2\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 288,
+      "offset": 364,
       "length": 7,
       "value": "\"coros\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 326,
+      "offset": 402,
       "length": 12,
       "value": "\"cronometer\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 369,
+      "offset": 445,
+      "length": 11,
+      "value": "\"decathlon\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 487,
       "length": 8,
       "value": "\"dexcom\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 408,
+      "offset": 526,
+      "length": 11,
+      "value": "\"dexcom_eu\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 568,
+      "length": 11,
+      "value": "\"dexcom_jp\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 610,
       "length": 13,
       "value": "\"eatthismuch\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 452,
+      "offset": 654,
       "length": 7,
       "value": "\"eight\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 490,
+      "offset": 692,
       "length": 11,
       "value": "\"fatsecret\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 532,
+      "offset": 734,
       "length": 12,
       "value": "\"finalsurge\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 575,
+      "offset": 777,
       "length": 8,
       "value": "\"fitbit\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 614,
+      "offset": 816,
+      "length": 5,
+      "value": "\"flo\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 852,
       "length": 16,
       "value": "\"freestylelibre\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 661,
+      "offset": 899,
       "length": 8,
       "value": "\"garmin\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 700,
+      "offset": 938,
       "length": 8,
       "value": "\"google\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 739,
+      "offset": 977,
       "length": 12,
       "value": "\"hammerhead\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 782,
+      "offset": 1020,
+      "length": 13,
+      "value": "\"healthgauge\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1064,
       "length": 8,
       "value": "\"huawei\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 821,
+      "offset": 1103,
       "length": 6,
       "value": "\"ifit\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 858,
+      "offset": 1140,
       "length": 8,
       "value": "\"inbody\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 897,
+      "offset": 1179,
       "length": 8,
       "value": "\"komoot\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 936,
-      "length": 12,
-      "value": "\"nutracheck\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 979,
-      "length": 7,
-      "value": "\"omron\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1017,
-      "length": 9,
-      "value": "\"omronus\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1057,
-      "length": 6,
-      "value": "\"oura\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1094,
-      "length": 9,
-      "value": "\"peloton\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1134,
-      "length": 7,
-      "value": "\"polar\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1172,
-      "length": 5,
-      "value": "\"pul\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1208,
-      "length": 8,
-      "value": "\"renpho\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1247,
-      "length": 13,
-      "value": "\"ridewithgps\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1291,
-      "length": 7,
-      "value": "\"rouvy\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1329,
-      "length": 8,
-      "value": "\"suunto\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1368,
-      "length": 7,
-      "value": "\"tempo\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1406,
-      "length": 11,
-      "value": "\"technogym\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1448,
-      "length": 8,
-      "value": "\"tridot\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1487,
-      "length": 13,
-      "value": "\"trainerroad\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1531,
-      "length": 15,
-      "value": "\"trainingpeaks\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1577,
-      "length": 13,
-      "value": "\"underarmour\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1621,
-      "length": 11,
-      "value": "\"virtuagym\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1663,
-      "length": 7,
-      "value": "\"wahoo\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1701,
-      "length": 7,
-      "value": "\"whoop\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1739,
-      "length": 10,
-      "value": "\"withings\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1780,
-      "length": 6,
-      "value": "\"xert\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1817,
-      "length": 6,
-      "value": "\"xoss\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1854,
-      "length": 7,
-      "value": "\"zwift\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1892,
-      "length": 13,
-      "value": "\"brytonsport\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1936,
-      "length": 12,
-      "value": "\"todaysplan\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 1979,
-      "length": 6,
-      "value": "\"wger\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 2016,
-      "length": 10,
-      "value": "\"velohero\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 2057,
-      "length": 18,
-      "value": "\"cyclinganalytics\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
-      "kind": "StringLiteral",
-      "offset": 2106,
+      "offset": 1218,
       "length": 7,
       "value": "\"nolio\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 2144,
+      "offset": 1256,
+      "length": 8,
+      "value": "\"lezyne\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1295,
+      "length": 12,
+      "value": "\"liverowing\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1338,
+      "length": 12,
+      "value": "\"nutracheck\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1381,
+      "length": 12,
+      "value": "\"macrofirst\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1424,
+      "length": 13,
+      "value": "\"mapmytracks\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1468,
+      "length": 14,
+      "value": "\"myfitnesspal\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1513,
+      "length": 6,
+      "value": "\"moxy\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1550,
+      "length": 7,
+      "value": "\"omron\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1588,
+      "length": 9,
+      "value": "\"omronus\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1628,
+      "length": 6,
+      "value": "\"oura\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1665,
+      "length": 9,
+      "value": "\"peloton\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1705,
+      "length": 7,
+      "value": "\"polar\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1743,
+      "length": 5,
+      "value": "\"pul\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1779,
+      "length": 8,
+      "value": "\"renpho\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1818,
+      "length": 13,
+      "value": "\"ridewithgps\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1862,
+      "length": 7,
+      "value": "\"rouvy\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1900,
+      "length": 8,
+      "value": "\"suunto\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1939,
+      "length": 7,
+      "value": "\"tempo\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1977,
+      "length": 11,
+      "value": "\"technogym\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2019,
+      "length": 8,
+      "value": "\"tridot\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2058,
+      "length": 9,
+      "value": "\"tredict\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2098,
+      "length": 13,
+      "value": "\"trainerroad\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2142,
+      "length": 12,
+      "value": "\"trainasone\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2185,
+      "length": 15,
+      "value": "\"trainingpeaks\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2231,
+      "length": 12,
+      "value": "\"todaysplan\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2274,
+      "length": 13,
+      "value": "\"underarmour\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2318,
+      "length": 11,
+      "value": "\"virtuagym\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2360,
+      "length": 7,
+      "value": "\"wahoo\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2398,
+      "length": 7,
+      "value": "\"whoop\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2436,
+      "length": 10,
+      "value": "\"withings\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2477,
+      "length": 6,
+      "value": "\"xert\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2514,
+      "length": 6,
+      "value": "\"xoss\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2551,
+      "length": 7,
+      "value": "\"zwift\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2589,
+      "length": 13,
+      "value": "\"brytonsport\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2633,
+      "length": 6,
+      "value": "\"wger\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2670,
+      "length": 10,
+      "value": "\"velohero\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2711,
+      "length": 18,
+      "value": "\"cyclinganalytics\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2760,
       "length": 12,
       "value": "\"trainxhale\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 2187,
+      "offset": 2803,
       "length": 12,
       "value": "\"ketomojous\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 2230,
+      "offset": 2846,
       "length": 12,
       "value": "\"ketomojoeu\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 2273,
+      "offset": 2889,
       "length": 8,
       "value": "\"strava\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Backend\/Enums\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2928,
+      "length": 8,
+      "value": "\"xiaomi\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/RequestClient.swift",
@@ -106705,14 +107521,14 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "Dictionary",
-      "offset": 19052,
+      "offset": 19044,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "Dictionary",
-      "offset": 19092,
+      "offset": 19084,
       "length": 3,
       "value": "[]"
     },
