@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TerraiOS
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import BackgroundTasks
@@ -14,8 +14,9 @@ import SwiftUI
 import UIKit
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 final public class LibreProActivator {
-  public init(tag: CoreNFC.NFCISO15693Tag, rawData: [Swift.UInt8])
+  public init(tag: any CoreNFC.NFCISO15693Tag, rawData: [Swift.UInt8])
   @objc deinit
 }
 @_hasMissingDesignatedInitializers final public class LibreProDataParser {
@@ -36,20 +37,20 @@ public struct FSLSensorDetails : Swift.Codable {
   public var data: TerraiOS.TerraGlucoseData
   public var device_data: TerraiOS.TerraDeviceData
   public var last_reading: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct Update : Swift.Codable {
   public var lastUpdated: Foundation.Date?
   public var samples: [TerraiOS.TerraData]
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraData : Swift.Codable {
   public let value: Swift.Double
   public let timestamp: Foundation.Date
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers @objc final public class TerraManager : ObjectiveC.NSObject {
   @objc deinit
@@ -69,18 +70,18 @@ extension TerraiOS.TerraManager {
 }
 extension TerraiOS.TerraManager {
   final public func getAthlete(type: TerraiOS.Connections, toWebhook: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraAthleteDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
-  final public func getMenstruation(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraMenstruationDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
-  final public func getMenstruation(type: TerraiOS.Connections, startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraMenstruationDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
-  final public func getDaily(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraDailyDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
-  final public func getDaily(type: TerraiOS.Connections, startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraDailyDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
-  final public func getSleep(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraSleepDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
-  final public func getSleep(type: TerraiOS.Connections, startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraSleepDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
-  final public func getBody(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraBodyDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
-  final public func getBody(type: TerraiOS.Connections, startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, latestReading: Swift.Bool = false, completion: @escaping (Swift.Bool, TerraiOS.TerraBodyDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
-  final public func getNutrition(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraNutritionDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
-  final public func getNutrition(type: TerraiOS.Connections, startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraNutritionDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
-  final public func getActivity(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraActivityDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
-  final public func getActivity(type: TerraiOS.Connections, startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraActivityDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
+  final public func getMenstruation(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraMenstruationDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
+  final public func getMenstruation(type: TerraiOS.Connections, startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraMenstruationDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
+  final public func getDaily(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraDailyDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
+  final public func getDaily(type: TerraiOS.Connections, startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraDailyDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
+  final public func getSleep(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraSleepDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
+  final public func getSleep(type: TerraiOS.Connections, startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraSleepDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
+  final public func getBody(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraBodyDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
+  final public func getBody(type: TerraiOS.Connections, startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, latestReading: Swift.Bool = false, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraBodyDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
+  final public func getNutrition(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraNutritionDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
+  final public func getNutrition(type: TerraiOS.Connections, startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraNutritionDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
+  final public func getActivity(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraActivityDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
+  final public func getActivity(type: TerraiOS.Connections, startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraActivityDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
 }
 public struct TerraStressData : Swift.Codable {
   public var medium_stress_duration_seconds: Swift.Double?
@@ -92,8 +93,8 @@ public struct TerraStressData : Swift.Codable {
   public var max_stress_level: Swift.Double?
   public var high_stress_duration_seconds: Swift.Double?
   public var samples: [TerraiOS.StressSample]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraMETData : Swift.Codable {
   public var num_moderate_intensity_minutes: Swift.Double?
@@ -102,8 +103,8 @@ public struct TerraMETData : Swift.Codable {
   public var samples: [TerraiOS.METSample]?
   public var num_high_intensity_minutes: Swift.Double?
   public var num_inactive_minutes: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraHeartRateSummaryData : Swift.Codable {
   public init(user_max_hr_bpm: Swift.Double? = nil, min_hr_bpm: Swift.Double? = nil, avg_hrv_sdnn: Swift.Double? = nil, avg_hrv_rmssd: Swift.Double? = nil, avg_hr_bpm: Swift.Double? = nil, resting_hr_bpm: Swift.Double? = nil, max_hr_bpm: Swift.Double? = nil, hr_zone_data: [TerraiOS.TerraHeartRateZoneData]? = [])
@@ -115,23 +116,23 @@ public struct TerraHeartRateSummaryData : Swift.Codable {
   public var resting_hr_bpm: Swift.Double?
   public var max_hr_bpm: Swift.Double?
   public var hr_zone_data: [TerraiOS.TerraHeartRateZoneData]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraHeartRateDetailedData : Swift.Codable {
   public init(hrv_samples_rmssd: [TerraiOS.HeartRatesVariabilitySampleRMSSD]? = [], hrv_samples_sdnn: [TerraiOS.HeartRatesVariabilitySampleSDNN]? = [], hr_samples: [TerraiOS.HeartRateSample]? = [])
   public var hrv_samples_rmssd: [TerraiOS.HeartRatesVariabilitySampleRMSSD]?
   public var hrv_samples_sdnn: [TerraiOS.HeartRatesVariabilitySampleSDNN]?
   public var hr_samples: [TerraiOS.HeartRateSample]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraHeartRateData : Swift.Codable {
   public init(summary: TerraiOS.TerraHeartRateSummaryData? = .init(), detailed: TerraiOS.TerraHeartRateDetailedData? = .init())
   public var summary: TerraiOS.TerraHeartRateSummaryData?
   public var detailed: TerraiOS.TerraHeartRateDetailedData?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraActiveDurationsData : Swift.Codable {
   public var activity_seconds: Swift.Double?
@@ -144,8 +145,8 @@ public struct TerraActiveDurationsData : Swift.Codable {
   public var vigorous_intensity_seconds: Swift.Double?
   public var standing_seconds: Swift.Double?
   public var standing_hours_count: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraDailyMetaData : Swift.Codable {
   public var start_time: Swift.String?
@@ -154,8 +155,8 @@ public struct TerraDailyMetaData : Swift.Codable {
   public var terra_upload_type: TerraiOS.TerraUploadType? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraDeviceData : Swift.Codable {
   public init(software_version: Swift.String? = nil, manufacturer: Swift.String? = nil, serial_number: Swift.String? = nil, name: Swift.String? = nil, hardware_version: Swift.String? = nil, activation_timestamp: Swift.String? = nil, other_devices: [TerraiOS.OtherDeviceData]? = [])
@@ -167,15 +168,15 @@ public struct TerraDeviceData : Swift.Codable {
   public var activation_timestamp: Swift.String?
   public var other_devices: [TerraiOS.OtherDeviceData]?
   public var data_provided: [Swift.String]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraSwimmingData : Swift.Codable {
   public var pool_length_meters: Swift.Double?
   public var num_laps: Swift.Double?
   public var num_strokes: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraElevationData : Swift.Codable {
   public var gain_actual_meters: Swift.Double?
@@ -184,8 +185,8 @@ public struct TerraElevationData : Swift.Codable {
   public var max_meters: Swift.Double?
   public var gain_planned_meters: Swift.Double?
   public var min_meters: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraDailyDistanceData : Swift.Codable {
   public var detailed: TerraiOS.TerraDistanceDetailedData?
@@ -194,8 +195,8 @@ public struct TerraDailyDistanceData : Swift.Codable {
   public var distance_meters: Swift.Double?
   public var swimming: TerraiOS.TerraSwimmingData?
   public var elevation: TerraiOS.TerraElevationData?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraCaloriesData : Swift.Codable {
   public var net_intake_calories: Swift.Double?
@@ -203,27 +204,27 @@ public struct TerraCaloriesData : Swift.Codable {
   public var BMR_calories: Swift.Double?
   public var total_burned_calories: Swift.Double?
   public var calorie_samples: [TerraiOS.TerraCalorieSample]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraTagEntry : Swift.Codable {
   public var tag_name: Swift.String?
   public var timestamp: Swift.String?
   public var notes: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraTagData : Swift.Codable {
   public var tags: [TerraiOS.TerraTagEntry]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraScores : Swift.Codable {
   public var recovery: Swift.Double?
   public var activity: Swift.Double?
   public var sleep: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraDailyData : Swift.Codable {
   public var stress_data: TerraiOS.TerraStressData?
@@ -238,8 +239,8 @@ public struct TerraDailyData : Swift.Codable {
   public var tag_data: TerraiOS.TerraTagData?
   public var strain_data: TerraiOS.TerraStrainData?
   public var scores: TerraiOS.TerraScores?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraOxygenData : Swift.Codable {
   public init(avg_saturation_percentage: Swift.Double? = nil, vo2max_ml_per_min_per_kg: Swift.Double? = nil, saturation_samples: [TerraiOS.OxygenSaturationSample]? = [], vo2_samples: [TerraiOS.Vo2Sample]? = [])
@@ -247,8 +248,8 @@ public struct TerraOxygenData : Swift.Codable {
   public var vo2max_ml_per_min_per_kg: Swift.Double?
   public var saturation_samples: [TerraiOS.OxygenSaturationSample]?
   public var vo2_samples: [TerraiOS.Vo2Sample]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraGlucoseData : Swift.Codable {
   public init(day_avg_blood_glucose_mg_per_dL: Swift.Double? = nil, blood_glucose_samples: [TerraiOS.GlucoseDataSample]? = [], detailed_blood_glucose_samples: [TerraiOS.GlucoseDataSample]? = [], gmi: Swift.Double? = nil, time_in_range: Swift.Double? = nil, sensor_usage: Swift.Int? = nil, daily_patterns: [TerraiOS.DailyPatternSample]? = [])
@@ -259,15 +260,15 @@ public struct TerraGlucoseData : Swift.Codable {
   public var time_in_range: Swift.Double?
   public var sensor_usage: Swift.Int?
   public var daily_patterns: [TerraiOS.DailyPatternSample]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraBodyMetaData : Swift.Codable {
   public init(start_time: Swift.String? = nil, end_time: Swift.String? = nil)
   public var start_time: Swift.String?
   public var end_time: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraECGReading : Swift.Codable {
   public var start_timestamp: Swift.String?
@@ -277,8 +278,8 @@ public struct TerraECGReading : Swift.Codable {
   public var terra_afib_classification: TerraiOS.TerraAFibClassification? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraBodyHeartData : Swift.Codable {
   public init(pulse_wave_velocity_samples: [TerraiOS.PulseVelocitySample]? = [], heart_rate_data: TerraiOS.TerraHeartRateData? = .init(), afib_classification_samples: [TerraiOS.AFibClassificationSample]? = [], ecg_signal: [TerraiOS.TerraECGReading]? = [], rr_interval_samples: [TerraiOS.RRIntervalSample]? = [])
@@ -287,40 +288,40 @@ public struct TerraBodyHeartData : Swift.Codable {
   public var afib_classification_samples: [TerraiOS.AFibClassificationSample]?
   public var ecg_signal: [TerraiOS.TerraECGReading]?
   public var rr_interval_samples: [TerraiOS.RRIntervalSample]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraBloodPressureData : Swift.Codable {
   public init(blood_pressure_samples: [TerraiOS.BloodPressureSample]? = [])
   public var blood_pressure_samples: [TerraiOS.BloodPressureSample]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraHydrationData : Swift.Codable {
   public init(hydration_amount_samples: [TerraiOS.HydrationMeasurementSample]? = [], day_total_water_consumption_ml: Swift.Double? = nil)
   public var hydration_amount_samples: [TerraiOS.HydrationMeasurementSample]?
   public var day_total_water_consumption_ml: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraTemperatureData : Swift.Codable {
   public init(ambient_temperature_samples: [TerraiOS.TemperatureSample]? = [], skin_temperature_samples: [TerraiOS.TemperatureSample]? = [], body_temperature_samples: [TerraiOS.TemperatureSample]? = [])
   public var ambient_temperature_samples: [TerraiOS.TemperatureSample]?
   public var skin_temperature_samples: [TerraiOS.TemperatureSample]?
   public var body_temperature_samples: [TerraiOS.TemperatureSample]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraMeasurementData : Swift.Codable {
   public init(measurements: [TerraiOS.MeasurementDataSample]? = [])
   public var measurements: [TerraiOS.MeasurementDataSample]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraKetoneData : Swift.Codable {
   public var ketone_samples: [TerraiOS.KetoneDataSample]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraBodyData : Swift.Codable {
   public init(metadata: TerraiOS.TerraBodyMetaData? = .init(), oxygen_data: TerraiOS.TerraOxygenData? = .init(), glucose_data: TerraiOS.TerraGlucoseData? = .init(), heart_data: TerraiOS.TerraBodyHeartData? = .init(), blood_pressure_data: TerraiOS.TerraBloodPressureData? = .init(), hydration_data: TerraiOS.TerraHydrationData? = .init(), temperature_data: TerraiOS.TerraTemperatureData? = .init(), measurements_data: TerraiOS.TerraMeasurementData? = .init(), device_data: TerraiOS.TerraDeviceData? = .init())
@@ -334,36 +335,36 @@ public struct TerraBodyData : Swift.Codable {
   public var measurements_data: TerraiOS.TerraMeasurementData?
   public var device_data: TerraiOS.TerraDeviceData?
   public var ketone_data: TerraiOS.TerraKetoneData?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraEnergyData : Swift.Codable {
   public var energy_kilojoules: Swift.Double?
   public var energy_planned_kilojoules: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraLapData : Swift.Codable {
   public var laps: [TerraiOS.LapSample]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraStrainData : Swift.Codable {
   public var strain_level: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraPowerData : Swift.Codable {
   public var avg_watts: Swift.Double?
   public var power_samples: [TerraiOS.PowerSample]?
   public var max_watts: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraPolyLineMapData : Swift.Codable {
   public var summary_polyline: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraMovementData : Swift.Codable {
   public var normalized_speed_meters_per_second: Swift.Double?
@@ -381,8 +382,8 @@ public struct TerraMovementData : Swift.Codable {
   public var speed_samples: [TerraiOS.SpeedSample]?
   public var adjusted_max_speed_meters_per_second: Swift.Double?
   public var torque_samples: [TerraiOS.TorqueSample]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraActivityMetaData : Swift.Codable {
   public var city: Swift.String?
@@ -400,26 +401,26 @@ public struct TerraActivityMetaData : Swift.Codable {
   public var terra_upload_type: TerraiOS.TerraUploadType? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraTSSData : Swift.Codable {
   public var TSS_samples: [TerraiOS.TSSSample]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraWorkData : Swift.Codable {
   public var work_kilojoules: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraDistanceDetailedData : Swift.Codable {
   public var step_samples: [TerraiOS.StepSample]?
   public var elevation_samples: [TerraiOS.ElevationSample]?
   public var distance_samples: [TerraiOS.DistanceSample]?
   public var floors_climbed_samples: [TerraiOS.FloorsClimbedSample]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraDistanceSummaryData : Swift.Codable {
   public var floors_climbed: Swift.Double?
@@ -427,22 +428,22 @@ public struct TerraDistanceSummaryData : Swift.Codable {
   public var distance_meters: Swift.Double?
   public var swimming: TerraiOS.TerraSwimmingData?
   public var elevation: TerraiOS.TerraElevationData?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraActivityDistanceData : Swift.Codable {
   public var detailed: TerraiOS.TerraDistanceDetailedData?
   public var summary: TerraiOS.TerraDistanceSummaryData?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraPositionData : Swift.Codable {
   public var start_pos_lat_lng_deg: [Swift.Double?]?
   public var position_samples: [TerraiOS.PositionSample]?
   public var center_pos_lat_lng_deg: [Swift.Double?]?
   public var end_pos_lat_lng_deg: [Swift.Double?]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraHeartRateZoneData : Swift.Codable {
   public var zone: Swift.Int?
@@ -453,8 +454,8 @@ public struct TerraHeartRateZoneData : Swift.Codable {
   public var terra_heart_rate_zone: TerraiOS.TerraHeartRateZone? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraActivityData : Swift.Codable {
   public var energy_data: TerraiOS.TerraEnergyData?
@@ -475,8 +476,8 @@ public struct TerraActivityData : Swift.Codable {
   public var calories_data: TerraiOS.TerraCaloriesData?
   public var position_data: TerraiOS.TerraPositionData?
   public var cheat_detection: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 extension Foundation.DateFormatter {
   public static let terraFormatter: Foundation.DateFormatter
@@ -499,16 +500,16 @@ public struct TerraBreathsData : Swift.Codable {
   public var min_breaths_per_min: Swift.Double?
   public var avg_breaths_per_min: Swift.Double?
   public var on_demand_reading: Swift.Bool?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraOxygenSaturationData : Swift.Codable {
   public var samples: [TerraiOS.SPO2Sample]?
   public var end_time: Swift.String?
   public var start_time: Swift.String?
   public var avg_saturation_percentage: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraSnoringData : Swift.Codable {
   public var num_snoring_events: Swift.Int?
@@ -516,15 +517,15 @@ public struct TerraSnoringData : Swift.Codable {
   public var end_time: Swift.String?
   public var start_time: Swift.String?
   public var total_snoring_duration_seconds: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraRespirationData : Swift.Codable {
   public var breaths_data: TerraiOS.TerraBreathsData?
   public var oxygen_saturation_data: TerraiOS.TerraOxygenSaturationData?
   public var snoring_data: TerraiOS.TerraSnoringData?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraSleepMetaData : Swift.Codable {
   public var upload_type: Swift.Int?
@@ -534,8 +535,8 @@ public struct TerraSleepMetaData : Swift.Codable {
   public var terra_sleep_upload_type: TerraiOS.TerraSleepUploadType? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraReadinessData : Swift.Codable {
   public var readiness: Swift.Double?
@@ -543,8 +544,8 @@ public struct TerraReadinessData : Swift.Codable {
   public var terra_recovery_level: TerraiOS.TerraRecoveryLevel? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraAwakeDurationData : Swift.Codable {
   public var num_out_of_bed_events: Swift.Int?
@@ -554,14 +555,14 @@ public struct TerraAwakeDurationData : Swift.Codable {
   public var duration_long_interruption_seconds: Swift.Double?
   public var duration_awake_state_seconds: Swift.Double?
   public var duration_short_interruption_seconds: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraOtherDurationData : Swift.Codable {
   public var duration_unmeasurable_sleep_seconds: Swift.Double?
   public var duration_in_bed_seconds: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraAsleepDurationData : Swift.Codable {
   public var duration_deep_sleep_state_seconds: Swift.Double?
@@ -569,8 +570,8 @@ public struct TerraAsleepDurationData : Swift.Codable {
   public var duration_asleep_state_seconds: Swift.Double?
   public var num_REM_events: Swift.Int?
   public var duration_light_sleep_state_seconds: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraSleepDurationData : Swift.Codable {
   public var sleep_efficiency: Swift.Double?
@@ -578,13 +579,13 @@ public struct TerraSleepDurationData : Swift.Codable {
   public var other: TerraiOS.TerraOtherDurationData?
   public var asleep: TerraiOS.TerraAsleepDurationData?
   public var hypnogram_samples: [TerraiOS.HypnogramSample]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraTemperatureSleepData : Swift.Codable {
   public var delta: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraSleepData : Swift.Codable {
   public var metadata: TerraiOS.TerraSleepMetaData?
@@ -594,8 +595,8 @@ public struct TerraSleepData : Swift.Codable {
   public var heart_rate_data: TerraiOS.TerraHeartRateData?
   public var readiness_data: TerraiOS.TerraReadinessData?
   public var device_data: TerraiOS.TerraDeviceData?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public enum CustomPermissions : Swift.String, Swift.CaseIterable {
   case WORKOUT_TYPE
@@ -616,6 +617,7 @@ public enum CustomPermissions : Swift.String, Swift.CaseIterable {
   case GENDER
   case DATE_OF_BIRTH
   case BASAL_ENERGY_BURNED
+  case POWER
   case SWIMMING_SUMMARY
   case RESTING_HEART_RATE
   case BLOOD_PRESSURE
@@ -626,6 +628,7 @@ public enum CustomPermissions : Swift.String, Swift.CaseIterable {
   case LEAN_BODY_MASS
   case OXYGEN_SATURATION
   case SLEEP_ANALYSIS
+  case SPEED
   case RESPIRATORY_RATE
   case NUTRITION_SODIUM
   case NUTRITION_PROTEIN
@@ -877,14 +880,14 @@ public struct AuthenticateUserPayload : Swift.Codable {
   public var auth_url: Swift.String?
   public var user_id: Swift.String?
   public var message: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct DeauthenticateUserPayload : Swift.Codable {
   public var status: Swift.String?
   public var message: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 extension Swift.Optional {
   public var optional: Wrapped? {
@@ -1000,20 +1003,20 @@ public struct TerraMenstruationDetails : Swift.Codable {
   public var cycle_length_days: Swift.Double?
   public var last_updated_time: Swift.String?
   public var menstruation_flow: [TerraiOS.MenstruationFlowSample]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraMenstruationMetadata : Swift.Codable {
   public var start_time: Swift.String?
   public var end_time: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraMenstruationData : Swift.Codable {
   public var metadata: TerraiOS.TerraMenstruationMetadata?
   public var menstruation_data: TerraiOS.TerraMenstruationDetails?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public enum TerraActivityType : Swift.Int {
   case IN_VEHICLE
@@ -1187,8 +1190,8 @@ public struct TerraMacrosModel : Swift.Codable {
   public var calories: Swift.Double?
   public var alcohol_g: Swift.Double?
   public var net_carbohydrates_g: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraMicrosModel : Swift.Codable {
   public init(biotin_mg: Swift.Double? = nil, caffeine_mg: Swift.Double? = nil, chloride_mg: Swift.Double? = nil, chromium_mg: Swift.Double? = nil, copper_mg: Swift.Double? = nil, calcium_mg: Swift.Double? = nil, folate_mg: Swift.Double? = nil, folic_acid_mg: Swift.Double? = nil, iodine_mg: Swift.Double? = nil, iron_mg: Swift.Double? = nil, magnesium_mg: Swift.Double? = nil, manganese_mg: Swift.Double? = nil, molybdenum_mg: Swift.Double? = nil, niacin_mg: Swift.Double? = nil, pantothenic_acid_mg: Swift.Double? = nil, phosphorus_mg: Swift.Double? = nil, potassium_mg: Swift.Double? = nil, riboflavin_mg: Swift.Double? = nil, selenium_mg: Swift.Double? = nil, thiamin_mg: Swift.Double? = nil, vitamin_A_mg: Swift.Double? = nil, vitamin_B12_mg: Swift.Double? = nil, vitamin_B6_mg: Swift.Double? = nil, vitamin_C_mg: Swift.Double? = nil, vitamin_D_mg: Swift.Double? = nil, vitamin_E_mg: Swift.Double? = nil, vitamin_K_mg: Swift.Double? = nil, zinc_mg: Swift.Double? = nil, monounsaturated_fat_g: Swift.Double? = nil, polyunsaturated_fat_g: Swift.Double? = nil, vitamin_D3_mg: Swift.Double? = nil, vitamin_D2_mg: Swift.Double? = nil, starch_g: Swift.Double? = nil, omega3_g: Swift.Double? = nil, omega6_g: Swift.Double? = nil, cystine_g: Swift.Double? = nil, histidine_g: Swift.Double? = nil, isoleucine_g: Swift.Double? = nil, leucine_g: Swift.Double? = nil, lysine_g: Swift.Double? = nil, methionine_g: Swift.Double? = nil, phenylalanine_g: Swift.Double? = nil, threonine_g: Swift.Double? = nil, tryptophan_g: Swift.Double? = nil, tyrosine_g: Swift.Double? = nil, valine_g: Swift.Double? = nil)
@@ -1238,8 +1241,8 @@ public struct TerraMicrosModel : Swift.Codable {
   public var tryptophan_g: Swift.Double?
   public var tyrosine_g: Swift.Double?
   public var valine_g: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraQuantityModel : Swift.Codable {
   public init(unit: Swift.Int? = nil, amount: Swift.Double? = nil)
@@ -1248,8 +1251,8 @@ public struct TerraQuantityModel : Swift.Codable {
   public var terra_nutrition_unit: TerraiOS.TerraNutritionUnit? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraMealData : Swift.Codable {
   public init(quantity: TerraiOS.TerraQuantityModel? = .init(), name: Swift.String? = nil, macros: TerraiOS.TerraMacrosModel? = .init(), micros: TerraiOS.TerraMicrosModel? = .init())
@@ -1263,15 +1266,15 @@ public struct TerraMealData : Swift.Codable {
   public var terra_meal_type: TerraiOS.TerraMealType? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraNutritonMetaData : Swift.Codable {
   public init(start_time: Swift.String? = nil, end_time: Swift.String? = nil)
   public var start_time: Swift.String?
   public var end_time: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraNutritonSummary : Swift.Codable {
   public init(macros: TerraiOS.TerraMacrosModel? = .init(), micros: TerraiOS.TerraMicrosModel? = .init(), water_ml: Swift.Double? = nil, drink_ml: Swift.Double? = nil)
@@ -1279,8 +1282,8 @@ public struct TerraNutritonSummary : Swift.Codable {
   public var micros: TerraiOS.TerraMicrosModel?
   public var water_ml: Swift.Double?
   public var drink_ml: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraNutritionData : Swift.Codable {
   public init(meals: [TerraiOS.TerraMealData]? = [], summary: TerraiOS.TerraNutritonSummary? = .init(), metadata: TerraiOS.TerraNutritonMetaData? = .init(), drink_samples: [TerraiOS.DrinkSample]? = [])
@@ -1288,8 +1291,8 @@ public struct TerraNutritionData : Swift.Codable {
   public var drink_samples: [TerraiOS.DrinkSample]?
   public var summary: TerraiOS.TerraNutritonSummary?
   public var metadata: TerraiOS.TerraNutritonMetaData?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraUserModel : Swift.Codable {
   public var last_webhook_update: Swift.String?
@@ -1297,8 +1300,8 @@ public struct TerraUserModel : Swift.Codable {
   public var user_id: Swift.String?
   public var scopes: Swift.String?
   public var reference_id: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraBodyDataPayloadModel {
   public var user: TerraiOS.TerraUserModel?
@@ -1307,8 +1310,8 @@ public struct TerraBodyDataPayloadModel {
   public var reference: Swift.String?
   public var type: Swift.String?
   public var status: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraAthleteDataPayloadModel {
   public var user: TerraiOS.TerraUserModel?
@@ -1317,8 +1320,8 @@ public struct TerraAthleteDataPayloadModel {
   public var reference: Swift.String?
   public var type: Swift.String?
   public var status: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraActivityDataPayloadModel {
   public var user: TerraiOS.TerraUserModel?
@@ -1327,8 +1330,8 @@ public struct TerraActivityDataPayloadModel {
   public var reference: Swift.String?
   public var type: Swift.String?
   public var status: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraSleepDataPayloadModel {
   public var user: TerraiOS.TerraUserModel?
@@ -1337,8 +1340,8 @@ public struct TerraSleepDataPayloadModel {
   public var reference: Swift.String?
   public var type: Swift.String?
   public var status: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraDailyDataPayloadModel {
   public var user: TerraiOS.TerraUserModel?
@@ -1347,8 +1350,8 @@ public struct TerraDailyDataPayloadModel {
   public var reference: Swift.String?
   public var type: Swift.String?
   public var status: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraMenstruationDataPayloadModel {
   public var user: TerraiOS.TerraUserModel?
@@ -1357,8 +1360,8 @@ public struct TerraMenstruationDataPayloadModel {
   public var reference: Swift.String?
   public var type: Swift.String?
   public var status: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraNutritionDataPayloadModel {
   public var user: TerraiOS.TerraUserModel?
@@ -1367,8 +1370,8 @@ public struct TerraNutritionDataPayloadModel {
   public var reference: Swift.String?
   public var type: Swift.String?
   public var status: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public class TerraClient {
   public init(userId: Swift.String, devId: Swift.String, xAPIKey: Swift.String)
@@ -1398,8 +1401,8 @@ public struct TerraAuthResponse : Swift.Codable {
   public var user_id: Swift.String?
   public var reference_id: Swift.String?
   public var message: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 extension Foundation.Data {
   public func bitread(_ offset: Swift.Int, _ bitOffset: Swift.Int, _ bitCount: Swift.Int) -> Swift.Int
@@ -1417,8 +1420,8 @@ public struct TerraAthleteData : Swift.Codable {
   public var state: Swift.String?
   public var country: Swift.String?
   public var account_creation_date: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @_inheritsConvenienceInitializers @objc final public class Terra : ObjectiveC.NSObject {
   public static var updateHandler: ((TerraiOS.DataTypes, TerraiOS.Update) -> Swift.Void)?
@@ -1437,35 +1440,35 @@ public struct ActivityLevelSample : Swift.Codable {
   public var terra_activity_level: TerraiOS.TerraActivityLevel? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct BreathSample : Swift.Codable {
   public var timestamp: Swift.String?
   public var breaths_per_min: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct CadenceSample : Swift.Codable {
   public var timestamp: Swift.String?
   public var cadence_rpm: Swift.Double?
   public var timer_duration_seconds: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct SpeedSample : Swift.Codable {
   public var timestamp: Swift.String?
   public var speed_meters_per_seconds: Swift.Double?
   public var timer_duration_seconds: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct StepSample : Swift.Codable {
   public var timestamp: Swift.String?
   public var steps: Swift.Double?
   public var timer_duration_seconds: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct LapSample : Swift.Codable {
   public var start_time: Swift.String?
@@ -1479,22 +1482,22 @@ public struct LapSample : Swift.Codable {
   public var terra_stroke_type: TerraiOS.TerraStrokeType? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct DistanceSample : Swift.Codable {
   public var timestamp: Swift.String?
   public var distance_meters: Swift.Double?
   public var timer_duration_seconds: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct ElevationSample : Swift.Codable {
   public var timestamp: Swift.String?
   public var elev_meters: Swift.Double?
   public var timer_duration_seconds: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct GlucoseDataSample : Swift.Codable {
   public init(timestamp: Swift.String, blood_glucose_mg_per_dL: Swift.Double, glucose_level_flag: Swift.Int? = 0, trend_arrow: Swift.Int? = 0)
@@ -1508,28 +1511,28 @@ public struct GlucoseDataSample : Swift.Codable {
   public var terra_trend_arrow: TerraiOS.TerraTrendArrow? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct HeartRateSample : Swift.Codable {
   public init(timestamp: Swift.String, bpm: Swift.Double)
   public var timestamp: Swift.String?
   public var bpm: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct HeartRatesVariabilitySampleSDNN : Swift.Codable {
   public init(hrv_sdnn: Swift.Double, timestamp: Swift.String)
   public var hrv_sdnn: Swift.Double?
   public var timestamp: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct HeartRatesVariabilitySampleRMSSD : Swift.Codable {
   public var hrv_rmssd: Swift.Double?
   public var timestamp: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct HypnogramSample : Swift.Codable {
   public var level: Swift.Int?
@@ -1537,55 +1540,55 @@ public struct HypnogramSample : Swift.Codable {
   public var terra_sleep_level: TerraiOS.TerraSleepLevel? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct METSample : Swift.Codable {
   public var level: Swift.Double?
   public var timestamp: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct OxygenSaturationSample : Swift.Codable {
   public init(percentage: Swift.Double, timestamp: Swift.String)
   public var percentage: Swift.Double?
   public var timestamp: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct PositionSample : Swift.Codable {
   public var timestamp: Swift.String?
   public var coords_lat_lng_deg: [Swift.Double]?
   public var timer_duration_seconds: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct PowerSample : Swift.Codable {
   public var timestamp: Swift.String?
   public var watts: Swift.Double?
   public var timer_duration_seconds: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct SPO2Sample : Swift.Codable {
   public init(timestamp: Swift.String, percentage: Swift.Double, type: Swift.Int? = 0)
   public var timestamp: Swift.String?
   public var percentage: Swift.Double?
   public var type: Swift.Int?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct SnoringSample : Swift.Codable {
   public var duration_seconds: Swift.Double?
   public var timestamp: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct StressSample : Swift.Codable {
   public var level: Swift.Double?
   public var timestamp: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TSSSample : Swift.Codable {
   public var intensity_factor_planned: Swift.Double?
@@ -1594,8 +1597,8 @@ public struct TSSSample : Swift.Codable {
   public var planned: Swift.Double?
   public var actual: Swift.Double?
   public var normalized_power_watts: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct OtherDeviceData : Swift.Codable {
   public init(software_version: Swift.String? = nil, manufacturer: Swift.String? = nil, serial_number: Swift.String? = nil, name: Swift.String? = nil, hardware_version: Swift.String? = nil)
@@ -1604,16 +1607,16 @@ public struct OtherDeviceData : Swift.Codable {
   public var serial_number: Swift.String?
   public var name: Swift.String?
   public var hardware_version: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct BloodPressureSample : Swift.Codable {
   public init(timestamp: Swift.String? = nil, diastolic_bp: Swift.Double? = nil, systolic_bp: Swift.Double? = nil)
   public var timestamp: Swift.String?
   public var diastolic_bp: Swift.Double?
   public var systolic_bp: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct MeasurementDataSample : Swift.Codable {
   public init(measurement_time: Swift.String? = nil, bodyfat_percentage: Swift.Double? = nil, BMI: Swift.Double? = nil, muscle_mass_g: Swift.Double? = nil, skin_fold_mm: Swift.Double? = nil, BMR: Swift.Double? = nil, height_cm: Swift.Double? = nil, estimated_fitness_age: Swift.Double? = nil, bone_mass_g: Swift.Double? = nil, water_percentage: Swift.Double? = nil, RMR: Swift.Double? = nil, weight_kg: Swift.Double? = nil, lean_mass_g: Swift.Double? = nil, insulin_units: Swift.Double? = nil, insulin_type: Swift.String? = nil, urine_color: Swift.String? = nil)
@@ -1633,43 +1636,43 @@ public struct MeasurementDataSample : Swift.Codable {
   public var insulin_units: Swift.Double?
   public var insulin_type: Swift.String?
   public var urine_color: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TemperatureSample : Swift.Codable {
   public init(timestamp: Swift.String, temperature_celsius: Swift.Double)
   public var timestamp: Swift.String?
   public var temperature_celsius: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct HydrationLevelSample : Swift.Codable {
   public init(timestamp: Swift.String, hydration_level: Swift.Double)
   public var timestamp: Swift.String?
   public var hydration_level: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct HydrationMeasurementSample : Swift.Codable {
   public init(timestamp: Swift.String, hydration_kg: Swift.Double)
   public var timestamp: Swift.String?
   public var hydration_kg: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct Vo2Sample : Swift.Codable {
   public init(timestamp: Swift.String, vo2max_ml_per_min_per_kg: Swift.Double)
   public var timestamp: Swift.String?
   public var vo2max_ml_per_min_per_kg: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct PulseVelocitySample : Swift.Codable {
   public init(timestamp: Swift.String? = nil, pulse_wave_velocity_meters_per_second: Swift.Double? = nil)
   public var timestamp: Swift.String?
   public var pulse_wave_velocity_meters_per_second: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct AFibClassificationSample : Swift.Codable {
   public init(timestamp: Swift.String? = nil, afib_classification: Swift.Int? = nil)
@@ -1678,30 +1681,30 @@ public struct AFibClassificationSample : Swift.Codable {
   public var terra_afib_classification: TerraiOS.TerraAFibClassification? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct DrinkSample : Swift.Codable {
   public var drink_unit: Swift.String?
   public var drink_volume: Swift.String?
   public var drink_name: Swift.String?
   public var timestamp: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TorqueSample : Swift.Codable {
   public var timestamp: Swift.String?
   public var torque_newton_meters: Swift.Double?
   public var timer_duration_seconds: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct FloorsClimbedSample : Swift.Codable {
   public var timestamp: Swift.String?
   public var floors_climbed: Swift.Double?
   public var timer_duration_seconds: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct DailyPatternSample : Swift.Codable {
   public var time_from_midnight: Swift.Int?
@@ -1710,35 +1713,35 @@ public struct DailyPatternSample : Swift.Codable {
   public var percentile_50: Swift.Double?
   public var percentile_75: Swift.Double?
   public var percentile_95: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct RawECGSample : Swift.Codable {
   public var potential_uV: Swift.Double?
   public var timestamp: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct RRIntervalSample : Swift.Codable {
   public var timestamp: Swift.String?
   public var rr_interval_ms: Swift.Double?
   public var hr_bpm: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct KetoneDataSample : Swift.Codable {
   public var timestamp: Swift.String?
   public var ketone_mg_per_dL: Swift.Double?
   public var sample_type: Swift.Int?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraCalorieSample : Swift.Codable {
   public var timestamp: Swift.String?
   public var calories: Swift.Double?
   public var timer_duration_seconds: Swift.Double?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct MenstruationFlowSample : Swift.Codable {
   public var timestamp: Swift.String?
@@ -1746,8 +1749,8 @@ public struct MenstruationFlowSample : Swift.Codable {
   public var terra_menstrual_flow: TerraiOS.TerraMenstrualFlow? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public enum DataTypes : Swift.String {
   case STEPS
