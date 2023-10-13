@@ -100541,133 +100541,133 @@
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "BooleanLiteral",
-      "offset": 8285,
+      "offset": 8345,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "Array",
-      "offset": 8426,
+      "offset": 8486,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "Array",
-      "offset": 8430,
+      "offset": 8490,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "BooleanLiteral",
-      "offset": 9659,
+      "offset": 9719,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "Array",
-      "offset": 9839,
+      "offset": 9899,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "IntegerLiteral",
-      "offset": 9843,
+      "offset": 9903,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "IntegerLiteral",
-      "offset": 9926,
+      "offset": 9986,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "Array",
-      "offset": 9979,
+      "offset": 10039,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "IntegerLiteral",
-      "offset": 10094,
+      "offset": 10154,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "IntegerLiteral",
-      "offset": 10099,
+      "offset": 10159,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "IntegerLiteral",
-      "offset": 10137,
+      "offset": 10197,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "BooleanLiteral",
-      "offset": 11110,
+      "offset": 11170,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "Array",
-      "offset": 11290,
+      "offset": 11350,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "IntegerLiteral",
-      "offset": 12431,
+      "offset": 12491,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "BooleanLiteral",
-      "offset": 12534,
+      "offset": 12594,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "StringLiteral",
-      "offset": 12690,
+      "offset": 12750,
       "length": 36,
       "value": "\"No data retrieved: \""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "StringLiteral",
-      "offset": 12725,
+      "offset": 12785,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "Array",
-      "offset": 12759,
+      "offset": 12819,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "Array",
-      "offset": 12763,
+      "offset": 12823,
       "length": 2,
       "value": "[]"
     },
@@ -116144,140 +116144,140 @@
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetActivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 15660,
+      "offset": 15705,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetActivity.swift",
       "kind": "Array",
-      "offset": 15840,
+      "offset": 15885,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetActivity.swift",
       "kind": "Array",
-      "offset": 17016,
+      "offset": 17061,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetActivity.swift",
       "kind": "Array",
-      "offset": 17955,
+      "offset": 18000,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetActivity.swift",
       "kind": "IntegerLiteral",
-      "offset": 19519,
+      "offset": 19564,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetActivity.swift",
       "kind": "IntegerLiteral",
-      "offset": 19554,
+      "offset": 19599,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetActivity.swift",
       "kind": "IntegerLiteral",
-      "offset": 19587,
+      "offset": 19632,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetActivity.swift",
       "kind": "IntegerLiteral",
-      "offset": 19620,
+      "offset": 19665,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetActivity.swift",
       "kind": "IntegerLiteral",
-      "offset": 19659,
+      "offset": 19704,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetActivity.swift",
       "kind": "FloatLiteral",
-      "offset": 19896,
+      "offset": 19941,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetActivity.swift",
       "kind": "FloatLiteral",
-      "offset": 20041,
+      "offset": 20086,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetActivity.swift",
       "kind": "IntegerLiteral",
-      "offset": 20068,
+      "offset": 20113,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetActivity.swift",
       "kind": "IntegerLiteral",
-      "offset": 20096,
+      "offset": 20141,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetActivity.swift",
       "kind": "Array",
-      "offset": 20120,
+      "offset": 20165,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetActivity.swift",
       "kind": "Array",
-      "offset": 20380,
+      "offset": 20425,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetActivity.swift",
       "kind": "Array",
-      "offset": 20752,
+      "offset": 20797,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetActivity.swift",
       "kind": "Array",
-      "offset": 21126,
+      "offset": 21171,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetActivity.swift",
       "kind": "Array",
-      "offset": 21501,
+      "offset": 21546,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetActivity.swift",
       "kind": "Array",
-      "offset": 21881,
+      "offset": 21926,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/elliottyu\/Documents\/GitHub\/TerraiOS\/TerraiOS\/AppleHealth\/Get\/GetActivity.swift",
       "kind": "Array",
-      "offset": 22263,
+      "offset": 22308,
       "length": 2,
       "value": "[]"
     },
