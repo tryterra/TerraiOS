@@ -1026,18 +1026,18 @@ public struct StepsPlannedWorkoutStepDuration : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public enum PlannedWorkoutStepDuration : Swift.Codable {
-  case TimePlannedWorkoutStepDuration(TerraiOS.TimePlannedWorkoutStepDuration)
-  case PowerAbovePlannedWorkoutStepDuration(TerraiOS.PowerAbovePlannedWorkoutStepDuration)
-  case PowerBelowPlannedWorkoutStepDuration(TerraiOS.PowerBelowPlannedWorkoutStepDuration)
-  case FixedRestPlannedWorkoutStepDuration(TerraiOS.FixedRestPlannedWorkoutStepDuration)
-  case CaloriesPlannedWorkoutStepDuration(TerraiOS.CaloriesPlannedWorkoutStepDuration)
-  case HRAbovePlannedWorkoutStepDuration(TerraiOS.HRAbovePlannedWorkoutStepDuration)
-  case RepsPlannedWorkoutStepDuration(TerraiOS.RepsPlannedWorkoutStepDuration)
-  case HRBelowPlannedWorkoutStepDuration(TerraiOS.HRBelowPlannedWorkoutStepDuration)
-  case DistancePlannedWorkoutStepDuration(TerraiOS.DistancePlannedWorkoutStepDuration)
-  case StepsPlannedWorkoutStepDuration(TerraiOS.StepsPlannedWorkoutStepDuration)
-  public func encode(to encoder: any Swift.Encoder) throws
+  case Time(TerraiOS.TimePlannedWorkoutStepDuration)
+  case PowerAbove(TerraiOS.PowerAbovePlannedWorkoutStepDuration)
+  case PowerBelow(TerraiOS.PowerBelowPlannedWorkoutStepDuration)
+  case FixedRest(TerraiOS.FixedRestPlannedWorkoutStepDuration)
+  case Calories(TerraiOS.CaloriesPlannedWorkoutStepDuration)
+  case HRAbove(TerraiOS.HRAbovePlannedWorkoutStepDuration)
+  case Reps(TerraiOS.RepsPlannedWorkoutStepDuration)
+  case HRBelow(TerraiOS.HRBelowPlannedWorkoutStepDuration)
+  case Distance(TerraiOS.DistancePlannedWorkoutStepDuration)
+  case Steps(TerraiOS.StepsPlannedWorkoutStepDuration)
   public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct CadencePlannedWorkoutStepTarget : Swift.Codable {
   public init(target_type: TerraiOS.PlannedWorkoutStepTargetType = .CADENCE, cadence_high: Swift.Double? = nil, cadence_low: Swift.Double? = nil, cadence: Swift.Double? = nil)
@@ -1118,17 +1118,17 @@ public struct SwimStrokePlannedWorkoutStepTarget : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public enum PlannedWorkoutStepTarget : Swift.Codable {
-  case CadencePlannedWorkoutStepTarget(TerraiOS.CadencePlannedWorkoutStepTarget)
-  case HRPlannedWorkoutStepTarget(TerraiOS.HRPlannedWorkoutStepTarget)
-  case PowerPlannedWorkoutStepTarget(TerraiOS.PowerPlannedWorkoutStepTarget)
-  case SpeedPlannedWorkoutStepTarget(TerraiOS.SpeedPlannedWorkoutStepTarget)
-  case PacePlannedWorkoutStepTarget(TerraiOS.PacePlannedWorkoutStepTarget)
-  case TSSPlannedWorkoutStepTarget(TerraiOS.TSSPlannedWorkoutStepTarget)
-  case IFPlannedWorkoutStepTarget(TerraiOS.IFPlannedWorkoutStepTarget)
-  case RepetitionPlannedWorkoutStepTarget(TerraiOS.RepetitionPlannedWorkoutStepTarget)
-  case SwimStrokePlannedWorkoutStepTarget(TerraiOS.SwimStrokePlannedWorkoutStepTarget)
-  public func encode(to encoder: any Swift.Encoder) throws
+  case Cadence(TerraiOS.CadencePlannedWorkoutStepTarget)
+  case HR(TerraiOS.HRPlannedWorkoutStepTarget)
+  case Power(TerraiOS.PowerPlannedWorkoutStepTarget)
+  case Speed(TerraiOS.SpeedPlannedWorkoutStepTarget)
+  case Pace(TerraiOS.PacePlannedWorkoutStepTarget)
+  case TSS(TerraiOS.TSSPlannedWorkoutStepTarget)
+  case IF(TerraiOS.IFPlannedWorkoutStepTarget)
+  case Repetition(TerraiOS.RepetitionPlannedWorkoutStepTarget)
+  case SwimStroke(TerraiOS.SwimStrokePlannedWorkoutStepTarget)
   public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct PlannedWorkoutStep : Swift.Codable {
   public init(order: Swift.Int, type: TerraiOS.PlannedWorkoutStepType = .STEP, name: Swift.String? = nil, description: Swift.String? = nil, intensity: Swift.Int? = nil, durations: [TerraiOS.PlannedWorkoutStepDuration] = [], targets: [TerraiOS.PlannedWorkoutStepTarget] = [])
@@ -1156,10 +1156,10 @@ public struct PlannedWorkoutRepeatStep : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public enum PlannedWorkoutSteps : Swift.Codable {
-  case PlannedWorkoutRepeatStep(TerraiOS.PlannedWorkoutRepeatStep)
-  case PlannedWorkoutStep(TerraiOS.PlannedWorkoutStep)
-  public func encode(to encoder: any Swift.Encoder) throws
+  case PlannedWorkoutRepeatSteps(TerraiOS.PlannedWorkoutRepeatStep)
+  case PlannedWorkoutSteps(TerraiOS.PlannedWorkoutStep)
   public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct PlannedWorkoutMetaData : Swift.Codable {
   public init(id: Foundation.UUID, name: Swift.String, type: TerraiOS.TerraActivityType, description: Swift.String, estimated_duration_seconds: Swift.Int? = nil, estimated_distance_meters: Swift.Double? = nil, estimated_calories: Swift.Double? = nil, estimated_elevation_gain_meters: Swift.Double? = nil, estimated_energy_kj: Swift.Double? = nil, estimated_tss: Swift.Double? = nil, estimated_if: Swift.Double? = nil, estimated_speed_meters_per_second: Swift.Double? = nil, estimated_tscore: Swift.Double? = nil, estimated_pace_minutes_per_kilometer: Swift.Double? = nil, provider: Swift.String? = nil, created_date: Swift.String? = nil, planned_date: Swift.String, pool_length_meters: Swift.Int? = nil)
