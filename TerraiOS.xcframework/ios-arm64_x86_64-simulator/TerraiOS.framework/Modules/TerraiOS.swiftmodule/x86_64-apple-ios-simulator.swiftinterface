@@ -1476,6 +1476,7 @@ public enum TerraError : Swift.Int, Swift.Error {
   case PlannedWorkoutNotSupportedOnDevice
   case PermissionsDenied
   case InvalidPostWorkoutFormat
+  case PlannedWorkoutNotFound
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
