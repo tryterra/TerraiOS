@@ -12,6 +12,7 @@ import Swift
 import SwiftUI
 @_exported import TerraiOS
 import UIKit
+import WorkoutKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
@@ -67,6 +68,8 @@ extension TerraiOS.TerraManager {
 extension TerraiOS.TerraManager {
   final public func postNutrition(type: TerraiOS.Connections, payload: TerraiOS.TerraNutritionData, completion: @escaping (Swift.Bool) -> Swift.Void = { _ in })
   final public func postBody(type: TerraiOS.Connections, payload: TerraiOS.TerraBodyData, completion: @escaping (Swift.Bool) -> Swift.Void = { _ in })
+  @available(iOS 17, *)
+  final public func postPlannedWorkout(type: TerraiOS.Connections, payload: TerraiOS.TerraPlannedWorkout, completion: @escaping (Swift.Bool, TerraiOS.TerraError?) -> Swift.Void)
 }
 extension TerraiOS.TerraManager {
   final public func getAthlete(type: TerraiOS.Connections, toWebhook: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraAthleteDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
@@ -82,6 +85,12 @@ extension TerraiOS.TerraManager {
   final public func getNutrition(type: TerraiOS.Connections, startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraNutritionDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
   final public func getActivity(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraActivityDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
   final public func getActivity(type: TerraiOS.Connections, startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraActivityDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
+  @available(iOS 17, *)
+  final public func getPlannedWorkouts(type: TerraiOS.Connections, completion: @escaping ([TerraiOS.TerraPlannedWorkout], TerraiOS.TerraError?) -> Swift.Void)
+  @available(iOS 17, *)
+  final public func deletePlannedWorkout(type: TerraiOS.Connections, id: Foundation.UUID, completion: @escaping (Swift.Bool, TerraiOS.TerraError?) -> Swift.Void)
+  @available(iOS 17, *)
+  final public func markPlannedWorkoutComplete(type: TerraiOS.Connections, id: Foundation.UUID, at: Foundation.Date = Date(), completion: @escaping (Swift.Bool, TerraiOS.TerraError?) -> Swift.Void)
 }
 public struct TerraStressData : Swift.Codable {
   public var medium_stress_duration_seconds: Swift.Double?
@@ -851,20 +860,87 @@ public enum TerraMealType : Swift.Int {
     get
   }
 }
+public enum PlannedWorkoutStepDurationType : Swift.Int, Swift.Codable {
+  case TIME
+  case DISTANCE_METERS
+  case HR_LESS_THAN
+  case HR_GREATER_THAN
+  case CALORIES
+  case OPEN
+  case POWER_LESS_THAN
+  case POWER_GREATER_THAN
+  case REPETITION_TIME
+  case REPS
+  case FIXED_REST
+  case TIME_AT_VALID_CDA
+  case STEPS
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum PlannedWorkoutStepTargetType : Swift.Int, Swift.Codable {
+  case SPEED
+  case HEART_RATE
+  case OPEN
+  case CADENCE
+  case POWER
+  case GRADE
+  case RESISTANCE
+  case POWER_LAP
+  case SWIM_STROKE
+  case SPEED_LAP
+  case HEART_RATE_LAP
+  case PACE
+  case HEART_RATE_THRESHOLD_PERCENTAGE
+  case HEART_RATE_MAX_PERCENTAGE
+  case SPEED_PERCENTAGE
+  case POWER_PERCENTAGE
+  case REPETITION
+  case TSS
+  case IF
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum PlannedWorkoutStepType : Swift.Int, Swift.Codable {
+  case STEP
+  case REPEAT_STEP
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum HeartRateContext : Swift.Int, Swift.Codable {
+  case NOT_SET
+  case ACTIVE
+  case NOT_ACTIVE
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 @objc public enum Permissions : Swift.UInt, Swift.CaseIterable {
-  case ACTIVITY = 0b0000000000001
-  case BODY = 0b0000000000010
-  case DAILY = 0b0000000000100
-  case SLEEP = 0b0000000001000
-  case SAMPLES = 0b0000000010000
-  case NUTRITION = 0b0000000100000
-  case MENSTRUATION = 0b0000001000000
-  case ACTIVITY_WRITE = 0b0000010000000
-  case BODY_WRITE = 0b0000100000000
-  case DAILY_WRITE = 0b0001000000000
-  case SLEEP_WRITE = 0b0010000000000
-  case NUTRITION_WRITE = 0b0100000000000
-  case MENSTRUATION_WRITE = 0b1000000000000
+  case ACTIVITY = 0b000000000000001
+  case BODY = 0b000000000000010
+  case DAILY = 0b000000000000100
+  case SLEEP = 0b000000000001000
+  case SAMPLES = 0b000000000010000
+  case NUTRITION = 0b000000000100000
+  case MENSTRUATION = 0b000000001000000
+  case ACTIVITY_WRITE = 0b000000010000000
+  case BODY_WRITE = 0b000000100000000
+  case DAILY_WRITE = 0b000001000000000
+  case SLEEP_WRITE = 0b000010000000000
+  case NUTRITION_WRITE = 0b000100000000000
+  case MENSTRUATION_WRITE = 0b001000000000000
+  case PLANNED_WORKOUT = 0b010000000000000
+  case PLANNED_WORKOUT_WRITE = 0b100000000000000
   public init?(rawValue: Swift.UInt)
   public typealias AllCases = [TerraiOS.Permissions]
   public typealias RawValue = Swift.UInt
@@ -886,6 +962,242 @@ public struct AuthenticateUserPayload : Swift.Codable {
 public struct DeauthenticateUserPayload : Swift.Codable {
   public var status: Swift.String?
   public var message: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TimePlannedWorkoutStepDuration : Swift.Codable {
+  public init(duration_type: TerraiOS.PlannedWorkoutStepDurationType = .TIME, seconds: Swift.Int? = nil)
+  public var duration_type: TerraiOS.PlannedWorkoutStepDurationType
+  public var seconds: Swift.Int?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PowerAbovePlannedWorkoutStepDuration : Swift.Codable {
+  public init(duration_type: TerraiOS.PlannedWorkoutStepDurationType = .POWER_GREATER_THAN, power_above_watts: Swift.Double? = nil)
+  public var duration_type: TerraiOS.PlannedWorkoutStepDurationType
+  public var power_above_watts: Swift.Double?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PowerBelowPlannedWorkoutStepDuration : Swift.Codable {
+  public init(duration_type: TerraiOS.PlannedWorkoutStepDurationType = .POWER_LESS_THAN, power_below_watts: Swift.Double? = nil)
+  public var duration_type: TerraiOS.PlannedWorkoutStepDurationType
+  public var power_below_watts: Swift.Double?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct FixedRestPlannedWorkoutStepDuration : Swift.Codable {
+  public init(duration_type: TerraiOS.PlannedWorkoutStepDurationType = .FIXED_REST, rest_seconds: Swift.Int? = nil)
+  public var duration_type: TerraiOS.PlannedWorkoutStepDurationType
+  public var rest_seconds: Swift.Int?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct CaloriesPlannedWorkoutStepDuration : Swift.Codable {
+  public init(duration_type: TerraiOS.PlannedWorkoutStepDurationType = .CALORIES, calories: Swift.Double? = nil)
+  public var duration_type: TerraiOS.PlannedWorkoutStepDurationType
+  public var calories: Swift.Double?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct HRAbovePlannedWorkoutStepDuration : Swift.Codable {
+  public init(duration_type: TerraiOS.PlannedWorkoutStepDurationType = .HR_GREATER_THAN, hr_above_bpm: Swift.Int? = nil)
+  public var duration_type: TerraiOS.PlannedWorkoutStepDurationType
+  public var hr_above_bpm: Swift.Int?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RepsPlannedWorkoutStepDuration : Swift.Codable {
+  public init(duration_type: TerraiOS.PlannedWorkoutStepDurationType = .FIXED_REST, reps: Swift.Int? = nil)
+  public var duration_type: TerraiOS.PlannedWorkoutStepDurationType
+  public var reps: Swift.Int?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct HRBelowPlannedWorkoutStepDuration : Swift.Codable {
+  public init(duration_type: TerraiOS.PlannedWorkoutStepDurationType = .HR_LESS_THAN, hr_below_bpm: Swift.Int? = nil)
+  public var duration_type: TerraiOS.PlannedWorkoutStepDurationType
+  public var hr_below_bpm: Swift.Int?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct DistancePlannedWorkoutStepDuration : Swift.Codable {
+  public init(duration_type: TerraiOS.PlannedWorkoutStepDurationType = .DISTANCE_METERS, distance_meters: Swift.Double? = nil)
+  public var duration_type: TerraiOS.PlannedWorkoutStepDurationType
+  public var distance_meters: Swift.Double?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct StepsPlannedWorkoutStepDuration : Swift.Codable {
+  public init(duration_type: TerraiOS.PlannedWorkoutStepDurationType = .STEPS, steps: Swift.Int? = nil)
+  public var duration_type: TerraiOS.PlannedWorkoutStepDurationType
+  public var steps: Swift.Int?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum PlannedWorkoutStepDuration : Swift.Codable {
+  case Time(TerraiOS.TimePlannedWorkoutStepDuration)
+  case PowerAbove(TerraiOS.PowerAbovePlannedWorkoutStepDuration)
+  case PowerBelow(TerraiOS.PowerBelowPlannedWorkoutStepDuration)
+  case FixedRest(TerraiOS.FixedRestPlannedWorkoutStepDuration)
+  case Calories(TerraiOS.CaloriesPlannedWorkoutStepDuration)
+  case HRAbove(TerraiOS.HRAbovePlannedWorkoutStepDuration)
+  case Reps(TerraiOS.RepsPlannedWorkoutStepDuration)
+  case HRBelow(TerraiOS.HRBelowPlannedWorkoutStepDuration)
+  case Distance(TerraiOS.DistancePlannedWorkoutStepDuration)
+  case Steps(TerraiOS.StepsPlannedWorkoutStepDuration)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct CadencePlannedWorkoutStepTarget : Swift.Codable {
+  public init(target_type: TerraiOS.PlannedWorkoutStepTargetType = .CADENCE, cadence_high: Swift.Double? = nil, cadence_low: Swift.Double? = nil, cadence: Swift.Double? = nil)
+  public var target_type: TerraiOS.PlannedWorkoutStepTargetType
+  public var cadence_high: Swift.Double?
+  public var cadence_low: Swift.Double?
+  public var cadence: Swift.Double?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct HRPlannedWorkoutStepTarget : Swift.Codable {
+  public init(target_type: TerraiOS.PlannedWorkoutStepTargetType = .HEART_RATE, hr_bpm_high: Swift.Int? = nil, hr_bpm_low: Swift.Int? = nil, hr_percentage: Swift.Double? = nil, hr_percentage_low: Swift.Double? = nil, hr_percentage_high: Swift.Double? = nil)
+  public var target_type: TerraiOS.PlannedWorkoutStepTargetType
+  public var hr_bpm_high: Swift.Int?
+  public var hr_bpm_low: Swift.Int?
+  public var hr_percentage: Swift.Double?
+  public var hr_percentage_low: Swift.Double?
+  public var hr_percentage_high: Swift.Double?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PowerPlannedWorkoutStepTarget : Swift.Codable {
+  public init(target_type: TerraiOS.PlannedWorkoutStepTargetType = .POWER, power_watt_high: Swift.Double? = nil, power_watt_low: Swift.Double? = nil, power_watt: Swift.Double? = nil, power_percentage: Swift.Double? = nil, power_percentage_low: Swift.Double? = nil, power_percentage_high: Swift.Double? = nil)
+  public var target_type: TerraiOS.PlannedWorkoutStepTargetType
+  public var power_watt_high: Swift.Double?
+  public var power_watt_low: Swift.Double?
+  public var power_watt: Swift.Double?
+  public var power_percentage: Swift.Double?
+  public var power_percentage_low: Swift.Double?
+  public var power_percentage_high: Swift.Double?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SpeedPlannedWorkoutStepTarget : Swift.Codable {
+  public init(target_type: TerraiOS.PlannedWorkoutStepTargetType = .SPEED, speed_meters_per_second: Swift.Double? = nil, speed_percentage: Swift.Double? = nil, speed_percentage_low: Swift.Double? = nil, speed_percentage_high: Swift.Double? = nil)
+  public var target_type: TerraiOS.PlannedWorkoutStepTargetType
+  public var speed_meters_per_second: Swift.Double?
+  public var speed_percentage: Swift.Double?
+  public var speed_percentage_low: Swift.Double?
+  public var speed_percentage_high: Swift.Double?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PacePlannedWorkoutStepTarget : Swift.Codable {
+  public init(target_type: TerraiOS.PlannedWorkoutStepTargetType = .PACE, pace_minutes_per_kilometer: Swift.Double? = nil)
+  public var target_type: TerraiOS.PlannedWorkoutStepTargetType
+  public var pace_minutes_per_kilometer: Swift.Double?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TSSPlannedWorkoutStepTarget : Swift.Codable {
+  public init(target_type: TerraiOS.PlannedWorkoutStepTargetType = .TSS, tss: Swift.Double? = nil)
+  public var target_type: TerraiOS.PlannedWorkoutStepTargetType
+  public var tss: Swift.Double?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct IFPlannedWorkoutStepTarget : Swift.Codable {
+  public init(target_type: TerraiOS.PlannedWorkoutStepTargetType = .IF, if_high: Swift.Double? = nil, if_low: Swift.Double? = nil)
+  public var target_type: TerraiOS.PlannedWorkoutStepTargetType
+  public var if_high: Swift.Double?
+  public var if_low: Swift.Double?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RepetitionPlannedWorkoutStepTarget : Swift.Codable {
+  public init(target_type: TerraiOS.PlannedWorkoutStepTargetType = .REPETITION, repititions: Swift.Int? = nil)
+  public var target_type: TerraiOS.PlannedWorkoutStepTargetType
+  public var repititions: Swift.Int?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SwimStrokePlannedWorkoutStepTarget : Swift.Codable {
+  public init(target_type: TerraiOS.PlannedWorkoutStepTargetType = .SWIM_STROKE, swim_strokes: Swift.Int? = nil)
+  public var target_type: TerraiOS.PlannedWorkoutStepTargetType
+  public var swim_strokes: Swift.Int?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum PlannedWorkoutStepTarget : Swift.Codable {
+  case Cadence(TerraiOS.CadencePlannedWorkoutStepTarget)
+  case HR(TerraiOS.HRPlannedWorkoutStepTarget)
+  case Power(TerraiOS.PowerPlannedWorkoutStepTarget)
+  case Speed(TerraiOS.SpeedPlannedWorkoutStepTarget)
+  case Pace(TerraiOS.PacePlannedWorkoutStepTarget)
+  case TSS(TerraiOS.TSSPlannedWorkoutStepTarget)
+  case IF(TerraiOS.IFPlannedWorkoutStepTarget)
+  case Repetition(TerraiOS.RepetitionPlannedWorkoutStepTarget)
+  case SwimStroke(TerraiOS.SwimStrokePlannedWorkoutStepTarget)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct PlannedWorkoutStep : Swift.Codable {
+  public init(order: Swift.Int, type: TerraiOS.PlannedWorkoutStepType = .STEP, name: Swift.String? = nil, description: Swift.String? = nil, intensity: Swift.Int? = nil, durations: [TerraiOS.PlannedWorkoutStepDuration] = [], targets: [TerraiOS.PlannedWorkoutStepTarget] = [])
+  public var order: Swift.Int
+  public var type: TerraiOS.PlannedWorkoutStepType
+  public var name: Swift.String?
+  public var description: Swift.String?
+  public var intensity: Swift.Int?
+  public var durations: [TerraiOS.PlannedWorkoutStepDuration]
+  public var targets: [TerraiOS.PlannedWorkoutStepTarget]
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PlannedWorkoutRepeatStep : Swift.Codable {
+  public init(order: Swift.Int, type: TerraiOS.PlannedWorkoutStepType = .REPEAT_STEP, name: Swift.String? = nil, description: Swift.String? = nil, intensity: Swift.Int? = nil, durations: [TerraiOS.PlannedWorkoutStepDuration] = [], targets: [TerraiOS.PlannedWorkoutStepTarget] = [], steps: [TerraiOS.PlannedWorkoutStep] = [])
+  public var order: Swift.Int
+  public var type: TerraiOS.PlannedWorkoutStepType
+  public var name: Swift.String?
+  public var description: Swift.String?
+  public var intensity: Swift.Int?
+  public var durations: [TerraiOS.PlannedWorkoutStepDuration]
+  public var targets: [TerraiOS.PlannedWorkoutStepTarget]
+  public var steps: [TerraiOS.PlannedWorkoutStep]
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum PlannedWorkoutSteps : Swift.Codable {
+  case PlannedWorkoutRepeatSteps(TerraiOS.PlannedWorkoutRepeatStep)
+  case PlannedWorkoutSteps(TerraiOS.PlannedWorkoutStep)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct PlannedWorkoutMetaData : Swift.Codable {
+  public init(id: Foundation.UUID, name: Swift.String, type: TerraiOS.TerraActivityType, description: Swift.String, estimated_duration_seconds: Swift.Int? = nil, estimated_distance_meters: Swift.Double? = nil, estimated_calories: Swift.Double? = nil, estimated_elevation_gain_meters: Swift.Double? = nil, estimated_energy_kj: Swift.Double? = nil, estimated_tss: Swift.Double? = nil, estimated_if: Swift.Double? = nil, estimated_speed_meters_per_second: Swift.Double? = nil, estimated_tscore: Swift.Double? = nil, estimated_pace_minutes_per_kilometer: Swift.Double? = nil, provider: Swift.String? = nil, created_date: Swift.String? = nil, planned_date: Swift.String, pool_length_meters: Swift.Int? = nil)
+  public var id: Foundation.UUID
+  public var name: Swift.String
+  public var type: TerraiOS.TerraActivityType
+  public var description: Swift.String
+  public var estimated_duration_seconds: Swift.Int?
+  public var estimated_distance_meters: Swift.Double?
+  public var estimated_calories: Swift.Double?
+  public var estimated_elevation_gain_meters: Swift.Double?
+  public var estimated_energy_kj: Swift.Double?
+  public var estimated_tss: Swift.Double?
+  public var estimated_if: Swift.Double?
+  public var estimated_speed_meters_per_second: Swift.Double?
+  public var estimated_tscore: Swift.Double?
+  public var estimated_pace_minutes_per_kilometer: Swift.Double?
+  public var provider: Swift.String?
+  public var created_date: Swift.String
+  public var planned_date: Swift.String
+  public var pool_length_meters: Swift.Int?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TerraPlannedWorkout : Swift.Codable {
+  public init(steps: [TerraiOS.PlannedWorkoutSteps] = [], metadata: TerraiOS.PlannedWorkoutMetaData)
+  public var steps: [TerraiOS.PlannedWorkoutSteps]
+  public var metadata: TerraiOS.PlannedWorkoutMetaData
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -1018,7 +1330,7 @@ public struct TerraMenstruationData : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public enum TerraActivityType : Swift.Int {
+public enum TerraActivityType : Swift.Int, Swift.Codable {
   case IN_VEHICLE
   case BIKING
   case STILL
@@ -1170,6 +1482,11 @@ public enum TerraError : Swift.Int, Swift.Error {
   case InvalidToken
   case HealthKitAuthorizationError
   case UnsupportedResource
+  case InvalidDateFormat
+  case PlannedWorkoutNotSupportedOnDevice
+  case PermissionsDenied
+  case InvalidPostWorkoutFormat
+  case PlannedWorkoutNotFound
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -1515,9 +1832,10 @@ public struct GlucoseDataSample : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct HeartRateSample : Swift.Codable {
-  public init(timestamp: Swift.String, bpm: Swift.Double)
+  public init(timestamp: Swift.String, bpm: Swift.Double, context: Swift.Int)
   public var timestamp: Swift.String?
   public var bpm: Swift.Double?
+  public var context: Swift.Int
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -1810,6 +2128,18 @@ extension TerraiOS.TerraMenstrualFlow : Swift.RawRepresentable {}
 extension TerraiOS.TerraMealType : Swift.Equatable {}
 extension TerraiOS.TerraMealType : Swift.Hashable {}
 extension TerraiOS.TerraMealType : Swift.RawRepresentable {}
+extension TerraiOS.PlannedWorkoutStepDurationType : Swift.Equatable {}
+extension TerraiOS.PlannedWorkoutStepDurationType : Swift.Hashable {}
+extension TerraiOS.PlannedWorkoutStepDurationType : Swift.RawRepresentable {}
+extension TerraiOS.PlannedWorkoutStepTargetType : Swift.Equatable {}
+extension TerraiOS.PlannedWorkoutStepTargetType : Swift.Hashable {}
+extension TerraiOS.PlannedWorkoutStepTargetType : Swift.RawRepresentable {}
+extension TerraiOS.PlannedWorkoutStepType : Swift.Equatable {}
+extension TerraiOS.PlannedWorkoutStepType : Swift.Hashable {}
+extension TerraiOS.PlannedWorkoutStepType : Swift.RawRepresentable {}
+extension TerraiOS.HeartRateContext : Swift.Equatable {}
+extension TerraiOS.HeartRateContext : Swift.Hashable {}
+extension TerraiOS.HeartRateContext : Swift.RawRepresentable {}
 extension TerraiOS.Permissions : Swift.Equatable {}
 extension TerraiOS.Permissions : Swift.Hashable {}
 extension TerraiOS.Permissions : Swift.RawRepresentable {}
