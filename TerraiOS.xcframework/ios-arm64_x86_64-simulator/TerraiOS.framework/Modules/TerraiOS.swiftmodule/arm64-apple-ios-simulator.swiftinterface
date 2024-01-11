@@ -1493,6 +1493,14 @@ public enum TerraError : Swift.Int, Swift.Error {
     get
   }
 }
+extension TerraiOS.TerraError : Swift.CustomStringConvertible, Foundation.LocalizedError {
+  public var description: Swift.String {
+    get
+  }
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
 public struct TerraMacrosModel : Swift.Codable {
   public init(sodium_mg: Swift.Double? = nil, protein_g: Swift.Double? = nil, carbohydrates_g: Swift.Double? = nil, fiber_g: Swift.Double? = nil, cholesterol_mg: Swift.Double? = nil, fat_g: Swift.Double? = nil, saturated_fat_g: Swift.Double? = nil, trans_fat_g: Swift.Double? = nil, sugar_g: Swift.Double? = nil, calories: Swift.Double? = nil, alcohol_g: Swift.Double? = nil, net_carbohydrates_g: Swift.Double? = nil)
   public var sodium_mg: Swift.Double?
