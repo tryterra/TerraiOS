@@ -1754,6 +1754,7 @@ public struct TerraAthleteData : Swift.Codable {
   public static func disconnectTerra(devId: Swift.String, xAPIKey: Swift.String, userId: Swift.String)
   public static func checkAuthentication(connection: TerraiOS.Connections, devId: Swift.String, completion: @escaping (Swift.Bool) -> Swift.Void)
   @objc public static func setUpBackgroundDelivery()
+  @objc public static func setIgnoredSources(_ ignored: [Swift.String])
   @objc public static func setUpBackgroundDeliveryWithoutBGTasks()
   @objc public static func overwriteLogLevel(_ level: Swift.String)
   @objc override dynamic public init()

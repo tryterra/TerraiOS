@@ -277,6 +277,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import Foundation;
 @import ObjectiveC;
 #endif
 
@@ -327,6 +328,7 @@ SWIFT_CLASS("_TtC8TerraiOS5Terra")
 /// Starts background delivery of Apple Health data.
 /// Must be run in the AppDelegate <code>didFinishLaunchingWithOptions</code>.
 + (void)setUpBackgroundDelivery;
++ (void)setIgnoredSources:(NSArray<NSString *> * _Nonnull)ignored;
 /// Please use <code>setUpBackgroundDelivery</code> instead.
 + (void)setUpBackgroundDeliveryWithoutBGTasks;
 + (void)overwriteLogLevel:(NSString * _Nonnull)level;
