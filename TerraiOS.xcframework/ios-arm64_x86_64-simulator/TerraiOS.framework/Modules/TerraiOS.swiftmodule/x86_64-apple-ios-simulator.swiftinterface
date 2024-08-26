@@ -599,7 +599,7 @@ public struct TerraTemperatureSleepData : Swift.Codable {
 public struct TerraSleepData : Swift.Codable {
   public var metadata: TerraiOS.TerraSleepMetaData?
   public var sleep_durations_data: TerraiOS.TerraSleepDurationData?
-  public var temperature_data: TerraiOS.TerraTemperatureData?
+  public var temperature_data: TerraiOS.TerraTemperatureSleepData?
   public var respiration_data: TerraiOS.TerraRespirationData?
   public var heart_rate_data: TerraiOS.TerraHeartRateData?
   public var readiness_data: TerraiOS.TerraReadinessData?
