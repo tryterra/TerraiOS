@@ -4,7 +4,6 @@
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import BackgroundTasks
 import Combine
-import CoreLocation
 import CoreNFC
 import Foundation
 import HealthKit
@@ -68,6 +67,8 @@ extension TerraiOS.TerraManager {
 extension TerraiOS.TerraManager {
   final public func postNutrition(type: TerraiOS.Connections, payload: TerraiOS.TerraNutritionData, completion: @escaping (Swift.Bool) -> Swift.Void = { _ in })
   final public func postBody(type: TerraiOS.Connections, payload: TerraiOS.TerraBodyData, completion: @escaping (Swift.Bool) -> Swift.Void = { _ in })
+  @available(iOS 14, *)
+  final public func postActivity(type: TerraiOS.Connections, payload: TerraiOS.TerraActivityData, completion: @escaping (Swift.Bool, TerraiOS.TerraError?) -> Swift.Void = { _,_  in })
   @available(iOS 17, *)
   final public func postPlannedWorkout(type: TerraiOS.Connections, payload: TerraiOS.TerraPlannedWorkout, completion: @escaping (Swift.Bool, TerraiOS.TerraError?) -> Swift.Void)
 }
@@ -208,6 +209,7 @@ public struct TerraDailyDistanceData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraCaloriesData : Swift.Codable {
+  public init(net_intake_calories: Swift.Double? = nil, net_activity_calories: Swift.Double? = nil, BMR_calories: Swift.Double? = nil, total_burned_calories: Swift.Double? = nil, calorie_samples: [TerraiOS.TerraCalorieSample]? = nil)
   public var net_intake_calories: Swift.Double?
   public var net_activity_calories: Swift.Double?
   public var BMR_calories: Swift.Double?
@@ -348,22 +350,26 @@ public struct TerraBodyData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraEnergyData : Swift.Codable {
+  public init(energy_kilojoules: Swift.Double? = nil, energy_planned_kilojoules: Swift.Double? = nil)
   public var energy_kilojoules: Swift.Double?
   public var energy_planned_kilojoules: Swift.Double?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraLapData : Swift.Codable {
+  public init(laps: [TerraiOS.LapSample]? = nil)
   public var laps: [TerraiOS.LapSample]?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraStrainData : Swift.Codable {
+  public init(strain_level: Swift.Double? = nil)
   public var strain_level: Swift.Double?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraPowerData : Swift.Codable {
+  public init(avg_watts: Swift.Double? = nil, power_samples: [TerraiOS.PowerSample]? = nil, max_watts: Swift.Double? = nil)
   public var avg_watts: Swift.Double?
   public var power_samples: [TerraiOS.PowerSample]?
   public var max_watts: Swift.Double?
@@ -371,11 +377,13 @@ public struct TerraPowerData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraPolyLineMapData : Swift.Codable {
+  public init(summary_polyline: Swift.String? = nil)
   public var summary_polyline: Swift.String?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraMovementData : Swift.Codable {
+  public init(normalized_speed_meters_per_second: Swift.Double? = nil, avg_torque_newton_meters: Swift.Double? = nil, avg_pace_minutes_per_kilometer: Swift.Double? = nil, max_pace_minutes_per_kilometer: Swift.Double? = nil, max_speed_meters_per_second: Swift.Double? = nil, avg_cadence_rpm: Swift.Double? = nil, max_cadence_rpm: Swift.Double? = nil, avg_velocity_meters_per_second: Swift.Double? = nil, max_torque_newton_meters: Swift.Double? = nil, avg_speed_meters_per_second: Swift.Double? = nil, max_velocity_meters_per_second: Swift.Double? = nil, cadence_samples: [TerraiOS.CadenceSample]? = nil, speed_samples: [TerraiOS.SpeedSample]? = nil, adjusted_max_speed_meters_per_second: Swift.Double? = nil, torque_samples: [TerraiOS.TorqueSample]? = nil)
   public var normalized_speed_meters_per_second: Swift.Double?
   public var avg_torque_newton_meters: Swift.Double?
   public var avg_pace_minutes_per_kilometer: Swift.Double?
@@ -395,6 +403,7 @@ public struct TerraMovementData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraActivityMetaData : Swift.Codable {
+  public init(city: Swift.String? = nil, type: Swift.Int? = nil, end_time: Swift.String? = nil, start_time: Swift.String? = nil, country: Swift.String? = nil, name: Swift.String? = nil, summary_id: Swift.String? = nil, upload_type: Swift.Int? = nil, state: Swift.String? = nil)
   public var city: Swift.String?
   public var type: Swift.Int?
   public var end_time: Swift.String?
@@ -414,16 +423,19 @@ public struct TerraActivityMetaData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraTSSData : Swift.Codable {
+  public init(TSS_samples: [TerraiOS.TSSSample]? = nil)
   public var TSS_samples: [TerraiOS.TSSSample]?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraWorkData : Swift.Codable {
+  public init(work_kilojoules: Swift.Double? = nil)
   public var work_kilojoules: Swift.Double?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraDistanceDetailedData : Swift.Codable {
+  public init(step_samples: [TerraiOS.StepSample]? = nil, elevation_samples: [TerraiOS.ElevationSample]? = nil, distance_samples: [TerraiOS.DistanceSample]? = nil, floors_climbed_samples: [TerraiOS.FloorsClimbedSample]? = nil)
   public var step_samples: [TerraiOS.StepSample]?
   public var elevation_samples: [TerraiOS.ElevationSample]?
   public var distance_samples: [TerraiOS.DistanceSample]?
@@ -432,6 +444,7 @@ public struct TerraDistanceDetailedData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraDistanceSummaryData : Swift.Codable {
+  public init(floors_climbed: Swift.Double? = nil, steps: Swift.Double? = nil, distance_meters: Swift.Double? = nil, swimming: TerraiOS.TerraSwimmingData? = nil, elevation: TerraiOS.TerraElevationData? = nil)
   public var floors_climbed: Swift.Double?
   public var steps: Swift.Double?
   public var distance_meters: Swift.Double?
@@ -441,12 +454,14 @@ public struct TerraDistanceSummaryData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraActivityDistanceData : Swift.Codable {
+  public init(detailed: TerraiOS.TerraDistanceDetailedData? = nil, summary: TerraiOS.TerraDistanceSummaryData? = nil)
   public var detailed: TerraiOS.TerraDistanceDetailedData?
   public var summary: TerraiOS.TerraDistanceSummaryData?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraPositionData : Swift.Codable {
+  public init(start_pos_lat_lng_deg: [Swift.Double?]? = nil, position_samples: [TerraiOS.PositionSample]? = nil, center_pos_lat_lng_deg: [Swift.Double?]? = nil, end_pos_lat_lng_deg: [Swift.Double?]? = nil)
   public var start_pos_lat_lng_deg: [Swift.Double?]?
   public var position_samples: [TerraiOS.PositionSample]?
   public var center_pos_lat_lng_deg: [Swift.Double?]?
@@ -455,6 +470,7 @@ public struct TerraPositionData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraHeartRateZoneData : Swift.Codable {
+  public init(zone: Swift.Int? = nil, start_percentage: Swift.Double? = nil, end_percentage: Swift.Double? = nil, name: Swift.String? = nil, duration_seconds: Swift.Double? = nil)
   public var zone: Swift.Int?
   public var start_percentage: Swift.Double?
   public var end_percentage: Swift.Double?
@@ -467,6 +483,7 @@ public struct TerraHeartRateZoneData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraActivityData : Swift.Codable {
+  public init(energy_data: TerraiOS.TerraEnergyData? = nil, oxygen_data: TerraiOS.TerraOxygenData? = nil, MET_data: TerraiOS.TerraMETData? = nil, strain_data: TerraiOS.TerraStrainData? = nil, power_data: TerraiOS.TerraPowerData? = nil, polyline_map_data: TerraiOS.TerraPolyLineMapData? = nil, heart_rate_data: TerraiOS.TerraHeartRateData? = nil, active_durations_data: TerraiOS.TerraActiveDurationsData? = nil, lap_data: TerraiOS.TerraLapData? = nil, movement_data: TerraiOS.TerraMovementData? = nil, metadata: TerraiOS.TerraActivityMetaData? = nil, TSS_data: TerraiOS.TerraTSSData? = nil, device_data: TerraiOS.TerraDeviceData? = nil, work_data: TerraiOS.TerraWorkData? = nil, distance_data: TerraiOS.TerraActivityDistanceData? = nil, calories_data: TerraiOS.TerraCaloriesData? = nil, position_data: TerraiOS.TerraPositionData? = nil, cheat_detection: Swift.Double? = nil)
   public var energy_data: TerraiOS.TerraEnergyData?
   public var oxygen_data: TerraiOS.TerraOxygenData?
   public var MET_data: TerraiOS.TerraMETData?
@@ -1487,6 +1504,11 @@ public enum TerraError : Swift.Int, Swift.Error {
   case PermissionsDenied
   case InvalidPostWorkoutFormat
   case PlannedWorkoutNotFound
+  case StartTimeCannotBeNil
+  case EndTimeCannotBeNil
+  case SamplesDateOutOfRange
+  case InvalidDevice
+  case StartDateMustPrecedeEndDate
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
