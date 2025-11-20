@@ -1319,6 +1319,7 @@ extension Foundation.Date {
 extension Foundation.Date : Swift.Strideable {
   public func distance(to other: Foundation.Date) -> Foundation.TimeInterval
   public func advanced(by n: Foundation.TimeInterval) -> Foundation.Date
+  public func advanced(byDates n: Swift.Int) -> Foundation.Date
 }
 public struct TerraMenstruationDetails : Swift.Codable {
   public var period_start_date: Swift.String?
