@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
-// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TerraiOS
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name TerraiOS
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import BackgroundTasks
 import Combine
 import CoreNFC
@@ -667,12 +667,15 @@ public enum CustomPermissions : Swift.String, Swift.CaseIterable {
   case NUTRITION_CALORIES
   case NUTRITION_WATER
   case NUTRITION_CHOLESTEROL
+  case SYMPTOM_COUGHING
+  case SYMPTOM_FEVER
+  case SYMPTOM_SORE_THROAT
   case MENSTRUATION
   case ELECTROCARDIOGRAM
   public init?(rawValue: Swift.String)
   public typealias AllCases = [TerraiOS.CustomPermissions]
   public typealias RawValue = Swift.String
-  public static var allCases: [TerraiOS.CustomPermissions] {
+  nonisolated public static var allCases: [TerraiOS.CustomPermissions] {
     get
   }
   public var rawValue: Swift.String {
@@ -961,7 +964,7 @@ public enum HeartRateContext : Swift.Int, Swift.Codable {
   public init?(rawValue: Swift.UInt)
   public typealias AllCases = [TerraiOS.Permissions]
   public typealias RawValue = Swift.UInt
-  public static var allCases: [TerraiOS.Permissions] {
+  nonisolated public static var allCases: [TerraiOS.Permissions] {
     get
   }
   public var rawValue: Swift.UInt {
