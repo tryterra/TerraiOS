@@ -72,6 +72,9 @@ extension TerraiOS.TerraManager {
   final public func getUserId(type: TerraiOS.Connections) -> Swift.String?
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
+  final public func requestHealthKitPermissions(customReadTypes: Swift.Set<TerraiOS.CustomPermissions> = [], completion: @escaping (Swift.Bool, TerraiOS.TerraError?) -> Swift.Void = { _, _ in })
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func subscribe(forDataTypes dataTypes: Swift.Set<TerraiOS.DataTypes>, completion: @escaping (Swift.Bool, TerraiOS.TerraError?) -> Swift.Void)
   #endif
 }
@@ -2047,7 +2050,7 @@ public struct TerraAthleteData : Swift.Codable {
   public static var environment: TerraiOS.TerraEnvironment
   public static var updateHandler: ((TerraiOS.DataTypes, TerraiOS.Update) -> Swift.Void)?
   #if compiler(>=5.3) && $NonescapableTypes
-  public static func instance(devId: Swift.String, referenceId: Swift.String?, completion: @escaping (TerraiOS.TerraManager?, TerraiOS.TerraError?) -> Swift.Void)
+  public static func instance(devId: Swift.String, referenceId: Swift.String?, requestPermissions: Swift.Bool = true, completion: @escaping (TerraiOS.TerraManager?, TerraiOS.TerraError?) -> Swift.Void)
   #endif
   public static func disconnectTerra(devId: Swift.String, xAPIKey: Swift.String, userId: Swift.String)
   public static func checkAuthentication(connection: TerraiOS.Connections, devId: Swift.String, completion: @escaping (Swift.Bool) -> Swift.Void)
