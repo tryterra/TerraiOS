@@ -61,7 +61,7 @@ public struct TerraData : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-@_hasMissingDesignatedInitializers @objc final public class TerraManager : ObjectiveC.NSObject {
+@_hasMissingDesignatedInitializers @objc final public class TerraManager : ObjectiveC.NSObject, @unchecked Swift.Sendable {
   @objc deinit
 }
 extension TerraiOS.TerraManager {
@@ -80,9 +80,11 @@ extension TerraiOS.TerraManager {
 }
 extension TerraiOS.TerraManager {
   #if compiler(>=5.3) && $NonescapableTypes
+  @available(*, deprecated, message: "This method is deprecated and will be removed in a future release.")
   final public func readGlucoseData(completion: @escaping (TerraiOS.FSLSensorDetails?) -> Swift.Void = { _ in })
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
+  @available(*, deprecated, message: "This method is deprecated and will be removed in a future release.")
   final public func activateSensor(completion: @escaping (TerraiOS.FSLSensorDetails?) -> Swift.Void = { _ in })
   #endif
 }
@@ -95,6 +97,7 @@ extension TerraiOS.TerraManager {
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS 17, *)
+  @available(*, deprecated, message: "This method is deprecated and will be removed in a future release.")
   final public func postPlannedWorkout(type: TerraiOS.Connections, payload: TerraiOS.TerraPlannedWorkout, completion: @escaping (Swift.Bool, TerraiOS.TerraError?) -> Swift.Void)
   #endif
 }
@@ -140,16 +143,32 @@ extension TerraiOS.TerraManager {
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS 17, *)
+  @available(*, deprecated, message: "This method is deprecated and will be removed in a future release.")
   final public func getPlannedWorkouts(type: TerraiOS.Connections, completion: @escaping ([TerraiOS.TerraPlannedWorkout], TerraiOS.TerraError?) -> Swift.Void)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS 17, *)
+  @available(*, deprecated, message: "This method is deprecated and will be removed in a future release.")
   final public func deletePlannedWorkout(type: TerraiOS.Connections, id: Foundation.UUID, completion: @escaping (Swift.Bool, TerraiOS.TerraError?) -> Swift.Void)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS 17, *)
+  @available(*, deprecated, message: "This method is deprecated and will be removed in a future release.")
   final public func markPlannedWorkoutComplete(type: TerraiOS.Connections, id: Foundation.UUID, at: Foundation.Date = Date(), completion: @escaping (Swift.Bool, TerraiOS.TerraError?) -> Swift.Void)
   #endif
+  @available(iOS 17, *)
+  final public func enablePlannedWorkoutBackendSync(enabled: Swift.Bool)
+  @available(iOS 17, *)
+  final public func syncPlannedWorkoutsFromBackend(type: TerraiOS.Connections)
+  @available(iOS 17, *)
+  final public var isPlannedWorkoutBackendSyncEnabled: Swift.Bool {
+    get
+  }
+}
+extension Foundation.NSNotification.Name {
+  public static let terraPlannedWorkoutSynced: Foundation.Notification.Name
+  public static let terraPlannedWorkoutSyncFailed: Foundation.Notification.Name
+  public static let terraPlannedWorkoutSyncCompleted: Foundation.Notification.Name
 }
 public struct TerraStressData : Swift.Codable {
   public var medium_stress_duration_seconds: Swift.Double?
@@ -1435,6 +1454,209 @@ public struct TerraPlannedWorkout : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public struct PendingWorkoutsResponse : Swift.Codable {
+  public let status: Swift.String?
+  public let actions: [TerraiOS.WorkoutAction]
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WorkoutAction : Swift.Codable {
+  public let action: Swift.String
+  public let plannedWorkoutId: Swift.String
+  public let plannedDate: Swift.String?
+  public let createdAt: Swift.String?
+  public let timestamp: Swift.Int64
+  public let workoutId: Swift.String?
+  public let workoutKitId: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@available(iOS 17, *)
+public struct PlannedWorkoutPayload : Swift.Codable {
+  public let status: Swift.String?
+  public let plannedWorkoutId: Swift.String
+  public let plannedDate: Swift.String
+  public let createdAt: Swift.String?
+  public let workoutId: Swift.String?
+  public let workoutPayload: TerraiOS.AppleWorkoutPayload
+  public let coercionWarnings: [Swift.String]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@available(iOS 17, *)
+public struct AppleWorkoutPayload : Swift.Codable {
+  public let workoutId: Swift.String
+  public let plannedDate: Swift.String
+  public let workout: TerraiOS.CustomWorkout
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@available(iOS 17, *)
+public struct CustomWorkout : Swift.Codable {
+  public let activity: TerraiOS.WorkoutActivity
+  public let location: TerraiOS.WorkoutLocation
+  public let displayName: Swift.String?
+  public let warmup: TerraiOS.WorkoutStep?
+  public let blocks: [TerraiOS.IntervalBlock]
+  public let cooldown: TerraiOS.WorkoutStep?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@available(iOS 17, *)
+public struct IntervalBlock : Swift.Codable {
+  public let steps: [TerraiOS.IntervalStep]
+  public let iterations: Swift.Int
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@available(iOS 17, *)
+public struct IntervalStep : Swift.Codable {
+  public let purpose: TerraiOS.StepType
+  public let step: TerraiOS.WorkoutStep
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@available(iOS 17, *)
+public struct WorkoutStep : Swift.Codable {
+  public let goal: TerraiOS.Goal
+  public let alert: TerraiOS.Alert?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@available(iOS 17, *)
+public enum StepType : Swift.String, Swift.Codable {
+  case work
+  case recovery
+  case rest
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  @available(iOS 17, *)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@available(iOS 17, *)
+public struct Goal : Swift.Codable {
+  public let type: TerraiOS.GoalType
+  public let value: Swift.Double?
+  public let unit: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@available(iOS 17, *)
+public enum GoalType : Swift.String, Swift.Codable {
+  case time
+  case distance
+  case energy
+  case open
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  @available(iOS 17, *)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@available(iOS 17, *)
+public struct Alert : Swift.Codable {
+  public let type: Swift.String
+  public let zone: Swift.Int?
+  public let target: TerraiOS.AlertTarget?
+  public let metric: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@available(iOS 17, *)
+public struct AlertTarget : Swift.Codable {
+  public let lowerBound: Swift.Double?
+  public let upperBound: Swift.Double?
+  public let unit: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@available(iOS 17, *)
+public enum WorkoutActivity : Swift.String, Swift.Codable {
+  case cycling
+  case running
+  case swimming
+  case walking
+  case hiking
+  case rowing
+  case elliptical
+  case stairClimbing
+  case yoga
+  case functionalStrengthTraining
+  case traditionalStrengthTraining
+  case coreTraining
+  case flexibility
+  case coolDown
+  case other
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  @available(iOS 17, *)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@available(iOS 17, *)
+public enum WorkoutLocation : Swift.String, Swift.Codable {
+  case indoor
+  case outdoor
+  case unknown
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  @available(iOS 17, *)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@available(iOS 17, *)
+public struct PlannedWorkoutSyncResult {
+  public let success: Swift.Bool
+  public let syncedCount: Swift.Int
+  public let failedCount: Swift.Int
+  public let warnings: [TerraiOS.PlannedWorkoutWarning]
+  public let error: TerraiOS.TerraError?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(success: Swift.Bool, syncedCount: Swift.Int, failedCount: Swift.Int = 0, warnings: [TerraiOS.PlannedWorkoutWarning] = [], error: TerraiOS.TerraError? = nil)
+  #endif
+}
+@available(iOS 17, *)
+public struct PlannedWorkoutWarning {
+  public let workoutId: Swift.String
+  public let message: Swift.String
+  public init(workoutId: Swift.String, message: Swift.String)
+}
+@available(iOS 17, *)
+public struct WorkoutSyncEvent {
+  public enum ActionType : Swift.String {
+    case create, update, delete, failure
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(rawValue: Swift.String)
+    #endif
+    @available(iOS 17, *)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public let plannedWorkoutId: Swift.String
+  public let displayName: Swift.String?
+  public let workoutKitId: Foundation.UUID?
+  public let actionType: TerraiOS.WorkoutSyncEvent.ActionType
+  public let coercionWarnings: [TerraiOS.PlannedWorkoutWarning]
+  public let error: (any Swift.Error)?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(plannedWorkoutId: Swift.String, displayName: Swift.String?, workoutKitId: Foundation.UUID?, actionType: TerraiOS.WorkoutSyncEvent.ActionType, coercionWarnings: [TerraiOS.PlannedWorkoutWarning] = [], error: (any Swift.Error)? = nil)
+  #endif
+}
 #if compiler(>=5.3) && $NonescapableTypes
 extension Swift.Optional {
   public var optional: Wrapped? {
@@ -1733,6 +1955,11 @@ public enum TerraError : Swift.Int, Swift.Error {
   case SamplesDateOutOfRange
   case InvalidDevice
   case StartDateMustPrecedeEndDate
+  case PlannedWorkoutSyncFailed
+  case PlannedWorkoutNetworkError
+  case PlannedWorkoutInvalidBackendResponse
+  case SDKNotConnected
+  case ProviderNotSupported
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
   #endif
@@ -2485,6 +2712,36 @@ extension TerraiOS.HeartRateContext : Swift.RawRepresentable {}
 extension TerraiOS.Permissions : Swift.Equatable {}
 extension TerraiOS.Permissions : Swift.Hashable {}
 extension TerraiOS.Permissions : Swift.RawRepresentable {}
+@available(iOS 17, *)
+extension TerraiOS.StepType : Swift.Equatable {}
+@available(iOS 17, *)
+extension TerraiOS.StepType : Swift.Hashable {}
+@available(iOS 17, *)
+extension TerraiOS.StepType : Swift.RawRepresentable {}
+@available(iOS 17, *)
+extension TerraiOS.GoalType : Swift.Equatable {}
+@available(iOS 17, *)
+extension TerraiOS.GoalType : Swift.Hashable {}
+@available(iOS 17, *)
+extension TerraiOS.GoalType : Swift.RawRepresentable {}
+@available(iOS 17, *)
+extension TerraiOS.WorkoutActivity : Swift.Equatable {}
+@available(iOS 17, *)
+extension TerraiOS.WorkoutActivity : Swift.Hashable {}
+@available(iOS 17, *)
+extension TerraiOS.WorkoutActivity : Swift.RawRepresentable {}
+@available(iOS 17, *)
+extension TerraiOS.WorkoutLocation : Swift.Equatable {}
+@available(iOS 17, *)
+extension TerraiOS.WorkoutLocation : Swift.Hashable {}
+@available(iOS 17, *)
+extension TerraiOS.WorkoutLocation : Swift.RawRepresentable {}
+@available(iOS 17, *)
+extension TerraiOS.WorkoutSyncEvent.ActionType : Swift.Equatable {}
+@available(iOS 17, *)
+extension TerraiOS.WorkoutSyncEvent.ActionType : Swift.Hashable {}
+@available(iOS 17, *)
+extension TerraiOS.WorkoutSyncEvent.ActionType : Swift.RawRepresentable {}
 extension TerraiOS.Resource : Swift.Equatable {}
 extension TerraiOS.Resource : Swift.Hashable {}
 extension TerraiOS.Resource : Swift.RawRepresentable {}
