@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
-// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name TerraiOS
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
+// swift-compiler-version: Apple Swift version 6.3.1 effective-5.10 (swiftlang-6.3.1.1.2 clang-2100.0.123.102)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name TerraiOS
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.1
 import BackgroundTasks
 import Combine
 import CoreNFC
@@ -65,97 +65,49 @@ public struct TerraData : Swift.Codable {
   @objc deinit
 }
 extension TerraiOS.TerraManager {
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func initConnection(type: TerraiOS.Connections, token: Swift.String, customReadTypes: Swift.Set<TerraiOS.CustomPermissions> = [], schedulerOn: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraError?) -> Swift.Void = { _, _ in })
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func getUserId(type: TerraiOS.Connections) -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func requestHealthKitPermissions(customReadTypes: Swift.Set<TerraiOS.CustomPermissions> = [], completion: @escaping (Swift.Bool, TerraiOS.TerraError?) -> Swift.Void = { _, _ in })
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func subscribe(forDataTypes dataTypes: Swift.Set<TerraiOS.DataTypes>, completion: @escaping (Swift.Bool, TerraiOS.TerraError?) -> Swift.Void)
-  #endif
 }
 extension TerraiOS.TerraManager {
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, message: "This method is deprecated and will be removed in a future release.")
   final public func readGlucoseData(completion: @escaping (TerraiOS.FSLSensorDetails?) -> Swift.Void = { _ in })
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, message: "This method is deprecated and will be removed in a future release.")
   final public func activateSensor(completion: @escaping (TerraiOS.FSLSensorDetails?) -> Swift.Void = { _ in })
-  #endif
 }
 extension TerraiOS.TerraManager {
   final public func postNutrition(type: TerraiOS.Connections, payload: TerraiOS.TerraNutritionData, completion: @escaping (Swift.Bool) -> Swift.Void = { _ in })
   final public func postBody(type: TerraiOS.Connections, payload: TerraiOS.TerraBodyData, completion: @escaping (Swift.Bool) -> Swift.Void = { _ in })
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS 14, *)
   final public func postActivity(type: TerraiOS.Connections, payload: TerraiOS.TerraActivityData, completion: @escaping (Swift.Bool, TerraiOS.TerraError?) -> Swift.Void = { _,_  in })
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS 17, *)
   @available(*, deprecated, message: "This method is deprecated and will be removed in a future release.")
   final public func postPlannedWorkout(type: TerraiOS.Connections, payload: TerraiOS.TerraPlannedWorkout, completion: @escaping (Swift.Bool, TerraiOS.TerraError?) -> Swift.Void)
-  #endif
 }
 extension TerraiOS.TerraManager {
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func getAthlete(type: TerraiOS.Connections, toWebhook: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraAthleteDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func getMenstruation(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraMenstruationDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func getMenstruation(type: TerraiOS.Connections, startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraMenstruationDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func getDaily(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraDailyDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func getDaily(type: TerraiOS.Connections, startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraDailyDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func getSleep(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraSleepDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func getSleep(type: TerraiOS.Connections, startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraSleepDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func getBody(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraBodyDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func getBody(type: TerraiOS.Connections, startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, latestReading: Swift.Bool = false, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraBodyDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func getNutrition(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraNutritionDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func getNutrition(type: TerraiOS.Connections, startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraNutritionDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func getActivity(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraActivityDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func getActivity(type: TerraiOS.Connections, startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraActivityDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS 17, *)
   @available(*, deprecated, message: "This method is deprecated and will be removed in a future release.")
   final public func getPlannedWorkouts(type: TerraiOS.Connections, completion: @escaping ([TerraiOS.TerraPlannedWorkout], TerraiOS.TerraError?) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS 17, *)
   @available(*, deprecated, message: "This method is deprecated and will be removed in a future release.")
   final public func deletePlannedWorkout(type: TerraiOS.Connections, id: Foundation.UUID, completion: @escaping (Swift.Bool, TerraiOS.TerraError?) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS 17, *)
   @available(*, deprecated, message: "This method is deprecated and will be removed in a future release.")
   final public func markPlannedWorkoutComplete(type: TerraiOS.Connections, id: Foundation.UUID, at: Foundation.Date = Date(), completion: @escaping (Swift.Bool, TerraiOS.TerraError?) -> Swift.Void)
-  #endif
   @available(iOS 17, *)
   final public func enablePlannedWorkoutBackendSync(enabled: Swift.Bool)
   @available(iOS 17, *)
@@ -194,9 +146,7 @@ public struct TerraMETData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraHeartRateSummaryData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(user_max_hr_bpm: Swift.Double? = nil, min_hr_bpm: Swift.Double? = nil, avg_hrv_sdnn: Swift.Double? = nil, avg_hrv_rmssd: Swift.Double? = nil, avg_hr_bpm: Swift.Double? = nil, resting_hr_bpm: Swift.Double? = nil, max_hr_bpm: Swift.Double? = nil, hr_zone_data: [TerraiOS.TerraHeartRateZoneData]? = [])
-  #endif
   public var user_max_hr_bpm: Swift.Double?
   public var min_hr_bpm: Swift.Double?
   public var avg_hrv_sdnn: Swift.Double?
@@ -209,9 +159,7 @@ public struct TerraHeartRateSummaryData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraHeartRateDetailedData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(hrv_samples_rmssd: [TerraiOS.HeartRatesVariabilitySampleRMSSD]? = [], hrv_samples_sdnn: [TerraiOS.HeartRatesVariabilitySampleSDNN]? = [], hr_samples: [TerraiOS.HeartRateSample]? = [])
-  #endif
   public var hrv_samples_rmssd: [TerraiOS.HeartRatesVariabilitySampleRMSSD]?
   public var hrv_samples_sdnn: [TerraiOS.HeartRatesVariabilitySampleSDNN]?
   public var hr_samples: [TerraiOS.HeartRateSample]?
@@ -219,9 +167,7 @@ public struct TerraHeartRateDetailedData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraHeartRateData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(summary: TerraiOS.TerraHeartRateSummaryData? = .init(), detailed: TerraiOS.TerraHeartRateDetailedData? = .init())
-  #endif
   public var summary: TerraiOS.TerraHeartRateSummaryData?
   public var detailed: TerraiOS.TerraHeartRateDetailedData?
   public func encode(to encoder: any Swift.Encoder) throws
@@ -245,18 +191,14 @@ public struct TerraDailyMetaData : Swift.Codable {
   public var start_time: Swift.String?
   public var end_time: Swift.String?
   public var upload_type: Swift.Int?
-  #if compiler(>=5.3) && $NonescapableTypes
   public var terra_upload_type: TerraiOS.TerraUploadType? {
     get
   }
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraDeviceData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(software_version: Swift.String? = nil, manufacturer: Swift.String? = nil, serial_number: Swift.String? = nil, name: Swift.String? = nil, hardware_version: Swift.String? = nil, activation_timestamp: Swift.String? = nil, other_devices: [TerraiOS.OtherDeviceData]? = [])
-  #endif
   public var software_version: Swift.String?
   public var manufacturer: Swift.String?
   public var serial_number: Swift.String?
@@ -296,9 +238,7 @@ public struct TerraDailyDistanceData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraCaloriesData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(net_intake_calories: Swift.Double? = nil, net_activity_calories: Swift.Double? = nil, BMR_calories: Swift.Double? = nil, total_burned_calories: Swift.Double? = nil, calorie_samples: [TerraiOS.TerraCalorieSample]? = nil)
-  #endif
   public var net_intake_calories: Swift.Double?
   public var net_activity_calories: Swift.Double?
   public var BMR_calories: Swift.Double?
@@ -343,9 +283,7 @@ public struct TerraDailyData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraOxygenData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(avg_saturation_percentage: Swift.Double? = nil, vo2max_ml_per_min_per_kg: Swift.Double? = nil, saturation_samples: [TerraiOS.OxygenSaturationSample]? = [], vo2_samples: [TerraiOS.Vo2Sample]? = [])
-  #endif
   public var avg_saturation_percentage: Swift.Double?
   public var vo2max_ml_per_min_per_kg: Swift.Double?
   public var saturation_samples: [TerraiOS.OxygenSaturationSample]?
@@ -354,9 +292,7 @@ public struct TerraOxygenData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraGlucoseData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(day_avg_blood_glucose_mg_per_dL: Swift.Double? = nil, blood_glucose_samples: [TerraiOS.GlucoseDataSample]? = [], detailed_blood_glucose_samples: [TerraiOS.GlucoseDataSample]? = [], gmi: Swift.Double? = nil, time_in_range: Swift.Double? = nil, sensor_usage: Swift.Int? = nil, daily_patterns: [TerraiOS.DailyPatternSample]? = [])
-  #endif
   public var day_avg_blood_glucose_mg_per_dL: Swift.Double?
   public var blood_glucose_samples: [TerraiOS.GlucoseDataSample]?
   public var detailed_blood_glucose_samples: [TerraiOS.GlucoseDataSample]?
@@ -368,9 +304,7 @@ public struct TerraGlucoseData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraBodyMetaData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(start_time: Swift.String? = nil, end_time: Swift.String? = nil)
-  #endif
   public var start_time: Swift.String?
   public var end_time: Swift.String?
   public func encode(to encoder: any Swift.Encoder) throws
@@ -381,18 +315,14 @@ public struct TerraECGReading : Swift.Codable {
   public var avg_hr_bpm: Swift.Double?
   public var afib_classfication: Swift.Int?
   public var raw_signal: [TerraiOS.RawECGSample]?
-  #if compiler(>=5.3) && $NonescapableTypes
   public var terra_afib_classification: TerraiOS.TerraAFibClassification? {
     get
   }
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraBodyHeartData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(pulse_wave_velocity_samples: [TerraiOS.PulseVelocitySample]? = [], heart_rate_data: TerraiOS.TerraHeartRateData? = .init(), afib_classification_samples: [TerraiOS.AFibClassificationSample]? = [], ecg_signal: [TerraiOS.TerraECGReading]? = [], rr_interval_samples: [TerraiOS.RRIntervalSample]? = [])
-  #endif
   public var pulse_wave_velocity_samples: [TerraiOS.PulseVelocitySample]?
   public var heart_rate_data: TerraiOS.TerraHeartRateData?
   public var afib_classification_samples: [TerraiOS.AFibClassificationSample]?
@@ -402,26 +332,20 @@ public struct TerraBodyHeartData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraBloodPressureData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(blood_pressure_samples: [TerraiOS.BloodPressureSample]? = [])
-  #endif
   public var blood_pressure_samples: [TerraiOS.BloodPressureSample]?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraHydrationData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(hydration_amount_samples: [TerraiOS.HydrationMeasurementSample]? = [], day_total_water_consumption_ml: Swift.Double? = nil)
-  #endif
   public var hydration_amount_samples: [TerraiOS.HydrationMeasurementSample]?
   public var day_total_water_consumption_ml: Swift.Double?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraTemperatureData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(ambient_temperature_samples: [TerraiOS.TemperatureSample]? = [], skin_temperature_samples: [TerraiOS.TemperatureSample]? = [], body_temperature_samples: [TerraiOS.TemperatureSample]? = [])
-  #endif
   public var ambient_temperature_samples: [TerraiOS.TemperatureSample]?
   public var skin_temperature_samples: [TerraiOS.TemperatureSample]?
   public var body_temperature_samples: [TerraiOS.TemperatureSample]?
@@ -429,9 +353,7 @@ public struct TerraTemperatureData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraMeasurementData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(measurements: [TerraiOS.MeasurementDataSample]? = [])
-  #endif
   public var measurements: [TerraiOS.MeasurementDataSample]?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -442,9 +364,7 @@ public struct TerraKetoneData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraBodyData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(metadata: TerraiOS.TerraBodyMetaData? = .init(), oxygen_data: TerraiOS.TerraOxygenData? = .init(), glucose_data: TerraiOS.TerraGlucoseData? = .init(), heart_data: TerraiOS.TerraBodyHeartData? = .init(), blood_pressure_data: TerraiOS.TerraBloodPressureData? = .init(), hydration_data: TerraiOS.TerraHydrationData? = .init(), temperature_data: TerraiOS.TerraTemperatureData? = .init(), measurements_data: TerraiOS.TerraMeasurementData? = .init(), device_data: TerraiOS.TerraDeviceData? = .init())
-  #endif
   public var metadata: TerraiOS.TerraBodyMetaData?
   public var oxygen_data: TerraiOS.TerraOxygenData?
   public var glucose_data: TerraiOS.TerraGlucoseData?
@@ -459,34 +379,26 @@ public struct TerraBodyData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraEnergyData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(energy_kilojoules: Swift.Double? = nil, energy_planned_kilojoules: Swift.Double? = nil)
-  #endif
   public var energy_kilojoules: Swift.Double?
   public var energy_planned_kilojoules: Swift.Double?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraLapData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(laps: [TerraiOS.LapSample]? = nil)
-  #endif
   public var laps: [TerraiOS.LapSample]?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraStrainData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(strain_level: Swift.Double? = nil)
-  #endif
   public var strain_level: Swift.Double?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraPowerData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(avg_watts: Swift.Double? = nil, power_samples: [TerraiOS.PowerSample]? = nil, max_watts: Swift.Double? = nil)
-  #endif
   public var avg_watts: Swift.Double?
   public var power_samples: [TerraiOS.PowerSample]?
   public var max_watts: Swift.Double?
@@ -494,17 +406,13 @@ public struct TerraPowerData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraPolyLineMapData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(summary_polyline: Swift.String? = nil)
-  #endif
   public var summary_polyline: Swift.String?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraMovementData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(normalized_speed_meters_per_second: Swift.Double? = nil, avg_torque_newton_meters: Swift.Double? = nil, avg_pace_minutes_per_kilometer: Swift.Double? = nil, max_pace_minutes_per_kilometer: Swift.Double? = nil, max_speed_meters_per_second: Swift.Double? = nil, avg_cadence_rpm: Swift.Double? = nil, max_cadence_rpm: Swift.Double? = nil, avg_velocity_meters_per_second: Swift.Double? = nil, max_torque_newton_meters: Swift.Double? = nil, avg_speed_meters_per_second: Swift.Double? = nil, max_velocity_meters_per_second: Swift.Double? = nil, cadence_samples: [TerraiOS.CadenceSample]? = nil, speed_samples: [TerraiOS.SpeedSample]? = nil, adjusted_max_speed_meters_per_second: Swift.Double? = nil, torque_samples: [TerraiOS.TorqueSample]? = nil)
-  #endif
   public var normalized_speed_meters_per_second: Swift.Double?
   public var avg_torque_newton_meters: Swift.Double?
   public var avg_pace_minutes_per_kilometer: Swift.Double?
@@ -524,9 +432,7 @@ public struct TerraMovementData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraActivityMetaData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(city: Swift.String? = nil, type: Swift.Int? = nil, end_time: Swift.String? = nil, start_time: Swift.String? = nil, country: Swift.String? = nil, name: Swift.String? = nil, summary_id: Swift.String? = nil, upload_type: Swift.Int? = nil, state: Swift.String? = nil)
-  #endif
   public var city: Swift.String?
   public var type: Swift.Int?
   public var end_time: Swift.String?
@@ -536,39 +442,29 @@ public struct TerraActivityMetaData : Swift.Codable {
   public var summary_id: Swift.String?
   public var upload_type: Swift.Int?
   public var state: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
   public var terra_activity_type: TerraiOS.TerraActivityType? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var terra_upload_type: TerraiOS.TerraUploadType? {
     get
   }
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraTSSData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(TSS_samples: [TerraiOS.TSSSample]? = nil)
-  #endif
   public var TSS_samples: [TerraiOS.TSSSample]?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraWorkData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(work_kilojoules: Swift.Double? = nil)
-  #endif
   public var work_kilojoules: Swift.Double?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraDistanceDetailedData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(step_samples: [TerraiOS.StepSample]? = nil, elevation_samples: [TerraiOS.ElevationSample]? = nil, distance_samples: [TerraiOS.DistanceSample]? = nil, floors_climbed_samples: [TerraiOS.FloorsClimbedSample]? = nil)
-  #endif
   public var step_samples: [TerraiOS.StepSample]?
   public var elevation_samples: [TerraiOS.ElevationSample]?
   public var distance_samples: [TerraiOS.DistanceSample]?
@@ -577,9 +473,7 @@ public struct TerraDistanceDetailedData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraDistanceSummaryData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(floors_climbed: Swift.Double? = nil, steps: Swift.Double? = nil, distance_meters: Swift.Double? = nil, swimming: TerraiOS.TerraSwimmingData? = nil, elevation: TerraiOS.TerraElevationData? = nil)
-  #endif
   public var floors_climbed: Swift.Double?
   public var steps: Swift.Double?
   public var distance_meters: Swift.Double?
@@ -589,18 +483,14 @@ public struct TerraDistanceSummaryData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraActivityDistanceData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(detailed: TerraiOS.TerraDistanceDetailedData? = nil, summary: TerraiOS.TerraDistanceSummaryData? = nil)
-  #endif
   public var detailed: TerraiOS.TerraDistanceDetailedData?
   public var summary: TerraiOS.TerraDistanceSummaryData?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraPositionData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(start_pos_lat_lng_deg: [Swift.Double?]? = nil, position_samples: [TerraiOS.PositionSample]? = nil, center_pos_lat_lng_deg: [Swift.Double?]? = nil, end_pos_lat_lng_deg: [Swift.Double?]? = nil)
-  #endif
   public var start_pos_lat_lng_deg: [Swift.Double?]?
   public var position_samples: [TerraiOS.PositionSample]?
   public var center_pos_lat_lng_deg: [Swift.Double?]?
@@ -609,26 +499,20 @@ public struct TerraPositionData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraHeartRateZoneData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(zone: Swift.Int? = nil, start_percentage: Swift.Double? = nil, end_percentage: Swift.Double? = nil, name: Swift.String? = nil, duration_seconds: Swift.Double? = nil)
-  #endif
   public var zone: Swift.Int?
   public var start_percentage: Swift.Double?
   public var end_percentage: Swift.Double?
   public var name: Swift.String?
   public var duration_seconds: Swift.Double?
-  #if compiler(>=5.3) && $NonescapableTypes
   public var terra_heart_rate_zone: TerraiOS.TerraHeartRateZone? {
     get
   }
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraActivityData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(energy_data: TerraiOS.TerraEnergyData? = nil, oxygen_data: TerraiOS.TerraOxygenData? = nil, MET_data: TerraiOS.TerraMETData? = nil, strain_data: TerraiOS.TerraStrainData? = nil, power_data: TerraiOS.TerraPowerData? = nil, polyline_map_data: TerraiOS.TerraPolyLineMapData? = nil, heart_rate_data: TerraiOS.TerraHeartRateData? = nil, active_durations_data: TerraiOS.TerraActiveDurationsData? = nil, lap_data: TerraiOS.TerraLapData? = nil, movement_data: TerraiOS.TerraMovementData? = nil, metadata: TerraiOS.TerraActivityMetaData? = nil, TSS_data: TerraiOS.TerraTSSData? = nil, device_data: TerraiOS.TerraDeviceData? = nil, work_data: TerraiOS.TerraWorkData? = nil, distance_data: TerraiOS.TerraActivityDistanceData? = nil, calories_data: TerraiOS.TerraCaloriesData? = nil, position_data: TerraiOS.TerraPositionData? = nil, cheat_detection: Swift.Double? = nil)
-  #endif
   public var energy_data: TerraiOS.TerraEnergyData?
   public var oxygen_data: TerraiOS.TerraOxygenData?
   public var MET_data: TerraiOS.TerraMETData?
@@ -654,11 +538,9 @@ extension Foundation.DateFormatter {
   public static let terraFormatter: Foundation.DateFormatter
 }
 extension Swift.String {
-  #if compiler(>=5.3) && $NonescapableTypes
   public var terraDate: Foundation.Date? {
     get
   }
-  #endif
 }
 extension Foundation.Date {
   public var terraString: Swift.String {
@@ -705,22 +587,18 @@ public struct TerraSleepMetaData : Swift.Codable {
   public var end_time: Swift.String?
   public var start_time: Swift.String?
   public var is_nap: Swift.Bool?
-  #if compiler(>=5.3) && $NonescapableTypes
   public var terra_sleep_upload_type: TerraiOS.TerraSleepUploadType? {
     get
   }
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraReadinessData : Swift.Codable {
   public var readiness: Swift.Double?
   public var recovery_level: Swift.Int?
-  #if compiler(>=5.3) && $NonescapableTypes
   public var terra_recovery_level: TerraiOS.TerraRecoveryLevel? {
     get
   }
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -823,9 +701,7 @@ public enum CustomPermissions : Swift.String, Swift.CaseIterable {
   case SYMPTOM_SORE_THROAT
   case MENSTRUATION
   case ELECTROCARDIOGRAM
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias AllCases = [TerraiOS.CustomPermissions]
   public typealias RawValue = Swift.String
   nonisolated public static var allCases: [TerraiOS.CustomPermissions] {
@@ -866,9 +742,7 @@ public enum TerraAFibClassification : Swift.Int {
   case NEGATIVE
   case POSITIVE
   case INCONCLUSIVE
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -881,9 +755,7 @@ public enum TerraActivityLevel : Swift.Int {
   case LOW_INTENSITY
   case MEDIUM_INTENSITY
   case HIGH_INTENSITY
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -897,9 +769,7 @@ public enum TerraHeartRateZone : Swift.Int {
   case ZONE_4
   case ZONE_5
   case OTHER
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -913,9 +783,7 @@ public enum TerraSleepLevel : Swift.Int {
   case LIGHT
   case DEEP
   case REM
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -928,9 +796,7 @@ public enum TerraUploadType : Swift.Int {
   case UPDATE
   case DELETE
   case PENDING
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -942,9 +808,7 @@ public enum TerraSleepUploadType : Swift.Int {
   case AUTOMATIC
   case TENTATIVE
   case INDETERMINATE
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -957,9 +821,7 @@ public enum TerraStrokeType : Swift.String {
   case BREASTSTROKE
   case BUTTERFLY
   case REST
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -969,9 +831,7 @@ public enum TerraGlucoseFlag : Swift.Int {
   case NORMAL
   case HIGH
   case LOW
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -989,9 +849,7 @@ public enum TerraNutritionUnit : Swift.Int {
   case MILLILITER
   case OUNCE
   case COUNT
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1005,9 +863,7 @@ public enum TerraRecoveryLevel : Swift.Int {
   case OK
   case GOOD
   case VERY_GOOD
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1020,9 +876,7 @@ public enum TerraTrendArrow : Swift.Int {
   case FLAT
   case RISING
   case RISING_QUICKLY
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1035,9 +889,7 @@ public enum TerraMenstrualFlow : Swift.Int {
   case MEDIUM
   case HEAVY
   case HAD
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1051,9 +903,7 @@ public enum TerraMealType : Swift.Int {
   case AFTERNOON_SNACK
   case DINNER
   case SNACK
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1073,9 +923,7 @@ public enum PlannedWorkoutStepDurationType : Swift.Int, Swift.Codable {
   case FIXED_REST
   case TIME_AT_VALID_CDA
   case STEPS
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1101,9 +949,7 @@ public enum PlannedWorkoutStepTargetType : Swift.Int, Swift.Codable {
   case REPETITION
   case TSS
   case IF
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1112,9 +958,7 @@ public enum PlannedWorkoutStepTargetType : Swift.Int, Swift.Codable {
 public enum PlannedWorkoutStepType : Swift.Int, Swift.Codable {
   case STEP
   case REPEAT_STEP
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1124,9 +968,7 @@ public enum HeartRateContext : Swift.Int, Swift.Codable {
   case NOT_SET
   case ACTIVE
   case NOT_ACTIVE
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1148,9 +990,7 @@ public enum HeartRateContext : Swift.Int, Swift.Codable {
   case MENSTRUATION_WRITE = 0b001000000000000
   case PLANNED_WORKOUT = 0b010000000000000
   case PLANNED_WORKOUT_WRITE = 0b100000000000000
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.UInt)
-  #endif
   public typealias AllCases = [TerraiOS.Permissions]
   public typealias RawValue = Swift.UInt
   nonisolated public static var allCases: [TerraiOS.Permissions] {
@@ -1175,90 +1015,70 @@ public struct DeauthenticateUserPayload : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TimePlannedWorkoutStepDuration : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(duration_type: TerraiOS.PlannedWorkoutStepDurationType = .TIME, seconds: Swift.Int? = nil)
-  #endif
   public var duration_type: TerraiOS.PlannedWorkoutStepDurationType
   public var seconds: Swift.Int?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct PowerAbovePlannedWorkoutStepDuration : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(duration_type: TerraiOS.PlannedWorkoutStepDurationType = .POWER_GREATER_THAN, power_above_watts: Swift.Double? = nil)
-  #endif
   public var duration_type: TerraiOS.PlannedWorkoutStepDurationType
   public var power_above_watts: Swift.Double?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct PowerBelowPlannedWorkoutStepDuration : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(duration_type: TerraiOS.PlannedWorkoutStepDurationType = .POWER_LESS_THAN, power_below_watts: Swift.Double? = nil)
-  #endif
   public var duration_type: TerraiOS.PlannedWorkoutStepDurationType
   public var power_below_watts: Swift.Double?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct FixedRestPlannedWorkoutStepDuration : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(duration_type: TerraiOS.PlannedWorkoutStepDurationType = .FIXED_REST, rest_seconds: Swift.Int? = nil)
-  #endif
   public var duration_type: TerraiOS.PlannedWorkoutStepDurationType
   public var rest_seconds: Swift.Int?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct CaloriesPlannedWorkoutStepDuration : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(duration_type: TerraiOS.PlannedWorkoutStepDurationType = .CALORIES, calories: Swift.Double? = nil)
-  #endif
   public var duration_type: TerraiOS.PlannedWorkoutStepDurationType
   public var calories: Swift.Double?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct HRAbovePlannedWorkoutStepDuration : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(duration_type: TerraiOS.PlannedWorkoutStepDurationType = .HR_GREATER_THAN, hr_above_bpm: Swift.Int? = nil)
-  #endif
   public var duration_type: TerraiOS.PlannedWorkoutStepDurationType
   public var hr_above_bpm: Swift.Int?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct RepsPlannedWorkoutStepDuration : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(duration_type: TerraiOS.PlannedWorkoutStepDurationType = .FIXED_REST, reps: Swift.Int? = nil)
-  #endif
   public var duration_type: TerraiOS.PlannedWorkoutStepDurationType
   public var reps: Swift.Int?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct HRBelowPlannedWorkoutStepDuration : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(duration_type: TerraiOS.PlannedWorkoutStepDurationType = .HR_LESS_THAN, hr_below_bpm: Swift.Int? = nil)
-  #endif
   public var duration_type: TerraiOS.PlannedWorkoutStepDurationType
   public var hr_below_bpm: Swift.Int?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct DistancePlannedWorkoutStepDuration : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(duration_type: TerraiOS.PlannedWorkoutStepDurationType = .DISTANCE_METERS, distance_meters: Swift.Double? = nil)
-  #endif
   public var duration_type: TerraiOS.PlannedWorkoutStepDurationType
   public var distance_meters: Swift.Double?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct StepsPlannedWorkoutStepDuration : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(duration_type: TerraiOS.PlannedWorkoutStepDurationType = .STEPS, steps: Swift.Int? = nil)
-  #endif
   public var duration_type: TerraiOS.PlannedWorkoutStepDurationType
   public var steps: Swift.Int?
   public func encode(to encoder: any Swift.Encoder) throws
@@ -1279,9 +1099,7 @@ public enum PlannedWorkoutStepDuration : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct CadencePlannedWorkoutStepTarget : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(target_type: TerraiOS.PlannedWorkoutStepTargetType = .CADENCE, cadence_high: Swift.Double? = nil, cadence_low: Swift.Double? = nil, cadence: Swift.Double? = nil)
-  #endif
   public var target_type: TerraiOS.PlannedWorkoutStepTargetType
   public var cadence_high: Swift.Double?
   public var cadence_low: Swift.Double?
@@ -1290,9 +1108,7 @@ public struct CadencePlannedWorkoutStepTarget : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct HRPlannedWorkoutStepTarget : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(target_type: TerraiOS.PlannedWorkoutStepTargetType = .HEART_RATE, hr_bpm_high: Swift.Int? = nil, hr_bpm_low: Swift.Int? = nil, hr_percentage: Swift.Double? = nil, hr_percentage_low: Swift.Double? = nil, hr_percentage_high: Swift.Double? = nil)
-  #endif
   public var target_type: TerraiOS.PlannedWorkoutStepTargetType
   public var hr_bpm_high: Swift.Int?
   public var hr_bpm_low: Swift.Int?
@@ -1303,9 +1119,7 @@ public struct HRPlannedWorkoutStepTarget : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct PowerPlannedWorkoutStepTarget : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(target_type: TerraiOS.PlannedWorkoutStepTargetType = .POWER, power_watt_high: Swift.Double? = nil, power_watt_low: Swift.Double? = nil, power_watt: Swift.Double? = nil, power_percentage: Swift.Double? = nil, power_percentage_low: Swift.Double? = nil, power_percentage_high: Swift.Double? = nil)
-  #endif
   public var target_type: TerraiOS.PlannedWorkoutStepTargetType
   public var power_watt_high: Swift.Double?
   public var power_watt_low: Swift.Double?
@@ -1317,9 +1131,7 @@ public struct PowerPlannedWorkoutStepTarget : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct SpeedPlannedWorkoutStepTarget : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(target_type: TerraiOS.PlannedWorkoutStepTargetType = .SPEED, speed_meters_per_second: Swift.Double? = nil, speed_percentage: Swift.Double? = nil, speed_percentage_low: Swift.Double? = nil, speed_percentage_high: Swift.Double? = nil)
-  #endif
   public var target_type: TerraiOS.PlannedWorkoutStepTargetType
   public var speed_meters_per_second: Swift.Double?
   public var speed_percentage: Swift.Double?
@@ -1329,27 +1141,21 @@ public struct SpeedPlannedWorkoutStepTarget : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct PacePlannedWorkoutStepTarget : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(target_type: TerraiOS.PlannedWorkoutStepTargetType = .PACE, pace_minutes_per_kilometer: Swift.Double? = nil)
-  #endif
   public var target_type: TerraiOS.PlannedWorkoutStepTargetType
   public var pace_minutes_per_kilometer: Swift.Double?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TSSPlannedWorkoutStepTarget : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(target_type: TerraiOS.PlannedWorkoutStepTargetType = .TSS, tss: Swift.Double? = nil)
-  #endif
   public var target_type: TerraiOS.PlannedWorkoutStepTargetType
   public var tss: Swift.Double?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct IFPlannedWorkoutStepTarget : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(target_type: TerraiOS.PlannedWorkoutStepTargetType = .IF, if_high: Swift.Double? = nil, if_low: Swift.Double? = nil)
-  #endif
   public var target_type: TerraiOS.PlannedWorkoutStepTargetType
   public var if_high: Swift.Double?
   public var if_low: Swift.Double?
@@ -1357,18 +1163,14 @@ public struct IFPlannedWorkoutStepTarget : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct RepetitionPlannedWorkoutStepTarget : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(target_type: TerraiOS.PlannedWorkoutStepTargetType = .REPETITION, repititions: Swift.Int? = nil)
-  #endif
   public var target_type: TerraiOS.PlannedWorkoutStepTargetType
   public var repititions: Swift.Int?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct SwimStrokePlannedWorkoutStepTarget : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(target_type: TerraiOS.PlannedWorkoutStepTargetType = .SWIM_STROKE, swim_strokes: Swift.Int? = nil)
-  #endif
   public var target_type: TerraiOS.PlannedWorkoutStepTargetType
   public var swim_strokes: Swift.Int?
   public func encode(to encoder: any Swift.Encoder) throws
@@ -1388,9 +1190,7 @@ public enum PlannedWorkoutStepTarget : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct PlannedWorkoutStep : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(order: Swift.Int, type: TerraiOS.PlannedWorkoutStepType = .STEP, name: Swift.String? = nil, description: Swift.String? = nil, intensity: Swift.Int? = nil, durations: [TerraiOS.PlannedWorkoutStepDuration] = [], targets: [TerraiOS.PlannedWorkoutStepTarget] = [])
-  #endif
   public var order: Swift.Int
   public var type: TerraiOS.PlannedWorkoutStepType
   public var name: Swift.String?
@@ -1402,9 +1202,7 @@ public struct PlannedWorkoutStep : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct PlannedWorkoutRepeatStep : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(order: Swift.Int, type: TerraiOS.PlannedWorkoutStepType = .REPEAT_STEP, name: Swift.String? = nil, description: Swift.String? = nil, intensity: Swift.Int? = nil, durations: [TerraiOS.PlannedWorkoutStepDuration] = [], targets: [TerraiOS.PlannedWorkoutStepTarget] = [], steps: [TerraiOS.PlannedWorkoutStep] = [])
-  #endif
   public var order: Swift.Int
   public var type: TerraiOS.PlannedWorkoutStepType
   public var name: Swift.String?
@@ -1423,9 +1221,7 @@ public enum PlannedWorkoutSteps : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct PlannedWorkoutMetaData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(id: Foundation.UUID, name: Swift.String, type: TerraiOS.TerraActivityType, description: Swift.String, estimated_duration_seconds: Swift.Int? = nil, estimated_distance_meters: Swift.Double? = nil, estimated_calories: Swift.Double? = nil, estimated_elevation_gain_meters: Swift.Double? = nil, estimated_energy_kj: Swift.Double? = nil, estimated_tss: Swift.Double? = nil, estimated_if: Swift.Double? = nil, estimated_speed_meters_per_second: Swift.Double? = nil, estimated_tscore: Swift.Double? = nil, estimated_pace_minutes_per_kilometer: Swift.Double? = nil, provider: Swift.String? = nil, created_date: Swift.String? = nil, planned_date: Swift.String, pool_length_meters: Swift.Int? = nil)
-  #endif
   public var id: Foundation.UUID
   public var name: Swift.String
   public var type: TerraiOS.TerraActivityType
@@ -1528,9 +1324,7 @@ public enum StepType : Swift.String, Swift.Codable {
   case work
   case recovery
   case rest
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   @available(iOS 17, *)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -1551,9 +1345,7 @@ public enum GoalType : Swift.String, Swift.Codable {
   case distance
   case energy
   case open
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   @available(iOS 17, *)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -1594,9 +1386,7 @@ public enum WorkoutActivity : Swift.String, Swift.Codable {
   case flexibility
   case coolDown
   case other
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   @available(iOS 17, *)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -1608,9 +1398,7 @@ public enum WorkoutLocation : Swift.String, Swift.Codable {
   case indoor
   case outdoor
   case unknown
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   @available(iOS 17, *)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -1624,9 +1412,7 @@ public struct PlannedWorkoutSyncResult {
   public let failedCount: Swift.Int
   public let warnings: [TerraiOS.PlannedWorkoutWarning]
   public let error: TerraiOS.TerraError?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(success: Swift.Bool, syncedCount: Swift.Int, failedCount: Swift.Int = 0, warnings: [TerraiOS.PlannedWorkoutWarning] = [], error: TerraiOS.TerraError? = nil)
-  #endif
 }
 @available(iOS 17, *)
 public struct PlannedWorkoutWarning {
@@ -1638,9 +1424,7 @@ public struct PlannedWorkoutWarning {
 public struct WorkoutSyncEvent {
   public enum ActionType : Swift.String {
     case create, update, delete, failure
-    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
-    #endif
     @available(iOS 17, *)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
@@ -1653,17 +1437,13 @@ public struct WorkoutSyncEvent {
   public let actionType: TerraiOS.WorkoutSyncEvent.ActionType
   public let coercionWarnings: [TerraiOS.PlannedWorkoutWarning]
   public let error: (any Swift.Error)?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(plannedWorkoutId: Swift.String, displayName: Swift.String?, workoutKitId: Foundation.UUID?, actionType: TerraiOS.WorkoutSyncEvent.ActionType, coercionWarnings: [TerraiOS.PlannedWorkoutWarning] = [], error: (any Swift.Error)? = nil)
-  #endif
 }
-#if compiler(>=5.3) && $NonescapableTypes
 extension Swift.Optional {
   public var optional: Wrapped? {
     get
   }
 }
-#endif
 public enum Resource : Swift.String {
   case AKTIIA
   case BIOSTRAP
@@ -1734,9 +1514,7 @@ public enum Resource : Swift.String {
   case KETOMOJOEU
   case STRAVA
   case XIAOMI
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -1918,9 +1696,7 @@ public enum TerraActivityType : Swift.Int, Swift.Codable {
   case WATER_SKIING
   case INDOOR_RUNNING
   case PADEL_TENNIS
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1960,9 +1736,7 @@ public enum TerraError : Swift.Int, Swift.Error {
   case PlannedWorkoutInvalidBackendResponse
   case SDKNotConnected
   case ProviderNotSupported
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1972,16 +1746,12 @@ extension TerraiOS.TerraError : Swift.CustomStringConvertible, Foundation.Locali
   public var description: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
   }
-  #endif
 }
 public struct TerraMacrosModel : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(sodium_mg: Swift.Double? = nil, protein_g: Swift.Double? = nil, carbohydrates_g: Swift.Double? = nil, fiber_g: Swift.Double? = nil, cholesterol_mg: Swift.Double? = nil, fat_g: Swift.Double? = nil, saturated_fat_g: Swift.Double? = nil, trans_fat_g: Swift.Double? = nil, sugar_g: Swift.Double? = nil, calories: Swift.Double? = nil, alcohol_g: Swift.Double? = nil, net_carbohydrates_g: Swift.Double? = nil)
-  #endif
   public var sodium_mg: Swift.Double?
   public var protein_g: Swift.Double?
   public var carbohydrates_g: Swift.Double?
@@ -1998,9 +1768,7 @@ public struct TerraMacrosModel : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraMicrosModel : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(biotin_mg: Swift.Double? = nil, caffeine_mg: Swift.Double? = nil, chloride_mg: Swift.Double? = nil, chromium_mg: Swift.Double? = nil, copper_mg: Swift.Double? = nil, calcium_mg: Swift.Double? = nil, folate_mg: Swift.Double? = nil, folic_acid_mg: Swift.Double? = nil, iodine_mg: Swift.Double? = nil, iron_mg: Swift.Double? = nil, magnesium_mg: Swift.Double? = nil, manganese_mg: Swift.Double? = nil, molybdenum_mg: Swift.Double? = nil, niacin_mg: Swift.Double? = nil, pantothenic_acid_mg: Swift.Double? = nil, phosphorus_mg: Swift.Double? = nil, potassium_mg: Swift.Double? = nil, riboflavin_mg: Swift.Double? = nil, selenium_mg: Swift.Double? = nil, thiamin_mg: Swift.Double? = nil, vitamin_A_mg: Swift.Double? = nil, vitamin_B12_mg: Swift.Double? = nil, vitamin_B6_mg: Swift.Double? = nil, vitamin_C_mg: Swift.Double? = nil, vitamin_D_mg: Swift.Double? = nil, vitamin_E_mg: Swift.Double? = nil, vitamin_K_mg: Swift.Double? = nil, zinc_mg: Swift.Double? = nil, monounsaturated_fat_g: Swift.Double? = nil, polyunsaturated_fat_g: Swift.Double? = nil, vitamin_D3_mg: Swift.Double? = nil, vitamin_D2_mg: Swift.Double? = nil, starch_g: Swift.Double? = nil, omega3_g: Swift.Double? = nil, omega6_g: Swift.Double? = nil, cystine_g: Swift.Double? = nil, histidine_g: Swift.Double? = nil, isoleucine_g: Swift.Double? = nil, leucine_g: Swift.Double? = nil, lysine_g: Swift.Double? = nil, methionine_g: Swift.Double? = nil, phenylalanine_g: Swift.Double? = nil, threonine_g: Swift.Double? = nil, tryptophan_g: Swift.Double? = nil, tyrosine_g: Swift.Double? = nil, valine_g: Swift.Double? = nil)
-  #endif
   public var biotin_mg: Swift.Double?
   public var caffeine_mg: Swift.Double?
   public var chloride_mg: Swift.Double?
@@ -2051,23 +1819,17 @@ public struct TerraMicrosModel : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraQuantityModel : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(unit: Swift.Int? = nil, amount: Swift.Double? = nil)
-  #endif
   public var unit: Swift.Int?
   public var amount: Swift.Double?
-  #if compiler(>=5.3) && $NonescapableTypes
   public var terra_nutrition_unit: TerraiOS.TerraNutritionUnit? {
     get
   }
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraMealData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(quantity: TerraiOS.TerraQuantityModel? = .init(), name: Swift.String? = nil, macros: TerraiOS.TerraMacrosModel? = .init(), micros: TerraiOS.TerraMicrosModel? = .init())
-  #endif
   public var quantity: TerraiOS.TerraQuantityModel?
   public var name: Swift.String?
   public var timestamp: Swift.String?
@@ -2075,27 +1837,21 @@ public struct TerraMealData : Swift.Codable {
   public var type: Swift.Int?
   public var macros: TerraiOS.TerraMacrosModel?
   public var micros: TerraiOS.TerraMicrosModel?
-  #if compiler(>=5.3) && $NonescapableTypes
   public var terra_meal_type: TerraiOS.TerraMealType? {
     get
   }
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraNutritonMetaData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(start_time: Swift.String? = nil, end_time: Swift.String? = nil)
-  #endif
   public var start_time: Swift.String?
   public var end_time: Swift.String?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraNutritonSummary : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(macros: TerraiOS.TerraMacrosModel? = .init(), micros: TerraiOS.TerraMicrosModel? = .init(), water_ml: Swift.Double? = nil, drink_ml: Swift.Double? = nil)
-  #endif
   public var macros: TerraiOS.TerraMacrosModel?
   public var micros: TerraiOS.TerraMicrosModel?
   public var water_ml: Swift.Double?
@@ -2104,9 +1860,7 @@ public struct TerraNutritonSummary : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct TerraNutritionData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(meals: [TerraiOS.TerraMealData]? = [], summary: TerraiOS.TerraNutritonSummary? = .init(), metadata: TerraiOS.TerraNutritonMetaData? = .init(), drink_samples: [TerraiOS.DrinkSample]? = [])
-  #endif
   public var meals: [TerraiOS.TerraMealData]?
   public var drink_samples: [TerraiOS.DrinkSample]?
   public var summary: TerraiOS.TerraNutritonSummary?
@@ -2198,53 +1952,23 @@ public class TerraClient {
   @objc deinit
 }
 extension TerraiOS.TerraClient {
-  #if compiler(>=5.3) && $NonescapableTypes
   public func authenticateUser(forResource resource: TerraiOS.Resource, completion: @escaping (TerraiOS.AuthenticateUserPayload?) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func deauthenticateUser(forUser userId: Swift.String, completion: @escaping (TerraiOS.DeauthenticateUserPayload?) -> Swift.Void)
-  #endif
 }
 extension TerraiOS.TerraClient {
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getActivity(startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraActivityDataPayloadModel?) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getActivity(startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraActivityDataPayloadModel?) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getDaily(startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraDailyDataPayloadModel?) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getDaily(startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraDailyDataPayloadModel?) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getBody(startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraBodyDataPayloadModel?) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getBody(startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraBodyDataPayloadModel?) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getAthlete(toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraAthleteDataPayloadModel?) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getMenstruation(startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraMenstruationDataPayloadModel?) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getMenstruation(startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraMenstruationDataPayloadModel?) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getSleep(startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraSleepDataPayloadModel?) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getSleep(startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraSleepDataPayloadModel?) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getNutrition(startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraNutritionDataPayloadModel?) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getNutrition(startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, completion: @escaping (TerraiOS.TerraNutritionDataPayloadModel?) -> Swift.Void)
-  #endif
 }
 public struct TerraAuthResponse : Swift.Codable {
   public var status: Swift.String
@@ -2276,9 +2000,7 @@ public struct TerraAthleteData : Swift.Codable {
 @_inheritsConvenienceInitializers @objc final public class Terra : ObjectiveC.NSObject {
   public static var environment: TerraiOS.TerraEnvironment
   public static var updateHandler: ((TerraiOS.DataTypes, TerraiOS.Update) -> Swift.Void)?
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func instance(devId: Swift.String, referenceId: Swift.String?, requestPermissions: Swift.Bool = true, completion: @escaping (TerraiOS.TerraManager?, TerraiOS.TerraError?) -> Swift.Void)
-  #endif
   public static func disconnectTerra(devId: Swift.String, xAPIKey: Swift.String, userId: Swift.String)
   public static func checkAuthentication(connection: TerraiOS.Connections, devId: Swift.String, completion: @escaping (Swift.Bool) -> Swift.Void)
   @objc public static func setUpBackgroundDelivery()
@@ -2291,11 +2013,9 @@ public struct TerraAthleteData : Swift.Codable {
 public struct ActivityLevelSample : Swift.Codable {
   public var timestamp: Swift.String?
   public var activity_level: Swift.Int?
-  #if compiler(>=5.3) && $NonescapableTypes
   public var terra_activity_level: TerraiOS.TerraActivityLevel? {
     get
   }
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -2335,11 +2055,9 @@ public struct LapSample : Swift.Codable {
   public var stroke_type: Swift.String?
   public var avg_hr_bpm: Swift.Double?
   public var avg_speed_meters_per_second: Swift.Double?
-  #if compiler(>=5.3) && $NonescapableTypes
   public var terra_stroke_type: TerraiOS.TerraStrokeType? {
     get
   }
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -2358,23 +2076,17 @@ public struct ElevationSample : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct GlucoseDataSample : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(timestamp: Swift.String, blood_glucose_mg_per_dL: Swift.Double, glucose_level_flag: Swift.Int? = 0, trend_arrow: Swift.Int? = 0)
-  #endif
   public var timestamp: Swift.String?
   public var blood_glucose_mg_per_dL: Swift.Double?
   public var glucose_level_flag: Swift.Int?
   public var trend_arrow: Swift.Int?
-  #if compiler(>=5.3) && $NonescapableTypes
   public var terra_glucose_flag: TerraiOS.TerraGlucoseFlag? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var terra_trend_arrow: TerraiOS.TerraTrendArrow? {
     get
   }
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -2402,11 +2114,9 @@ public struct HeartRatesVariabilitySampleRMSSD : Swift.Codable {
 public struct HypnogramSample : Swift.Codable {
   public var level: Swift.Int?
   public var timestamp: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
   public var terra_sleep_level: TerraiOS.TerraSleepLevel? {
     get
   }
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -2438,9 +2148,7 @@ public struct PowerSample : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct SPO2Sample : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(timestamp: Swift.String, percentage: Swift.Double, type: Swift.Int? = 0)
-  #endif
   public var timestamp: Swift.String?
   public var percentage: Swift.Double?
   public var type: Swift.Int?
@@ -2470,9 +2178,7 @@ public struct TSSSample : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct OtherDeviceData : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(software_version: Swift.String? = nil, manufacturer: Swift.String? = nil, serial_number: Swift.String? = nil, name: Swift.String? = nil, hardware_version: Swift.String? = nil)
-  #endif
   public var software_version: Swift.String?
   public var manufacturer: Swift.String?
   public var serial_number: Swift.String?
@@ -2482,9 +2188,7 @@ public struct OtherDeviceData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct BloodPressureSample : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(timestamp: Swift.String? = nil, diastolic_bp: Swift.Double? = nil, systolic_bp: Swift.Double? = nil)
-  #endif
   public var timestamp: Swift.String?
   public var diastolic_bp: Swift.Double?
   public var systolic_bp: Swift.Double?
@@ -2492,9 +2196,7 @@ public struct BloodPressureSample : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct MeasurementDataSample : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(measurement_time: Swift.String? = nil, bodyfat_percentage: Swift.Double? = nil, BMI: Swift.Double? = nil, muscle_mass_g: Swift.Double? = nil, skin_fold_mm: Swift.Double? = nil, BMR: Swift.Double? = nil, height_cm: Swift.Double? = nil, estimated_fitness_age: Swift.Double? = nil, bone_mass_g: Swift.Double? = nil, water_percentage: Swift.Double? = nil, RMR: Swift.Double? = nil, weight_kg: Swift.Double? = nil, lean_mass_g: Swift.Double? = nil, insulin_units: Swift.Double? = nil, insulin_type: Swift.String? = nil, urine_color: Swift.String? = nil)
-  #endif
   public var measurement_time: Swift.String?
   public var bodyfat_percentage: Swift.Double?
   public var BMI: Swift.Double?
@@ -2543,25 +2245,19 @@ public struct Vo2Sample : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct PulseVelocitySample : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(timestamp: Swift.String? = nil, pulse_wave_velocity_meters_per_second: Swift.Double? = nil)
-  #endif
   public var timestamp: Swift.String?
   public var pulse_wave_velocity_meters_per_second: Swift.Double?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct AFibClassificationSample : Swift.Codable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(timestamp: Swift.String? = nil, afib_classification: Swift.Int? = nil)
-  #endif
   public var timestamp: Swift.String?
   public var afib_classification: Swift.Int?
-  #if compiler(>=5.3) && $NonescapableTypes
   public var terra_afib_classification: TerraiOS.TerraAFibClassification? {
     get
   }
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -2627,11 +2323,9 @@ public struct TerraCalorieSample : Swift.Codable {
 public struct MenstruationFlowSample : Swift.Codable {
   public var timestamp: Swift.String?
   public var flow: Swift.Int?
-  #if compiler(>=5.3) && $NonescapableTypes
   public var terra_menstrual_flow: TerraiOS.TerraMenstrualFlow? {
     get
   }
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -2641,9 +2335,7 @@ public enum DataTypes : Swift.String {
   case HEART_RATE_VARIABILITY
   case CALORIES
   case DISTANCE
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
