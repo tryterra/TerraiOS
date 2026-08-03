@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name TerraiOS
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
 import BackgroundTasks
 import Combine
 import CoreNFC
@@ -61,6 +61,55 @@ public struct TerraData : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public struct TerraObservationCode : Swift.Codable {
+  public var system: Swift.String?
+  public var code: Swift.String?
+  public var display: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TerraObservationValue : Swift.Codable {
+  public var value_type: Swift.Int?
+  public var quantity: Swift.Double?
+  public var unit: Swift.String?
+  public var boolean: Swift.Bool?
+  public var text: Swift.String?
+  public var code: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TerraObservationComponent : Swift.Codable {
+  public var code: Swift.String?
+  public var value: TerraiOS.TerraObservationValue?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TerraHealthObservationMetadata : Swift.Codable {
+  public var start_time: Swift.String?
+  public var end_time: Swift.String?
+  public var summary_id: Swift.String?
+  public var timestamp_localization: Swift.Int?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TerraHealthObservationDetails : Swift.Codable {
+  public var category: Swift.Int?
+  public var observation_type: Swift.String?
+  public var codes: [TerraiOS.TerraObservationCode]?
+  public var value: TerraiOS.TerraObservationValue?
+  public var severity: Swift.Int?
+  public var components: [TerraiOS.TerraObservationComponent]?
+  public var status: Swift.Int?
+  public var notes: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TerraHealthObservationData : Swift.Codable {
+  public var metadata: TerraiOS.TerraHealthObservationMetadata?
+  public var observation_data: TerraiOS.TerraHealthObservationDetails?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 @_hasMissingDesignatedInitializers @objc final public class TerraManager : ObjectiveC.NSObject, @unchecked Swift.Sendable {
   @objc deinit
 }
@@ -89,6 +138,8 @@ extension TerraiOS.TerraManager {
   final public func getAthlete(type: TerraiOS.Connections, toWebhook: Swift.Bool = true, completion: @escaping (Swift.Bool, TerraiOS.TerraAthleteDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
   final public func getMenstruation(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraMenstruationDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
   final public func getMenstruation(type: TerraiOS.Connections, startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraMenstruationDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
+  final public func getHealthObservation(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraHealthObservationDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
+  final public func getHealthObservation(type: TerraiOS.Connections, startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraHealthObservationDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
   final public func getDaily(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraDailyDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
   final public func getDaily(type: TerraiOS.Connections, startDate: Foundation.Date = Date.startOfToday, endDate: Foundation.Date = Date(), toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraDailyDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
   final public func getSleep(type: TerraiOS.Connections, startDate: Foundation.TimeInterval = Date.startOfToday.timeIntervalSince1970, endDate: Foundation.TimeInterval = Date().timeIntervalSince1970, toWebhook: Swift.Bool = true, withSamples: Swift.Bool? = nil, completion: @escaping (Swift.Bool, TerraiOS.TerraSleepDataPayloadModel?, TerraiOS.TerraError?) -> Swift.Void = { _, _, _ in })
@@ -701,6 +752,7 @@ public enum CustomPermissions : Swift.String, Swift.CaseIterable {
   case SYMPTOM_SORE_THROAT
   case MENSTRUATION
   case ELECTROCARDIOGRAM
+  case HEALTH_OBSERVATION
   public init?(rawValue: Swift.String)
   public typealias AllCases = [TerraiOS.CustomPermissions]
   public typealias RawValue = Swift.String
@@ -990,6 +1042,7 @@ public enum HeartRateContext : Swift.Int, Swift.Codable {
   case MENSTRUATION_WRITE = 0b001000000000000
   case PLANNED_WORKOUT = 0b010000000000000
   case PLANNED_WORKOUT_WRITE = 0b100000000000000
+  case HEALTH_OBSERVATION = 0b1000000000000000
   public init?(rawValue: Swift.UInt)
   public typealias AllCases = [TerraiOS.Permissions]
   public typealias RawValue = Swift.UInt
@@ -1937,6 +1990,16 @@ public struct TerraMenstruationDataPayloadModel {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public struct TerraHealthObservationDataPayloadModel {
+  public var user: TerraiOS.TerraUserModel?
+  public var data: [TerraiOS.TerraHealthObservationData]?
+  public var message: Swift.String?
+  public var reference: Swift.String?
+  public var type: Swift.String?
+  public var status: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 public struct TerraNutritionDataPayloadModel {
   public var user: TerraiOS.TerraUserModel?
   public var data: [TerraiOS.TerraNutritionData]?
@@ -2455,6 +2518,8 @@ extension TerraiOS.TerraDailyDataPayloadModel : Swift.Encodable {}
 extension TerraiOS.TerraDailyDataPayloadModel : Swift.Decodable {}
 extension TerraiOS.TerraMenstruationDataPayloadModel : Swift.Encodable {}
 extension TerraiOS.TerraMenstruationDataPayloadModel : Swift.Decodable {}
+extension TerraiOS.TerraHealthObservationDataPayloadModel : Swift.Encodable {}
+extension TerraiOS.TerraHealthObservationDataPayloadModel : Swift.Decodable {}
 extension TerraiOS.TerraNutritionDataPayloadModel : Swift.Encodable {}
 extension TerraiOS.TerraNutritionDataPayloadModel : Swift.Decodable {}
 extension TerraiOS.DataTypes : Swift.Equatable {}
