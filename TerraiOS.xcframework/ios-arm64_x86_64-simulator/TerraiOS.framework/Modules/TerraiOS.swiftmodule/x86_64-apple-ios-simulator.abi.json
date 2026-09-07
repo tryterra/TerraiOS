@@ -80293,6 +80293,13 @@
       },
       {
         "kind": "Import",
+        "name": "HealthKit",
+        "printedName": "HealthKit",
+        "declKind": "Import",
+        "moduleName": "TerraiOS"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -132364,7 +132371,7 @@
       "kind": "StringLiteral",
       "offset": 151,
       "length": 7,
-      "value": "\"1.9.2\""
+      "value": "\"1.9.3\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
@@ -137143,126 +137150,126 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Models\/Activity.swift",
       "kind": "BooleanLiteral",
-      "offset": 219,
+      "offset": 236,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Models\/Activity.swift",
       "kind": "IntegerLiteral",
-      "offset": 278,
+      "offset": 295,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Models\/Activity.swift",
       "kind": "IntegerLiteral",
-      "offset": 314,
+      "offset": 331,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Models\/Activity.swift",
       "kind": "IntegerLiteral",
-      "offset": 343,
+      "offset": 360,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Models\/Activity.swift",
       "kind": "Array",
-      "offset": 371,
+      "offset": 388,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Models\/Activity.swift",
       "kind": "Array",
-      "offset": 395,
+      "offset": 412,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Models\/Activity.swift",
       "kind": "Array",
-      "offset": 440,
+      "offset": 457,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Models\/Activity.swift",
       "kind": "Array",
-      "offset": 479,
+      "offset": 496,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Models\/Activity.swift",
       "kind": "Array",
-      "offset": 522,
+      "offset": 539,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Models\/Activity.swift",
       "kind": "Array",
-      "offset": 558,
+      "offset": 575,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Models\/Activity.swift",
       "kind": "Array",
-      "offset": 765,
+      "offset": 782,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Models\/Activity.swift",
       "kind": "Array",
-      "offset": 801,
+      "offset": 818,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Models\/Activity.swift",
       "kind": "IntegerLiteral",
-      "offset": 1038,
+      "offset": 1055,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Models\/Activity.swift",
       "kind": "Array",
-      "offset": 1079,
+      "offset": 1096,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Models\/Activity.swift",
       "kind": "IntegerLiteral",
-      "offset": 1160,
+      "offset": 1177,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Models\/Activity.swift",
       "kind": "StringLiteral",
-      "offset": 1187,
+      "offset": 1204,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Models\/Activity.swift",
       "kind": "Array",
-      "offset": 1217,
+      "offset": 1234,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Models\/Activity.swift",
       "kind": "StringLiteral",
-      "offset": 1248,
+      "offset": 1265,
       "length": 2,
       "value": "\"\""
     },
