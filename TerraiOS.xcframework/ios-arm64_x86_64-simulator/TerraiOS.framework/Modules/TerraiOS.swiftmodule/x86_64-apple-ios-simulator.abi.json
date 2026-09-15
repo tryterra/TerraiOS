@@ -873,6 +873,23 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "HealthKit",
+        "printedName": "HealthKit",
+        "declKind": "Import",
+        "moduleName": "TerraiOS"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TerraiOS",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "FSLSensorDetails",
         "printedName": "FSLSensorDetails",
@@ -129555,6 +129572,514 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "Date",
+        "printedName": "Date",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "terraString",
+            "printedName": "terraString",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10Foundation4DateV8TerraiOSE11terraStringSSvp",
+            "mangledName": "$s10Foundation4DateV8TerraiOSE11terraStringSSvp",
+            "moduleName": "TerraiOS",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10Foundation4DateV8TerraiOSE11terraStringSSvg",
+                "mangledName": "$s10Foundation4DateV8TerraiOSE11terraStringSSvg",
+                "moduleName": "TerraiOS",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "startOfToday",
+            "printedName": "startOfToday",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10Foundation4DateV8TerraiOSE12startOfTodayACvpZ",
+            "mangledName": "$s10Foundation4DateV8TerraiOSE12startOfTodayACvpZ",
+            "moduleName": "TerraiOS",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10Foundation4DateV8TerraiOSE12startOfTodayACvgZ",
+                "mangledName": "$s10Foundation4DateV8TerraiOSE12startOfTodayACvgZ",
+                "moduleName": "TerraiOS",
+                "static": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "endOfToday",
+            "printedName": "endOfToday",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10Foundation4DateV8TerraiOSE10endOfTodayACvpZ",
+            "mangledName": "$s10Foundation4DateV8TerraiOSE10endOfTodayACvpZ",
+            "moduleName": "TerraiOS",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10Foundation4DateV8TerraiOSE10endOfTodayACvgZ",
+                "mangledName": "$s10Foundation4DateV8TerraiOSE10endOfTodayACvgZ",
+                "moduleName": "TerraiOS",
+                "static": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "startOfDay",
+            "printedName": "startOfDay",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10Foundation4DateV8TerraiOSE10startOfDayACvp",
+            "mangledName": "$s10Foundation4DateV8TerraiOSE10startOfDayACvp",
+            "moduleName": "TerraiOS",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10Foundation4DateV8TerraiOSE10startOfDayACvg",
+                "mangledName": "$s10Foundation4DateV8TerraiOSE10startOfDayACvg",
+                "moduleName": "TerraiOS",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "endOfDay",
+            "printedName": "endOfDay",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10Foundation4DateV8TerraiOSE8endOfDayACvp",
+            "mangledName": "$s10Foundation4DateV8TerraiOSE8endOfDayACvp",
+            "moduleName": "TerraiOS",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10Foundation4DateV8TerraiOSE8endOfDayACvg",
+                "mangledName": "$s10Foundation4DateV8TerraiOSE8endOfDayACvg",
+                "moduleName": "TerraiOS",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "todayAt12AM",
+            "printedName": "todayAt12AM(date:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Foundation4DateV8TerraiOSE11todayAt12AM4dateA2C_tFZ",
+            "mangledName": "$s10Foundation4DateV8TerraiOSE11todayAt12AM4dateA2C_tFZ",
+            "moduleName": "TerraiOS",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "distance",
+            "printedName": "distance(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Foundation4DateV8TerraiOSE8distance2toSdAC_tF",
+            "mangledName": "$s10Foundation4DateV8TerraiOSE8distance2toSdAC_tF",
+            "moduleName": "TerraiOS",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "advanced",
+            "printedName": "advanced(by:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Foundation4DateV8TerraiOSE8advanced2byACSd_tF",
+            "mangledName": "$s10Foundation4DateV8TerraiOSE8advanced2byACSd_tF",
+            "moduleName": "TerraiOS",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "advanced",
+            "printedName": "advanced(byDates:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Foundation4DateV8TerraiOSE8advanced7byDatesACSi_tF",
+            "mangledName": "$s10Foundation4DateV8TerraiOSE8advanced7byDatesACSi_tF",
+            "moduleName": "TerraiOS",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:10Foundation4DateV",
+        "mangledName": "$s10Foundation4DateV",
+        "moduleName": "Foundation",
+        "intro_Macosx": "10.10",
+        "intro_iOS": "8.0",
+        "intro_tvOS": "9.0",
+        "intro_watchOS": "2.0",
+        "declAttributes": [
+          "Available",
+          "Available",
+          "Available",
+          "Available"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ReferenceConvertible",
+            "printedName": "ReferenceConvertible",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ReferenceType",
+                "printedName": "ReferenceType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSDate",
+                    "printedName": "Foundation.NSDate",
+                    "usr": "c:objc(cs)NSDate"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:10Foundation20ReferenceConvertibleP",
+            "mangledName": "$s10Foundation20ReferenceConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Comparable",
+            "printedName": "Comparable",
+            "usr": "s:SL",
+            "mangledName": "$sSL"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomReflectable",
+            "printedName": "CustomReflectable",
+            "usr": "s:s17CustomReflectableP",
+            "mangledName": "$ss17CustomReflectableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Strideable",
+            "printedName": "Strideable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Stride",
+                "printedName": "Stride",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:Sx",
+            "mangledName": "$sSx"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_CustomPlaygroundQuickLookable",
+            "printedName": "_CustomPlaygroundQuickLookable",
+            "usr": "s:s30_CustomPlaygroundQuickLookableP",
+            "mangledName": "$ss30_CustomPlaygroundQuickLookableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSDate",
+                    "printedName": "Foundation.NSDate",
+                    "usr": "c:objc(cs)NSDate"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "Name",
         "printedName": "Name",
         "children": [
@@ -130620,514 +131145,6 @@
                     "name": "NSString",
                     "printedName": "Foundation.NSString",
                     "usr": "c:objc(cs)NSString"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:s21_ObjectiveCBridgeableP",
-            "mangledName": "$ss21_ObjectiveCBridgeableP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "Date",
-        "printedName": "Date",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "terraString",
-            "printedName": "terraString",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:10Foundation4DateV8TerraiOSE11terraStringSSvp",
-            "mangledName": "$s10Foundation4DateV8TerraiOSE11terraStringSSvp",
-            "moduleName": "TerraiOS",
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "isFromExtension": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:10Foundation4DateV8TerraiOSE11terraStringSSvg",
-                "mangledName": "$s10Foundation4DateV8TerraiOSE11terraStringSSvg",
-                "moduleName": "TerraiOS",
-                "isFromExtension": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "startOfToday",
-            "printedName": "startOfToday",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Date",
-                "printedName": "Foundation.Date",
-                "usr": "s:10Foundation4DateV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:10Foundation4DateV8TerraiOSE12startOfTodayACvpZ",
-            "mangledName": "$s10Foundation4DateV8TerraiOSE12startOfTodayACvpZ",
-            "moduleName": "TerraiOS",
-            "static": true,
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Date",
-                    "printedName": "Foundation.Date",
-                    "usr": "s:10Foundation4DateV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:10Foundation4DateV8TerraiOSE12startOfTodayACvgZ",
-                "mangledName": "$s10Foundation4DateV8TerraiOSE12startOfTodayACvgZ",
-                "moduleName": "TerraiOS",
-                "static": true,
-                "isFromExtension": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "endOfToday",
-            "printedName": "endOfToday",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Date",
-                "printedName": "Foundation.Date",
-                "usr": "s:10Foundation4DateV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:10Foundation4DateV8TerraiOSE10endOfTodayACvpZ",
-            "mangledName": "$s10Foundation4DateV8TerraiOSE10endOfTodayACvpZ",
-            "moduleName": "TerraiOS",
-            "static": true,
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Date",
-                    "printedName": "Foundation.Date",
-                    "usr": "s:10Foundation4DateV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:10Foundation4DateV8TerraiOSE10endOfTodayACvgZ",
-                "mangledName": "$s10Foundation4DateV8TerraiOSE10endOfTodayACvgZ",
-                "moduleName": "TerraiOS",
-                "static": true,
-                "isFromExtension": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "startOfDay",
-            "printedName": "startOfDay",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Date",
-                "printedName": "Foundation.Date",
-                "usr": "s:10Foundation4DateV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:10Foundation4DateV8TerraiOSE10startOfDayACvp",
-            "mangledName": "$s10Foundation4DateV8TerraiOSE10startOfDayACvp",
-            "moduleName": "TerraiOS",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Date",
-                    "printedName": "Foundation.Date",
-                    "usr": "s:10Foundation4DateV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:10Foundation4DateV8TerraiOSE10startOfDayACvg",
-                "mangledName": "$s10Foundation4DateV8TerraiOSE10startOfDayACvg",
-                "moduleName": "TerraiOS",
-                "isFromExtension": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "endOfDay",
-            "printedName": "endOfDay",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Date",
-                "printedName": "Foundation.Date",
-                "usr": "s:10Foundation4DateV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:10Foundation4DateV8TerraiOSE8endOfDayACvp",
-            "mangledName": "$s10Foundation4DateV8TerraiOSE8endOfDayACvp",
-            "moduleName": "TerraiOS",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Date",
-                    "printedName": "Foundation.Date",
-                    "usr": "s:10Foundation4DateV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:10Foundation4DateV8TerraiOSE8endOfDayACvg",
-                "mangledName": "$s10Foundation4DateV8TerraiOSE8endOfDayACvg",
-                "moduleName": "TerraiOS",
-                "isFromExtension": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "todayAt12AM",
-            "printedName": "todayAt12AM(date:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Date",
-                "printedName": "Foundation.Date",
-                "usr": "s:10Foundation4DateV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Date",
-                "printedName": "Foundation.Date",
-                "usr": "s:10Foundation4DateV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:10Foundation4DateV8TerraiOSE11todayAt12AM4dateA2C_tFZ",
-            "mangledName": "$s10Foundation4DateV8TerraiOSE11todayAt12AM4dateA2C_tFZ",
-            "moduleName": "TerraiOS",
-            "static": true,
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "distance",
-            "printedName": "distance(to:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Double",
-                "printedName": "Swift.Double",
-                "usr": "s:Sd"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Date",
-                "printedName": "Foundation.Date",
-                "usr": "s:10Foundation4DateV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:10Foundation4DateV8TerraiOSE8distance2toSdAC_tF",
-            "mangledName": "$s10Foundation4DateV8TerraiOSE8distance2toSdAC_tF",
-            "moduleName": "TerraiOS",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "advanced",
-            "printedName": "advanced(by:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Date",
-                "printedName": "Foundation.Date",
-                "usr": "s:10Foundation4DateV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Double",
-                "printedName": "Swift.Double",
-                "usr": "s:Sd"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:10Foundation4DateV8TerraiOSE8advanced2byACSd_tF",
-            "mangledName": "$s10Foundation4DateV8TerraiOSE8advanced2byACSd_tF",
-            "moduleName": "TerraiOS",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "advanced",
-            "printedName": "advanced(byDates:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Date",
-                "printedName": "Foundation.Date",
-                "usr": "s:10Foundation4DateV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:10Foundation4DateV8TerraiOSE8advanced7byDatesACSi_tF",
-            "mangledName": "$s10Foundation4DateV8TerraiOSE8advanced7byDatesACSi_tF",
-            "moduleName": "TerraiOS",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Struct",
-        "usr": "s:10Foundation4DateV",
-        "mangledName": "$s10Foundation4DateV",
-        "moduleName": "Foundation",
-        "intro_Macosx": "10.10",
-        "intro_iOS": "8.0",
-        "intro_tvOS": "9.0",
-        "intro_watchOS": "2.0",
-        "declAttributes": [
-          "Available",
-          "Available",
-          "Available",
-          "Available"
-        ],
-        "isExternal": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "ReferenceConvertible",
-            "printedName": "ReferenceConvertible",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "ReferenceType",
-                "printedName": "ReferenceType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSDate",
-                    "printedName": "Foundation.NSDate",
-                    "usr": "c:objc(cs)NSDate"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:10Foundation20ReferenceConvertibleP",
-            "mangledName": "$s10Foundation20ReferenceConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Comparable",
-            "printedName": "Comparable",
-            "usr": "s:SL",
-            "mangledName": "$sSL"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomReflectable",
-            "printedName": "CustomReflectable",
-            "usr": "s:s17CustomReflectableP",
-            "mangledName": "$ss17CustomReflectableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Decodable",
-            "printedName": "Decodable",
-            "usr": "s:Se",
-            "mangledName": "$sSe"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Encodable",
-            "printedName": "Encodable",
-            "usr": "s:SE",
-            "mangledName": "$sSE"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "SendableMetatype",
-            "printedName": "SendableMetatype",
-            "usr": "s:s16SendableMetatypeP",
-            "mangledName": "$ss16SendableMetatypeP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Strideable",
-            "printedName": "Strideable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "Stride",
-                "printedName": "Stride",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Double",
-                    "printedName": "Swift.Double",
-                    "usr": "s:Sd"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:Sx",
-            "mangledName": "$sSx"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_CustomPlaygroundQuickLookable",
-            "printedName": "_CustomPlaygroundQuickLookable",
-            "usr": "s:s30_CustomPlaygroundQuickLookableP",
-            "mangledName": "$ss30_CustomPlaygroundQuickLookableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_ObjectiveCBridgeable",
-            "printedName": "_ObjectiveCBridgeable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "_ObjectiveCType",
-                "printedName": "_ObjectiveCType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSDate",
-                    "printedName": "Foundation.NSDate",
-                    "usr": "c:objc(cs)NSDate"
                   }
                 ]
               }
@@ -132370,629 +132387,629 @@
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 151,
-      "length": 7,
-      "value": "\"1.9.3\""
+      "length": 14,
+      "value": "\"1.9.4-beta.1\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 490,
+      "offset": 497,
       "length": 18,
       "value": "\"WoWsUcHPrOKeYEnc\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 532,
+      "offset": 539,
       "length": 31,
       "value": "\"co.tryterra.data.post.request\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 598,
+      "offset": 605,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 600,
+      "offset": 607,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 632,
+      "offset": 639,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 635,
+      "offset": 642,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 670,
+      "offset": 677,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 709,
+      "offset": 716,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 750,
+      "offset": 757,
       "length": 1,
       "value": "7"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 799,
+      "offset": 806,
       "length": 27,
       "value": "\"co.tryterra.logging.level\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 852,
+      "offset": 859,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 872,
+      "offset": 879,
       "length": 20,
       "value": "\"co.tryterra.dev.id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 918,
+      "offset": 925,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 943,
+      "offset": 950,
       "length": 29,
       "value": "\"co.tryterra.app.permissions\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 998,
+      "offset": 1005,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1021,
+      "offset": 1028,
       "length": 45,
       "value": "\"co.tryterra.apple.health.custom.permissions\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1092,
+      "offset": 1099,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1123,
+      "offset": 1130,
       "length": 36,
       "value": "\"co.tryterra.subscription.datatypes\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1185,
+      "offset": 1192,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1211,
+      "offset": 1218,
       "length": 26,
       "value": "\"co.tryterra.scheduler.on\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1263,
+      "offset": 1270,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1291,
+      "offset": 1298,
       "length": 28,
       "value": "\"co.tryterra.workout.anchor\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1345,
+      "offset": 1352,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1376,
+      "offset": 1383,
       "length": 32,
       "value": "\"co.tryterra.mindfulness.anchor\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1434,
+      "offset": 1441,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1459,
+      "offset": 1466,
       "length": 26,
       "value": "\"co.tryterra.steps.anchor\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1511,
+      "offset": 1518,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1540,
+      "offset": 1547,
       "length": 31,
       "value": "\"co.tryterra.heart.rate.anchor\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1597,
+      "offset": 1604,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1637,
+      "offset": 1644,
       "length": 43,
       "value": "\"co.tryterra.heart.rate.variability.anchor\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1706,
+      "offset": 1713,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1734,
+      "offset": 1741,
       "length": 29,
       "value": "\"co.tryterra.calories.anchor\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1789,
+      "offset": 1796,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1817,
+      "offset": 1824,
       "length": 29,
       "value": "\"co.tryterra.calories.anchor\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1872,
+      "offset": 1879,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1896,
+      "offset": 1903,
       "length": 26,
       "value": "\"co.tryterra.steps.anchor\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1948,
+      "offset": 1955,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1980,
+      "offset": 1987,
       "length": 28,
       "value": "\"co.tryterra.workout.resync\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2034,
+      "offset": 2041,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2067,
+      "offset": 2074,
       "length": 35,
       "value": "\"co.tryterra.deferred.while.locked\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2128,
+      "offset": 2135,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2158,
+      "offset": 2165,
       "length": 36,
       "value": "\"co.tryterra.last.steps.update.time\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2220,
+      "offset": 2227,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2253,
+      "offset": 2260,
       "length": 41,
       "value": "\"co.tryterra.last.heart.rate.update.time\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2320,
+      "offset": 2327,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2364,
+      "offset": 2371,
       "length": 53,
       "value": "\"co.tryterra.last.heart.rate.variability.update.time\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2443,
+      "offset": 2450,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2475,
+      "offset": 2482,
       "length": 39,
       "value": "\"co.tryterra.last.calories.update.time\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2540,
+      "offset": 2547,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2572,
+      "offset": 2579,
       "length": 39,
       "value": "\"co.tryterra.last.distance.update.time\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2637,
+      "offset": 2644,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2662,
+      "offset": 2669,
       "length": 30,
       "value": "\"co.tryterra.daily.data.cache\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2718,
+      "offset": 2725,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2745,
+      "offset": 2752,
       "length": 33,
       "value": "\"co.tryterra.activity.data.cache\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2804,
+      "offset": 2811,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2828,
+      "offset": 2835,
       "length": 30,
       "value": "\"co.tryterra.sleep.data.cache\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2884,
+      "offset": 2891,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2907,
+      "offset": 2914,
       "length": 29,
       "value": "\"co.tryterra.body.data.cache\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2962,
+      "offset": 2969,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2990,
+      "offset": 2997,
       "length": 34,
       "value": "\"co.tryterra.nutrition.data.cache\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3050,
+      "offset": 3057,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3081,
+      "offset": 3088,
       "length": 37,
       "value": "\"co.tryterra.menstruation.data.cache\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3144,
+      "offset": 3151,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3180,
+      "offset": 3187,
       "length": 43,
       "value": "\"co.tryterra.health.observation.data.cache\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3249,
+      "offset": 3256,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3277,
+      "offset": 3284,
       "length": 34,
       "value": "\"co.tryterra.terra.chunking.daily\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3337,
+      "offset": 3344,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3368,
+      "offset": 3375,
       "length": 38,
       "value": "\"co.tryterra.terra.chunking.nutrition\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3432,
+      "offset": 3439,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3466,
+      "offset": 3473,
       "length": 41,
       "value": "\"co.tryterra.terra.chunking.menstruation\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3533,
+      "offset": 3540,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3572,
+      "offset": 3579,
       "length": 47,
       "value": "\"co.tryterra.terra.chunking.health.observation\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3645,
+      "offset": 3652,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3672,
+      "offset": 3679,
       "length": 34,
       "value": "\"co.tryterra.terra.chunking.sleep\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3732,
+      "offset": 3739,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3758,
+      "offset": 3765,
       "length": 33,
       "value": "\"co.tryterra.terra.chunking.body\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3817,
+      "offset": 3824,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3847,
+      "offset": 3854,
       "length": 36,
       "value": "\"co.tryterra.terra.chunking.workout\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3909,
+      "offset": 3916,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3942,
+      "offset": 3949,
       "length": 43,
       "value": "\"co.tryterra.last.background.delivery.sent\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4011,
+      "offset": 4018,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4040,
+      "offset": 4047,
       "length": 41,
       "value": "\"co.tryterra.terra.posted.planed.workout\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4107,
+      "offset": 4114,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4144,
+      "offset": 4151,
       "length": 44,
       "value": "\"co.tryterra.terra.completed.planed.workout\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4214,
+      "offset": 4221,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4253,
+      "offset": 4260,
       "length": 42,
       "value": "\"co.tryterra.planned.workout.sync.enabled\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4321,
+      "offset": 4328,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4353,
+      "offset": 4360,
       "length": 37,
       "value": "\"co.tryterra.workout.plan.id.storage\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4416,
+      "offset": 4423,
       "length": 2,
       "value": "\"\""
     },
@@ -133013,35 +133030,35 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "IntegerLiteral",
-      "offset": 8799,
+      "offset": 8794,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "IntegerLiteral",
-      "offset": 8802,
+      "offset": 8797,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "BooleanLiteral",
-      "offset": 10190,
+      "offset": 10185,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "BooleanLiteral",
-      "offset": 10563,
+      "offset": 10558,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "StringLiteral",
-      "offset": 14226,
+      "offset": 14221,
       "length": 92,
       "value": "\"HealthKit store became inaccessible mid-fetch (device locked) — discarding partial daily\""
     },
@@ -133496,21 +133513,21 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetSleep.swift",
       "kind": "IntegerLiteral",
-      "offset": 3820,
+      "offset": 4096,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetSleep.swift",
       "kind": "IntegerLiteral",
-      "offset": 3823,
+      "offset": 4099,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetSleep.swift",
       "kind": "Array",
-      "offset": 4316,
+      "offset": 4592,
       "length": 2,
       "value": "[]"
     },
@@ -138647,36 +138664,64 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
-      "kind": "Array",
-      "offset": 42134,
-      "length": 2,
-      "value": "[]"
+      "kind": "IntegerLiteral",
+      "offset": 21451,
+      "length": 1,
+      "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
-      "kind": "Array",
-      "offset": 42657,
-      "length": 2,
-      "value": "[]"
+      "kind": "IntegerLiteral",
+      "offset": 21725,
+      "length": 3,
+      "value": "120"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "Dictionary",
-      "offset": 51399,
+      "offset": 21785,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "Dictionary",
-      "offset": 51439,
+      "offset": 21873,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
+      "kind": "Array",
+      "offset": 47023,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
+      "kind": "Array",
+      "offset": 47546,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
+      "kind": "Dictionary",
+      "offset": 56288,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
+      "kind": "Dictionary",
+      "offset": 56328,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 54199,
+      "offset": 59088,
       "length": 4,
       "value": "true"
     },
@@ -139166,273 +139211,273 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 7339,
+      "offset": 7334,
       "length": 10,
       "value": "\"calories\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 7390,
+      "offset": 7385,
       "length": 9,
       "value": "\"protein\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 7439,
+      "offset": 7434,
       "length": 15,
       "value": "\"carbohydrates\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 7489,
+      "offset": 7484,
       "length": 5,
       "value": "\"fat\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 7526,
+      "offset": 7521,
       "length": 7,
       "value": "\"fiber\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 7565,
+      "offset": 7560,
       "length": 7,
       "value": "\"sugar\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 7605,
+      "offset": 7600,
       "length": 8,
       "value": "\"sodium\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 7667,
+      "offset": 7662,
       "length": 13,
       "value": "\"cholesterol\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 7731,
+      "offset": 7726,
       "length": 11,
       "value": "\"vitamin_A\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 7793,
+      "offset": 7788,
       "length": 11,
       "value": "\"vitamin_C\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 7852,
+      "offset": 7847,
       "length": 7,
       "value": "\"water\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 7909,
+      "offset": 7904,
       "length": 15,
       "value": "\"dietaryBiotin\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 7975,
+      "offset": 7970,
       "length": 17,
       "value": "\"dietaryCaffeine\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 8042,
+      "offset": 8037,
       "length": 16,
       "value": "\"dietaryCalcium\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 8109,
+      "offset": 8104,
       "length": 17,
       "value": "\"dietaryChloride\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 8177,
+      "offset": 8172,
       "length": 17,
       "value": "\"dietaryChromium\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 8243,
+      "offset": 8238,
       "length": 15,
       "value": "\"dietaryCopper\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 8319,
+      "offset": 8314,
       "length": 27,
       "value": "\"dietaryFatMonounsaturated\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 8391,
+      "offset": 8386,
       "length": 27,
       "value": "\"dietaryFatPolyunsaturated\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 8457,
+      "offset": 8452,
       "length": 21,
       "value": "\"dietaryFatSaturated\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 8511,
+      "offset": 8506,
       "length": 15,
       "value": "\"dietaryFolate\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 8575,
+      "offset": 8570,
       "length": 15,
       "value": "\"dietaryIodine\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 8637,
+      "offset": 8632,
       "length": 13,
       "value": "\"dietaryIron\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 8702,
+      "offset": 8697,
       "length": 18,
       "value": "\"dietaryMagnesium\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 8772,
+      "offset": 8767,
       "length": 18,
       "value": "\"dietaryManganese\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 8843,
+      "offset": 8838,
       "length": 19,
       "value": "\"dietaryMolybdenum\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 8911,
+      "offset": 8906,
       "length": 15,
       "value": "\"dietaryNiacin\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 8984,
+      "offset": 8979,
       "length": 24,
       "value": "\"dietaryPantothenicAcid\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 9061,
+      "offset": 9056,
       "length": 19,
       "value": "\"dietaryPhosphorus\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 9132,
+      "offset": 9127,
       "length": 18,
       "value": "\"dietaryPotassium\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 9203,
+      "offset": 9198,
       "length": 19,
       "value": "\"dietaryRiboflavin\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 9273,
+      "offset": 9268,
       "length": 17,
       "value": "\"dietarySelenium\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 9340,
+      "offset": 9335,
       "length": 16,
       "value": "\"dietaryThiamin\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 9409,
+      "offset": 9404,
       "length": 19,
       "value": "\"dietaryVitaminB12\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 9480,
+      "offset": 9475,
       "length": 18,
       "value": "\"dietaryVitaminB6\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 9549,
+      "offset": 9544,
       "length": 17,
       "value": "\"dietaryVitaminD\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 9617,
+      "offset": 9612,
       "length": 17,
       "value": "\"dietaryVitaminE\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 9685,
+      "offset": 9680,
       "length": 17,
       "value": "\"dietaryVitaminK\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetNutrition.swift",
       "kind": "StringLiteral",
-      "offset": 9749,
+      "offset": 9744,
       "length": 13,
       "value": "\"dietaryZinc\""
     },
