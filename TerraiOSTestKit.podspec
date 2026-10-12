@@ -1,21 +1,16 @@
-Pod::Spec.new do |spec|
-  spec.name           = "TerraiOSTestKit"
-  spec.version        = "2.0.0"
-  spec.summary        = "Test doubles for Terra's iOS SDK (TerraTestKit), for test targets only."
-  spec.description    = <<-DESC
-    TerraTestKit fakes HealthKit, Terra's backend and storage, so an app can test its TerraSDK
-    integration without a device or a network. Add it to test targets only.
-  DESC
-  spec.homepage       = "https://github.com/tryterra/TerraiOS"
-  spec.license        = { :type => "MIT", :text => "Copyright (c) 2022 TERRA. See https://github.com/tryterra/TerraiOS/blob/master/LICENSE" }
-  spec.author         = { "Terra" => "dev@tryterra.co" }
-  spec.platform       = :ios, "15.0"
-  spec.source         = {
-    :http => "https://github.com/tryterra/TerraiOS/releases/download/#{spec.version}/TerraTestKit.xcframework.zip",
-    :sha256 => "272a4709ce2aeaf2ae6824617cf8f61ce068f503b59af1665ba6efa7b64ead23"
+Pod::Spec.new do |s|
+  s.name = 'TerraiOSTestKit'
+  s.version = '2.0.0'
+  s.summary = 'Test doubles for the Terra mobile SDK, as a binary xcframework.'
+  s.homepage = 'https://github.com/tryterra/TerraiOS'
+  s.license = { :type => 'Proprietary', :text => 'Copyright Terra' }
+  s.author = 'Terra'
+  s.source = {
+    :http => 'https://github.com/tryterra/TerraiOS/releases/download/2.0.0/TerraTestKit.xcframework.zip',
+    :sha256 => 'e8a32c2858e5229286b34a4f8792d4e86022630c026a3519c9196530a545d664'
   }
-  spec.swift_versions = ["5.9", "6.0"]
-  spec.vendored_frameworks = "TerraTestKit.xcframework"
-  # TerraTestKit links TerraSDK and ships no copy of it; both come from one build.
-  spec.dependency "TerraiOS", spec.version.to_s
+  s.platform = :ios, '15.0'
+  s.swift_versions = ['5.9', '6.0']
+  s.vendored_frameworks = 'TerraTestKit.xcframework'
+  s.dependency 'TerraiOS', '2.0.0'
 end
