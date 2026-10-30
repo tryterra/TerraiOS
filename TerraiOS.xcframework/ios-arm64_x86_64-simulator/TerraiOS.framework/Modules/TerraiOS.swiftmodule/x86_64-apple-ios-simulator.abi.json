@@ -132388,7 +132388,7 @@
       "kind": "StringLiteral",
       "offset": 151,
       "length": 7,
-      "value": "\"1.9.4\""
+      "value": "\"1.9.5\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/Constants.swift",
@@ -133030,35 +133030,35 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "IntegerLiteral",
-      "offset": 8794,
+      "offset": 8410,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "IntegerLiteral",
-      "offset": 8797,
+      "offset": 8413,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "BooleanLiteral",
-      "offset": 10185,
+      "offset": 9774,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "BooleanLiteral",
-      "offset": 10558,
+      "offset": 10147,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/Get\/GetDaily.swift",
       "kind": "StringLiteral",
-      "offset": 14221,
+      "offset": 13810,
       "length": 92,
       "value": "\"HealthKit store became inaccessible mid-fetch (device locked) — discarding partial daily\""
     },
@@ -138714,63 +138714,63 @@
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "Array",
-      "offset": 48598,
+      "offset": 47804,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "Array",
-      "offset": 49121,
+      "offset": 48327,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "StringLiteral",
-      "offset": 53899,
+      "offset": 53105,
       "length": 33,
       "value": "\"co.tryterra.BGDelivery.inflight\""
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "Dictionary",
-      "offset": 54000,
+      "offset": 53206,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "IntegerLiteral",
-      "offset": 54047,
+      "offset": 53253,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 54092,
+      "offset": 53298,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "Dictionary",
-      "offset": 60464,
+      "offset": 59670,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "Dictionary",
-      "offset": 60504,
+      "offset": 59710,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDelivery.swift",
       "kind": "BooleanLiteral",
-      "offset": 63264,
+      "offset": 62470,
       "length": 4,
       "value": "true"
     },
@@ -139536,6 +139536,13 @@
       "offset": 644,
       "length": 2,
       "value": "30"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/BackgroundDeliveryHelpers.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2326,
+      "length": 1,
+      "value": "7"
     },
     {
       "filePath": "\/Users\/runner\/work\/TerraiOSPackage\/TerraiOSPackage\/TerraiOS\/AppleHealth\/HealthStoreReads.swift",
