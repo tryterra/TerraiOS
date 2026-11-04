@@ -12,15 +12,11 @@ Health data, and uploads it to Terra on its own, in the foreground and in the ba
 
 ## Install
 
-2.0.0-beta.1 is a pre-release. SwiftPM and CocoaPods leave pre-releases out of version ranges, so
-the examples below pin it exactly. Once 2.0.0 ships, use `from: "2.0.0"` (SwiftPM) or `'~> 2.0'`
-(CocoaPods) instead.
-
 ### Swift Package Manager
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/tryterra/TerraiOS", exact: "2.0.0-beta.1"),
+    .package(url: "https://github.com/tryterra/TerraiOS", from: "2.0.0"),
 ],
 targets: [
     .target(name: "MyApp", dependencies: [.product(name: "TerraSDK", package: "TerraiOS")]),
@@ -29,7 +25,7 @@ targets: [
 ```
 
 In Xcode: File > Add Package Dependencies, enter `https://github.com/tryterra/TerraiOS`, choose
-"Exact Version" with `2.0.0-beta.1`, and add `TerraSDK` to your app target.
+"Up to Next Major Version" from `2.0.0`, and add `TerraSDK` to your app target.
 
 The `TerraiOS` product is the same binary as `TerraSDK`, kept so a 1.x dependency declaration still
 resolves after the version bump. Use one of them, not both.
@@ -44,10 +40,10 @@ checksums in `Package.swift`.
 platform :ios, '15.0'
 
 target 'MyApp' do
-  pod 'TerraiOS', '2.0.0-beta.1'
+  pod 'TerraiOS', '~> 2.0'
 
   target 'MyAppTests' do
-    pod 'TerraiOSTestKit', '2.0.0-beta.1'
+    pod 'TerraiOSTestKit', '~> 2.0'
   end
 end
 ```
