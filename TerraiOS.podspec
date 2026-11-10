@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'TerraiOS'
-  s.version = '2.2.0'
+  s.version = '2.2.1'
   s.summary = 'Terra mobile SDK for Apple Health, as a binary xcframework.'
   s.homepage = 'https://github.com/tryterra/TerraiOS'
   # The zip carries no LICENSE file, so the text travels in the spec.
@@ -29,8 +29,8 @@ Pod::Spec.new do |s|
   LICENSE
   s.author = 'Terra'
   s.source = {
-    :http => 'https://github.com/tryterra/TerraiOS/releases/download/2.2.0/TerraSDK.xcframework.zip',
-    :sha256 => '87ce761af80dc874a5dc6ae6ab65945ab3e3f751756461017797faf3c7d308c5'
+    :http => 'https://github.com/tryterra/TerraiOS/releases/download/2.2.1/TerraSDK.xcframework.zip',
+    :sha256 => '70f75034ecac9ad12e7228f8702c336025f4a3de0780c8853f87bcdd3cf5974c'
   }
   s.platform = :ios, '15.0'
   s.swift_versions = ['5.9', '6.0']
