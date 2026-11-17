@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'TerraiOSTestKit'
-  s.version = '2.2.1'
+  s.version = '2.3.0'
   s.summary = 'Test doubles for the Terra mobile SDK, as a binary xcframework.'
   s.homepage = 'https://github.com/tryterra/TerraiOS'
   # The zip carries no LICENSE file, so the text travels in the spec.
@@ -29,11 +29,11 @@ Pod::Spec.new do |s|
   LICENSE
   s.author = 'Terra'
   s.source = {
-    :http => 'https://github.com/tryterra/TerraiOS/releases/download/2.2.1/TerraTestKit.xcframework.zip',
-    :sha256 => 'aecf1bbe2bb8876b3f2128f4c17455bc2ad1e74904179eace711086d38552541'
+    :http => 'https://github.com/tryterra/TerraiOS/releases/download/2.3.0/TerraTestKit.xcframework.zip',
+    :sha256 => '24937a31c8b2b3291752a14a168284011e407e91e085ac03bb9deda0f852dbf2'
   }
   s.platform = :ios, '15.0'
   s.swift_versions = ['5.9', '6.0']
   s.vendored_frameworks = 'TerraTestKit.xcframework'
-  s.dependency 'TerraiOS', '2.2.1'
+  s.dependency 'TerraiOS', '2.3.0'
 end
